@@ -1,0 +1,6 @@
+.DS_Store
+.vscode
+text/
+libmx/libmx.a
+ush
+.bash_history
