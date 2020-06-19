@@ -8,47 +8,47 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/ovoitenko/Desktop/ushell/cmake-build-debug"/>
+				<Option working_dir="/Users/mac/Desktop/USH/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/ovoitenko/Desktop/ushell/cmake-build-debug"/>
+				<Option working_dir="/Users/mac/Desktop/USH/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/ovoitenko/Desktop/ushell/cmake-build-debug"/>
+				<Option working_dir="/Users/mac/Desktop/USH/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ushell">
-				<Option output="/Users/ovoitenko/Desktop/ushell/cmake-build-debug/ushell" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/ovoitenko/Desktop/ushell/cmake-build-debug"/>
+				<Option output="/Users/mac/Desktop/USH/cmake-build-debug/ushell" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/Desktop/USH/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/ovoitenko/Desktop/ushell/inc"/>
-					<Add directory="/Users/ovoitenko/Desktop/ushell/libmx"/>
-					<Add directory="/Users/ovoitenko/Desktop/ushell/libmx/inc"/>
-					<Add directory="/Users/ovoitenko/Desktop/ushell/libmx/src"/>
-					<Add directory="/Users/ovoitenko/Desktop/ushell/src"/>
+					<Add directory="/Users/mac/Desktop/USH/inc"/>
+					<Add directory="/Users/mac/Desktop/USH/libmx"/>
+					<Add directory="/Users/mac/Desktop/USH/libmx/inc"/>
+					<Add directory="/Users/mac/Desktop/USH/libmx/src"/>
+					<Add directory="/Users/mac/Desktop/USH/src"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -56,24 +56,24 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 ushell"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 ushell"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ushell/fast">
-				<Option output="/Users/ovoitenko/Desktop/ushell/cmake-build-debug/ushell" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/ovoitenko/Desktop/ushell/cmake-build-debug"/>
+				<Option output="/Users/mac/Desktop/USH/cmake-build-debug/ushell" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/Desktop/USH/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/ovoitenko/Desktop/ushell/inc"/>
-					<Add directory="/Users/ovoitenko/Desktop/ushell/libmx"/>
-					<Add directory="/Users/ovoitenko/Desktop/ushell/libmx/inc"/>
-					<Add directory="/Users/ovoitenko/Desktop/ushell/libmx/src"/>
-					<Add directory="/Users/ovoitenko/Desktop/ushell/src"/>
+					<Add directory="/Users/mac/Desktop/USH/inc"/>
+					<Add directory="/Users/mac/Desktop/USH/libmx"/>
+					<Add directory="/Users/mac/Desktop/USH/libmx/inc"/>
+					<Add directory="/Users/mac/Desktop/USH/libmx/src"/>
+					<Add directory="/Users/mac/Desktop/USH/src"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -81,551 +81,551 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 ushell/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/ushell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 ushell/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mac/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/inc/libmx.h">
+		<Unit filename="/Users/mac/Desktop/USH/inc/libmx.h">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/inc/macroses.h">
+		<Unit filename="/Users/mac/Desktop/USH/inc/macroses.h">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/inc/ush.h">
+		<Unit filename="/Users/mac/Desktop/USH/inc/ush.h">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/inc/libmx.h">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/inc/libmx.h">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_add_strarr.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_add_strarr.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_arrstr_to_str.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_arrstr_to_str.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_binary_search.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_binary_search.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_bubble_sort.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_bubble_sort.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_count_substr.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_count_substr.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_count_words.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_count_words.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_create_node.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_create_node.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_del_extra_spaces.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_del_extra_spaces.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_del_strarr.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_del_strarr.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_dupstrarr.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_dupstrarr.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_file_to_str.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_file_to_str.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_foreach.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_foreach.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_get_char_index.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_get_char_index.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_get_substr_index.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_get_substr_index.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_get_user_home.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_get_user_home.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_get_user_name.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_get_user_name.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_getchar.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_getchar.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_hex_to_nbr.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_hex_to_nbr.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_is_str_starts.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_is_str_starts.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_isspace.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_isspace.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_itoa.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_itoa.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_list_size.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_list_size.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_memccpy.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_memccpy.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_memchr.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_memchr.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_memcmp.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_memcmp.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_memcpy.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_memcpy.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_memmem.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_memmem.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_memmove.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_memmove.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_memrchr.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_memrchr.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_memset.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_memset.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_nbr_to_hex.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_nbr_to_hex.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_pop_back.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_pop_back.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_pop_front.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_pop_front.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_pop_list.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_pop_list.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_pow.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_pow.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_print_strarr.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_print_strarr.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_print_unicode.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_print_unicode.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_printchar.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_printchar.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_printerr.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_printerr.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_printint.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_printint.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_printstr.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_printstr.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_push_back.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_push_back.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_push_front.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_push_front.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_quicksort.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_quicksort.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_read_line.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_read_line.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_realloc.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_realloc.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_replace_substr.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_replace_substr.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_sort_list.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_sort_list.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_sqrt.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_sqrt.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_str_reverse.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_str_reverse.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strcat.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strcat.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strcmp.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strcmp.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strcmp2.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strcmp2.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strcpy.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strcpy.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strdel.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strdel.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strdup.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strdup.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strjoin.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strjoin.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strjoin2.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strjoin2.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strjoin3.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strjoin3.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strlen.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strlen.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strncmp.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strncmp.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strncpy.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strncpy.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strndup.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strndup.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strnew.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strnew.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strsplit.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strsplit.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strstr.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strstr.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_strtrim.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_strtrim.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/libmx/src/mx_swap_char.c">
+		<Unit filename="/Users/mac/Desktop/USH/libmx/src/mx_swap_char.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/bit_function.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/builtins/mx_cd.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/main.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/builtins/mx_echo.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_0_and_x.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/builtins/mx_env.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_add_one_rank.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/builtins/mx_export.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_add_process.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/builtins/mx_fg.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_ascii.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/builtins/mx_jobs.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_audit_str.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/main.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_buildin_list.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_add_one_rank.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_call_vlad.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_add_process.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_cd.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_ascii.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_charge_paranetr_export.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_audit_str.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_chdir_l.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_buildin_list.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_chdir_p.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_call_vlad.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_check_env.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_charge_paranetr_export.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_check_symbol.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_chdir_l.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_clear_tokens.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_chdir_p.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_close_all_pr.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_check_env.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_create_ast.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_check_symbol.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_create_comands.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_clear_tokens.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_create_tnode.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_close_all_pr.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_create_token.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_create_ast.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_ctrl_r.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_create_comands.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_ctrl_v_and_not_ascii.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_create_tnode.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_del_last_rank.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_create_token.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_del_pid_process.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_ctrl_r.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_del_top_process.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_ctrl_v_and_not_ascii.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_delete_ast.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_del_last_rank.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_delete_tnode.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_del_pid_process.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_delete_veriable_env.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_del_top_process.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_do_replace.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_delete_ast.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_echo.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_delete_tnode.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_end_flag.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_delete_veriable_env.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_env.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_do_replace.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_env_to_vlad.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_end_flag.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_exec_dmore.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_env_to_vlad.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_exec_env_pr.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_exec_dmore.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_exec_less.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_exec_env_pr.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_exec_more.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_exec_less.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_exec_token.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_exec_more.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_execute.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_exec_token.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_execute_proces.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_execute.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_execute_tree.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_execute_proces.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_exit.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_execute_tree.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_export.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_exit.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_fg.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_find_tnode.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_find_tnode.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_flang_comand.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_flang_comand.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_fre_env_path.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_fre_env_path.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_get_info.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_get_info.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_get_min_tnode.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_get_min_tnode.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_get_name.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_get_name.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_get_next_token.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_get_next_token.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_get_path_env.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_get_path_env.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_get_token_type.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_get_token_type.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_get_twidth.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_get_twidth.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_history.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_history.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_home.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_home.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_if_new_parameter.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_if_new_parameter.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_input.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_input.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_insert_tree.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_insert_tree.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_is_buildin.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_is_buildin.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_is_char.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_is_char.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_is_commad.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_is_commad.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_is_link.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_is_link.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_is_operator.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_is_operator.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_key_delite.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_jobs.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_key_duble_tab.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_key_delite.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_key_tab.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_key_duble_tab.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_lexer.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_key_tab.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_mini_parser_tab.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_lexer.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_not_ascii.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_mini_parser_tab.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_one_symbol.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_not_ascii.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_parametr_shell.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_one_symbol.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_parsing.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_parametr_shell.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_parsing_input.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_parsing.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_pipe_execute.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_parsing_input.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_print_cont.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_pipe_execute.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_print_env.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_print_cont.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_print_error_env.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_print_env.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_print_esc.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_print_error_env.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_print_susp.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_print_esc.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_print_tab_comands.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_print_susp.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_printstr_env.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_print_tab_comands.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_push_env.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_printstr_env.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_pwd.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_push_env.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_read_comand.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_pwd.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_read_keyboard.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_read_comand.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_reg.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_read_keyboard.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_return_value.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_reg.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_serch_list.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_return_value.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_signals.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_serch_list.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_start_program.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_signals.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_str_bquote.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_start_program.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_strarr_add_to_strarr.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_str_bquote.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_subs.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_strarr_add_to_strarr.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_syntax_analyzer.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_subs.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_token_in_program.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_syntax_analyzer.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_unset.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_token_in_program.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_unset_fds.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_unset.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_ush_close.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_unset_fds.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_ush_init.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_ush_close.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_var_tree_to_var.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_ush_init.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_wait_process.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_var_tree_to_var.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_which.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_wait_process.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/mx_write_from_to.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_which.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/out_monitor.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/mx_write_from_to.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/utils/bit_function.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/src/out_monitor.c">
+		<Unit filename="/Users/mac/Desktop/USH/src/utils/mx_0_and_x.c">
 			<Option target="ushell"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/ushell/CMakeLists.txt">
+		<Unit filename="/Users/mac/Desktop/USH/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
