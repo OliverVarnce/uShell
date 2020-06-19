@@ -1,6 +1,4 @@
 #include "ush.h"
-#include "macroses.h"
-
 
 static char *read_bqute(int des, int des2) {
     char *str = 0;

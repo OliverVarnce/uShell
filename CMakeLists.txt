@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(ushell C)
+project(USH C)
 
 set(CMAKE_C_STANDARD 11)
 
@@ -8,14 +8,19 @@ include_directories(libmx)
 include_directories(libmx/inc)
 include_directories(libmx/src)
 include_directories(src)
+include_directories(src/builtins)
+include_directories(src/errhandlers)
+include_directories(src/history)
+include_directories(src/memory)
+include_directories(src/parsers)
+include_directories(src/sorting)
+include_directories(src/stream)
+include_directories(src/utils)
 
-add_executable(ushell
-        inc/libmx.h
-        inc/macroses.h
+add_executable(USH
         inc/ush.h
         libmx/inc/libmx.h
-        libmx/src/mx_add_strarr.c
-        libmx/src/mx_arrstr_to_str.c
+        libmx/src/mx_atoi.c
         libmx/src/mx_binary_search.c
         libmx/src/mx_bubble_sort.c
         libmx/src/mx_count_substr.c
@@ -23,16 +28,14 @@ add_executable(ushell
         libmx/src/mx_create_node.c
         libmx/src/mx_del_extra_spaces.c
         libmx/src/mx_del_strarr.c
-        libmx/src/mx_dupstrarr.c
+        libmx/src/mx_delete_list.c
         libmx/src/mx_file_to_str.c
         libmx/src/mx_foreach.c
         libmx/src/mx_get_char_index.c
         libmx/src/mx_get_substr_index.c
-        libmx/src/mx_get_user_home.c
-        libmx/src/mx_get_user_name.c
-        libmx/src/mx_getchar.c
         libmx/src/mx_hex_to_nbr.c
-        libmx/src/mx_is_str_starts.c
+        libmx/src/mx_isalpha.c
+        libmx/src/mx_isdigit.c
         libmx/src/mx_isspace.c
         libmx/src/mx_itoa.c
         libmx/src/mx_list_size.c
@@ -47,7 +50,6 @@ add_executable(ushell
         libmx/src/mx_nbr_to_hex.c
         libmx/src/mx_pop_back.c
         libmx/src/mx_pop_front.c
-        libmx/src/mx_pop_list.c
         libmx/src/mx_pow.c
         libmx/src/mx_print_strarr.c
         libmx/src/mx_print_unicode.c
@@ -66,14 +68,12 @@ add_executable(ushell
         libmx/src/mx_str_reverse.c
         libmx/src/mx_strcat.c
         libmx/src/mx_strcmp.c
-        libmx/src/mx_strcmp2.c
         libmx/src/mx_strcpy.c
         libmx/src/mx_strdel.c
         libmx/src/mx_strdup.c
         libmx/src/mx_strjoin.c
-        libmx/src/mx_strjoin2.c
-        libmx/src/mx_strjoin3.c
         libmx/src/mx_strlen.c
+        libmx/src/mx_strncat.c
         libmx/src/mx_strncmp.c
         libmx/src/mx_strncpy.c
         libmx/src/mx_strndup.c
@@ -82,110 +82,61 @@ add_executable(ushell
         libmx/src/mx_strstr.c
         libmx/src/mx_strtrim.c
         libmx/src/mx_swap_char.c
-        src/utils/bit_function.c
+        src/builtins/add_proc.c
+        src/builtins/del_proc.c
+        src/builtins/detect_builds.c
+        src/builtins/env_in_list.c
+        src/builtins/env_print.c
+        src/builtins/mx_create_proc.c
+        src/builtins/print_history.c
+        src/builtins/proc_chars_find.c
+        src/builtins/proc_cut_str.c
+        src/builtins/proc_num_find.c
+        src/builtins/ush_cd.c
+        src/builtins/ush_echo.c
+        src/builtins/ush_env.c
+        src/builtins/ush_exit.c
+        src/builtins/ush_export.c
+        src/builtins/ush_fg.c
+        src/builtins/ush_processes.c
+        src/builtins/ush_pwd.c
+        src/builtins/ush_unset.c
+        src/builtins/ush_which.c
+        src/errhandlers/mx_printerror.c
+        src/history/history.c
+        src/memory/free_history.c
+        src/memory/free_list.c
+        src/memory/free_node.c
+        src/memory/free_processes.c
+        src/parsers/parse.c
+        src/parsers/parse_backquote.c
+        src/parsers/parse_dblqte_openparen_closeparen_opbrce_clbrce.c
+        src/parsers/parse_dollar.c
+        src/parsers/parse_get_format_str.c
+        src/parsers/parse_get_proc_output.c
+        src/parsers/parse_get_subst_replace_str.c
+        src/parsers/parse_mark_chars.c
+        src/parsers/parse_mx_check_parse.c
+        src/parsers/parse_mx_create_outer_subst_n_dblq_list.c
+        src/parsers/parse_pop_push_free_format_list.c
+        src/parsers/parse_replace_sub_str.c
+        src/parsers/parse_single_quote.c
+        src/parsers/parse_substitutions.c
+        src/parsers/parse_tilda.c
+        src/sorting/mx_pop_frontf.c
+        src/sorting/mx_push_backdup.c
+        src/stream/read_stream.c
+        src/stream/stream.c
         src/utils/main.c
-        src/utils/mx_0_and_x.c
-        src/builtins/mx_add_one_rank.c
-        src/builtins/mx_add_process.c
-        src/utils/mx_ascii.c
-        src/utils/mx_audit_str.c
-        src/builtins/mx_buildin_list.c
-        src/builtins/mx_call_vlad.c
-        src/builtins/mx_cd.c
-        src/memory/mx_charge_paranetr_export.c
-        src/utils/mx_chdir_l.c
-        src/utils/mx_chdir_p.c
-        src/builtins/mx_check_env.c
-        src/parsers/mx_check_symbol.c
-        src/memory/mx_clear_tokens.c
-        src/builtins/mx_close_all_pr.c
-        src/utils/mx_create_ast.c
-        src/utils/mx_create_comands.c
-        src/utils/mx_create_tnode.c
-        src/utils/mx_create_token.c
-        src/exec/mx_ctrl_r.c
-        src/builtins/mx_ctrl_v_and_not_ascii.c
-        src/builtins/mx_del_last_rank.c
-        src/builtins/mx_del_pid_process.c
-        src/builtins/mx_del_top_process.c
-        src/utils/mx_delete_ast.c
-        src/builtins/mx_delete_tnode.c
-        src/builtins/mx_delete_veriable_env.c
-        src/utils/mx_do_replace.c
-        src/builtins/mx_echo.c
-        src/builtins/mx_end_flag.c
-        src/builtins/mx_env.c
-        src/builtins/mx_env_to_vlad.c
-        src/exec/mx_exec_dmore.c
-        src/exec/mx_exec_env_pr.c
-        src/exec/mx_exec_less.c
-        src/exec/mx_exec_more.c
-        src/exec/mx_exec_token.c
-        src/exec/mx_execute.c
-        src/exec/mx_execute_proces.c
-        src/exec/mx_execute_tree.c
-        src/utils/mx_exit.c
-        src/builtins/mx_export.c
-        src/builtins/mx_fg.c
-        src/builtins/mx_find_tnode.c
-        src/builtins/mx_flang_comand.c
-        src/builtins/mx_fre_env_path.c
-        src/builtins/mx_get_info.c
-        src/builtins/mx_get_min_tnode.c
-        src/builtins/mx_get_name.c
-        src/builtins/mx_get_next_token.c
-        src/builtins/mx_get_path_env.c
-        src/builtins/mx_get_token_type.c
-        src/builtins/mx_get_twidth.c
-        src/utils/mx_history.c
-        src/utils/mx_home.c
-        src/builtins/mx_if_new_parameter.c
-        src/utils/mx_input.c
-        src/utils/mx_insert_tree.c
-        src/parsers/mx_is_buildin.c
-        src/parsers/mx_is_char.c
-        src/parsers/mx_is_commad.c
-        src/parsers/mx_is_link.c
-        src/parsers/mx_is_operator.c
-        src/builtins/mx_jobs.c
-        src/parsers/mx_key_delite.c
-        src/builtins/mx_key_duble_tab.c
-        src/builtins/mx_key_tab.c
-        src/utils/mx_lexer.c
-        src/parsers/mx_mini_parser_tab.c
-        src/utils/mx_not_ascii.c
-        src/parsers/mx_one_symbol.c
-        src/utils/mx_parametr_shell.c
-        src/parsers/mx_parsing.c
-        src/parsers/mx_parsing_input.c
-        src/exec/mx_pipe_execute.c
-        src/prinitng/mx_print_cont.c
-        src/prinitng/mx_print_env.c
-        src/prinitng/mx_print_error_env.c
-        src/prinitng/mx_print_esc.c
-        src/prinitng/mx_print_susp.c
-        src/prinitng/mx_print_tab_comands.c
-        src/prinitng/mx_printstr_env.c
-        src/builtins/mx_push_env.c
-        src/builtins/mx_pwd.c
-        src/builtins/mx_read_comand.c
-        src/exec/mx_read_keyboard.c
-        src/utils/mx_reg.c
-        src/builtins/mx_return_value.c
-        src/builtins/mx_serch_list.c
-        src/exec/mx_signals.c
-        src/utils/mx_start_program.c
-        src/utils/mx_str_bquote.c
-        src/utils/mx_strarr_add_to_strarr.c
-        src/utils/mx_subs.c
-        src/utils/mx_syntax_analyzer.c
-        src/utils/mx_token_in_program.c
-        src/builtins/mx_unset.c
-        src/builtins/mx_unset_fds.c
-        src/utils/mx_ush_close.c
-        src/utils/mx_ush_init.c
-        src/utils/mx_var_tree_to_var.c
-        src/utils/mx_wait_process.c
-        src/builtins/mx_which.c
-        src/utils/mx_write_from_to.c
-        src/utils/out_monitor.c)
+        src/utils/mx_copy_dub_arr.c
+        src/utils/mx_delit_fre.c
+        src/utils/mx_detect_exp.c
+        src/utils/mx_empty_proc.c
+        src/utils/mx_enable_disable_canon.c
+        src/utils/mx_getopt.c
+        src/utils/mx_join.c
+        src/utils/mx_name_search.c
+        src/utils/mx_opencheck.c
+        src/utils/mx_setup_term.c
+        src/utils/mx_strcmp_null.c
+        src/utils/mx_strpart.c)

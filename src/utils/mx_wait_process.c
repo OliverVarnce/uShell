@@ -1,5 +1,4 @@
 #include "ush.h"
-#include "macroses.h"
 
 static void check_status(char **argv, int status, t_info *info, pid_t pr) {
     char **mas_name = 0;

@@ -1,5 +1,4 @@
 #include "ush.h"
-#include "macroses.h"
 
 static t_process* get_process(int n, char *str, t_info *info) {
     t_list *tmp = info->processes;
