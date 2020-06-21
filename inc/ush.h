@@ -12,7 +12,6 @@
 #include <sys/types.h>
 #include <regex.h> 
 #include <pwd.h>
-#include <term.h>
 #include <stdio.h>
 #include <dirent.h>
 #include "libmx.h"
@@ -21,12 +20,14 @@
 #include <signal.h>
 #include <sys/wait.h>
 #include <termcap.h>
+#include <wchar.h>
 #include <sys/cdefs.h>
 #include <sys/_types.h>
 #include <sys/_types/_pid_t.h>
 #include <sys/_types/_id_t.h>
 #include <sys/signal.h>
 #include <sys/resource.h>
+
 
 #define MX_W_INT(w)         (*(int *)&(w))
 #define MX_WST(x)           (x & 0177)
