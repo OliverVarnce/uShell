@@ -48,9 +48,8 @@
 #define MX_FLAGS_W O_RDWR | O_CREAT | O_TRUNC, S_IWRITE | S_IREAD
 #define MX_FLAGS_WE O_RDWR | O_CREAT | O_APPEND, S_IWRITE | S_IREAD
 #define MAX_PROC_COUNT 500
-#define MX_HISTORY_STRING "\x1b[38;5;243mu$h> \x1b[38;5;68m"
-#define MX_NAME "\x1b[38;5;243mu$h> \x1b[38;5;68m"
-#define MX_SEARCH "\x1b[38;5;243mSearch > \x1b[38;5;68m"
+#define MX_USH "u$h> "
+#define MX_SEARCH "Search > "
 #define MX_PATH ((t_token*)tmp->next->next->data)->value[0]
 #define MX_FUNC_RETURN mx_return_value("HOME", &(info->var_tree))
 #define MX_GET_PATH (argv[i] ? argv[i] : MX_FUNC_RETURN)
@@ -184,7 +183,7 @@ enum e_keys{
 
 
 // tree
-void mx_insert_tree(t_tnode **root, t_tnode *new, 
+void mx_insert_tree(t_tnode **root, t_tnode *new,
     int (*cmp)(void*, void*),
     void (*free_)(void *)
 );

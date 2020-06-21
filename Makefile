@@ -53,7 +53,7 @@ SRC = $(addprefix $(SRC_DIR)/,\
         builtins/mx_unset.c \
         builtins/mx_unset_fds.c \
         builtins/mx_which.c \
-		exec/mx_ctrl_r.c \
+		signals/mx_ctrl_r.c \
 		exec/mx_exec_dmore.c \
 		exec/mx_exec_env_pr.c \
 		exec/mx_exec_less.c \
@@ -63,8 +63,8 @@ SRC = $(addprefix $(SRC_DIR)/,\
 		exec/mx_execute_proces.c \
 		exec/mx_execute_tree.c \
 		exec/mx_pipe_execute.c \
-		exec/mx_read_keyboard.c \
-		exec/mx_signals.c \
+		signals/mx_read_keyboard.c \
+		signals/mx_signals.c \
 		memory/mx_charge_paranetr_export.c \
 		memory/mx_clear_tokens.c \
 		parsers/mx_check_symbol.c \

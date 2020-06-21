@@ -66,6 +66,6 @@ void mx_clean_space_in_term(char *str, t_info *info, char *new_str) {
     }
     write(1,"\r",1);
     mx_print_esc("J");
-    mx_printstr(MX_HISTORY_STRING);
+    mx_printstr(MX_USH);
     mx_printstr(new_str);
 }

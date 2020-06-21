@@ -5,10 +5,10 @@ static unsigned int mx_read_keyb_and_prinitng(t_info *info, int index,
     unsigned int ch = 0;
 
     if (index != MX_MAX_COMAND + 1)
-        mx_terminal_out(MX_NAME, mx_strlen(MX_COMMAND[index]) + 1, 0,
+        mx_terminal_out(MX_USH, mx_strlen(MX_COMMAND[index]) + 1, 0,
                            MX_COMMAND[index]);
     else
-        mx_terminal_out(MX_NAME, 1, 0, "");
+        mx_terminal_out(MX_USH, 1, 0, "");
     mx_printstr("\n");
     mx_terminal_out(MX_SEARCH, i, 0, temp);
     ch = mx_getchar();
@@ -23,10 +23,10 @@ static int search_comand(t_info *info, int index, char *temp) {
 
     if (index != MX_MAX_COMAND + 1) {
         str_len_comand = mx_strlen(MX_COMMAND[index]) + 1;
-        mx_clean_terminal(MX_NAME, str_len_comand, 0, MX_COMMAND[index]);
+        mx_clean_terminal(MX_USH, str_len_comand, 0, MX_COMMAND[index]);
     }
     else
-        mx_clean_terminal(MX_NAME, 1, 0, "");
+        mx_clean_terminal(MX_USH, 1, 0, "");
     for (int y = 0; index_comand == MX_MAX_COMAND + 1 && MX_COMMAND[y]; y++)
         if (mx_strstr(MX_COMMAND[y], temp) != 0)
             index_comand = y;
