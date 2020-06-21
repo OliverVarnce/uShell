@@ -1,17 +1,21 @@
 #include "libmx.h"
 
-
 void *mx_realloc(void *ptr, size_t size) {
-    unsigned char *ptr_ = (unsigned char *)ptr;
-    unsigned char *newMem = (unsigned char *)malloc(size); 
+    if (size <= 0)
+        return NULL;
 
-    if (newMem == 0) 
-        return 0;
-    if(ptr == 0) 
-        return (void *)newMem;
-    for(size_t i = 0; i < size; i++) {
-        newMem[i] = ptr_[i];
-    }
+    void *new_ptr = malloc(size);
+
+    if (!new_ptr)
+        return NULL;
+
+    if (!ptr)
+        return new_ptr;
+
+    size_t size_ptr = malloc_size(ptr); // change to malloc_size()
+    //printf("%zu\n", size_ptr);
+    mx_memcpy(new_ptr, ptr, (size_ptr > size ? size : size_ptr));
     free(ptr);
-    return newMem;
+
+    return new_ptr;
 }

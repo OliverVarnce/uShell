@@ -1,20 +1,23 @@
 #include "libmx.h"
 
-unsigned long mx_hex_to_nbr(const char *hex) {
-    int a = 0;
-    unsigned long sum = 0;
-    unsigned long pow = 1;
+static char mx_tolower(char c) {
+	if (c >= 'A' && c <= 'Z') {
+		return c + 32;
+	}
+	return c;
+}
 
-    while (hex[a])
-        a++;
-    for (int i = a - 1; i >= 0; i--) {
-        if(hex[i] >= '0' && hex[i] <= '9')
-            sum = sum + (hex[i] - '0') * pow;
-        if(hex[i] >= 'A' && hex[i] <= 'Z')
-            sum = sum + (hex[i] - 'A' + 10) * pow;
-        if(hex[i] >= 'a' && hex[i] <= 'z')
-            sum = sum + (hex[i] - 'a' + 10) * pow;
-        pow *= 16;
-    }
-    return sum;
+unsigned long mx_hex_to_nbr(const char *hex) {
+	int hex_len = mx_strlen(hex);
+	char hex_digits[] = {'0', '1', '2', '3', '4', '5', '6'
+							, '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+	unsigned long dec_num = 0;
+
+	for (int i = 0, power = hex_len - 1; i < hex_len; i++, power--) {
+		for (int j = 0; j < 16; j++) {
+			if (mx_tolower(hex[i]) == hex_digits[j])
+				dec_num += j * mx_pow(16, power);
+		}
+	}
+	return dec_num;
 }

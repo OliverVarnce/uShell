@@ -1,38 +1,20 @@
 #include "libmx.h"
 
-static void write_str_to_strstr(char ***s1, const char *s, char c, int b) {
-    int a = 0;
-    int d = 0;
-    int i = 0;
-    char **s2 = *s1; 
-    
-    while (a < b) {
-        while (mx_get_char_index(&s[i], c) == 0 && s[i] != '\0')
-            i++;
-        d = mx_get_char_index(&s[i], c);
-        if (d > 0) {
-            s2[a++] = mx_strndup(&s[i], d);
-            i += d;
-        }
-        else {
-            s2[a++] = mx_strndup(&s[i], mx_strlen(&s[i])); 
-            i += d;
-        }
-    }
-    s2[b] = 0;
-    *s1 = s2;
-}
-
 char **mx_strsplit(const char *s, char c) {
-    int b = 0;
-    char **s1 = NULL;
+    if (!s) return NULL;
 
-    if (s == 0)
-        return 0;
-    b = mx_count_words(s, c);
-    s1 = (char **)malloc((b + 1) * sizeof(char *));
-    if (s1 != 0) { 
-        write_str_to_strstr(&s1, s, c, b);
+    int words = mx_count_words(s, c);
+    char **strings = (char **)malloc(sizeof(char *) * (words + 1));
+
+    for (int i = 0, b = 0, e = 0; i < words; i++) {
+        for (; s[b] == c && s[b] != '\0'; b++);
+        e = b;
+        for (; s[e] != c && s[e] != '\0'; e++);
+        //printf("Before mx_strndup(). b = %d, e = %d\n", b , e);
+        strings[i] = mx_strndup(&s[b], e - b);
+        b = e;
     }
-    return s1;
+    strings[words] = NULL;
+
+    return strings;
 }

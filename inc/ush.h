@@ -12,10 +12,12 @@
 #include <sys/types.h>
 #include <regex.h> 
 #include <pwd.h>
+#include <term.h>
 #include <stdio.h>
 #include <dirent.h>
 #include "libmx.h"
 #include <time.h>
+#include <termios.h>
 #include <signal.h>
 #include <sys/wait.h>
 #include <termcap.h>
@@ -329,5 +331,19 @@ int mx_delete_veriable_env(char *str1, char *str2, t_var *var, int *i);
 
 // echo
 int mx_0_and_x(char *str, int *i);
+
+//utils
+char *mx_strjoin2(char *s1, char *s2);
+char **mx_dupstrarr(char **strs);
+int mx_strcmp2(const char *s1, const char *s2);
+char *mx_strjoin3(char *s1, char *s2);
+char *mx_arrstr_to_str(char **strs);
+unsigned int mx_getchar();
+bool mx_is_str_starts(char *string, char *start);
+void mx_add_to_strarr(char ***strs, char *str);
+void mx_pop_front_free_data(t_list **head);
+void mx_pop_list(t_list **head, void *data, bool(*if_list)(void *, void *),
+                 void(*del_data)(void *));
+
 
 #endif

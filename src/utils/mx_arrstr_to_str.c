@@ -1,4 +1,4 @@
-#include "libmx.h"
+#include "ush.h"
 
 char *mx_arrstr_to_str(char **strs) {
     char *new_string = 0;

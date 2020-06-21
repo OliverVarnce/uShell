@@ -1,16 +1,22 @@
 #include "libmx.h"
 
 void mx_printint(int n) {
-    if (n == -2147483648) {
-        mx_printchar('-');
-        mx_printchar('2');
-        n = 147483648;
+    int digits[10];
+    int i = 0;
+    long x = n;
+
+    if (n == 0) {
+        mx_printchar('0');
+        return;
     }
     if (n < 0) {
         mx_printchar('-');
-        n = -n;
+        x *= -1;
     }
-    if (n > 9) 
-        mx_printint(n / 10);
-    mx_printchar(n % 10 + '0');
+    for (; x > 0; x /= 10) {
+        digits[i++] = x % 10;
+    }
+    while (i > 0) {
+        mx_printchar(digits[--i] + 48);
+    }
 }

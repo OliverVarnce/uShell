@@ -1,12 +1,11 @@
-#include "libmx.h"
-#include <termios.h>
+#include "ush.h"
 
 static void setTerminalSettings() {
     struct termios newTerm;
 
     tcgetattr(STDIN_FILENO, &newTerm);
     newTerm.c_iflag &= ~(IGNBRK | BRKINT | PARMRK | ISTRIP
-                | INLCR | IGNCR | ICRNL | IXON);
+                         | INLCR | IGNCR | ICRNL | IXON);
     newTerm.c_lflag &= ~(ECHO | ECHONL | ICANON | ISIG | IEXTEN);
     newTerm.c_cflag &= ~(CSIZE | PARENB);
     newTerm.c_cflag |= CS8;

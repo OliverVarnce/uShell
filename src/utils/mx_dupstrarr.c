@@ -1,4 +1,4 @@
-#include "libmx.h"
+#include "ush.h"
 
 char **mx_dupstrarr(char **strs) {
     char **new_arr = 0;

@@ -1,43 +1,29 @@
 #include "libmx.h"
 
-static int int_str_sub(const char *str, const char *sub, int a, int b) {
-    int temp = 0;
+char *mx_replace_substr(const char *str, const char *sub, const char *replace) {
+    int subs = 0, sub_len = 0, rep_len = 0, new_len = 0, b = 0;
+    char *rep_str = NULL;
 
-    if (mx_get_substr_index(&str[a], sub) > 0)
-        temp = mx_get_substr_index(&str[a], sub);
-    else
-        temp = b;
-    return temp;
-}
-
-static int char_to_str(const char *str, const char *sub,
-                        const char *replace) {
-    int a = mx_count_substr(str, sub);
-    int b  = mx_strlen(str) - (mx_strlen(sub) - mx_strlen(replace)) * a;
-
-    return b;
-}
-
-char *mx_replace_substr(const char *str,
-                        const char *sub, const char *replace) {
-    int a[5] = {0, 0, 0, 0, 0};
-    char *s = NULL;
-
-    if (str == NULL || sub == NULL || replace == NULL)
+    if (!str || !sub || !replace)
         return NULL;
-    a[1] = char_to_str(str, sub, replace);
-    s = mx_strnew(a[1]);
-    while (a[2] < a[1]) { 
-        while (mx_get_substr_index(&str[a[3]], sub))
-            s[a[2]++] = str[a[3]++];
-        if (mx_get_substr_index(&str[a[3]], sub) >= 0) {
-            for (int l = 0; l < mx_strlen(replace); l++, a[2]++)
-                s[a[2]] = replace[l];
-            a[3] = a[3] + mx_strlen(sub);
-        }
-        a[4] = int_str_sub(str, sub, a[3], a[1]);
-        for (int k = 0; k < a[4] && a[2] < a[1]; a[2]++, a[3]++, k++)
-            s[a[2]] = str[a[3]];
+
+    sub_len = mx_strlen(sub);
+    rep_len = mx_strlen(replace);
+
+    if (sub_len == 0 || rep_len == 0)
+        return mx_strdup(str); // or return NULL - ?
+
+    subs = mx_count_substr(str, sub);
+    new_len = mx_strlen(str) - subs * (sub_len - rep_len);
+    rep_str = mx_strnew(new_len);
+
+    for (int i = 0, l = mx_get_substr_index(str, sub); i < subs; i++) {
+        rep_str = mx_strncat(rep_str, &str[b], l);
+        rep_str = mx_strcat(rep_str, replace);
+        b += l + sub_len;
+        l = mx_get_substr_index(&str[b], sub);
     }
-    return s;
+    rep_str = mx_strcat(rep_str, &str[b]);
+
+    return rep_str;
 }

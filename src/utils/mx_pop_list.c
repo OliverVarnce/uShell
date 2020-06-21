@@ -1,4 +1,4 @@
-#include "libmx.h"
+#include "ush.h"
 
 static bool del(t_list *s, t_list **head, void(*del_data)(void *)) {
     del_data(s->data);
@@ -24,7 +24,7 @@ void mx_pop_list(t_list **head, void *data, bool(*if_list)(void *, void *),
             s->next = temp->next;
             free(temp);
             return;
-        } 
+        }
         s = s->next;
     }
 }
