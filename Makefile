@@ -208,7 +208,6 @@ OBJ =	mx_add_one_rank.o \
   		mx_printstr_env.o \
   		main.o \
   		bit_function.o \
-        main.o \
         mx_0_and_x.o \
         mx_arrstr_to_str.o \
         mx_ascii.o \
@@ -273,8 +272,7 @@ ush : $(SRC) inc/ush.h libmx/libmx.a
 
 uninstall : clean
 	@make uninstall -C $(LIBMXF)
-	@rm -rf $(APP_NAME)
-	@rm $(OBJ)
+	@rm -rf $(APP_NAME) $(OBJ)
 	@printf "$(NAME) \033[31;1muninstalled\033[0m\n"
 
 clean :
