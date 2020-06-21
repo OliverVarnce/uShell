@@ -80,7 +80,7 @@ SRC = $(addprefix $(SRC_DIR)/,\
 		parsers/mx_parsing_input.c \
 		printing/mx_print_cont.c \
 		printing/mx_print_env.c \
-		printing/mx_print_error_env.c \
+		printing/mx_printerr_env.c \
 		printing/mx_print_esc.c \
 		printing/mx_print_susp.c \
 		printing/mx_print_tab_comands.c \
@@ -126,7 +126,7 @@ SRC = $(addprefix $(SRC_DIR)/,\
         utils/mx_wait_process.c \
         utils/mx_write_from_to.c \
         utils/mx_getchar.c \
-        utils/out_monitor.c \
+        utils/mx_term_out.c \
         utils/mx_add_to_strarr.c \
         utils/mx_pop_front_free_data.c \
         utils/mx_pop_list.c)
@@ -201,7 +201,7 @@ OBJ =	mx_add_one_rank.o \
   		mx_parsing_input.o \
   		mx_print_cont.o \
   		mx_print_env.o \
-  		mx_print_error_env.o \
+  		mx_printerr_env.o \
   		mx_print_esc.o \
   		mx_print_susp.o \
   		mx_print_tab_comands.o \
@@ -246,14 +246,14 @@ OBJ =	mx_add_one_rank.o \
         mx_wait_process.o \
         mx_write_from_to.o \
         mx_getchar.o \
-        out_monitor.o \
+        mx_term_out.o \
         mx_add_to_strarr.o \
         mx_pop_front_free_data.o \
         mx_pop_list.o
 
 CC = clang
 
-CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic #-g3 -fsanitize=address
+CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 
 all : install
 

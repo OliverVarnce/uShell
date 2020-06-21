@@ -49,13 +49,11 @@
 #define MX_FLAGS_WE O_RDWR | O_CREAT | O_APPEND, S_IWRITE | S_IREAD
 #define MAX_PROC_COUNT 500
 #define MX_HISTORY_STRING "\x1b[38;5;243mu$h> \x1b[38;5;68m"
-#define MX_NAME "\x4\x1b[38;5;76mu$h> \x1b[38;5;76m"
-#define MX_SEARCH "\x8\x1b[38;5;243mSearch > \x1b[38;5;68m"
+#define MX_NAME "\x1b[38;5;243mu$h> \x1b[38;5;68m"
+#define MX_SEARCH "\x1b[38;5;243mSearch > \x1b[38;5;68m"
 #define MX_PATH ((t_token*)tmp->next->next->data)->value[0]
 #define MX_FUNC_RETURN mx_return_value("HOME", &(info->var_tree))
 #define MX_GET_PATH (argv[i] ? argv[i] : MX_FUNC_RETURN)
-#define MX_AMPERSAND "\033[1;31m\'&\' - not allowed in this version!\033[0m\n"
-#define MX_DLES "\033[1;31m\'<<\' - not allowed in this version!\033[0m\n"
 #define MX_REG_EXPORT   "^[A-Za-z_]+[A-Za-z_0-9]*(=.*)?$"
 #define MX_REG_ERR      "^^-(i+)?[^Pui]"
 #define MX_REG_I        "^-i+((P|u)?|((P|u).+)?)$"
@@ -264,10 +262,10 @@ int mx_len_symbol(int sum, char *str);
 int mx_input(t_info *info);
 void mx_print_esc(char *s);
 void mx_check_outprogram_new_line(void);
-void mx_clean_monitor(char *str, t_info *info, char *new_str);
+void mx_clean_space_in_term(char *str, t_info *info, char *new_str);
 void mx_print_esc(char *s);
-void mx_out_monitor_new(char *name, int table2, int pos,char *str);
-void mx_clean_monitor_new(char *name, int table2, int pos,char *str);
+void mx_terminal_out(char *name, int table2, int pos,char *str);
+void mx_clean_terminal(char *name, int table2, int pos,char *str);
 void mx_print_esc(char *s);
 void mx_key_delite(t_info *info);
 char **mx_key_tab(char *parsing, char **str, t_info *info);
@@ -323,7 +321,7 @@ char **mx_get_name(t_info *info, int numb);
 char **mx_call_vlad(char **argv, int i);
 char **mx_env_to_vlad(t_var *var);
 bool mx_check_env(char **argv, char **path, t_var *var, int *i);
-bool mx_print_error_env(char *str, int flag);
+bool mx_printerr_env(char *str, int flag);
 void mx_print_env(t_var *var);
 void mx_fre_env_path(t_var *var, char *path);
 bool mx_reg(char *str, char *regular);

@@ -6,7 +6,7 @@ static bool print() {
     return 1;
 }
 
-bool mx_print_error_env(char *str, int flag) {
+bool mx_printerr_env(char *str, int flag) {
     char s;
 
     if (flag == 2) {

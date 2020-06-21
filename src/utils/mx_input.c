@@ -54,7 +54,7 @@ int mx_input(t_info *info) {
     info->input = create_input(info);
     while (if_next == 3) {
         if (chars[2] != 10 || chars[0] == 9 || chars[0] == 18)
-            mx_out_monitor_new(MX_NAME, MX_STR_LEN, MX_STR_POS, MX_STR);
+            mx_terminal_out(MX_NAME, MX_STR_LEN, MX_STR_POS, MX_STR);
         ch = mx_read_keyboard(info);
         if (ch > 127)
             mx_ctrl_v_and_not_ascii(info, chars);

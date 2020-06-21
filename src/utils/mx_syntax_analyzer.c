@@ -5,7 +5,6 @@ static bool is_double_op(t_list *tmp, bool *op) {
         if (*op) {
             mx_printerr("\033[1;31mu$h: Error near \'");
             mx_printerr(((t_token*)tmp->data)->value[0]);
-            mx_printerr("\'\033[0m\n");
             return true;
         }
         *op = true;
@@ -15,7 +14,6 @@ static bool is_double_op(t_list *tmp, bool *op) {
     if ((tmp->next == 0) && (*op)) {
         mx_printerr("\033[1;31mu$h: Error near \'");
         mx_printerr(((t_token*)tmp->data)->value[0]);
-        mx_printerr("\'\033[0m\n");
         return false;
     }
     return false;
@@ -35,7 +33,6 @@ static bool is_double_more(t_list *tmp) {
         {
             mx_printerr("\033[1;31mu$h: Error near \'");
             mx_printerr(value);
-            mx_printerr("\'\033[0m\n");
             return true;
         }
     }
@@ -51,7 +48,6 @@ static bool is_double_less(t_list *tmp) {
             (mx_strcmp(MX_PATH, ">") == 0))) {
             mx_printerr("\033[1;31mu$h: Error near \'");
             mx_printerr(value);
-            mx_printerr("\'\033[0m\n");
             return true;
         }
     }
@@ -60,11 +56,11 @@ static bool is_double_less(t_list *tmp) {
 
 static bool mx_is_ampersand(t_list *tmp) {
     if (mx_strcmp(((t_token*)tmp->data)->value[0], "&") == 0) {
-        mx_printerr(MX_AMPERSAND);
+        mx_printerr("May be later :-)");
         return true;
     }
     if (mx_strcmp(((t_token*)tmp->data)->value[0], "<<") == 0) {
-        mx_printerr(MX_DLES);
+        mx_printerr("May be later :-)");
         return true;
     }
     return false;

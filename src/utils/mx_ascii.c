@@ -25,32 +25,32 @@ static void special_symbols(unsigned int ch, t_info *info) {
 
     if (MX_SYMBOL != 9 && ch == 9) {
         str_tab = mx_strndup(MX_STR,str_pos);
-        mx_clean_monitor_new(MX_NAME, MX_STR_LEN, MX_STR_POS, MX_STR);
+        mx_clean_terminal(MX_NAME, MX_STR_LEN, MX_STR_POS, MX_STR);
         info->input->comand_tab = mx_key_tab(str_tab, &MX_STR, info);
         info->input->pos_tab = 0;
     }
     if (MX_SYMBOL == 9 && ch == 9) {
-        mx_clean_monitor_new(MX_NAME, MX_STR_LEN, MX_STR_POS, MX_STR);
+        mx_clean_terminal(MX_NAME, MX_STR_LEN, MX_STR_POS, MX_STR);
         mx_key_duble_tab(&MX_STR, info->input->comand_tab, info);
     }
     MX_SYMBOL = mx_handle_events(ch);
     if (MX_SYMBOL == 18) {
-        mx_clean_monitor_new(MX_NAME, MX_STR_LEN, MX_STR_POS, MX_STR);
+        mx_clean_terminal(MX_NAME, MX_STR_LEN, MX_STR_POS, MX_STR);
         mx_ctrl_r(info);
     }
 }
 
 static int ctrl_enter_d_c(t_info *info) {
     if (MX_SYMBOL == -1) {
-        mx_clean_monitor(MX_STR, info, "exit");
+        mx_clean_space_in_term(MX_STR, info, "exit");
         return 0;
     }
     else if (MX_SYMBOL == 2) {
-        mx_clean_monitor_new(MX_NAME, MX_STR_LEN, MX_STR_POS, MX_STR);
+        mx_clean_terminal(MX_NAME, MX_STR_LEN, MX_STR_POS, MX_STR);
         return 2;
     }
     else if (MX_SYMBOL == KEY_ENTER) {
-        mx_clean_monitor(MX_STR, info, MX_STR);
+        mx_clean_space_in_term(MX_STR, info, MX_STR);
         if (mx_strlen(MX_STR) != 0) {
             if (info->history == NULL
                 || mx_strcmp(MX_STR, info->history->data) != 0)
@@ -72,7 +72,7 @@ int mx_ascii(t_info *info, char *chars, unsigned int ch) {
             chars[2] = 10;
     }
     else {
-        mx_clean_monitor_new(MX_NAME, MX_STR_LEN, MX_STR_POS, MX_STR);
+        mx_clean_terminal(MX_NAME, MX_STR_LEN, MX_STR_POS, MX_STR);
         mx_one_symbol(&(MX_STR), ch, &(MX_STR_LEN), MX_STR_POS);
     }
     return spec_symbol;

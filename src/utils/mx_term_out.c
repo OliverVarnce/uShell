@@ -21,7 +21,7 @@ static void print_two_str(char *str1, char *str2) {
     mx_printstr(str2);
 }
 
-void mx_out_monitor_new(char *name, int table2, int pos, char *str) {
+void mx_terminal_out(char *name, int table2, int pos, char *str) {
     int symbol = mx_bit_sumbol(&str[table2 - pos - 1]);
     int len = (int) name[0];
     int col = mx_get_twidth();
@@ -43,7 +43,7 @@ void mx_out_monitor_new(char *name, int table2, int pos, char *str) {
     mx_printstr("\x1b[0m");
 }
 
-void mx_clean_monitor_new(char *name, int table2, int pos, char *str) {
+void mx_clean_terminal(char *name, int table2, int pos, char *str) {
 
     int temp;
     int len = (int)name[0];
@@ -56,7 +56,7 @@ void mx_clean_monitor_new(char *name, int table2, int pos, char *str) {
     mx_print_esc("J");
 }
 
-void mx_clean_monitor(char *str, t_info *info, char *new_str) {
+void mx_clean_space_in_term(char *str, t_info *info, char *new_str) {
     int temp;
     int col = mx_get_twidth();
 
@@ -68,5 +68,4 @@ void mx_clean_monitor(char *str, t_info *info, char *new_str) {
     mx_print_esc("J");
     mx_printstr(MX_HISTORY_STRING);
     mx_printstr(new_str);
-    mx_printstr(" \x1b[0m\n");
 }
