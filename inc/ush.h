@@ -12,7 +12,6 @@
 #include <sys/types.h>
 #include <regex.h> 
 #include <pwd.h>
-#include <term.h>
 #include <stdio.h>
 #include <dirent.h>
 #include "libmx.h"
@@ -21,6 +20,7 @@
 #include <signal.h>
 #include <sys/wait.h>
 #include <termcap.h>
+#include <wchar.h>
 #include <sys/cdefs.h>
 #include <sys/_types.h>
 #include <sys/_types/_pid_t.h>

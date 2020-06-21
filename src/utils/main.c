@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static void mx_not_stdin_terminal(t_info *info, int argc, char *argv[]) {
+void mx_not_stdin_terminal(t_info *info, int argc, char *argv[]) {
     char *str = 0;
     char *temp = mx_strnew(1024);
     char *temp2 = 0;
@@ -26,7 +26,7 @@ int main(int argc, char *argv[], char **envp) {
     int str = 1;
     t_info *info = 0;
 
-    //mx_get_twidth();
+    mx_get_twidth();
     mx_ush_init(&info, envp);
     if (isatty(0) == 0) 
         mx_not_stdin_terminal(info, argc, argv);
@@ -42,5 +42,6 @@ int main(int argc, char *argv[], char **envp) {
             info->if_ctrl_c = 1;
         }
     mx_ush_close(info);
+    system("leaks ush");
     return info->exit_status;
 }
