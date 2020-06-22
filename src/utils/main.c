@@ -22,12 +22,12 @@ void mx_not_stdin_terminal(t_ush *ush, int argc, char *argv[]) {
     argc++;
 }
 
-int main(int argc, char *argv[], char **envp) {
+int main(int argc, char *argv[], char **env) {
     int str = 1;
     t_ush *ush = 0;
 
     mx_get_twidth();
-    mx_ush_init(&ush, envp);
+    mx_ush_init(&ush, env);
     if (isatty(0) == 0) 
         mx_not_stdin_terminal(ush, argc, argv);
     else

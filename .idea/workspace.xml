@@ -12,23 +12,243 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66ffa57a-d346-4769-a3ff-cfc76628324e" name="Default Changelist" comment="bugfix">
+      <change afterPath="$PROJECT_DIR$/src/utils/mx_env_to_var.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/mx_setenv.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_atoi.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_binary_search.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_bubble_sort.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_count_substr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_count_words.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_create_node.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_del_extra_spaces.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_del_strarr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_delete_list.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_file_to_str.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_foreach.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_get_char_index.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_get_substr_index.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_hex_to_nbr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_isalpha.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_isdigit.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_isspace.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_itoa.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_list_size.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_memccpy.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_memchr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_memcmp.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_memcpy.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_memmem.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_memmove.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_memrchr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_memset.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_nbr_to_hex.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_pop_back.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_pop_front.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_pow.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_print_strarr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_print_unicode.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_printchar.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_printerr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_printint.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_printstr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_push_back.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_push_front.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_quicksort.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_read_line.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_realloc.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_replace_substr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_sort_list.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_sqrt.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_str_reverse.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_strcat.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_strcmp.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_strcpy.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_strdel.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_strdup.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_strjoin.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_strlen.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_strncat.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_strncmp.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_strncpy.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_strndup.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_strnew.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_strsplit.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_strstr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_strtrim.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/libmx/src/mx_swap_char.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_add_one_rank.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_add_process.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_buildin_list.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_call_vlad.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_cd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_check_env.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_close_all_pr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_del_last_rank.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_del_pid_process.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_del_top_process.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_delete_tnode.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_delete_veriable_env.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_echo.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_end_flag.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_env.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_env_to_vlad.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_export.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_fg.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_find_tnode.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_flang_comand.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_fre_env_path.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_get_info.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_get_min_tnode.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_get_name.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_get_next_token.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_get_path_env.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_get_token_type.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_get_twidth.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_if_new_parameter.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_jobs.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_key_duble_tab.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_key_tab.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_push_env.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_pwd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_read_comand.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_return_value.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_serch_list.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_unset.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_unset_fds.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/builtins/mx_which.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/exec/mx_exec_dmore.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/exec/mx_exec_env_pr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/exec/mx_exec_less.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/exec/mx_exec_more.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/exec/mx_exec_token.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/exec/mx_execute.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/exec/mx_execute_proces.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/exec/mx_execute_tree.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/exec/mx_pipe_execute.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/memory/mx_charge_paranetr_export.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/memory/mx_clear_tokens.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/parsers/mx_check_symbol.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/parsers/mx_is_buildin.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/parsers/mx_is_char.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/parsers/mx_is_commad.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/parsers/mx_is_link.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/parsers/mx_is_operator.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/parsers/mx_key_delite.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/parsers/mx_mini_parser_tab.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/parsers/mx_one_symbol.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/parsers/mx_parsing.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/parsers/mx_parsing_input.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/printing/mx_print_cont.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/printing/mx_print_env.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/printing/mx_print_esc.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/printing/mx_print_susp.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/printing/mx_print_tab_comands.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/printing/mx_printerr_env.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/printing/mx_printstr_env.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/signals/mx_ctrl_r.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/signals/mx_read_keyboard.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/signals/mx_signals.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/bit_function.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/main.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_0_and_x.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_add_to_strarr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_arrstr_to_str.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_ascii.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_audit_str.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_chdir_l.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_chdir_p.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_create_ast.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_create_comands.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_create_tnode.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_create_token.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_delete_ast.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_do_replace.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_dupstrarr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_exit.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_getchar.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_history.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_home.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_input.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_insert_tree.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_is_str_starts.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_lexer.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_loop.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_not_ascii.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_parametr_shell.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_pop_front_free_data.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_pop_list.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_reg.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_start_program.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_str_bquote.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_strarr_add_to_strarr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_strcmp2.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_strjoin2.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_strjoin3.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_subs.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_syntax_analyzer.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_term_out.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_token_in_program.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_ush_close.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_ush_init.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_var_tree_to_var.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_wait_process.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_write_from_to.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/USH.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/USH.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/ush.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ush.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_ctrl_v_and_not_ascii.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_ctrl_v_and_not_ascii.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_buildin_list.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_buildin_list.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_cd.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_cd.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_echo.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_echo.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_env.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_env.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_export.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_export.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/builtins/mx_fg.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_fg.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_key_duble_tab.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_key_duble_tab.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_key_tab.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_key_tab.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parsers/mx_key_delite.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/mx_key_delite.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parsers/mx_mini_parser_tab.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/mx_mini_parser_tab.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/signals/mx_ctrl_r.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/signals/mx_ctrl_r.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/signals/mx_read_keyboard.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/signals/mx_read_keyboard.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/signals/mx_signals.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_get_info.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_get_info.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_if_new_parameter.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_if_new_parameter.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_jobs.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_jobs.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_push_env.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_push_env.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_return_value.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_return_value.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_serch_list.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_serch_list.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_unset.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_unset.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_which.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_which.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exec/mx_exec_dmore.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/exec/mx_exec_dmore.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exec/mx_exec_env_pr.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/exec/mx_exec_env_pr.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exec/mx_exec_less.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/exec/mx_exec_less.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exec/mx_execute_tree.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/exec/mx_execute_tree.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mx_ascii.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_ascii.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mx_home.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_home.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/mx_input.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_input.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mx_not_ascii.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_not_ascii.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mx_parametr_shell.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_parametr_shell.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mx_start_program.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_start_program.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mx_str_bquote.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_str_bquote.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/mx_term_out.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_term_out.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/mx_ush_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_ush_init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mx_var_tree_to_var.c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/mx_wait_process.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_wait_process.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +274,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -72,7 +293,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="USH" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="USH" TARGET_NAME="USH" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="USH" RUN_TARGET_NAME="USH">
+    <configuration name="USH" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="USH" TARGET_NAME="USH" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="USH" RUN_TARGET_NAME="USH">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -92,6 +313,7 @@
       <workItem from="1592560073242" duration="3241000" />
       <workItem from="1592773051887" duration="5003000" />
       <workItem from="1592819904313" duration="2836000" />
+      <workItem from="1592839911420" duration="3484000" />
     </task>
     <task id="LOCAL-00001" summary="razbil na papki">
       <created>1592565543518</created>
@@ -132,7 +354,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="razbil na papki" />
@@ -180,14 +402,16 @@
       <screen x="0" y="23" width="1280" height="730" />
     </state>
     <state width="1238" height="227" key="GridCell.Tab.1.right/0.23.1280.730@0.23.1280.730" timestamp="1592820590843" />
-    <state width="320" height="242" key="ImportCMakeProjectWizard.bottomPanel" timestamp="1592819900589">
-      <screen x="0" y="23" width="1280" height="730" />
+    <state width="640" height="306" key="ImportCMakeProjectWizard.bottomPanel" timestamp="1592839907443">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state width="320" height="242" key="ImportCMakeProjectWizard.bottomPanel/0.23.1280.730@0.23.1280.730" timestamp="1592819900589" />
-    <state width="320" height="315" key="ImportCMakeProjectWizard.topPanel" timestamp="1592819900588">
-      <screen x="0" y="23" width="1280" height="730" />
+    <state width="640" height="306" key="ImportCMakeProjectWizard.bottomPanel/0.23.2560.1337@0.23.2560.1337" timestamp="1592839907443" />
+    <state width="640" height="715" key="ImportCMakeProjectWizard.topPanel" timestamp="1592839907442">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state width="320" height="315" key="ImportCMakeProjectWizard.topPanel/0.23.1280.730@0.23.1280.730" timestamp="1592819900588" />
+    <state width="640" height="715" key="ImportCMakeProjectWizard.topPanel/0.23.2560.1337@0.23.2560.1337" timestamp="1592839907442" />
     <state x="128" y="85" key="MergeDialog" timestamp="1592819210825">
       <screen x="0" y="23" width="1280" height="730" />
     </state>
@@ -204,10 +428,11 @@
       <screen x="0" y="23" width="1280" height="730" />
     </state>
     <state x="431" y="309" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.730@0.23.1280.730" timestamp="1592816719251" />
-    <state x="321" y="158" width="598" height="548" key="find.popup" timestamp="1592822252849">
-      <screen x="0" y="23" width="1280" height="730" />
+    <state x="642" y="270" width="1196" height="1004" key="find.popup" timestamp="1592843064657">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="321" y="158" width="598" height="548" key="find.popup/0.23.1280.730@0.23.1280.730" timestamp="1592822252849" />
+    <state x="642" y="270" width="1196" height="1004" key="find.popup/0.23.2560.1337@0.23.2560.1337" timestamp="1592843064657" />
     <state x="394" y="108" key="git4idea.branch.GitSmartOperationDialog" timestamp="1592819793514">
       <screen x="0" y="23" width="1280" height="730" />
     </state>

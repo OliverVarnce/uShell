@@ -54,7 +54,8 @@ int mx_input(t_ush *ush) {
     ush->input = create_input(ush);
     while (if_next == 3) {
         if (chars[2] != 10 || chars[0] == 9 || chars[0] == 18)
-            mx_terminal_out(MX_USH, ush->input->inplen, ush->input->endpoint, ush->input->comands[ush->input->id]);
+            mx_terminal_out(MX_USH, ush->input->inplen, ush->input->endpoint,
+                            ush->input->comands[ush->input->id]);
         ch = mx_read_keyboard(ush);
         if (ch > 127)
             mx_ctrl_v_and_not_ascii(ush, chars);

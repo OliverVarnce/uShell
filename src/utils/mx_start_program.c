@@ -43,39 +43,39 @@ static char *create_mem(char *str1, char **str2, char *str3, char **value) {
     return mem;
 }
 
-static bool check_if_env_have(char *name, t_list **var_tree) {
-    t_list *var_tree_check = *var_tree;
+static bool check_if_env_have(char *name, t_list **environ) {
+    t_list *environ_check = *environ;
 
-    while (var_tree_check) {
-        if (mx_strcmp(((t_variable *)var_tree_check->data)->name, name) == 0)
+    while (environ_check) {
+        if (mx_strcmp(((t_variable *)environ_check->data)->name, name) == 0)
             return false;
         else
-            var_tree_check = var_tree_check->next;
+            environ_check = environ_check->next;
     }
     return true;
 }
 
-static void check_env(t_list **var_tree) {
+static void check_env(t_list **environ) {
     char *tmp = 0;
 
-    if (check_if_env_have("PWD", var_tree)) {
+    if (check_if_env_have("PWD", environ)) {
         tmp = getcwd(NULL, 0);;
-        mx_push_env(var_tree, mx_strdup("PWD"),
+        mx_push_env(environ, mx_strdup("PWD"),
                     tmp, mx_strjoin("PWD=", tmp));
     }
-    if (check_if_env_have("OLDPWD", var_tree)) {
+    if (check_if_env_have("OLDPWD", environ)) {
         tmp = getcwd(NULL, 0);
-        mx_push_env(var_tree, mx_strdup("OLDPWD"), tmp,
+        mx_push_env(environ, mx_strdup("OLDPWD"), tmp,
                     mx_strjoin("OLDPWD=", tmp));
     }
-    if (check_if_env_have("SHLVL", var_tree)) {
+    if (check_if_env_have("SHLVL", environ)) {
         tmp = mx_strdup("1");
-        mx_push_env(var_tree, mx_strdup("SHLVL"), tmp,
+        mx_push_env(environ, mx_strdup("SHLVL"), tmp,
                     mx_strjoin("SHLVL=", tmp));
     }
 }
 
-void mx_start_program(t_list **var_tree, char **env) {
+void mx_start_program(t_list **environ, char **env) {
     int i = -1;
     char **envvar = 0;
     char *tmp = 0;
@@ -90,9 +90,9 @@ void mx_start_program(t_list **var_tree, char **env) {
         var->is_env = true;
         var->mem = tmp;
         putenv(tmp);
-        mx_push_back(var_tree, var);
+        mx_push_back(environ, var);
         free(envvar[1]);
         free(envvar);
     }
-    check_env(var_tree);
+    check_env(environ);
 }

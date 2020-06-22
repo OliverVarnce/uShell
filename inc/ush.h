@@ -42,7 +42,7 @@
 #define MX_USH "\x4\x1b[32;5;76mu$h> \x1b[37;5;76m"
 #define MX_SEARCH "Search > "
 #define MX_PATH ((t_token*)tmp->next->next->data)->value[0]
-#define MX_FUNC_RETURN mx_return_value("HOME", &(ush->var_tree))
+#define MX_FUNC_RETURN mx_return_value("HOME", &(ush->environ))
 #define MX_GET_PATH (argv[i] ? argv[i] : MX_FUNC_RETURN)
 #define MX_REG_EXPORT   "^[A-Za-z_]+[A-Za-z_0-9]*(=.*)?$"
 #define MX_REG_ERR      "^^-(i+)?[^Pui]"
@@ -141,8 +141,8 @@ typedef struct s_ush {
     char *old_pwd;
     char *path;
     char *home;
-    t_list *var_tree;
-    int last_status;
+    t_list *environ;
+    int last_return;
 }              t_ush;
 
 enum e_keys{
@@ -182,14 +182,14 @@ void mx_insert_tree(t_tnode **root, t_tnode *new,
 t_tnode* mx_get_min_tnode(t_tnode *root);
 void mx_strarr_add_to_strarr(char ***strs, char ***str);
 t_tnode *mx_create_tnode(void *data);
-void mx_start_program(t_list **var_tree, char **env);
+void mx_start_program(t_list **environ, char **env);
 void mx_delete_tnode(t_tnode **root, void *data, int (*cmp)(void*, void*), void (*free_tnode)(t_tnode *tnode));
-void mx_push_env(t_list **var_tree, char *name, char *value, char *mem);
+void mx_push_env(t_list **environ, char *name, char *value, char *mem);
 t_tnode *mx_find_tnode(t_tnode *root, void *data, int (*cmp)(void*, void*));
 void mx_if_new_parameter(char *str, int *start, int end, t_ush *processes);
-char *mx_return_value(char **str, t_list **var_tree);
-char *mx_return_value2(const char *str, t_list **var_tree);
-void mx_serch_list(t_list **var_tree, char *name, char *value);
+char *mx_return_value(char **str, t_list **environ);
+char *mx_return_value2(const char *str, t_list **environ);
+void mx_serch_list(t_list **environ, char *name, char *value);
 t_token *mx_create_token(char type, char **value, int priority);
 void mx_clear_tokens(t_list **tokens);
 t_token* mx_get_next_token(int *start, int end, char *str, t_ush *processes);
@@ -198,7 +198,7 @@ void mx_parametr_shell(t_ush *processes, int *i, char **new_str);
 int mx_flang_comand(char *str, int *pos, int end, int flag);
 void mx_read_user(char **user);
 t_token *mx_token_in_program(int *curr_pos, int end, char *str, t_ush *processes);
-int mx_exec_dmore(t_tnode *root, int *fds, int operatorStatus, t_ush *ush);
+int mx_exec_dmore(t_tnode *root, int *fds, int opstat, t_ush *ush);
 void mx_ush_init(t_ush **ush, char **env);
 void mx_subs(char **str);
 void mx_parsing(char *str, t_ush *ush);
@@ -218,8 +218,8 @@ void mx_printstr_env(char *str);
 int mx_pwd(char **argv, t_ush *ush);
 void mx_echo(char **str,  t_ush *ush);
 void mx_env(char **argv, t_ush *ush);
-void mx_export(char **argv, t_list **var_tree, t_ush *ush);
-void mx_unset(char **argv, t_list **var_tree, t_ush *ush);
+void mx_export(char **argv, t_list **environ, t_ush *ush);
+void mx_unset(char **argv, t_list **environ, t_ush *ush);
 void mx_which(char **argv, t_ush *ush);
 bool mx_is_buildin(char *str);
 void mx_jobs(t_ush *ush);
@@ -254,8 +254,8 @@ void mx_print_esc(char *s);
 void mx_check_outprogram_new_line(void);
 void mx_clean_space_in_term(char *str, t_ush *ush, char *new_str);
 void mx_print_esc(char *s);
-void mx_terminal_out(char *name, int table2, int pos,char *str);
-void mx_clean_terminal(char *name, int table2, int pos,char *str);
+void mx_terminal_out(char *name, int tbl, int pos,char *str);
+void mx_clean_terminal(char *name, int tbl, int pos,char *str);
 void mx_print_esc(char *s);
 void mx_key_delite(t_ush *ush);
 char **mx_key_tab(char *parsing, char **str, t_ush *ush);
@@ -266,7 +266,7 @@ void mx_print_tab_comands(t_list *list_comand);
 t_ush* mx_get_info(t_ush *ush);
 bool mx_is_link(char *file);
 void mx_unset_fds(int *fds, int *savedFds, int operator_starus);
-t_var *mx_var_tree_to_var(t_list *var_tree);
+t_var *mx_environ_to_var(t_list *environ);
 int mx_get_twidth();
 
 // lexer
@@ -331,6 +331,7 @@ void mx_add_to_strarr(char ***strs, char *str);
 void mx_pop_front_free_data(t_list **head);
 void mx_pop_list(t_list **head, void *data, bool(*if_list)(void *, void *),
                  void(*del_data)(void *));
+void mx_setenv();
 
 
 #endif

@@ -26,5 +26,5 @@ void mx_jobs(t_ush *ush) {
         print_row(tmp, c);
         tmp = tmp->next;
     }
-    ush->last_status = 0;
+    ush->last_return = 0;
 }

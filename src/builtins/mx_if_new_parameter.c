@@ -38,7 +38,7 @@ static void create_parameter(char *str, int *start, int end, t_ush *processes) {
     value = mx_audit_str(tmp, processes, 0);
     mx_strdel(&tmp);
     mx_subs(&value);
-    mx_serch_list(&(processes->var_tree), name, value);
+    mx_serch_list(&(processes->environ), name, value);
     pos = get_start_index(&str[*start]);
     if (pos != -1) 
         *start += pos;

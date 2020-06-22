@@ -121,7 +121,7 @@ SRC = $(addprefix $(SRC_DIR)/,\
         utils/mx_token_in_program.c \
         utils/mx_ush_close.c \
         utils/mx_ush_init.c \
-        utils/mx_var_tree_to_var.c \
+        utils/mx_env_to_var.c \
         utils/mx_wait_process.c \
         utils/mx_write_from_to.c \
         utils/mx_getchar.c \
@@ -129,7 +129,8 @@ SRC = $(addprefix $(SRC_DIR)/,\
         utils/mx_add_to_strarr.c \
         utils/mx_pop_front_free_data.c \
         utils/mx_pop_list.c \
-        utils/mx_loop.c)
+        utils/mx_loop.c \
+        utils/mx_setenv.c)
 
 
 
@@ -241,7 +242,7 @@ OBJ =	mx_add_one_rank.o \
         mx_token_in_program.o \
         mx_ush_close.o \
         mx_ush_init.o \
-        mx_var_tree_to_var.o \
+        mx_env_to_var.o \
         mx_wait_process.o \
         mx_write_from_to.o \
         mx_getchar.o \
@@ -249,11 +250,12 @@ OBJ =	mx_add_one_rank.o \
         mx_add_to_strarr.o \
         mx_pop_front_free_data.o \
         mx_pop_list.o \
-        mx_loop.o
+        mx_loop.o \
+        mx_setenv.o
 
 CC = clang
 
-CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
+CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic #-g -fsanitize=address
 
 all : install
 

@@ -1,7 +1,7 @@
 #include "ush.h"
 
 static void clearenv(t_ush *ush) {
-    t_list *tmp = ush->var_tree;
+    t_list *tmp = ush->environ;
 
     while (tmp) {
         if (((t_variable*)tmp->data)->is_env)

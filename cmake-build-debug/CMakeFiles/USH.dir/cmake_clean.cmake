@@ -133,7 +133,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/USH.dir/src/printing/mx_printstr_env.c.o"
   "CMakeFiles/USH.dir/src/signals/mx_ctrl_r.c.o"
   "CMakeFiles/USH.dir/src/signals/mx_read_keyboard.c.o"
-  "CMakeFiles/USH.dir/src/signals/mx_signals.c.o"
   "CMakeFiles/USH.dir/src/utils/bit_function.c.o"
   "CMakeFiles/USH.dir/src/utils/main.c.o"
   "CMakeFiles/USH.dir/src/utils/mx_0_and_x.c.o"

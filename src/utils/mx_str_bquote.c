@@ -38,7 +38,7 @@ static void child(t_ush *processes, int des[2], char **str) {
     close(des[0]);
     dup2(des[1], 1);
     mx_parsing(*str, processes);
-    if (processes->last_status == 130 || !(processes->if_ctrl_c))
+    if (processes->last_return == 130 || !(processes->if_ctrl_c))
         exit(130);
     exit(0);
 }

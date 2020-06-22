@@ -38,7 +38,10 @@ static char *get_pwd() {
 void mx_ush_init(t_ush **ush, char **env) {
     t_ush *new_info = (t_ush*) malloc(sizeof(t_ush));
 
-    new_info->env = env;
+    if ((*env) == NULL || getenv("SHLVL")) {
+        mx_setenv();
+        new_info->env = env;
+    }
     new_info->processes = 0; // empty
     new_info->is_exit = false;
     new_info->exit_status = 0;
@@ -46,9 +49,9 @@ void mx_ush_init(t_ush **ush, char **env) {
     new_info->pwd_p = getcwd(NULL, 0);
     new_info->pwd_l = mx_strdup(new_info->pwd);
     new_info->old_pwd = get_pwd();
-    new_info->last_status = 0;
+    new_info->last_return = 0;
     (*ush) = new_info;
-    mx_start_program(&(new_info->var_tree), env);
+    mx_start_program(&(new_info->environ), env);
     signal(SIGSEGV, NULL);
     signal(SIGINT, emp);
     signal(SIGTSTP, emp);

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.15)
 project(USH C)
 
 set(CMAKE_C_STANDARD 11)
@@ -15,8 +15,6 @@ include_directories(src/parsers)
 include_directories(src/printing)
 include_directories(src/signals)
 include_directories(src/utils)
-
-set(CMAKE_C_FLAGS "-ltermcap")
 
 add_executable(USH
         inc/ush.h
@@ -155,7 +153,6 @@ add_executable(USH
         src/printing/mx_printstr_env.c
         src/signals/mx_ctrl_r.c
         src/signals/mx_read_keyboard.c
-        src/signals/mx_signals.c
         src/utils/bit_function.c
         src/utils/main.c
         src/utils/mx_0_and_x.c
@@ -198,6 +195,6 @@ add_executable(USH
         src/utils/mx_token_in_program.c
         src/utils/mx_ush_close.c
         src/utils/mx_ush_init.c
-        src/utils/mx_var_tree_to_var.c
+        src/utils/mx_environ_to_var.c
         src/utils/mx_wait_process.c
         src/utils/mx_write_from_to.c)

@@ -51,7 +51,7 @@ static bool print_env(t_var *var, char **argv, int *i) {
 }
 
 void mx_env(char **argv, t_ush *ush) {
-    t_var *var = mx_var_tree_to_var(ush->var_tree);
+    t_var *var = mx_environ_to_var(ush->environ);
     char *path = NULL;
     int i = 0;
 
@@ -60,7 +60,7 @@ void mx_env(char **argv, t_ush *ush) {
             break;
         if (mx_check_env(argv, &path, var, &i)) {
             mx_fre_env_path(var, path);
-            ush->last_status = 1;
+            ush->last_return = 1;
             return;
         }
     }

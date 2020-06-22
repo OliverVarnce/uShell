@@ -62,7 +62,7 @@ static void fg_wait(int status, pid_t ch_pr, t_ush *ush) {
     if (MX_WIFSIG(status)) {
         if (MX_WTERMSIG(status) == SIGINT) {
             mx_del_pid_process(ush, ch_pr);
-            ush->last_status = 130;
+            ush->last_return = 130;
         }
         else {
             char **str = mx_get_name(ush, ch_pr);
@@ -82,7 +82,7 @@ void mx_fg(char **argv, t_ush *ush) {
                 fg_wait(status, ch_pr, ush);
             else {
                 mx_del_pid_process(ush, ch_pr);
-                ush->last_status = MX_EXSTATUS(status);
+                ush->last_return = MX_EXSTATUS(status);
             }
         }
     }

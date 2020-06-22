@@ -20,23 +20,23 @@ static int mx_exec_buildin(t_token *token, int *fds,
     return status;
 }
 
-static int or_operator(t_tnode *root, int *fds, char operatorStatus,
+static int or_operator(t_tnode *root, int *fds, char opstat,
                        t_ush *ush) {
     int status = 0;
 
-    status = mx_execute_tree(root->left, fds, operatorStatus, ush);
-        if (ush->last_status != 0)
-            status = mx_execute_tree(root->right, fds, operatorStatus, ush);
+    status = mx_execute_tree(root->left, fds, opstat, ush);
+        if (ush->last_return != 0)
+            status = mx_execute_tree(root->right, fds, opstat, ush);
     return status;
 }
 
-static int and_operator(t_tnode *root, int *fds, char operatorStatus,
+static int and_operator(t_tnode *root, int *fds, char opstat,
                         t_ush *ush) {
     int status = 0;
 
-    status = mx_execute_tree(root->left, fds, operatorStatus, ush);
-        if (ush->last_status == 0)
-            status = mx_execute_tree(root->right, fds, operatorStatus, ush);
+    status = mx_execute_tree(root->left, fds, opstat, ush);
+        if (ush->last_return == 0)
+            status = mx_execute_tree(root->right, fds, opstat, ush);
     return status;
 }
 
