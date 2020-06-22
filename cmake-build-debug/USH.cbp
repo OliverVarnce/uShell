@@ -55,6 +55,7 @@
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/parsers"/>
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/printing"/>
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/signals"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/sortings"/>
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/utils"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
@@ -87,6 +88,7 @@
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/parsers"/>
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/printing"/>
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/signals"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/sortings"/>
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/utils"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
@@ -417,10 +419,10 @@
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_which.c">
 			<Option target="USH"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec_dmore.c">
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec.c">
 			<Option target="USH"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec_env_pr.c">
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec_env_fpr.c">
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec_less.c">
@@ -429,19 +431,19 @@
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec_more.c">
 			<Option target="USH"/>
 		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec_opmore.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec_pipe.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec_processes.c">
+			<Option target="USH"/>
+		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec_token.c">
 			<Option target="USH"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_execute.c">
-			<Option target="USH"/>
-		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_execute_proces.c">
-			<Option target="USH"/>
-		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_execute_tree.c">
-			<Option target="USH"/>
-		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_pipe_execute.c">
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec_tree.c">
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/memory/mx_charge_paranetr_export.c">
@@ -483,19 +485,16 @@
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/parsers/mx_parsing_input.c">
 			<Option target="USH"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/printing/mx_print_cont.c">
-			<Option target="USH"/>
-		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/printing/mx_print_env.c">
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/printing/mx_print_esc.c">
 			<Option target="USH"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/printing/mx_print_susp.c">
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/printing/mx_print_stat.c">
 			<Option target="USH"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/printing/mx_print_tab_comands.c">
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/printing/mx_print_tab_cmds.c">
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/printing/mx_printerr_env.c">
@@ -508,6 +507,21 @@
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/signals/mx_read_keyboard.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/sortings/mx_create_node_proc.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/sortings/mx_pop_back_proc.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/sortings/mx_pop_front_proc.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/sortings/mx_push_back_proc.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/sortings/mx_push_front_proc.c">
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/bit_function.c">
@@ -540,7 +554,7 @@
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_create_ast.c">
 			<Option target="USH"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_create_comands.c">
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_create_cmds.c">
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_create_tnode.c">
@@ -556,6 +570,9 @@
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_dupstrarr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_env_to_var.c">
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_exit.c">
@@ -600,6 +617,9 @@
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_reg.c">
 			<Option target="USH"/>
 		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_setenv.c">
+			<Option target="USH"/>
+		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_start_program.c">
 			<Option target="USH"/>
 		</Unit>
@@ -636,10 +656,7 @@
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_ush_init.c">
 			<Option target="USH"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_var_tree_to_var.c">
-			<Option target="USH"/>
-		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_wait_process.c">
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_wait_processes.c">
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_write_from_to.c">

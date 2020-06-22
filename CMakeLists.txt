@@ -14,7 +14,11 @@ include_directories(src/memory)
 include_directories(src/parsers)
 include_directories(src/printing)
 include_directories(src/signals)
+include_directories(src/sortings)
 include_directories(src/utils)
+
+SET(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} -ltermcap")
+
 
 add_executable(USH
         inc/ush.h
@@ -122,15 +126,15 @@ add_executable(USH
         src/builtins/mx_unset.c
         src/builtins/mx_unset_fds.c
         src/builtins/mx_which.c
-        src/exec/mx_exec_opmore.c
+        src/exec/mx_exec.c
         src/exec/mx_exec_env_fpr.c
         src/exec/mx_exec_less.c
         src/exec/mx_exec_more.c
-        src/exec/mx_exec_token.c
-        src/exec/mx_exec.c
-        src/exec/mx_exec_processes.c
-        src/exec/mx_exec_tree.c
+        src/exec/mx_exec_opmore.c
         src/exec/mx_exec_pipe.c
+        src/exec/mx_exec_processes.c
+        src/exec/mx_exec_token.c
+        src/exec/mx_exec_tree.c
         src/memory/mx_charge_paranetr_export.c
         src/memory/mx_clear_tokens.c
         src/parsers/mx_check_symbol.c
@@ -144,14 +148,19 @@ add_executable(USH
         src/parsers/mx_one_symbol.c
         src/parsers/mx_parsing.c
         src/parsers/mx_parsing_input.c
-        src/printing/mx_print_stat.c
         src/printing/mx_print_env.c
         src/printing/mx_print_esc.c
+        src/printing/mx_print_stat.c
         src/printing/mx_print_tab_cmds.c
         src/printing/mx_printerr_env.c
         src/printing/mx_printstr_env.c
         src/signals/mx_ctrl_r.c
         src/signals/mx_read_keyboard.c
+        src/sortings/mx_create_node_proc.c
+        src/sortings/mx_pop_back_proc.c
+        src/sortings/mx_pop_front_proc.c
+        src/sortings/mx_push_back_proc.c
+        src/sortings/mx_push_front_proc.c
         src/utils/bit_function.c
         src/utils/main.c
         src/utils/mx_0_and_x.c
@@ -168,6 +177,7 @@ add_executable(USH
         src/utils/mx_delete_ast.c
         src/utils/mx_do_replace.c
         src/utils/mx_dupstrarr.c
+        src/utils/mx_env_to_var.c
         src/utils/mx_exit.c
         src/utils/mx_getchar.c
         src/utils/mx_history.c
@@ -182,6 +192,7 @@ add_executable(USH
         src/utils/mx_pop_front_free_data.c
         src/utils/mx_pop_list.c
         src/utils/mx_reg.c
+        src/utils/mx_setenv.c
         src/utils/mx_start_program.c
         src/utils/mx_str_bquote.c
         src/utils/mx_strarr_add_to_strarr.c
@@ -194,6 +205,5 @@ add_executable(USH
         src/utils/mx_token_in_program.c
         src/utils/mx_ush_close.c
         src/utils/mx_ush_init.c
-        src/utils/mx_environ_to_var.c
         src/utils/mx_wait_processes.c
         src/utils/mx_write_from_to.c)

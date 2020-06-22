@@ -2904,59 +2904,59 @@ src/builtins/mx_which.c.s:
 	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/builtins/mx_which.c.s
 .PHONY : src/builtins/mx_which.c.s
 
-src/exec/mx_exec_dmore.o: src/exec/mx_exec_dmore.c.o
+src/exec/mx_exec.o: src/exec/mx_exec.c.o
 
-.PHONY : src/exec/mx_exec_dmore.o
-
-# target to build an object file
-src/exec/mx_exec_dmore.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_dmore.c.o
-.PHONY : src/exec/mx_exec_dmore.c.o
-
-src/exec/mx_exec_dmore.i: src/exec/mx_exec_dmore.c.i
-
-.PHONY : src/exec/mx_exec_dmore.i
-
-# target to preprocess a source file
-src/exec/mx_exec_dmore.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_dmore.c.i
-.PHONY : src/exec/mx_exec_dmore.c.i
-
-src/exec/mx_exec_dmore.s: src/exec/mx_exec_dmore.c.s
-
-.PHONY : src/exec/mx_exec_dmore.s
-
-# target to generate assembly for a file
-src/exec/mx_exec_dmore.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_dmore.c.s
-.PHONY : src/exec/mx_exec_dmore.c.s
-
-src/exec/mx_exec_env_pr.o: src/exec/mx_exec_env_pr.c.o
-
-.PHONY : src/exec/mx_exec_env_pr.o
+.PHONY : src/exec/mx_exec.o
 
 # target to build an object file
-src/exec/mx_exec_env_pr.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_env_pr.c.o
-.PHONY : src/exec/mx_exec_env_pr.c.o
+src/exec/mx_exec.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec.c.o
+.PHONY : src/exec/mx_exec.c.o
 
-src/exec/mx_exec_env_pr.i: src/exec/mx_exec_env_pr.c.i
+src/exec/mx_exec.i: src/exec/mx_exec.c.i
 
-.PHONY : src/exec/mx_exec_env_pr.i
+.PHONY : src/exec/mx_exec.i
 
 # target to preprocess a source file
-src/exec/mx_exec_env_pr.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_env_pr.c.i
-.PHONY : src/exec/mx_exec_env_pr.c.i
+src/exec/mx_exec.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec.c.i
+.PHONY : src/exec/mx_exec.c.i
 
-src/exec/mx_exec_env_pr.s: src/exec/mx_exec_env_pr.c.s
+src/exec/mx_exec.s: src/exec/mx_exec.c.s
 
-.PHONY : src/exec/mx_exec_env_pr.s
+.PHONY : src/exec/mx_exec.s
 
 # target to generate assembly for a file
-src/exec/mx_exec_env_pr.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_env_pr.c.s
-.PHONY : src/exec/mx_exec_env_pr.c.s
+src/exec/mx_exec.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec.c.s
+.PHONY : src/exec/mx_exec.c.s
+
+src/exec/mx_exec_env_fpr.o: src/exec/mx_exec_env_fpr.c.o
+
+.PHONY : src/exec/mx_exec_env_fpr.o
+
+# target to build an object file
+src/exec/mx_exec_env_fpr.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_env_fpr.c.o
+.PHONY : src/exec/mx_exec_env_fpr.c.o
+
+src/exec/mx_exec_env_fpr.i: src/exec/mx_exec_env_fpr.c.i
+
+.PHONY : src/exec/mx_exec_env_fpr.i
+
+# target to preprocess a source file
+src/exec/mx_exec_env_fpr.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_env_fpr.c.i
+.PHONY : src/exec/mx_exec_env_fpr.c.i
+
+src/exec/mx_exec_env_fpr.s: src/exec/mx_exec_env_fpr.c.s
+
+.PHONY : src/exec/mx_exec_env_fpr.s
+
+# target to generate assembly for a file
+src/exec/mx_exec_env_fpr.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_env_fpr.c.s
+.PHONY : src/exec/mx_exec_env_fpr.c.s
 
 src/exec/mx_exec_less.o: src/exec/mx_exec_less.c.o
 
@@ -3012,6 +3012,87 @@ src/exec/mx_exec_more.c.s:
 	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_more.c.s
 .PHONY : src/exec/mx_exec_more.c.s
 
+src/exec/mx_exec_opmore.o: src/exec/mx_exec_opmore.c.o
+
+.PHONY : src/exec/mx_exec_opmore.o
+
+# target to build an object file
+src/exec/mx_exec_opmore.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_opmore.c.o
+.PHONY : src/exec/mx_exec_opmore.c.o
+
+src/exec/mx_exec_opmore.i: src/exec/mx_exec_opmore.c.i
+
+.PHONY : src/exec/mx_exec_opmore.i
+
+# target to preprocess a source file
+src/exec/mx_exec_opmore.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_opmore.c.i
+.PHONY : src/exec/mx_exec_opmore.c.i
+
+src/exec/mx_exec_opmore.s: src/exec/mx_exec_opmore.c.s
+
+.PHONY : src/exec/mx_exec_opmore.s
+
+# target to generate assembly for a file
+src/exec/mx_exec_opmore.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_opmore.c.s
+.PHONY : src/exec/mx_exec_opmore.c.s
+
+src/exec/mx_exec_pipe.o: src/exec/mx_exec_pipe.c.o
+
+.PHONY : src/exec/mx_exec_pipe.o
+
+# target to build an object file
+src/exec/mx_exec_pipe.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_pipe.c.o
+.PHONY : src/exec/mx_exec_pipe.c.o
+
+src/exec/mx_exec_pipe.i: src/exec/mx_exec_pipe.c.i
+
+.PHONY : src/exec/mx_exec_pipe.i
+
+# target to preprocess a source file
+src/exec/mx_exec_pipe.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_pipe.c.i
+.PHONY : src/exec/mx_exec_pipe.c.i
+
+src/exec/mx_exec_pipe.s: src/exec/mx_exec_pipe.c.s
+
+.PHONY : src/exec/mx_exec_pipe.s
+
+# target to generate assembly for a file
+src/exec/mx_exec_pipe.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_pipe.c.s
+.PHONY : src/exec/mx_exec_pipe.c.s
+
+src/exec/mx_exec_processes.o: src/exec/mx_exec_processes.c.o
+
+.PHONY : src/exec/mx_exec_processes.o
+
+# target to build an object file
+src/exec/mx_exec_processes.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_processes.c.o
+.PHONY : src/exec/mx_exec_processes.c.o
+
+src/exec/mx_exec_processes.i: src/exec/mx_exec_processes.c.i
+
+.PHONY : src/exec/mx_exec_processes.i
+
+# target to preprocess a source file
+src/exec/mx_exec_processes.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_processes.c.i
+.PHONY : src/exec/mx_exec_processes.c.i
+
+src/exec/mx_exec_processes.s: src/exec/mx_exec_processes.c.s
+
+.PHONY : src/exec/mx_exec_processes.s
+
+# target to generate assembly for a file
+src/exec/mx_exec_processes.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_processes.c.s
+.PHONY : src/exec/mx_exec_processes.c.s
+
 src/exec/mx_exec_token.o: src/exec/mx_exec_token.c.o
 
 .PHONY : src/exec/mx_exec_token.o
@@ -3039,113 +3120,32 @@ src/exec/mx_exec_token.c.s:
 	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_token.c.s
 .PHONY : src/exec/mx_exec_token.c.s
 
-src/exec/mx_execute.o: src/exec/mx_execute.c.o
+src/exec/mx_exec_tree.o: src/exec/mx_exec_tree.c.o
 
-.PHONY : src/exec/mx_execute.o
-
-# target to build an object file
-src/exec/mx_execute.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_execute.c.o
-.PHONY : src/exec/mx_execute.c.o
-
-src/exec/mx_execute.i: src/exec/mx_execute.c.i
-
-.PHONY : src/exec/mx_execute.i
-
-# target to preprocess a source file
-src/exec/mx_execute.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_execute.c.i
-.PHONY : src/exec/mx_execute.c.i
-
-src/exec/mx_execute.s: src/exec/mx_execute.c.s
-
-.PHONY : src/exec/mx_execute.s
-
-# target to generate assembly for a file
-src/exec/mx_execute.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_execute.c.s
-.PHONY : src/exec/mx_execute.c.s
-
-src/exec/mx_execute_proces.o: src/exec/mx_execute_proces.c.o
-
-.PHONY : src/exec/mx_execute_proces.o
+.PHONY : src/exec/mx_exec_tree.o
 
 # target to build an object file
-src/exec/mx_execute_proces.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_execute_proces.c.o
-.PHONY : src/exec/mx_execute_proces.c.o
+src/exec/mx_exec_tree.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_tree.c.o
+.PHONY : src/exec/mx_exec_tree.c.o
 
-src/exec/mx_execute_proces.i: src/exec/mx_execute_proces.c.i
+src/exec/mx_exec_tree.i: src/exec/mx_exec_tree.c.i
 
-.PHONY : src/exec/mx_execute_proces.i
-
-# target to preprocess a source file
-src/exec/mx_execute_proces.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_execute_proces.c.i
-.PHONY : src/exec/mx_execute_proces.c.i
-
-src/exec/mx_execute_proces.s: src/exec/mx_execute_proces.c.s
-
-.PHONY : src/exec/mx_execute_proces.s
-
-# target to generate assembly for a file
-src/exec/mx_execute_proces.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_execute_proces.c.s
-.PHONY : src/exec/mx_execute_proces.c.s
-
-src/exec/mx_execute_tree.o: src/exec/mx_execute_tree.c.o
-
-.PHONY : src/exec/mx_execute_tree.o
-
-# target to build an object file
-src/exec/mx_execute_tree.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_execute_tree.c.o
-.PHONY : src/exec/mx_execute_tree.c.o
-
-src/exec/mx_execute_tree.i: src/exec/mx_execute_tree.c.i
-
-.PHONY : src/exec/mx_execute_tree.i
+.PHONY : src/exec/mx_exec_tree.i
 
 # target to preprocess a source file
-src/exec/mx_execute_tree.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_execute_tree.c.i
-.PHONY : src/exec/mx_execute_tree.c.i
+src/exec/mx_exec_tree.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_tree.c.i
+.PHONY : src/exec/mx_exec_tree.c.i
 
-src/exec/mx_execute_tree.s: src/exec/mx_execute_tree.c.s
+src/exec/mx_exec_tree.s: src/exec/mx_exec_tree.c.s
 
-.PHONY : src/exec/mx_execute_tree.s
-
-# target to generate assembly for a file
-src/exec/mx_execute_tree.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_execute_tree.c.s
-.PHONY : src/exec/mx_execute_tree.c.s
-
-src/exec/mx_pipe_execute.o: src/exec/mx_pipe_execute.c.o
-
-.PHONY : src/exec/mx_pipe_execute.o
-
-# target to build an object file
-src/exec/mx_pipe_execute.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_pipe_execute.c.o
-.PHONY : src/exec/mx_pipe_execute.c.o
-
-src/exec/mx_pipe_execute.i: src/exec/mx_pipe_execute.c.i
-
-.PHONY : src/exec/mx_pipe_execute.i
-
-# target to preprocess a source file
-src/exec/mx_pipe_execute.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_pipe_execute.c.i
-.PHONY : src/exec/mx_pipe_execute.c.i
-
-src/exec/mx_pipe_execute.s: src/exec/mx_pipe_execute.c.s
-
-.PHONY : src/exec/mx_pipe_execute.s
+.PHONY : src/exec/mx_exec_tree.s
 
 # target to generate assembly for a file
-src/exec/mx_pipe_execute.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_pipe_execute.c.s
-.PHONY : src/exec/mx_pipe_execute.c.s
+src/exec/mx_exec_tree.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/exec/mx_exec_tree.c.s
+.PHONY : src/exec/mx_exec_tree.c.s
 
 src/memory/mx_charge_paranetr_export.o: src/memory/mx_charge_paranetr_export.c.o
 
@@ -3498,33 +3498,6 @@ src/parsers/mx_parsing_input.c.s:
 	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/parsers/mx_parsing_input.c.s
 .PHONY : src/parsers/mx_parsing_input.c.s
 
-src/printing/mx_print_cont.o: src/printing/mx_print_cont.c.o
-
-.PHONY : src/printing/mx_print_cont.o
-
-# target to build an object file
-src/printing/mx_print_cont.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_cont.c.o
-.PHONY : src/printing/mx_print_cont.c.o
-
-src/printing/mx_print_cont.i: src/printing/mx_print_cont.c.i
-
-.PHONY : src/printing/mx_print_cont.i
-
-# target to preprocess a source file
-src/printing/mx_print_cont.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_cont.c.i
-.PHONY : src/printing/mx_print_cont.c.i
-
-src/printing/mx_print_cont.s: src/printing/mx_print_cont.c.s
-
-.PHONY : src/printing/mx_print_cont.s
-
-# target to generate assembly for a file
-src/printing/mx_print_cont.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_cont.c.s
-.PHONY : src/printing/mx_print_cont.c.s
-
 src/printing/mx_print_env.o: src/printing/mx_print_env.c.o
 
 .PHONY : src/printing/mx_print_env.o
@@ -3579,59 +3552,59 @@ src/printing/mx_print_esc.c.s:
 	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_esc.c.s
 .PHONY : src/printing/mx_print_esc.c.s
 
-src/printing/mx_print_susp.o: src/printing/mx_print_susp.c.o
+src/printing/mx_print_stat.o: src/printing/mx_print_stat.c.o
 
-.PHONY : src/printing/mx_print_susp.o
-
-# target to build an object file
-src/printing/mx_print_susp.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_susp.c.o
-.PHONY : src/printing/mx_print_susp.c.o
-
-src/printing/mx_print_susp.i: src/printing/mx_print_susp.c.i
-
-.PHONY : src/printing/mx_print_susp.i
-
-# target to preprocess a source file
-src/printing/mx_print_susp.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_susp.c.i
-.PHONY : src/printing/mx_print_susp.c.i
-
-src/printing/mx_print_susp.s: src/printing/mx_print_susp.c.s
-
-.PHONY : src/printing/mx_print_susp.s
-
-# target to generate assembly for a file
-src/printing/mx_print_susp.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_susp.c.s
-.PHONY : src/printing/mx_print_susp.c.s
-
-src/printing/mx_print_tab_comands.o: src/printing/mx_print_tab_comands.c.o
-
-.PHONY : src/printing/mx_print_tab_comands.o
+.PHONY : src/printing/mx_print_stat.o
 
 # target to build an object file
-src/printing/mx_print_tab_comands.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_tab_comands.c.o
-.PHONY : src/printing/mx_print_tab_comands.c.o
+src/printing/mx_print_stat.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_stat.c.o
+.PHONY : src/printing/mx_print_stat.c.o
 
-src/printing/mx_print_tab_comands.i: src/printing/mx_print_tab_comands.c.i
+src/printing/mx_print_stat.i: src/printing/mx_print_stat.c.i
 
-.PHONY : src/printing/mx_print_tab_comands.i
+.PHONY : src/printing/mx_print_stat.i
 
 # target to preprocess a source file
-src/printing/mx_print_tab_comands.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_tab_comands.c.i
-.PHONY : src/printing/mx_print_tab_comands.c.i
+src/printing/mx_print_stat.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_stat.c.i
+.PHONY : src/printing/mx_print_stat.c.i
 
-src/printing/mx_print_tab_comands.s: src/printing/mx_print_tab_comands.c.s
+src/printing/mx_print_stat.s: src/printing/mx_print_stat.c.s
 
-.PHONY : src/printing/mx_print_tab_comands.s
+.PHONY : src/printing/mx_print_stat.s
 
 # target to generate assembly for a file
-src/printing/mx_print_tab_comands.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_tab_comands.c.s
-.PHONY : src/printing/mx_print_tab_comands.c.s
+src/printing/mx_print_stat.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_stat.c.s
+.PHONY : src/printing/mx_print_stat.c.s
+
+src/printing/mx_print_tab_cmds.o: src/printing/mx_print_tab_cmds.c.o
+
+.PHONY : src/printing/mx_print_tab_cmds.o
+
+# target to build an object file
+src/printing/mx_print_tab_cmds.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_tab_cmds.c.o
+.PHONY : src/printing/mx_print_tab_cmds.c.o
+
+src/printing/mx_print_tab_cmds.i: src/printing/mx_print_tab_cmds.c.i
+
+.PHONY : src/printing/mx_print_tab_cmds.i
+
+# target to preprocess a source file
+src/printing/mx_print_tab_cmds.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_tab_cmds.c.i
+.PHONY : src/printing/mx_print_tab_cmds.c.i
+
+src/printing/mx_print_tab_cmds.s: src/printing/mx_print_tab_cmds.c.s
+
+.PHONY : src/printing/mx_print_tab_cmds.s
+
+# target to generate assembly for a file
+src/printing/mx_print_tab_cmds.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/printing/mx_print_tab_cmds.c.s
+.PHONY : src/printing/mx_print_tab_cmds.c.s
 
 src/printing/mx_printerr_env.o: src/printing/mx_printerr_env.c.o
 
@@ -3740,6 +3713,141 @@ src/signals/mx_read_keyboard.s: src/signals/mx_read_keyboard.c.s
 src/signals/mx_read_keyboard.c.s:
 	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/signals/mx_read_keyboard.c.s
 .PHONY : src/signals/mx_read_keyboard.c.s
+
+src/sortings/mx_create_node_proc.o: src/sortings/mx_create_node_proc.c.o
+
+.PHONY : src/sortings/mx_create_node_proc.o
+
+# target to build an object file
+src/sortings/mx_create_node_proc.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/sortings/mx_create_node_proc.c.o
+.PHONY : src/sortings/mx_create_node_proc.c.o
+
+src/sortings/mx_create_node_proc.i: src/sortings/mx_create_node_proc.c.i
+
+.PHONY : src/sortings/mx_create_node_proc.i
+
+# target to preprocess a source file
+src/sortings/mx_create_node_proc.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/sortings/mx_create_node_proc.c.i
+.PHONY : src/sortings/mx_create_node_proc.c.i
+
+src/sortings/mx_create_node_proc.s: src/sortings/mx_create_node_proc.c.s
+
+.PHONY : src/sortings/mx_create_node_proc.s
+
+# target to generate assembly for a file
+src/sortings/mx_create_node_proc.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/sortings/mx_create_node_proc.c.s
+.PHONY : src/sortings/mx_create_node_proc.c.s
+
+src/sortings/mx_pop_back_proc.o: src/sortings/mx_pop_back_proc.c.o
+
+.PHONY : src/sortings/mx_pop_back_proc.o
+
+# target to build an object file
+src/sortings/mx_pop_back_proc.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/sortings/mx_pop_back_proc.c.o
+.PHONY : src/sortings/mx_pop_back_proc.c.o
+
+src/sortings/mx_pop_back_proc.i: src/sortings/mx_pop_back_proc.c.i
+
+.PHONY : src/sortings/mx_pop_back_proc.i
+
+# target to preprocess a source file
+src/sortings/mx_pop_back_proc.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/sortings/mx_pop_back_proc.c.i
+.PHONY : src/sortings/mx_pop_back_proc.c.i
+
+src/sortings/mx_pop_back_proc.s: src/sortings/mx_pop_back_proc.c.s
+
+.PHONY : src/sortings/mx_pop_back_proc.s
+
+# target to generate assembly for a file
+src/sortings/mx_pop_back_proc.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/sortings/mx_pop_back_proc.c.s
+.PHONY : src/sortings/mx_pop_back_proc.c.s
+
+src/sortings/mx_pop_front_proc.o: src/sortings/mx_pop_front_proc.c.o
+
+.PHONY : src/sortings/mx_pop_front_proc.o
+
+# target to build an object file
+src/sortings/mx_pop_front_proc.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/sortings/mx_pop_front_proc.c.o
+.PHONY : src/sortings/mx_pop_front_proc.c.o
+
+src/sortings/mx_pop_front_proc.i: src/sortings/mx_pop_front_proc.c.i
+
+.PHONY : src/sortings/mx_pop_front_proc.i
+
+# target to preprocess a source file
+src/sortings/mx_pop_front_proc.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/sortings/mx_pop_front_proc.c.i
+.PHONY : src/sortings/mx_pop_front_proc.c.i
+
+src/sortings/mx_pop_front_proc.s: src/sortings/mx_pop_front_proc.c.s
+
+.PHONY : src/sortings/mx_pop_front_proc.s
+
+# target to generate assembly for a file
+src/sortings/mx_pop_front_proc.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/sortings/mx_pop_front_proc.c.s
+.PHONY : src/sortings/mx_pop_front_proc.c.s
+
+src/sortings/mx_push_back_proc.o: src/sortings/mx_push_back_proc.c.o
+
+.PHONY : src/sortings/mx_push_back_proc.o
+
+# target to build an object file
+src/sortings/mx_push_back_proc.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/sortings/mx_push_back_proc.c.o
+.PHONY : src/sortings/mx_push_back_proc.c.o
+
+src/sortings/mx_push_back_proc.i: src/sortings/mx_push_back_proc.c.i
+
+.PHONY : src/sortings/mx_push_back_proc.i
+
+# target to preprocess a source file
+src/sortings/mx_push_back_proc.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/sortings/mx_push_back_proc.c.i
+.PHONY : src/sortings/mx_push_back_proc.c.i
+
+src/sortings/mx_push_back_proc.s: src/sortings/mx_push_back_proc.c.s
+
+.PHONY : src/sortings/mx_push_back_proc.s
+
+# target to generate assembly for a file
+src/sortings/mx_push_back_proc.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/sortings/mx_push_back_proc.c.s
+.PHONY : src/sortings/mx_push_back_proc.c.s
+
+src/sortings/mx_push_front_proc.o: src/sortings/mx_push_front_proc.c.o
+
+.PHONY : src/sortings/mx_push_front_proc.o
+
+# target to build an object file
+src/sortings/mx_push_front_proc.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/sortings/mx_push_front_proc.c.o
+.PHONY : src/sortings/mx_push_front_proc.c.o
+
+src/sortings/mx_push_front_proc.i: src/sortings/mx_push_front_proc.c.i
+
+.PHONY : src/sortings/mx_push_front_proc.i
+
+# target to preprocess a source file
+src/sortings/mx_push_front_proc.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/sortings/mx_push_front_proc.c.i
+.PHONY : src/sortings/mx_push_front_proc.c.i
+
+src/sortings/mx_push_front_proc.s: src/sortings/mx_push_front_proc.c.s
+
+.PHONY : src/sortings/mx_push_front_proc.s
+
+# target to generate assembly for a file
+src/sortings/mx_push_front_proc.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/sortings/mx_push_front_proc.c.s
+.PHONY : src/sortings/mx_push_front_proc.c.s
 
 src/utils/bit_function.o: src/utils/bit_function.c.o
 
@@ -4011,32 +4119,32 @@ src/utils/mx_create_ast.c.s:
 	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_create_ast.c.s
 .PHONY : src/utils/mx_create_ast.c.s
 
-src/utils/mx_create_comands.o: src/utils/mx_create_comands.c.o
+src/utils/mx_create_cmds.o: src/utils/mx_create_cmds.c.o
 
-.PHONY : src/utils/mx_create_comands.o
+.PHONY : src/utils/mx_create_cmds.o
 
 # target to build an object file
-src/utils/mx_create_comands.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_create_comands.c.o
-.PHONY : src/utils/mx_create_comands.c.o
+src/utils/mx_create_cmds.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_create_cmds.c.o
+.PHONY : src/utils/mx_create_cmds.c.o
 
-src/utils/mx_create_comands.i: src/utils/mx_create_comands.c.i
+src/utils/mx_create_cmds.i: src/utils/mx_create_cmds.c.i
 
-.PHONY : src/utils/mx_create_comands.i
+.PHONY : src/utils/mx_create_cmds.i
 
 # target to preprocess a source file
-src/utils/mx_create_comands.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_create_comands.c.i
-.PHONY : src/utils/mx_create_comands.c.i
+src/utils/mx_create_cmds.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_create_cmds.c.i
+.PHONY : src/utils/mx_create_cmds.c.i
 
-src/utils/mx_create_comands.s: src/utils/mx_create_comands.c.s
+src/utils/mx_create_cmds.s: src/utils/mx_create_cmds.c.s
 
-.PHONY : src/utils/mx_create_comands.s
+.PHONY : src/utils/mx_create_cmds.s
 
 # target to generate assembly for a file
-src/utils/mx_create_comands.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_create_comands.c.s
-.PHONY : src/utils/mx_create_comands.c.s
+src/utils/mx_create_cmds.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_create_cmds.c.s
+.PHONY : src/utils/mx_create_cmds.c.s
 
 src/utils/mx_create_tnode.o: src/utils/mx_create_tnode.c.o
 
@@ -4172,6 +4280,33 @@ src/utils/mx_dupstrarr.s: src/utils/mx_dupstrarr.c.s
 src/utils/mx_dupstrarr.c.s:
 	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_dupstrarr.c.s
 .PHONY : src/utils/mx_dupstrarr.c.s
+
+src/utils/mx_env_to_var.o: src/utils/mx_env_to_var.c.o
+
+.PHONY : src/utils/mx_env_to_var.o
+
+# target to build an object file
+src/utils/mx_env_to_var.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_env_to_var.c.o
+.PHONY : src/utils/mx_env_to_var.c.o
+
+src/utils/mx_env_to_var.i: src/utils/mx_env_to_var.c.i
+
+.PHONY : src/utils/mx_env_to_var.i
+
+# target to preprocess a source file
+src/utils/mx_env_to_var.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_env_to_var.c.i
+.PHONY : src/utils/mx_env_to_var.c.i
+
+src/utils/mx_env_to_var.s: src/utils/mx_env_to_var.c.s
+
+.PHONY : src/utils/mx_env_to_var.s
+
+# target to generate assembly for a file
+src/utils/mx_env_to_var.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_env_to_var.c.s
+.PHONY : src/utils/mx_env_to_var.c.s
 
 src/utils/mx_exit.o: src/utils/mx_exit.c.o
 
@@ -4551,6 +4686,33 @@ src/utils/mx_reg.c.s:
 	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_reg.c.s
 .PHONY : src/utils/mx_reg.c.s
 
+src/utils/mx_setenv.o: src/utils/mx_setenv.c.o
+
+.PHONY : src/utils/mx_setenv.o
+
+# target to build an object file
+src/utils/mx_setenv.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_setenv.c.o
+.PHONY : src/utils/mx_setenv.c.o
+
+src/utils/mx_setenv.i: src/utils/mx_setenv.c.i
+
+.PHONY : src/utils/mx_setenv.i
+
+# target to preprocess a source file
+src/utils/mx_setenv.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_setenv.c.i
+.PHONY : src/utils/mx_setenv.c.i
+
+src/utils/mx_setenv.s: src/utils/mx_setenv.c.s
+
+.PHONY : src/utils/mx_setenv.s
+
+# target to generate assembly for a file
+src/utils/mx_setenv.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_setenv.c.s
+.PHONY : src/utils/mx_setenv.c.s
+
 src/utils/mx_start_program.o: src/utils/mx_start_program.c.o
 
 .PHONY : src/utils/mx_start_program.o
@@ -4875,59 +5037,32 @@ src/utils/mx_ush_init.c.s:
 	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_ush_init.c.s
 .PHONY : src/utils/mx_ush_init.c.s
 
-src/utils/mx_var_tree_to_var.o: src/utils/mx_var_tree_to_var.c.o
+src/utils/mx_wait_processes.o: src/utils/mx_wait_processes.c.o
 
-.PHONY : src/utils/mx_var_tree_to_var.o
-
-# target to build an object file
-src/utils/mx_var_tree_to_var.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_var_tree_to_var.c.o
-.PHONY : src/utils/mx_var_tree_to_var.c.o
-
-src/utils/mx_var_tree_to_var.i: src/utils/mx_var_tree_to_var.c.i
-
-.PHONY : src/utils/mx_var_tree_to_var.i
-
-# target to preprocess a source file
-src/utils/mx_var_tree_to_var.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_var_tree_to_var.c.i
-.PHONY : src/utils/mx_var_tree_to_var.c.i
-
-src/utils/mx_var_tree_to_var.s: src/utils/mx_var_tree_to_var.c.s
-
-.PHONY : src/utils/mx_var_tree_to_var.s
-
-# target to generate assembly for a file
-src/utils/mx_var_tree_to_var.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_var_tree_to_var.c.s
-.PHONY : src/utils/mx_var_tree_to_var.c.s
-
-src/utils/mx_wait_process.o: src/utils/mx_wait_process.c.o
-
-.PHONY : src/utils/mx_wait_process.o
+.PHONY : src/utils/mx_wait_processes.o
 
 # target to build an object file
-src/utils/mx_wait_process.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_wait_process.c.o
-.PHONY : src/utils/mx_wait_process.c.o
+src/utils/mx_wait_processes.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_wait_processes.c.o
+.PHONY : src/utils/mx_wait_processes.c.o
 
-src/utils/mx_wait_process.i: src/utils/mx_wait_process.c.i
+src/utils/mx_wait_processes.i: src/utils/mx_wait_processes.c.i
 
-.PHONY : src/utils/mx_wait_process.i
+.PHONY : src/utils/mx_wait_processes.i
 
 # target to preprocess a source file
-src/utils/mx_wait_process.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_wait_process.c.i
-.PHONY : src/utils/mx_wait_process.c.i
+src/utils/mx_wait_processes.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_wait_processes.c.i
+.PHONY : src/utils/mx_wait_processes.c.i
 
-src/utils/mx_wait_process.s: src/utils/mx_wait_process.c.s
+src/utils/mx_wait_processes.s: src/utils/mx_wait_processes.c.s
 
-.PHONY : src/utils/mx_wait_process.s
+.PHONY : src/utils/mx_wait_processes.s
 
 # target to generate assembly for a file
-src/utils/mx_wait_process.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_wait_process.c.s
-.PHONY : src/utils/mx_wait_process.c.s
+src/utils/mx_wait_processes.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_wait_processes.c.s
+.PHONY : src/utils/mx_wait_processes.c.s
 
 src/utils/mx_write_from_to.o: src/utils/mx_write_from_to.c.o
 
@@ -5274,33 +5409,33 @@ help:
 	@echo "... src/builtins/mx_which.o"
 	@echo "... src/builtins/mx_which.i"
 	@echo "... src/builtins/mx_which.s"
-	@echo "... src/exec/mx_exec_dmore.o"
-	@echo "... src/exec/mx_exec_dmore.i"
-	@echo "... src/exec/mx_exec_dmore.s"
-	@echo "... src/exec/mx_exec_env_pr.o"
-	@echo "... src/exec/mx_exec_env_pr.i"
-	@echo "... src/exec/mx_exec_env_pr.s"
+	@echo "... src/exec/mx_exec.o"
+	@echo "... src/exec/mx_exec.i"
+	@echo "... src/exec/mx_exec.s"
+	@echo "... src/exec/mx_exec_env_fpr.o"
+	@echo "... src/exec/mx_exec_env_fpr.i"
+	@echo "... src/exec/mx_exec_env_fpr.s"
 	@echo "... src/exec/mx_exec_less.o"
 	@echo "... src/exec/mx_exec_less.i"
 	@echo "... src/exec/mx_exec_less.s"
 	@echo "... src/exec/mx_exec_more.o"
 	@echo "... src/exec/mx_exec_more.i"
 	@echo "... src/exec/mx_exec_more.s"
+	@echo "... src/exec/mx_exec_opmore.o"
+	@echo "... src/exec/mx_exec_opmore.i"
+	@echo "... src/exec/mx_exec_opmore.s"
+	@echo "... src/exec/mx_exec_pipe.o"
+	@echo "... src/exec/mx_exec_pipe.i"
+	@echo "... src/exec/mx_exec_pipe.s"
+	@echo "... src/exec/mx_exec_processes.o"
+	@echo "... src/exec/mx_exec_processes.i"
+	@echo "... src/exec/mx_exec_processes.s"
 	@echo "... src/exec/mx_exec_token.o"
 	@echo "... src/exec/mx_exec_token.i"
 	@echo "... src/exec/mx_exec_token.s"
-	@echo "... src/exec/mx_execute.o"
-	@echo "... src/exec/mx_execute.i"
-	@echo "... src/exec/mx_execute.s"
-	@echo "... src/exec/mx_execute_proces.o"
-	@echo "... src/exec/mx_execute_proces.i"
-	@echo "... src/exec/mx_execute_proces.s"
-	@echo "... src/exec/mx_execute_tree.o"
-	@echo "... src/exec/mx_execute_tree.i"
-	@echo "... src/exec/mx_execute_tree.s"
-	@echo "... src/exec/mx_pipe_execute.o"
-	@echo "... src/exec/mx_pipe_execute.i"
-	@echo "... src/exec/mx_pipe_execute.s"
+	@echo "... src/exec/mx_exec_tree.o"
+	@echo "... src/exec/mx_exec_tree.i"
+	@echo "... src/exec/mx_exec_tree.s"
 	@echo "... src/memory/mx_charge_paranetr_export.o"
 	@echo "... src/memory/mx_charge_paranetr_export.i"
 	@echo "... src/memory/mx_charge_paranetr_export.s"
@@ -5340,21 +5475,18 @@ help:
 	@echo "... src/parsers/mx_parsing_input.o"
 	@echo "... src/parsers/mx_parsing_input.i"
 	@echo "... src/parsers/mx_parsing_input.s"
-	@echo "... src/printing/mx_print_cont.o"
-	@echo "... src/printing/mx_print_cont.i"
-	@echo "... src/printing/mx_print_cont.s"
 	@echo "... src/printing/mx_print_env.o"
 	@echo "... src/printing/mx_print_env.i"
 	@echo "... src/printing/mx_print_env.s"
 	@echo "... src/printing/mx_print_esc.o"
 	@echo "... src/printing/mx_print_esc.i"
 	@echo "... src/printing/mx_print_esc.s"
-	@echo "... src/printing/mx_print_susp.o"
-	@echo "... src/printing/mx_print_susp.i"
-	@echo "... src/printing/mx_print_susp.s"
-	@echo "... src/printing/mx_print_tab_comands.o"
-	@echo "... src/printing/mx_print_tab_comands.i"
-	@echo "... src/printing/mx_print_tab_comands.s"
+	@echo "... src/printing/mx_print_stat.o"
+	@echo "... src/printing/mx_print_stat.i"
+	@echo "... src/printing/mx_print_stat.s"
+	@echo "... src/printing/mx_print_tab_cmds.o"
+	@echo "... src/printing/mx_print_tab_cmds.i"
+	@echo "... src/printing/mx_print_tab_cmds.s"
 	@echo "... src/printing/mx_printerr_env.o"
 	@echo "... src/printing/mx_printerr_env.i"
 	@echo "... src/printing/mx_printerr_env.s"
@@ -5367,6 +5499,21 @@ help:
 	@echo "... src/signals/mx_read_keyboard.o"
 	@echo "... src/signals/mx_read_keyboard.i"
 	@echo "... src/signals/mx_read_keyboard.s"
+	@echo "... src/sortings/mx_create_node_proc.o"
+	@echo "... src/sortings/mx_create_node_proc.i"
+	@echo "... src/sortings/mx_create_node_proc.s"
+	@echo "... src/sortings/mx_pop_back_proc.o"
+	@echo "... src/sortings/mx_pop_back_proc.i"
+	@echo "... src/sortings/mx_pop_back_proc.s"
+	@echo "... src/sortings/mx_pop_front_proc.o"
+	@echo "... src/sortings/mx_pop_front_proc.i"
+	@echo "... src/sortings/mx_pop_front_proc.s"
+	@echo "... src/sortings/mx_push_back_proc.o"
+	@echo "... src/sortings/mx_push_back_proc.i"
+	@echo "... src/sortings/mx_push_back_proc.s"
+	@echo "... src/sortings/mx_push_front_proc.o"
+	@echo "... src/sortings/mx_push_front_proc.i"
+	@echo "... src/sortings/mx_push_front_proc.s"
 	@echo "... src/utils/bit_function.o"
 	@echo "... src/utils/bit_function.i"
 	@echo "... src/utils/bit_function.s"
@@ -5397,9 +5544,9 @@ help:
 	@echo "... src/utils/mx_create_ast.o"
 	@echo "... src/utils/mx_create_ast.i"
 	@echo "... src/utils/mx_create_ast.s"
-	@echo "... src/utils/mx_create_comands.o"
-	@echo "... src/utils/mx_create_comands.i"
-	@echo "... src/utils/mx_create_comands.s"
+	@echo "... src/utils/mx_create_cmds.o"
+	@echo "... src/utils/mx_create_cmds.i"
+	@echo "... src/utils/mx_create_cmds.s"
 	@echo "... src/utils/mx_create_tnode.o"
 	@echo "... src/utils/mx_create_tnode.i"
 	@echo "... src/utils/mx_create_tnode.s"
@@ -5415,6 +5562,9 @@ help:
 	@echo "... src/utils/mx_dupstrarr.o"
 	@echo "... src/utils/mx_dupstrarr.i"
 	@echo "... src/utils/mx_dupstrarr.s"
+	@echo "... src/utils/mx_env_to_var.o"
+	@echo "... src/utils/mx_env_to_var.i"
+	@echo "... src/utils/mx_env_to_var.s"
 	@echo "... src/utils/mx_exit.o"
 	@echo "... src/utils/mx_exit.i"
 	@echo "... src/utils/mx_exit.s"
@@ -5457,6 +5607,9 @@ help:
 	@echo "... src/utils/mx_reg.o"
 	@echo "... src/utils/mx_reg.i"
 	@echo "... src/utils/mx_reg.s"
+	@echo "... src/utils/mx_setenv.o"
+	@echo "... src/utils/mx_setenv.i"
+	@echo "... src/utils/mx_setenv.s"
 	@echo "... src/utils/mx_start_program.o"
 	@echo "... src/utils/mx_start_program.i"
 	@echo "... src/utils/mx_start_program.s"
@@ -5493,12 +5646,9 @@ help:
 	@echo "... src/utils/mx_ush_init.o"
 	@echo "... src/utils/mx_ush_init.i"
 	@echo "... src/utils/mx_ush_init.s"
-	@echo "... src/utils/mx_var_tree_to_var.o"
-	@echo "... src/utils/mx_var_tree_to_var.i"
-	@echo "... src/utils/mx_var_tree_to_var.s"
-	@echo "... src/utils/mx_wait_process.o"
-	@echo "... src/utils/mx_wait_process.i"
-	@echo "... src/utils/mx_wait_process.s"
+	@echo "... src/utils/mx_wait_processes.o"
+	@echo "... src/utils/mx_wait_processes.i"
+	@echo "... src/utils/mx_wait_processes.s"
 	@echo "... src/utils/mx_write_from_to.o"
 	@echo "... src/utils/mx_write_from_to.i"
 	@echo "... src/utils/mx_write_from_to.s"

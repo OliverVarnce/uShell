@@ -111,8 +111,10 @@ typedef struct s_token{
 
 typedef struct s_processes {
     char **name;
+    void *data;
     pid_t pid;
     int index;
+    struct s_processes *next;
 }              t_processes;
 
 typedef struct s_input {
@@ -132,7 +134,7 @@ typedef struct s_ush {
     char **env;
     t_list *history;
     t_input *input;
-    t_list *processes;
+    t_processes *processes;
     bool is_exit;
     bool if_ctrl_c;
     int exit_status;
@@ -293,7 +295,7 @@ int mx_buildin_list(t_token *token, t_ush *ush);
 void mx_exec_env_fpr(char *path, char **argv, char **env, t_ush *ush);
 
 // processes
-int mx_add_process(t_list **processes, pid_t pid, char **name);
+int mx_add_process(t_processes **processes, pid_t pid, char **name);
 void mx_del_top_process(t_ush *ush);
 void mx_del_pid_process(t_ush *ush, int pid);
 void mx_wait_processes(t_ush *ush, char **argv);
@@ -333,6 +335,14 @@ void mx_pop_front_free_data(t_list **head);
 void mx_pop_list(t_list **head, void *data, bool(*if_list)(void *, void *),
                  void(*del_data)(void *));
 void mx_setenv();
+
+
+//sortings
+t_processes *mx_create_proc_node(void *data);
+void mx_pop_back_proc(t_processes **head);
+void mx_pop_front_proc(t_processes **head);
+void mx_push_front_proc(t_processes **list, void *data);
+void mx_push_back_proc(t_processes **list, void *data);
 
 
 #endif

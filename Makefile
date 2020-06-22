@@ -129,7 +129,12 @@ SRC = $(addprefix $(SRC_DIR)/,\
         utils/mx_pop_front_free_data.c \
         utils/mx_pop_list.c \
         utils/mx_loop.c \
-        utils/mx_setenv.c)
+        utils/mx_setenv.c \
+        sortings/mx_create_node_proc.c \
+        sortings/mx_pop_back_proc.c \
+        sortings/mx_pop_front_proc.c \
+        sortings/mx_push_back_proc.c \
+        sortings/mx_push_front_proc.c)
 
 
 
@@ -249,11 +254,17 @@ OBJ =	mx_add_one_rank.o \
         mx_pop_front_free_data.o \
         mx_pop_list.o \
         mx_loop.o \
-        mx_setenv.o
+        mx_setenv.o \
+        mx_create_node_proc.o \
+        mx_pop_back_proc.o \
+        mx_pop_front_proc.o \
+        mx_push_back_proc.o \
+        mx_push_front_proc.o
+
 
 CC = clang
 
-CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic #-g -fsanitize=address
+CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic -ltermcap #-g -fsanitize=address
 
 all : install
 
@@ -264,7 +275,7 @@ libmx/libmx.a:
 
 ush : $(SRC) inc/ush.h libmx/libmx.a
 	@$(CC) $(CFLAGS) -c $(SRC) $(foreach d, $(INC), -I $d)
-	@$(CC) -ltermcap $(CFLAGS) $(OBJ) $(LIBMXF)/$(LIB_NAME) -o $(APP_NAME)
+	@$(CC) $(CFLAGS) $(OBJ) $(LIBMXF)/$(LIB_NAME) -o $(APP_NAME)
 	@printf "\r\33[2K$@ \033[32;1mcreated\033[0m\n"
 	@mkdir -p $(OBJ_DIR)
 	@mv $(OBJ) $(OBJ_DIR)
