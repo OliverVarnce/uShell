@@ -11,23 +11,42 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66ffa57a-d346-4769-a3ff-cfc76628324e" name="Default Changelist" comment="bugfix">
+    <list default="true" id="66ffa57a-d346-4769-a3ff-cfc76628324e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/printing/mx_print_stat.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/printing/mx_print_tab_cmds.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/ush.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ush.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_cd.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_cd.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/builtins/mx_ctrl_v_and_not_ascii.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_ctrl_v_and_not_ascii.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_env.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_env.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/builtins/mx_fg.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_fg.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/builtins/mx_key_duble_tab.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_key_duble_tab.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/builtins/mx_key_tab.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_key_tab.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_read_comand.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_read_comand.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exec/mx_exec_dmore.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/exec/mx_exec_opmore.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exec/mx_exec_env_pr.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/exec/mx_exec_env_fpr.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exec/mx_execute.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/exec/mx_exec.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exec/mx_execute_proces.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/exec/mx_exec_processes.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exec/mx_execute_tree.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/exec/mx_exec_tree.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exec/mx_pipe_execute.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/exec/mx_exec_pipe.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parsers/mx_key_delite.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/mx_key_delite.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parsers/mx_mini_parser_tab.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/mx_mini_parser_tab.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsers/mx_one_symbol.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/mx_one_symbol.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsers/mx_parsing.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/mx_parsing.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/printing/mx_print_cont.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/printing/mx_print_susp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/printing/mx_print_tab_comands.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/printing/mx_printerr_env.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/printing/mx_printerr_env.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/printing/mx_printstr_env.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/printing/mx_printstr_env.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/signals/mx_ctrl_r.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/signals/mx_ctrl_r.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/signals/mx_read_keyboard.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/signals/mx_read_keyboard.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/signals/mx_signals.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/mx_ascii.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_ascii.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mx_create_comands.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_create_cmds.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mx_history.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_history.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/mx_input.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_input.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/mx_not_ascii.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_not_ascii.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mx_term_out.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_term_out.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/mx_ush_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_ush_init.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/mx_wait_process.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_wait_process.c" afterDir="false" />
     </list>
@@ -54,6 +73,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -72,7 +92,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="USH" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="USH" TARGET_NAME="USH" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="USH" RUN_TARGET_NAME="USH">
+    <configuration name="USH" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="USH" TARGET_NAME="USH" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="USH" RUN_TARGET_NAME="USH">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -92,6 +112,8 @@
       <workItem from="1592560073242" duration="3241000" />
       <workItem from="1592773051887" duration="5003000" />
       <workItem from="1592819904313" duration="2836000" />
+      <workItem from="1592839911420" duration="5894000" />
+      <workItem from="1592850198000" duration="3078000" />
     </task>
     <task id="LOCAL-00001" summary="razbil na papki">
       <created>1592565543518</created>
@@ -128,26 +150,35 @@
       <option name="project" value="LOCAL" />
       <updated>1592821811693</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="bugfix working without env">
+      <created>1592845172558</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1592845172558</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="razbil na papki" />
     <MESSAGE value="bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix" />
+    <MESSAGE value="bugfix working without env" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix working without env" />
   </component>
   <component name="WindowStateProjectService">
     <state x="318" y="197" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592772965028">
       <screen x="0" y="23" width="1280" height="730" />
     </state>
     <state x="318" y="197" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.730@0.23.1280.730" timestamp="1592772965028" />
-    <state x="227" y="23" key="CommitChangelistDialog2" timestamp="1592822731934">
-      <screen x="0" y="23" width="1280" height="730" />
+    <state x="454" y="23" key="CommitChangelistDialog2" timestamp="1592853983733">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="227" y="23" key="CommitChangelistDialog2/0.23.1280.730@0.23.1280.730" timestamp="1592822731934" />
+    <state x="454" y="23" key="CommitChangelistDialog2/0.23.2560.1337@0.23.2560.1337" timestamp="1592853983733" />
     <state width="1238" height="227" key="GridCell.Tab.0.bottom" timestamp="1592820590841">
       <screen x="0" y="23" width="1280" height="730" />
     </state>
@@ -180,14 +211,16 @@
       <screen x="0" y="23" width="1280" height="730" />
     </state>
     <state width="1238" height="227" key="GridCell.Tab.1.right/0.23.1280.730@0.23.1280.730" timestamp="1592820590843" />
-    <state width="320" height="242" key="ImportCMakeProjectWizard.bottomPanel" timestamp="1592819900589">
-      <screen x="0" y="23" width="1280" height="730" />
+    <state width="640" height="306" key="ImportCMakeProjectWizard.bottomPanel" timestamp="1592839907443">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state width="320" height="242" key="ImportCMakeProjectWizard.bottomPanel/0.23.1280.730@0.23.1280.730" timestamp="1592819900589" />
-    <state width="320" height="315" key="ImportCMakeProjectWizard.topPanel" timestamp="1592819900588">
-      <screen x="0" y="23" width="1280" height="730" />
+    <state width="640" height="306" key="ImportCMakeProjectWizard.bottomPanel/0.23.2560.1337@0.23.2560.1337" timestamp="1592839907443" />
+    <state width="640" height="715" key="ImportCMakeProjectWizard.topPanel" timestamp="1592839907442">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state width="320" height="315" key="ImportCMakeProjectWizard.topPanel/0.23.1280.730@0.23.1280.730" timestamp="1592819900588" />
+    <state width="640" height="715" key="ImportCMakeProjectWizard.topPanel/0.23.2560.1337@0.23.2560.1337" timestamp="1592839907442" />
     <state x="128" y="85" key="MergeDialog" timestamp="1592819210825">
       <screen x="0" y="23" width="1280" height="730" />
     </state>
@@ -196,18 +229,24 @@
       <screen x="0" y="23" width="1280" height="730" />
     </state>
     <state x="477" y="97" key="RollbackChangesDialog/0.23.1280.730@0.23.1280.730" timestamp="1592816874446" />
-    <state x="240" y="128" key="Vcs.Push.Dialog.v2" timestamp="1592821570010">
-      <screen x="0" y="23" width="1280" height="730" />
+    <state x="480" y="215" key="Vcs.Push.Dialog.v2" timestamp="1592845179151">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="240" y="128" key="Vcs.Push.Dialog.v2/0.23.1280.730@0.23.1280.730" timestamp="1592821570010" />
+    <state x="480" y="215" key="Vcs.Push.Dialog.v2/0.23.2560.1337@0.23.2560.1337" timestamp="1592845179151" />
+    <state x="1075" y="328" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1592852340944">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state x="1075" y="328" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.2560.1337@0.23.2560.1337" timestamp="1592852340944" />
     <state x="431" y="309" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592816719251">
       <screen x="0" y="23" width="1280" height="730" />
     </state>
     <state x="431" y="309" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.730@0.23.1280.730" timestamp="1592816719251" />
-    <state x="321" y="158" width="598" height="548" key="find.popup" timestamp="1592822252849">
-      <screen x="0" y="23" width="1280" height="730" />
+    <state x="642" y="270" width="1196" height="1004" key="find.popup" timestamp="1592853594092">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="321" y="158" width="598" height="548" key="find.popup/0.23.1280.730@0.23.1280.730" timestamp="1592822252849" />
+    <state x="642" y="270" width="1196" height="1004" key="find.popup/0.23.2560.1337@0.23.2560.1337" timestamp="1592853594092" />
     <state x="394" y="108" key="git4idea.branch.GitSmartOperationDialog" timestamp="1592819793514">
       <screen x="0" y="23" width="1280" height="730" />
     </state>

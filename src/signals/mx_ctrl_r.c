@@ -5,8 +5,8 @@ static unsigned int mx_read_keyb_and_prinitng(t_ush *ush, int index,
     unsigned int ch = 0;
 
     if (index != ush->input->maxcmd + 1)
-        mx_terminal_out(MX_USH, mx_strlen(ush->input->comands[index]) + 1, 0,
-                           ush->input->comands[index]);
+        mx_terminal_out(MX_USH, mx_strlen(ush->input->cmds[index]) + 1, 0,
+                           ush->input->cmds[index]);
     else
         mx_terminal_out(MX_USH, 1, 0, "");
     mx_printstr("\n");
@@ -22,13 +22,15 @@ static int search_comand(t_ush *ush, int index, char *tmp) {
     int str_len_comand = 0;
 
     if (index != ush->input->maxcmd + 1) {
-        str_len_comand = mx_strlen(ush->input->comands[index]) + 1;
-        mx_clean_terminal(MX_USH, str_len_comand, 0, ush->input->comands[index]);
+        str_len_comand = mx_strlen(ush->input->cmds[index]) + 1;
+        mx_clean_terminal(MX_USH, str_len_comand, 0,
+                          ush->input->cmds[index]);
     }
     else
         mx_clean_terminal(MX_USH, 1, 0, "");
-    for (int y = 0; index_comand == ush->input->maxcmd + 1 && ush->input->comands[y]; y++)
-        if (mx_strstr(ush->input->comands[y], tmp) != 0)
+    for (int y = 0; index_comand == ush->input->maxcmd + 1
+         && ush->input->cmds[y]; y++)
+        if (mx_strstr(ush->input->cmds[y], tmp) != 0)
             index_comand = y;
     return index_comand;
 }
@@ -51,7 +53,7 @@ void mx_ctrl_r(t_ush *ush) {
     if (index != ush->input->maxcmd + 1) {
         ush->input->id = index;
         ush->input->endpoint = 0;
-        ush->input->inplen = mx_strlen(ush->input->comands[ush->input->id]) + 1;
+        ush->input->inplen = mx_strlen(ush->input->cmds[ush->input->id]) + 1;
     }
     mx_strdel(&tmp);
 }

@@ -52,7 +52,7 @@ static void export_pwd_oldpwd(t_ush *ush) {
     tmp[1] = mx_strjoin("PWD=", ush->pwd);
     tmp[2] = mx_strjoin("OLDPWD=", ush->old_pwd);
     tmp[3] = 0;
-    mx_export(tmp, &ush->var_tree, ush);
+    mx_export(tmp, &ush->environ, ush);
     mx_del_strarr(&tmp);
 }
 
@@ -60,7 +60,7 @@ int mx_cd(char **argv, t_ush *ush) {
     int i = 0;
     int flags = get_flags(argv, &i);
     char *path = (flags & 4) ? ush->old_pwd : (argv[i] ? argv[i]
-        : mx_return_value2("HOME", &(ush->var_tree)));
+        : mx_return_value2("HOME", &ush->environ));
     int status  = 0;
 
     if (mx_is_link(path) && (flags & 1) && (flags & 2) == 0) {
@@ -73,7 +73,6 @@ int mx_cd(char **argv, t_ush *ush) {
         status = mx_chdir_l(path, ush, flags);
     if (status == 0)
         export_pwd_oldpwd(ush);
-    ush->last_status = status;
+    ush->last_return = status;
     return status;
 }
-

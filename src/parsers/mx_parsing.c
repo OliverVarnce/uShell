@@ -3,7 +3,7 @@
 void mx_parsing(char *str, t_ush *ush) {
     int end = mx_strlen(str);
     char *tmp = mx_parsing_input(str);
-    char **comands = 0;
+    char **cmds = 0;
 
     if (tmp == 0) {
         return;
@@ -13,7 +13,7 @@ void mx_parsing(char *str, t_ush *ush) {
         mx_printerr("u$h: parse error near | \\ |\n");
         return;
     }
-    comands = mx_create_comands(tmp, end);
-    mx_execute(comands, ush);
-    mx_del_strarr(&comands);
+    cmds = mx_create_cmds(tmp, end);
+    mx_execute(cmds, ush);
+    mx_del_strarr(&cmds);
 }

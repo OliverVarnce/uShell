@@ -1,7 +1,7 @@
 #include "ush.h"
 
-static bool print() {
-    mx_printerr("\nusage: env [-i] [-P utilpath] [-u name]\n");
+static bool printerr() {
+    mx_printerr(MX_USAGE_ENV);
     mx_printerr("\t[name=value ...] [utility [argument ...]]\n");
     return 1;
 }
@@ -26,6 +26,6 @@ bool mx_printerr_env(char *str, int flag) {
         mx_printerr("env: option requires an argument -- ");
     }
     write(2, &s, 1);
-    return print();
+    return printerr();
 }
 

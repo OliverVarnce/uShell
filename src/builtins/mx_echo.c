@@ -92,7 +92,7 @@ void mx_echo(char **str, t_ush *ush) {
     else {
         print_e(i, flags, str);
     }
-    ush->last_status = 0;
+    ush->last_return = 0;
     free(flags);
 }
 

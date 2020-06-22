@@ -34,7 +34,7 @@ static void parametrchell(t_ush *processes, int *i, char **new_str) {
     else {
         mx_strdel(&par_shell);
         par_shell = mx_strndup(&new_str[0][*i + 2], end - *i - 3);
-        par_shell = mx_return_value(&par_shell, &(processes->var_tree));
+        par_shell = mx_return_value(&par_shell, &(processes->environ));
         mx_do_replace(new_str, *i, end, par_shell);
         if (par_shell)
             *i += mx_strlen(par_shell);
@@ -44,7 +44,7 @@ static void parametrchell(t_ush *processes, int *i, char **new_str) {
 static void parametrlaststatus(t_ush *processes, int *i, char **new_str, int flag) {
     char *par_shell = 0;
 
-    par_shell = mx_itoa(processes->last_status);
+    par_shell = mx_itoa(processes->last_return);
     mx_do_replace(new_str, *i, flag, par_shell);
     if (par_shell) {
         *i += mx_strlen(par_shell);
@@ -66,7 +66,7 @@ void mx_parametr_shell(t_ush *processes, int *i, char **new_str) {
         parametrchell(processes, i, new_str);
     }
     else {
-        par_shell = mx_return_value(&par_shell, &(processes->var_tree));
+        par_shell = mx_return_value(&par_shell, &(processes->environ));
         mx_do_replace(new_str, *i, flag, par_shell);
         if (par_shell)
             *i += mx_strlen(par_shell);

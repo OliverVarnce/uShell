@@ -16,25 +16,25 @@ static void change_variteble(t_variable *noda, char *name, char *value) {
     }
 }
 
-void mx_serch_list(t_list **var_tree, char *name, char *value) {
-    t_list *var_tree_temp = *var_tree;
+void mx_serch_list(t_list **environ, char *name, char *value) {
+    t_list *environ_temp = *environ;
     t_variable *var = 0;
     int i = 1;
 
-    while (i == 1 && var_tree_temp) {
-        if (mx_strcmp(((t_variable*)var_tree_temp->data)->name, name) == 0) {
-            change_variteble(var_tree_temp->data, name, value);
+    while (i == 1 && environ_temp) {
+        if (mx_strcmp(((t_variable*)environ_temp->data)->name, name) == 0) {
+            change_variteble(environ_temp->data, name, value);
             i = 0;
         }
         else
-            var_tree_temp = var_tree_temp->next;
+            environ_temp = environ_temp->next;
     }
-    if (!(var_tree_temp)) {
+    if (!(environ_temp)) {
         var = (t_variable*)malloc(sizeof(t_variable));
         var->mem = 0;
         var->is_env = false;
         var->name = name;
         var->value = value;
-        mx_push_back(var_tree, var);
+        mx_push_back(environ, var);
     }
 }

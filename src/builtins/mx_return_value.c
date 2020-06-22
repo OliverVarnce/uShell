@@ -1,7 +1,7 @@
 #include "ush.h"
 
-char *mx_return_value(char **str, t_list **var_tree) {
-    t_list *tmp = *var_tree;
+char *mx_return_value(char **str, t_list **environ) {
+    t_list *tmp = *environ;
 
     while (tmp) {
         if (mx_strcmp(*str, ((t_variable*)tmp->data)->name) == 0) {
@@ -14,8 +14,8 @@ char *mx_return_value(char **str, t_list **var_tree) {
     return 0;
 }
 
-char *mx_return_value2(const char *str, t_list **var_tree) {
-    t_list *tmp = *var_tree;
+char *mx_return_value2(const char *str, t_list **environ) {
+    t_list *tmp = *environ;
 
     while (tmp) {
         if (mx_strcmp(str, ((t_variable*)tmp->data)->name) == 0)
