@@ -81,7 +81,7 @@ void mx_start_program(t_list **var_tree, char **env) {
     char *tmp = 0;
     t_variable *var = 0;
 
-    while (env[++i]) {
+    for (; env[++i];) {
         var = (t_variable *)malloc(sizeof(t_variable));
         envvar = mx_strsplit(env[i], '=');
         var->name = envvar[0];

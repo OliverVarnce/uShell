@@ -11,7 +11,7 @@ void mx_execute(char **commands, t_ush *processes) {
         if (processes->if_ctrl_c && mx_syntax_analyzer(tokens)) {
             root_ast = mx_create_ast(&tokens, 0);
             mx_execute_tree(root_ast, 0, 0, processes);
-            mx_delete_ast(&root_ast);
+            mx_delete_last(&root_ast);
         }
         else
             mx_clear_tokens(&tokens);

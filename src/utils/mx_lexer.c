@@ -3,7 +3,7 @@
 static int get_start_index(char *str) {
     int i = 0;
 
-    while(str[i]) {
+    for (; str[i];) {
         if (str[i] != ' ') {
             return i;
         }
@@ -15,7 +15,7 @@ static int get_start_index(char *str) {
 static int get_end_index(char *str) {
     int i = mx_strlen(str) - 1;
 
-    while(i >= 0) {
+    for (; i >= 0; ) {
         if (str[i] != ' ') {
             return i + 1;
         }
@@ -31,7 +31,7 @@ t_list *mx_create_tokens(char *str, t_ush *processes) {
     t_list *tokens = 0;
 
     mx_if_new_parameter(str, &start, end, processes);
-    while ((newToken = mx_get_next_token(&start, end, str, processes))) {
+    for (; (newToken = mx_get_next_token(&start, end, str, processes));) {
         if (newToken->type == 2)
             free(newToken);
         else

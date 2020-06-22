@@ -7,7 +7,7 @@ static char *read_bqute(int des, int des2) {
     ssize_t check2 = 0;
 
     close(des2);
-    while ((check = read(des, tmp, 1024)) != 0) {
+    for (; (check = read(des, tmp, 1024)) != 0;) {
         str = realloc(str, check2 + check + 1);
         mx_memcpy(&str[check2], tmp, check);
         check2 += check;
@@ -23,7 +23,7 @@ static char *read_to_delim(int des, int des2) {
     char *str = read_bqute(des, des2);
     int i = -1;
 
-    while (str && str[++i] != 0)
+    for (; str && str[++i] != 0;)
         if (str[i] == '\n')
             str[i] = '\x0d';
     if (str) {

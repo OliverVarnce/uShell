@@ -9,7 +9,7 @@ char **mx_dupstrarr(char **strs) {
         return 0;
     for (;strs[len];len++);
     new_arr = (char **)malloc(sizeof(char *) * (len + 1));
-    while (strs[++i]) {
+    for (; strs[++i];) {
         new_arr[i] = mx_strdup(strs[i]);
     }
     new_arr[i] = 0;

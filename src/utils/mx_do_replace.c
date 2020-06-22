@@ -11,11 +11,11 @@ void mx_do_replace(char **str, size_t start, size_t end, char *str_new) {
     if (new_str) {
         for (i = 0; i < start; i++)
             new_str[i] = (*str)[i];
-        while (sum != 0 && str_new[i - start]) {
+        for (; sum != 0 && str_new[i - start];) {
             new_str[i] = str_new[i - start];
             i++;
         }
-        while((*str)[end])
+        for (; (*str)[end];)
             new_str[i++] = (*str)[end++];
         new_str[i] = 0;
     }

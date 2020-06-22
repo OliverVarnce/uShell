@@ -1,6 +1,6 @@
 #include "ush.h"
 
-int mx_bit_sumbol(char *str) {
+int mx_bit_symbol(char *str) {
     unsigned char tmp = (unsigned char)str[0];
 
     if (tmp >> 7 == 0)

@@ -8,7 +8,7 @@ static t_list* find_max_priority(t_list* tokens) {
     if (tmp == 0)
         return 0;
     max_priority = ((t_token*)tmp->data)->priority;
-    while (tmp) {
+    for (; tmp;) {
         if (((t_token*)tmp->data)->priority > max_priority) {
             max_priority = ((t_token*)tmp->data)->priority;
             max_node = tmp;
@@ -29,7 +29,7 @@ t_list* del_token(t_list **tokens, t_list *max) {
         free(*tokens);
         *tokens = 0;
     }
-    while (tmp->next) {
+    for (; tmp->next;) {
         if (strcmp(((t_token*)tmp->next->data)->value[0],
                     ((t_token*)max->data)->value[0]) == 0) {
             next = tmp->next->next;

@@ -156,7 +156,7 @@ add_executable(USH
         src/signals/mx_ctrl_r.c
         src/signals/mx_read_keyboard.c
         src/signals/mx_signals.c
-        src/utils/bit_function.c
+        src/utils/bit_func.c
         src/utils/main.c
         src/utils/mx_0_and_x.c
         src/utils/mx_add_to_strarr.c
@@ -169,7 +169,7 @@ add_executable(USH
         src/utils/mx_create_comands.c
         src/utils/mx_create_tnode.c
         src/utils/mx_create_token.c
-        src/utils/mx_delete_ast.c
+        src/utils/mx_delete_last.c
         src/utils/mx_do_replace.c
         src/utils/mx_dupstrarr.c
         src/utils/mx_exit.c

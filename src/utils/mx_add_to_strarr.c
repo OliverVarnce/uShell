@@ -11,7 +11,7 @@ void mx_add_to_strarr(char ***strs, char *str) {
         (*strs)[1] = 0;
         return;
     }
-    while ((*strs)[count])
+    for (; (*strs)[count];)
         count++;
     *strs = (char **)mx_realloc(*strs, sizeof(char *) * (count+ 2));
     (*strs)[count] = str;

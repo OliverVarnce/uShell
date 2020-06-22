@@ -1,7 +1,7 @@
 #include "ush.h"
 
 static void mx_skip_spaces (char *str, int *start, int end) {
-    while (str[*start] && *start < end) {
+    for (; str[*start] && *start < end;) {
         if (str[*start] != ' ') {
             return;
         }
@@ -18,8 +18,8 @@ static bool if_symbol(char test) {
 static void end_argv(int *curr_pos, int end, char *str) {
     int pos = 0;
 
-    while (mx_is_char(str[*curr_pos]) || (str[*curr_pos] == ' '
-           && !mx_check_symbol(str, *curr_pos, str[*curr_pos]))) {
+    for (; mx_is_char(str[*curr_pos]) || (str[*curr_pos] == ' '
+           && !mx_check_symbol(str, *curr_pos, str[*curr_pos]));) {
         if (if_symbol(str[*curr_pos])
             && mx_check_symbol(str, *curr_pos, str[*curr_pos])) {
             pos = (*curr_pos);
@@ -55,7 +55,7 @@ t_token *mx_token_in_program(int *curr_pos, int end, char *str,
     char *newValue = 0;
     char *tmp = 0;
 
-    while (mx_is_char(str[token_start])) {
+    for (; mx_is_char(str[token_start]);) {
         end_argv(curr_pos, end, str);
         newValue = mx_strndup(&str[token_start], *curr_pos - token_start);
         tmp = mx_audit_str(newValue, processes, 0);

@@ -16,7 +16,7 @@ void mx_pop_list(t_list **head, void *data, bool(*if_list)(void *, void *),
     s = *head;
     if (if_list(data, s->data) && del(s, head, del_data))
         return;
-    while (s->next != 0) {
+    for (; s->next != 0;) {
         if (if_list(data, s->next->data)) {
             del_data(s->next->data);
             tmp = s->next;

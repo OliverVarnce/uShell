@@ -278,7 +278,7 @@ unsigned int mx_read_keyboard(t_ush *ush);
 
 // AST
 t_tnode* mx_create_ast(t_list** tokens, t_tnode *prev);
-void mx_delete_ast(t_tnode **root);
+void mx_delete_last(t_tnode **root);
 
 //exec
 int mx_execute_tree(t_tnode *root, int *fds, char operator_status, t_ush *ush);

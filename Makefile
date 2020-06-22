@@ -85,7 +85,7 @@ SRC = $(addprefix $(SRC_DIR)/,\
 		printing/mx_print_tab_comands.c \
 		printing/mx_printstr_env.c \
 		utils/main.c \
-		utils/bit_function.c \
+		utils/bit_func.c \
         utils/main.c \
         utils/mx_0_and_x.c \
         utils/mx_arrstr_to_str.c \
@@ -97,7 +97,7 @@ SRC = $(addprefix $(SRC_DIR)/,\
         utils/mx_create_comands.c \
         utils/mx_create_tnode.c \
         utils/mx_create_token.c \
-        utils/mx_delete_ast.c \
+        utils/mx_delete_last.c \
         utils/mx_do_replace.c \
         utils/mx_dupstrarr.c \
         utils/mx_exit.c \
@@ -206,7 +206,7 @@ OBJ =	mx_add_one_rank.o \
   		mx_print_tab_comands.o \
   		mx_printstr_env.o \
   		main.o \
-  		bit_function.o \
+  		bit_func.o \
         mx_0_and_x.o \
         mx_arrstr_to_str.o \
         mx_ascii.o \
@@ -217,7 +217,7 @@ OBJ =	mx_add_one_rank.o \
         mx_create_comands.o \
         mx_create_tnode.o \
         mx_create_token.o \
-        mx_delete_ast.o \
+        mx_delete_last.o \
         mx_do_replace.o \
         mx_dupstrarr.o \
         mx_exit.o \
