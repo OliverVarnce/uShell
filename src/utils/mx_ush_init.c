@@ -38,11 +38,12 @@ static char *get_pwd() {
 void mx_ush_init(t_ush **ush, char **env) {
     t_ush *new_info = (t_ush*) malloc(sizeof(t_ush));
 
+
     if ((*env) == NULL || getenv("SHLVL")) {
         mx_setenv();
         new_info->env = env;
     }
-    new_info->processes = 0; // empty
+    new_info->processes = 0;
     new_info->is_exit = false;
     new_info->exit_status = 0;
     new_info->pwd = get_pwd();

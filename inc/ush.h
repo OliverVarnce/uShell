@@ -36,6 +36,7 @@
 #define MX_WTERMSIG(x)      (MX_WST(x))
 #define MX_EXSTATUS(x)      ((MX_W_INT(x) >> 8) & 0x000000ff)
 
+#define MX_USAGE_ENV "\nusage: env [-i] [-P utilpath] [-u name]\n"
 #define MX_FLAGS_W O_RDWR | O_CREAT | O_TRUNC, S_IWRITE | S_IREAD
 #define MX_FLAGS_WE O_RDWR | O_CREAT | O_APPEND, S_IWRITE | S_IREAD
 #define MAX_PROC_COUNT 500
@@ -115,7 +116,7 @@ typedef struct s_process {
 }              t_process;
 
 typedef struct s_input {
-    char **comands;
+    char **cmds;
     char **comand_tab;
     int id;
     int maxcmd;
@@ -198,7 +199,7 @@ void mx_parametr_shell(t_ush *processes, int *i, char **new_str);
 int mx_flang_comand(char *str, int *pos, int end, int flag);
 void mx_read_user(char **user);
 t_token *mx_token_in_program(int *curr_pos, int end, char *str, t_ush *processes);
-int mx_exec_dmore(t_tnode *root, int *fds, int opstat, t_ush *ush);
+int mx_exec_opmore(t_tnode *root, int *fds, int opstat, t_ush *ush);
 void mx_ush_init(t_ush **ush, char **env);
 void mx_subs(char **str);
 void mx_parsing(char *str, t_ush *ush);
@@ -213,7 +214,7 @@ void mx_write_from_to(int from , int to, off_t start);
 
 //BUILT IN
 int mx_cd(char **argv, t_ush *ush);
-int mx_history(t_list **list_comands);
+int mx_history(t_list **list_cmds);
 void mx_printstr_env(char *str);
 int mx_pwd(char **argv, t_ush *ush);
 void mx_echo(char **str,  t_ush *ush);
@@ -244,7 +245,7 @@ int mx_end_flag(char *str, int *position, int end, int flag);
 char *mx_parsing_input(char *str);
 char *mx_audit_str(char *str, t_ush *processes, bool dqute);
 char *mx_str_bquote(char **str, t_ush *processes);
-char **mx_create_comands(char *str, int end);
+char **mx_create_cmds(char *str, int end);
 void mx_one_symbol(char **str, char ch, int *count, int position);
 void mx_not_ascii(char *chars, t_ush *ush);
 int mx_bit_sumbol(char *str);
@@ -260,9 +261,9 @@ void mx_print_esc(char *s);
 void mx_key_delite(t_ush *ush);
 char **mx_key_tab(char *parsing, char **str, t_ush *ush);
 char *mx_mini_parser_tab(char *parsing, t_ush *ush);
-void mx_read_comand(char *parsing, t_list **list_comand);
-void mx_key_duble_tab(char **str, char **comands, t_ush *ush);
-void mx_print_tab_comands(t_list *list_comand);
+void mx_read_comand(char *parsing, t_list **list_cmd);
+void mx_key_duble_tab(char **str, char **cmds, t_ush *ush);
+void mx_print_tab_cmds(t_list *list_cmd);
 t_ush* mx_get_info(t_ush *ush);
 bool mx_is_link(char *file);
 void mx_unset_fds(int *fds, int *savedFds, int operator_starus);
@@ -289,7 +290,7 @@ void mx_execute_proces(t_token* token);
 void mx_close_all_pr(t_ush *ush);
 int mx_pipe_execute(t_tnode *root, int *fds, char operator_status, t_ush *processes);
 int mx_buildin_list(t_token *token, t_ush *ush);
-void mx_exec_env_pr(char *path, char **argv, char **env, t_ush *ush);
+void mx_exec_env_fpr(char *path, char **argv, char **env, t_ush *ush);
 
 // processes
 int mx_add_process(t_list **processes, pid_t pid, char **name);
@@ -301,7 +302,7 @@ void mx_loop(char str, t_ush *ush);
 
 //print
 void mx_print_susp(char **mas_name);
-void mx_print_cont(char **mas_name, int pid);
+void mx_print_stat(char **mas_name, int pid, int event);
 char **mx_get_name(t_ush *ush, int numb);
 
 // env 

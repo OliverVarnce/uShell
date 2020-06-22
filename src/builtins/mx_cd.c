@@ -60,7 +60,7 @@ int mx_cd(char **argv, t_ush *ush) {
     int i = 0;
     int flags = get_flags(argv, &i);
     char *path = (flags & 4) ? ush->old_pwd : (argv[i] ? argv[i]
-        : mx_return_value2("HOME", &(ush->environ)));
+        : mx_return_value2("HOME", &ush->environ));
     int status  = 0;
 
     if (mx_is_link(path) && (flags & 1) && (flags & 2) == 0) {
@@ -76,4 +76,3 @@ int mx_cd(char **argv, t_ush *ush) {
     ush->last_return = status;
     return status;
 }
-

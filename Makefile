@@ -54,15 +54,15 @@ SRC = $(addprefix $(SRC_DIR)/,\
         builtins/mx_unset_fds.c \
         builtins/mx_which.c \
 		signals/mx_ctrl_r.c \
-		exec/mx_exec_dmore.c \
-		exec/mx_exec_env_pr.c \
+		exec/mx_exec_opmore.c \
+		exec/mx_exec_env_fpr.c \
 		exec/mx_exec_less.c \
 		exec/mx_exec_more.c \
 		exec/mx_exec_token.c \
-		exec/mx_execute.c \
-		exec/mx_execute_proces.c \
-		exec/mx_execute_tree.c \
-		exec/mx_pipe_execute.c \
+		exec/mx_exec.c \
+		exec/mx_exec_processes.c \
+		exec/mx_exec_tree.c \
+		exec/mx_exec_pipe.c \
 		signals/mx_read_keyboard.c \
 		memory/mx_charge_paranetr_export.c \
 		memory/mx_clear_tokens.c \
@@ -77,12 +77,11 @@ SRC = $(addprefix $(SRC_DIR)/,\
 		parsers/mx_one_symbol.c \
 		parsers/mx_parsing.c \
 		parsers/mx_parsing_input.c \
-		printing/mx_print_cont.c \
+		printing/mx_print_stat.c \
 		printing/mx_print_env.c \
 		printing/mx_printerr_env.c \
 		printing/mx_print_esc.c \
-		printing/mx_print_susp.c \
-		printing/mx_print_tab_comands.c \
+		printing/mx_print_tab_cmds.c \
 		printing/mx_printstr_env.c \
 		utils/main.c \
 		utils/bit_function.c \
@@ -94,7 +93,7 @@ SRC = $(addprefix $(SRC_DIR)/,\
         utils/mx_chdir_l.c \
         utils/mx_chdir_p.c \
         utils/mx_create_ast.c \
-        utils/mx_create_comands.c \
+        utils/mx_create_cmds.c \
         utils/mx_create_tnode.c \
         utils/mx_create_token.c \
         utils/mx_delete_ast.c \
@@ -176,15 +175,15 @@ OBJ =	mx_add_one_rank.o \
         mx_unset_fds.o \
         mx_which.o \
   		mx_ctrl_r.o \
-  		mx_exec_dmore.o \
-  		mx_exec_env_pr.o \
+  		mx_exec_opmore.o \
+  		mx_exec_env_fpr.o \
   		mx_exec_less.o \
   		mx_exec_more.o \
   		mx_exec_token.o \
-  		mx_execute.o \
-  		mx_execute_proces.o \
-  		mx_execute_tree.o \
-  		mx_pipe_execute.o \
+  		mx_exec.o \
+  		mx_exec_processes.o \
+  		mx_exec_tree.o \
+  		mx_exec_pipe.o \
   		mx_read_keyboard.o \
   		mx_charge_paranetr_export.o \
   		mx_clear_tokens.o \
@@ -199,12 +198,11 @@ OBJ =	mx_add_one_rank.o \
   		mx_one_symbol.o \
   		mx_parsing.o \
   		mx_parsing_input.o \
-  		mx_print_cont.o \
+  		mx_print_stat.o \
   		mx_print_env.o \
   		mx_printerr_env.o \
   		mx_print_esc.o \
-  		mx_print_susp.o \
-  		mx_print_tab_comands.o \
+  		mx_print_tab_cmds.o \
   		mx_printstr_env.o \
   		main.o \
   		bit_function.o \
@@ -215,7 +213,7 @@ OBJ =	mx_add_one_rank.o \
         mx_chdir_l.o \
         mx_chdir_p.o \
         mx_create_ast.o \
-        mx_create_comands.o \
+        mx_create_cmds.o \
         mx_create_tnode.o \
         mx_create_token.o \
         mx_delete_ast.o \

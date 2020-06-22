@@ -46,7 +46,7 @@ static int pipe_r(t_tnode *root, int *fds, int opstat, t_ush *ush) {
     return status;
 }
 
-int mx_exec_dmore(t_tnode *root, int *fds, int opstat, t_ush *ush) {
+int mx_exec_opmore(t_tnode *root, int *fds, int opstat, t_ush *ush) {
     int fdsBuff[2];
     int status = 0;
     int fd = 0;

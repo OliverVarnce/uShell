@@ -7,6 +7,6 @@ void mx_printstr_env(char *str) {
     mx_printstr(str);
     mx_printstr("=");
     mx_printstr(tmp);
-    write(1,"\n",1);
+    mx_printstr("\n");
     free(tmp);
 }

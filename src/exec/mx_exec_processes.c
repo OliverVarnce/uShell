@@ -2,7 +2,7 @@
 
 static void print_err(t_token *token) {
     if (errno == 2)
-        mx_printerr("u$h: command not found: ");
+        mx_printerr("\nu$h: command not found: ");
     else {
         mx_printerr("u$h: ");
         mx_printerr(strerror(errno));

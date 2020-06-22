@@ -52,7 +52,7 @@ static int start_child(char *path, char **argv, char **env) {
     return 0;
 }
 
-void mx_exec_env_pr(char *path, char **argv, char **env, t_ush *ush) {
+void mx_exec_env_fpr(char *path, char **argv, char **env, t_ush *ush) {
     pid_t pid = fork();
 
     if (pid == 0) {

@@ -53,7 +53,7 @@ static int fg_continue(char **argv, t_ush *ush) {
         ush->exit_status = 1;
         return 1;
     }
-    mx_print_cont(pr->name, pr->index);
+    mx_print_stat(pr->name, pr->index, 1);
     kill(pr->pid, SIGCONT);
     return 0;
 }
@@ -66,7 +66,7 @@ static void fg_wait(int status, pid_t ch_pr, t_ush *ush) {
         }
         else {
             char **str = mx_get_name(ush, ch_pr);
-            mx_print_susp(str);
+            mx_print_stat(str, 0, 0);
         }
     }
 }
