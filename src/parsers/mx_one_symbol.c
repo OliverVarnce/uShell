@@ -4,8 +4,8 @@ static void del_one_symbol(char **str, int *count, int position) {
     int i = position;
     unsigned char check = (unsigned char)*str[*count - position - 2];
 
-    if ((*count) > 1 && (*count) > position + 1) {
-        while ((check = check >> 6) == 2) {
+    if (*count > 1 && *count > position + 1) {
+        while ((check = (check >> 6)) == 2) {
             (*count)--;
             while (i > 0) {
                 *str[*count - i - 1] = *str[(*count) - i];

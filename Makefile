@@ -121,7 +121,7 @@ SRC = $(addprefix $(SRC_DIR)/,\
         utils/mx_ush_close.c \
         utils/mx_ush_init.c \
         utils/mx_env_to_var.c \
-        utils/mx_wait_process.c \
+        utils/mx_wait_processes.c \
         utils/mx_write_from_to.c \
         utils/mx_getchar.c \
         utils/mx_term_out.c \
@@ -241,7 +241,7 @@ OBJ =	mx_add_one_rank.o \
         mx_ush_close.o \
         mx_ush_init.o \
         mx_env_to_var.o \
-        mx_wait_process.o \
+        mx_wait_processes.o \
         mx_write_from_to.o \
         mx_getchar.o \
         mx_term_out.o \

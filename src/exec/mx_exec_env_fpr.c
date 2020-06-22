@@ -60,7 +60,7 @@ void mx_exec_env_fpr(char *path, char **argv, char **env, t_ush *ush) {
         start_child(path, argv, env);
     }
     else {
-        mx_wait_process(ush, argv);
+        mx_wait_processes(ush, argv);
     }
     mx_del_strarr(&env);
     mx_del_strarr(&argv);

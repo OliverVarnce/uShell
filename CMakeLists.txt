@@ -195,5 +195,5 @@ add_executable(USH
         src/utils/mx_ush_close.c
         src/utils/mx_ush_init.c
         src/utils/mx_environ_to_var.c
-        src/utils/mx_wait_process.c
+        src/utils/mx_wait_processes.c
         src/utils/mx_write_from_to.c)
