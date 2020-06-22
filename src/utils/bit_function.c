@@ -1,31 +1,31 @@
 #include "ush.h"
 
 int mx_bit_sumbol(char *str) {
-    unsigned char temp = (unsigned char)str[0];
+    unsigned char tmp = (unsigned char)str[0];
 
-    if (temp >> 7 == 0)
+    if (tmp >> 7 == 0)
         return 1;
-    if (temp >> 5 == 6)
+    if (tmp >> 5 == 6)
         return 2;
-    if (temp >> 4 == 14)
+    if (tmp >> 4 == 14)
         return 3;
-    if (temp >> 3 == 30)
+    if (tmp >> 3 == 30)
         return 4;
     return 0;
 }
 
 int mx_len_symbol(int sum, char *str) {
-    unsigned char temp;
-    int sumator = 0;
+    unsigned char tmp;
+    int counter = 0;
 
     for (int i = 0; i < sum; i++) {
-        temp = (unsigned char)str[i];
-        if (temp >> 7 == 0)
-            sumator++;
-        else if (temp >> 6 == 3)
-            sumator++;
-        if (temp >> 3 == 30)
-            sumator++;
+        tmp = (unsigned char)str[i];
+        if (tmp >> 7 == 0)
+            counter++;
+        else if (tmp >> 6 == 3)
+            counter++;
+        if (tmp >> 3 == 30)
+            counter++;
     }
-    return sumator;
+    return counter;
 }

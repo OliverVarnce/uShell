@@ -2,17 +2,17 @@
 
 void mx_not_stdin_terminal(t_ush *ush, int argc, char *argv[]) {
     char *str = 0;
-    char *temp = mx_strnew(1024);
+    char *tmp = mx_strnew(1024);
     char *temp2 = 0;
     ssize_t check;
     int i = -1;
 
     ush->if_ctrl_c = 1;
-    while ((check = read(0, temp, 1024)) != 0) {
-        temp2 = mx_strndup(temp, check);
+    while ((check = read(0, tmp, 1024)) != 0) {
+        temp2 = mx_strndup(tmp, check);
         str = mx_strjoin3(str, temp2);
     }
-    free(temp);
+    free(tmp);
     while (str && str[++i] != 0)
         if (str[i] == '\n')
             str[i] = ';';

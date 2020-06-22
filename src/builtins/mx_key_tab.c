@@ -11,18 +11,18 @@ static char **many_comand_in_list(char *path, char **str, t_ush *ush,
                                   t_list *list_comand) {
     int number_comand = 0;
     char **creat_list_comands = NULL;
-    int temp = 0;
+    int tmp = 0;
     int size_list = mx_list_size(list_comand) + 1;
     char *name_comand = 0;
 
     mx_clean_space_in_term("", ush, *str);
     mx_print_tab_comands(list_comand);
     creat_list_comands = (char **)malloc(size_list * sizeof(char *));
-    for (temp = mx_strlen(path) - 1; temp != 0 && path[temp] != '/'; temp--);
-    temp = mx_strlen(&path[temp]);
+    for (tmp = mx_strlen(path) - 1; tmp != 0 && path[tmp] != '/'; tmp--);
+    tmp = mx_strlen(&path[tmp]);
     while (list_comand) {
         name_comand = list_comand->data;
-        creat_list_comands[number_comand++] = mx_strdup(&name_comand[temp - 1]);
+        creat_list_comands[number_comand++] = mx_strdup(&name_comand[tmp - 1]);
         mx_pop_front(&list_comand);
     }
     creat_list_comands[number_comand++] = NULL;

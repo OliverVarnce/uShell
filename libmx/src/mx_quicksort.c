@@ -1,9 +1,9 @@
 #include "libmx.h"
 
 static void swap_elements(char **left, char **right) {
-    char *temp = *left;
+    char *tmp = *left;
     *left = *right;
-    *right = temp;
+    *right = tmp;
 }
 
 int mx_quicksort(char **arr, int left, int right) {

@@ -11,13 +11,13 @@ static bool is_not_operator(char c) {
 }
 
 static int end_parametr(char *str, int i) {
-    int temp = i + 1;
+    int tmp = i + 1;
 
-    while (is_not_operator(str[temp]))
-        temp++;
-    if (str[temp] == '?' && str[temp + 1] != '(')
-        temp++;
-    return temp;
+    while (is_not_operator(str[tmp]))
+        tmp++;
+    if (str[tmp] == '?' && str[tmp + 1] != '(')
+        tmp++;
+    return tmp;
 }
 
 static void parametrchell(t_ush *processes, int *i, char **new_str) {

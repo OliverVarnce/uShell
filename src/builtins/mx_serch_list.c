@@ -1,18 +1,18 @@
 #include "ush.h"
 
 static void change_variteble(t_variable *noda, char *name, char *value) {
-    char *temp = 0;
+    char *tmp = 0;
 
     mx_strdel(&((t_variable*)noda)->name);
     mx_strdel(&((t_variable*)noda)->value);
     noda->name = name;
     noda->value = value;
     if (noda->is_env) {
-        temp = mx_strjoin(name, "=");
-        temp = mx_strjoin2(temp, value);
+        tmp = mx_strjoin(name, "=");
+        tmp = mx_strjoin2(tmp, value);
         mx_strdel(&(noda->mem));
-        noda->mem = temp;
-        putenv(temp);
+        noda->mem = tmp;
+        putenv(tmp);
     }
 }
 

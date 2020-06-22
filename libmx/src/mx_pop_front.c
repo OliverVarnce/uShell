@@ -4,7 +4,7 @@ void mx_pop_front(t_list **head) {
     if (head == NULL || *head == NULL)
         return;
 
-    t_list *temp = *head;
-    *head = temp->next;
-    free(temp);
+    t_list *tmp = *head;
+    *head = tmp->next;
+    free(tmp);
 }

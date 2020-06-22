@@ -14,24 +14,24 @@ static void substitution_comand(char **str, char **str2, t_ush *processes) {
 }
 
 static void editor_str(char **str, t_ush *processes) {
-    char *temp = 0;
+    char *tmp = 0;
     char *temp2 = 0;
     int i = 1;
 
     if (str[0][0] == '$')
         i++;
-    temp = mx_strndup(&str[0][i], mx_strlen(*str) - i - 1);
+    tmp = mx_strndup(&str[0][i], mx_strlen(*str) - i - 1);
     if (str[0][0] == 39) {
         mx_strdel(str);
-        *str = temp;
+        *str = tmp;
     }
     else if (str[0][0] == 96 || str[0][0] == '$')
-        substitution_comand(str, &temp, processes);
+        substitution_comand(str, &tmp, processes);
     else if (str[0][0] == 34) { 
-        temp2 = mx_audit_str(temp, processes, 1);
+        temp2 = mx_audit_str(tmp, processes, 1);
         mx_subs(&temp2);
         mx_strdel(str);
-        mx_strdel(&temp);
+        mx_strdel(&tmp);
         *str = temp2;
     }
 }

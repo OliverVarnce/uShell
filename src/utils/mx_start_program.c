@@ -2,7 +2,7 @@
 
 static void shlvl_new(char **s) {
     int a = 0;
-    char *temp = 0;
+    char *tmp = 0;
     int i = 0;
     int neg = 1;
 
@@ -15,8 +15,8 @@ static void shlvl_new(char **s) {
     }
     a = a * neg;
     mx_strdel(s);
-    temp = mx_itoa(++a);
-    *s = temp;
+    tmp = mx_itoa(++a);
+    *s = tmp;
 }
 
 static char *create_mem(char *str1, char **str2, char *str3, char **value) {
@@ -56,29 +56,29 @@ static bool check_if_env_have(char *name, t_list **var_tree) {
 }
 
 static void check_env(t_list **var_tree) {
-    char *temp = 0;
+    char *tmp = 0;
 
     if (check_if_env_have("PWD", var_tree)) {
-        temp = getcwd(NULL, 0);;
+        tmp = getcwd(NULL, 0);;
         mx_push_env(var_tree, mx_strdup("PWD"),
-                    temp, mx_strjoin("PWD=", temp));
+                    tmp, mx_strjoin("PWD=", tmp));
     }
     if (check_if_env_have("OLDPWD", var_tree)) {
-        temp = getcwd(NULL, 0);
-        mx_push_env(var_tree, mx_strdup("OLDPWD"), temp,
-                    mx_strjoin("OLDPWD=", temp));
+        tmp = getcwd(NULL, 0);
+        mx_push_env(var_tree, mx_strdup("OLDPWD"), tmp,
+                    mx_strjoin("OLDPWD=", tmp));
     }
     if (check_if_env_have("SHLVL", var_tree)) {
-        temp = mx_strdup("1");
-        mx_push_env(var_tree, mx_strdup("SHLVL"), temp,
-                    mx_strjoin("SHLVL=", temp));
+        tmp = mx_strdup("1");
+        mx_push_env(var_tree, mx_strdup("SHLVL"), tmp,
+                    mx_strjoin("SHLVL=", tmp));
     }
 }
 
 void mx_start_program(t_list **var_tree, char **env) {
     int i = -1;
     char **envvar = 0;
-    char *temp = 0;
+    char *tmp = 0;
     t_variable *var = 0;
 
     while (env[++i]) {
@@ -86,10 +86,10 @@ void mx_start_program(t_list **var_tree, char **env) {
         envvar = mx_strsplit(env[i], '=');
         var->name = envvar[0];
         var->value = mx_strdup(&env[i][mx_strlen(var->name) + 1]);
-        temp = create_mem(envvar[0], &envvar[1], env[i], &(var->value));
+        tmp = create_mem(envvar[0], &envvar[1], env[i], &(var->value));
         var->is_env = true;
-        var->mem = temp;
-        putenv(temp);
+        var->mem = tmp;
+        putenv(tmp);
         mx_push_back(var_tree, var);
         free(envvar[1]);
         free(envvar);

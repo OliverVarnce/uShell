@@ -2,20 +2,20 @@
 
 static char *read_bqute(int des, int des2) {
     char *str = 0;
-    char *temp = malloc(1025 * sizeof(char));
+    char *tmp = malloc(1025 * sizeof(char));
     ssize_t check;
     ssize_t check2 = 0;
 
     close(des2);
-    while ((check = read(des, temp, 1024)) != 0) {
+    while ((check = read(des, tmp, 1024)) != 0) {
         str = realloc(str, check2 + check + 1);
-        mx_memcpy(&str[check2], temp, check);
+        mx_memcpy(&str[check2], tmp, check);
         check2 += check;
     }
     if (check2 > 1)
         str[check2 - 1] = 0;
     close(des);
-    free(temp);
+    free(tmp);
     return str;
 }
 

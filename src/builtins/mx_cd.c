@@ -46,14 +46,14 @@ static int get_flags(char **argv, int *i) {
 }
 
 static void export_pwd_oldpwd(t_ush *ush) {
-    char **temp = (char **) malloc(4 * sizeof (char *));
+    char **tmp = (char **) malloc(4 * sizeof (char *));
 
-    temp[0] = mx_strdup("cd");
-    temp[1] = mx_strjoin("PWD=", ush->pwd);
-    temp[2] = mx_strjoin("OLDPWD=", ush->old_pwd);
-    temp[3] = 0;
-    mx_export(temp, &ush->var_tree, ush);
-    mx_del_strarr(&temp);
+    tmp[0] = mx_strdup("cd");
+    tmp[1] = mx_strjoin("PWD=", ush->pwd);
+    tmp[2] = mx_strjoin("OLDPWD=", ush->old_pwd);
+    tmp[3] = 0;
+    mx_export(tmp, &ush->var_tree, ush);
+    mx_del_strarr(&tmp);
 }
 
 int mx_cd(char **argv, t_ush *ush) {

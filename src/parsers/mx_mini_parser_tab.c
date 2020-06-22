@@ -1,13 +1,13 @@
 #include "ush.h"
 
-static bool name_comand(char temp) {
-    char check = temp >> 7;
+static bool name_comand(char tmp) {
+    char check = tmp >> 7;
 
-    if ((temp > 47 && temp < 58) || (temp > 64 && temp <91) || temp == '~')
+    if ((tmp > 47 && tmp < 58) || (tmp > 64 && tmp <91) || tmp == '~')
         return 1;
-    if ((temp > 96 && temp < 123) || temp == 46 || temp == '/' || temp == '.')
+    if ((tmp > 96 && tmp < 123) || tmp == 46 || tmp == '/' || tmp == '.')
         return 1;
-    if (temp == '+' || temp == '-' || temp == '_')
+    if (tmp == '+' || tmp == '-' || tmp == '_')
         return 1;
     if (check != 0)
         return 1;
@@ -41,18 +41,18 @@ char *mx_mini_parser_tab(char *parsing, t_ush *ush) {
     char *tem_str = create_str_comand(parsing);
     int pos = 0;
     char if_comand = 0;
-    char *temp = 0;
+    char *tmp = 0;
 
     if (mx_strstr(tem_str, "/"))
         tem_str[0] = '1';
     if (tem_str[0] != 0 && tem_str[1] == '~') {
         pos = 0;
-        temp = mx_strdup(&tem_str[1]);
+        tmp = mx_strdup(&tem_str[1]);
         if_comand = tem_str[0];
         mx_strdel(&tem_str);
-        mx_home(&temp, &pos, ush);
-        tem_str = mx_strjoin("\r", temp);
-        mx_strdel(&temp);
+        mx_home(&tmp, &pos, ush);
+        tem_str = mx_strjoin("\r", tmp);
+        mx_strdel(&tmp);
         tem_str[0] = if_comand;
     }
     return tem_str;
