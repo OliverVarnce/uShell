@@ -4,8 +4,6 @@ static void check_status(char **argv, int status, t_ush *ush, pid_t pr) {
     char **mas_name = 0;
 
     if (MX_WIFSIG(status)) {
-        if (MX_WTERMSIG(status) == SIGSEGV)
-            mx_segfault();
         if (MX_WTERMSIG(status) == SIGINT) {
             mx_del_pid_process(ush, pr);
             ush->last_status = 130;

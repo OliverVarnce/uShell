@@ -64,7 +64,6 @@ SRC = $(addprefix $(SRC_DIR)/,\
 		exec/mx_execute_tree.c \
 		exec/mx_pipe_execute.c \
 		signals/mx_read_keyboard.c \
-		signals/mx_signals.c \
 		memory/mx_charge_paranetr_export.c \
 		memory/mx_clear_tokens.c \
 		parsers/mx_check_symbol.c \
@@ -186,7 +185,6 @@ OBJ =	mx_add_one_rank.o \
   		mx_execute_tree.o \
   		mx_pipe_execute.o \
   		mx_read_keyboard.o \
-  		mx_signals.o \
   		mx_charge_paranetr_export.o \
   		mx_clear_tokens.o \
   		mx_check_symbol.o \

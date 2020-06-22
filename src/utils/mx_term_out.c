@@ -60,7 +60,7 @@ void mx_clean_space_in_term(char *str, t_ush *ush, char *new_str) {
     int tmp;
     int col = mx_get_twidth();
 
-    tmp = (mx_len_symbol(MX_STR_LEN - MX_STR_POS, str) + 4) / col;
+    tmp = (mx_len_symbol(ush->input->inplen - ush->input->endpoint, str) + 4) / col;
     for (int i = tmp; i > 0; i--) {
         mx_print_esc("1F");
     }

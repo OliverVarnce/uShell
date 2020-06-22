@@ -16,24 +16,24 @@ static bool name_comand(char tmp) {
 }
 
 static char *create_str_comand(char *parsing) {
-    int str_len;
+    int inplen;
     char *temp_str = 0;
 
     if (parsing == 0)
         return mx_strnew(0);
-    str_len = mx_strlen(parsing) - 1;
-    while (str_len > -1 && name_comand(parsing[str_len]))
-        str_len--;
-    if (str_len == -1)
+    inplen = mx_strlen(parsing) - 1;
+    while (inplen > -1 && name_comand(parsing[inplen]))
+        inplen--;
+    if (inplen == -1)
         temp_str =  mx_strjoin("\r", parsing);
     else
-        temp_str = mx_strdup(&parsing[str_len]);
-    while (str_len > -1 && parsing[str_len] == ' ')
-        str_len--;
-    if (str_len == -1)
+        temp_str = mx_strdup(&parsing[inplen]);
+    while (inplen > -1 && parsing[inplen] == ' ')
+        inplen--;
+    if (inplen == -1)
         temp_str[0] = '\r';
     else
-        temp_str[0] = parsing[str_len];
+        temp_str[0] = parsing[inplen];
     return temp_str;
 }
 

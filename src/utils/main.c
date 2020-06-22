@@ -33,6 +33,6 @@ int main(int argc, char *argv[], char **envp) {
     else
         mx_loop(str, ush);
     mx_ush_close(ush);
-    system("leaks ush");
+    //system("leaks ush");
     return ush->exit_status;
 }

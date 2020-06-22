@@ -20,11 +20,11 @@ static t_input *create_input(t_ush *ush) {
 
     input->comands = creat_comands(&(ush->history));
     input->id = 0;
-    input->max_comand = mx_list_size(ush->history);
-    input->str_len = 1;
-    input->pos_tab = 0;
-    input->end_posit = 0;
-    input->if_ = 0;
+    input->maxcmd = mx_list_size(ush->history);
+    input->inplen = 1;
+    input->tabposition = 0;
+    input->endpoint = 0;
+    input->symb = 0;
     return input;
 }
 
@@ -54,13 +54,13 @@ int mx_input(t_ush *ush) {
     ush->input = create_input(ush);
     while (if_next == 3) {
         if (chars[2] != 10 || chars[0] == 9 || chars[0] == 18)
-            mx_terminal_out(MX_USH, MX_STR_LEN, MX_STR_POS, MX_STR);
+            mx_terminal_out(MX_USH, ush->input->inplen, ush->input->endpoint, ush->input->comands[ush->input->id]);
         ch = mx_read_keyboard(ush);
         if (ch > 127)
             mx_ctrl_v_and_not_ascii(ush, chars);
         else
             if_next = mx_ascii(ush, chars, ch);
-        ush->input->if_ = chars[0];
+        ush->input->symb = chars[0];
     }
     return_descriptors(save_fd1, term_fd1, ush);
     return if_next;

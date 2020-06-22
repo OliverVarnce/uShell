@@ -2,17 +2,17 @@
 
 void mx_key_delite(t_ush *ush) {
     int i;
-    int sum = mx_bit_sumbol(&MX_STR[MX_STR_LEN - MX_STR_POS - 1]);
+    int sum = mx_bit_sumbol(&ush->input->comands[ush->input->id][ush->input->inplen - ush->input->endpoint - 1]);
 
-    mx_clean_terminal(MX_USH, MX_STR_LEN, MX_STR_POS, MX_STR);
+    mx_clean_terminal(MX_USH, ush->input->inplen, ush->input->endpoint, ush->input->comands[ush->input->id]);
     for (;sum > 0; sum--) {
-        i = MX_STR_POS;
-        MX_STR_POS--;
+        i = ush->input->endpoint;
+        ush->input->endpoint--;
         while (i > 0) {
-            MX_STR[MX_STR_LEN - i - 1] = MX_STR[MX_STR_LEN - i];
+            ush->input->comands[ush->input->id][ush->input->inplen - i - 1] = ush->input->comands[ush->input->id][ush->input->inplen - i];
             i--;
         }
-        MX_STR_LEN--;
+        ush->input->inplen--;
     }
-    ush->input->comands[MX_MAX_COMAND][MX_STR_LEN - 1] = 0;
+    ush->input->comands[ush->input->maxcmd][ush->input->inplen - 1] = 0;
 }

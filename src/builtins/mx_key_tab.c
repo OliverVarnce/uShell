@@ -38,10 +38,10 @@ static void one_comand_in_list(t_ush *ush, t_list *list_comand, char **str,
         len_comand = mx_strlen(&path[len_comand]);
         path = list_comand->data;
         for (int i = len_comand - 1; path[i]; i++)
-            mx_one_symbol(str, path[i], &(MX_STR_LEN), MX_STR_POS);
-        if (MX_STR_POS != 0) {
-            mx_one_symbol(str, ' ', &(MX_STR_LEN), MX_STR_POS);
-            (MX_STR_POS)++;
+            mx_one_symbol(str, path[i], &(ush->input->inplen), ush->input->endpoint);
+        if (ush->input->endpoint != 0) {
+            mx_one_symbol(str, ' ', &(ush->input->inplen), ush->input->endpoint);
+            (ush->input->endpoint)++;
         }
         mx_pop_front_free_data(&list_comand);
 }

@@ -60,9 +60,7 @@ static int fg_continue(char **argv, t_ush *ush) {
 
 static void fg_wait(int status, pid_t ch_pr, t_ush *ush) {
     if (MX_WIFSIG(status)) {
-        if (MX_WTERMSIG(status) == SIGSEGV)
-            mx_segfault();
-        else if (MX_WTERMSIG(status) == SIGINT) {
+        if (MX_WTERMSIG(status) == SIGINT) {
             mx_del_pid_process(ush, ch_pr);
             ush->last_status = 130;
         }

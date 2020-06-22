@@ -36,15 +36,6 @@
 #define MX_WTERMSIG(x)      (MX_WST(x))
 #define MX_EXSTATUS(x)      ((MX_W_INT(x) >> 8) & 0x000000ff)
 
-
-#define MX_STR ush->input->comands[ush->input->id]
-#define MX_COMMAND ush->input->comands
-#define MX_ID ush->input->id
-#define MX_STR_LEN ush->input->str_len
-#define MX_STR_POS ush->input->end_posit
-#define MX_MAX_COMAND ush->input->max_comand
-#define MX_SYMBOL ush->input->if_
-#define MX_ID_TAB_KEY ush->input->pos_tab
 #define MX_FLAGS_W O_RDWR | O_CREAT | O_TRUNC, S_IWRITE | S_IREAD
 #define MX_FLAGS_WE O_RDWR | O_CREAT | O_APPEND, S_IWRITE | S_IREAD
 #define MAX_PROC_COUNT 500
@@ -127,11 +118,11 @@ typedef struct s_input {
     char **comands;
     char **comand_tab;
     int id;
-    int max_comand;
-    int str_len;
-    int end_posit;
-    int if_;
-    int pos_tab;
+    int maxcmd;
+    int inplen;
+    int endpoint;
+    int symb;
+    int tabposition;
 }              t_input;
 
 typedef struct s_ush {
@@ -305,9 +296,6 @@ int mx_add_process(t_list **processes, pid_t pid, char **name);
 void mx_del_top_process(t_ush *ush);
 void mx_del_pid_process(t_ush *ush, int pid);
 void mx_wait_process(t_ush *ush, char **argv);
-void mx_segfault();
-void mx_ctrl_c();
-void mx_ctrl_z();
 void mx_segfault_in();
 void mx_loop(char str, t_ush *ush);
 

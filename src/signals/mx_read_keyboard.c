@@ -7,7 +7,7 @@ unsigned int mx_read_keyboard(t_ush *ush) {
         mx_printerr("u$h: some troubeles with input!\n");
         exit(2);
     }
-    if (ush->input->if_  == 9 && ch != 9)
+    if (ush->input->symb  == 9 && ch != 9)
         mx_del_strarr(&(ush->input->comand_tab));
     return ch;
 }

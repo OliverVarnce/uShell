@@ -1,5 +1,8 @@
 #include "ush.h"
 
+static void emp () {
+}
+
 static char* mx_get_link_path(char *path) {
     char *link_path = malloc(1024);
     int len = 0;
@@ -46,7 +49,7 @@ void mx_ush_init(t_ush **ush, char **env) {
     new_info->last_status = 0;
     (*ush) = new_info;
     mx_start_program(&(new_info->var_tree), env);
-    signal(SIGSEGV, mx_segfault_in);
-    signal(SIGINT, mx_ctrl_c);
-    signal(SIGTSTP, mx_ctrl_z);
+    signal(SIGSEGV, NULL);
+    signal(SIGINT, emp);
+    signal(SIGTSTP, emp);
 }
