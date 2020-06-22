@@ -138,6 +138,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ovoitenko/Desktop/USH/src/printing/mx_printstr_env.c" "/Users/ovoitenko/Desktop/USH/cmake-build-debug/CMakeFiles/USH.dir/src/printing/mx_printstr_env.c.o"
   "/Users/ovoitenko/Desktop/USH/src/signals/mx_ctrl_r.c" "/Users/ovoitenko/Desktop/USH/cmake-build-debug/CMakeFiles/USH.dir/src/signals/mx_ctrl_r.c.o"
   "/Users/ovoitenko/Desktop/USH/src/signals/mx_read_keyboard.c" "/Users/ovoitenko/Desktop/USH/cmake-build-debug/CMakeFiles/USH.dir/src/signals/mx_read_keyboard.c.o"
+  "/Users/ovoitenko/Desktop/USH/src/signals/mx_signals.c" "/Users/ovoitenko/Desktop/USH/cmake-build-debug/CMakeFiles/USH.dir/src/signals/mx_signals.c.o"
   "/Users/ovoitenko/Desktop/USH/src/utils/bit_function.c" "/Users/ovoitenko/Desktop/USH/cmake-build-debug/CMakeFiles/USH.dir/src/utils/bit_function.c.o"
   "/Users/ovoitenko/Desktop/USH/src/utils/main.c" "/Users/ovoitenko/Desktop/USH/cmake-build-debug/CMakeFiles/USH.dir/src/utils/main.c.o"
   "/Users/ovoitenko/Desktop/USH/src/utils/mx_0_and_x.c" "/Users/ovoitenko/Desktop/USH/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_0_and_x.c.o"
@@ -162,7 +163,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ovoitenko/Desktop/USH/src/utils/mx_insert_tree.c" "/Users/ovoitenko/Desktop/USH/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_insert_tree.c.o"
   "/Users/ovoitenko/Desktop/USH/src/utils/mx_is_str_starts.c" "/Users/ovoitenko/Desktop/USH/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_is_str_starts.c.o"
   "/Users/ovoitenko/Desktop/USH/src/utils/mx_lexer.c" "/Users/ovoitenko/Desktop/USH/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_lexer.c.o"
-  "/Users/ovoitenko/Desktop/USH/src/utils/mx_loop.c" "/Users/ovoitenko/Desktop/USH/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_loop.c.o"
   "/Users/ovoitenko/Desktop/USH/src/utils/mx_not_ascii.c" "/Users/ovoitenko/Desktop/USH/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_not_ascii.c.o"
   "/Users/ovoitenko/Desktop/USH/src/utils/mx_parametr_shell.c" "/Users/ovoitenko/Desktop/USH/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_parametr_shell.c.o"
   "/Users/ovoitenko/Desktop/USH/src/utils/mx_pop_front_free_data.c" "/Users/ovoitenko/Desktop/USH/cmake-build-debug/CMakeFiles/USH.dir/src/utils/mx_pop_front_free_data.c.o"
@@ -198,7 +198,6 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../src/memory"
   "../src/parsers"
   "../src/printing"
-  "../src/signals"
   "../src/utils"
   )
 

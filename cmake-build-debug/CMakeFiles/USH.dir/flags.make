@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk 
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/ovoitenko/Desktop/USH/inc -I/Users/ovoitenko/Desktop/USH/libmx -I/Users/ovoitenko/Desktop/USH/libmx/inc -I/Users/ovoitenko/Desktop/USH/libmx/src -I/Users/ovoitenko/Desktop/USH/src -I/Users/ovoitenko/Desktop/USH/src/builtins -I/Users/ovoitenko/Desktop/USH/src/exec -I/Users/ovoitenko/Desktop/USH/src/memory -I/Users/ovoitenko/Desktop/USH/src/parsers -I/Users/ovoitenko/Desktop/USH/src/printing -I/Users/ovoitenko/Desktop/USH/src/signals -I/Users/ovoitenko/Desktop/USH/src/utils 
+C_INCLUDES = -I/Users/ovoitenko/Desktop/USH/inc -I/Users/ovoitenko/Desktop/USH/libmx -I/Users/ovoitenko/Desktop/USH/libmx/inc -I/Users/ovoitenko/Desktop/USH/libmx/src -I/Users/ovoitenko/Desktop/USH/src -I/Users/ovoitenko/Desktop/USH/src/builtins -I/Users/ovoitenko/Desktop/USH/src/exec -I/Users/ovoitenko/Desktop/USH/src/memory -I/Users/ovoitenko/Desktop/USH/src/parsers -I/Users/ovoitenko/Desktop/USH/src/printing -I/Users/ovoitenko/Desktop/USH/src/utils 
 

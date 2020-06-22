@@ -54,7 +54,6 @@
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/memory"/>
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/parsers"/>
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/printing"/>
-					<Add directory="/Users/ovoitenko/Desktop/USH/src/signals"/>
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/utils"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
@@ -86,7 +85,6 @@
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/memory"/>
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/parsers"/>
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/printing"/>
-					<Add directory="/Users/ovoitenko/Desktop/USH/src/signals"/>
 					<Add directory="/Users/ovoitenko/Desktop/USH/src/utils"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
@@ -510,6 +508,9 @@
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/signals/mx_read_keyboard.c">
 			<Option target="USH"/>
 		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/signals/mx_signals.c">
+			<Option target="USH"/>
+		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/bit_function.c">
 			<Option target="USH"/>
 		</Unit>
@@ -580,9 +581,6 @@
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_lexer.c">
-			<Option target="USH"/>
-		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_loop.c">
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_not_ascii.c">
