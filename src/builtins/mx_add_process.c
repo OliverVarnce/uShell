@@ -6,10 +6,10 @@ static int get_index(t_list *process) {
 
     if (tmp == 0)
         return 0;
-    max = ((t_process*)tmp->data)->index;
+    max = ((t_processes*)tmp->data)->index;
     while (tmp) {
-        if (max < ((t_process*)tmp->data)->index) {
-            max = ((t_process*)tmp->data)->index;
+        if (max < ((t_processes*)tmp->data)->index) {
+            max = ((t_processes*)tmp->data)->index;
         }
         tmp = tmp->next;
     }
@@ -20,7 +20,7 @@ static bool is_exist(t_list *process, pid_t pid) {
     t_list *tmp = process;
 
     while (tmp) {
-        if (((t_process*)process->data)->pid == pid)
+        if (((t_processes*)process->data)->pid == pid)
             return true;
         tmp = tmp->next;
     }
@@ -29,11 +29,11 @@ static bool is_exist(t_list *process, pid_t pid) {
 
 int mx_add_process(t_list **processes, pid_t pid, char **name) {
     int max_index = get_index(*processes);
-    t_process *pr = 0;
+    t_processes *pr = 0;
 
     if (is_exist(*processes, pid))
         return -1;
-    pr = (t_process*)malloc(sizeof(t_process));
+    pr = (t_processes*)malloc(sizeof(t_processes));
     pr->index = max_index + 1;
     pr->pid = pid;
     pr->name = mx_dupstrarr(name);

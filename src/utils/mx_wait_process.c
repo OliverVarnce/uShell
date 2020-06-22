@@ -16,7 +16,7 @@ static void check_status(char **argv, int status, t_ush *ush, pid_t pr) {
     }
 }
 
-void mx_wait_process(t_ush *ush, char **argv) {
+void mx_wait_processes(t_ush *ush, char **argv) {
     int status = 0;
     pid_t pr = 0;
 

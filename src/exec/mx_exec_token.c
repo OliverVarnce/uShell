@@ -24,13 +24,13 @@ int exec_token(t_token *token, int *fds, char operator_status, t_ush *ush) {
     else {
         del_desc(operator_status, fds);
         if (!(operator_status & OP_AMP)) {
-            mx_wait_process(ush, token->value);
+            mx_wait_processes(ush, token->value);
             return exit_status;
         }
         else {
             if (mx_add_process(&(ush->processes), pid, token->value) != -1)
                 printf("Process [%d] created\n", pid);
-            printf("pr = %d\n", ((t_process*)ush->processes->data)->pid);
+            printf("pr = %d\n", ((t_processes*)ush->processes->data)->pid);
         }
     }
     return 1;

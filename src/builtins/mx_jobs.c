@@ -1,9 +1,9 @@
 #include "ush.h"
 
 static void print_row(t_list *tmp, char c) {
-    char *name = mx_arrstr_to_str(((t_process*)tmp->data)->name);
+    char *name = mx_arrstr_to_str(((t_processes*)tmp->data)->name);
 
-    printf("[%d] %c suspended %s\n", ((t_process*)tmp->data)->index, c,
+    printf("[%d] %c suspended %s\n", ((t_processes*)tmp->data)->index, c,
         name);
     free(name);
 }

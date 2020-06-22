@@ -109,11 +109,11 @@ typedef struct s_token{
     int priority;
 }              t_token;
 
-typedef struct s_process {
+typedef struct s_processes {
     char **name;
     pid_t pid;
     int index;
-}              t_process;
+}              t_processes;
 
 typedef struct s_input {
     char **cmds;
@@ -296,7 +296,7 @@ void mx_exec_env_fpr(char *path, char **argv, char **env, t_ush *ush);
 int mx_add_process(t_list **processes, pid_t pid, char **name);
 void mx_del_top_process(t_ush *ush);
 void mx_del_pid_process(t_ush *ush, int pid);
-void mx_wait_process(t_ush *ush, char **argv);
+void mx_wait_processes(t_ush *ush, char **argv);
 void mx_segfault_in();
 void mx_loop(char str, t_ush *ush);
 
