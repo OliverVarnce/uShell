@@ -48,7 +48,7 @@
 #define MX_FLAGS_W O_RDWR | O_CREAT | O_TRUNC, S_IWRITE | S_IREAD
 #define MX_FLAGS_WE O_RDWR | O_CREAT | O_APPEND, S_IWRITE | S_IREAD
 #define MAX_PROC_COUNT 500
-#define MX_USH "u$h> "
+#define MX_USH "\x4\x1b[32;5;76mu$h> \x1b[37;5;76m"
 #define MX_SEARCH "Search > "
 #define MX_PATH ((t_token*)tmp->next->next->data)->value[0]
 #define MX_FUNC_RETURN mx_return_value("HOME", &(ush->var_tree))
