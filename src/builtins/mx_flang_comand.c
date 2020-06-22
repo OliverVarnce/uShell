@@ -8,7 +8,7 @@ static bool if_symbol(char test) {
 
 static void printerrflag(char flag) {
     mx_printerr("u$h: parse error near | ");
-    mx_printcharerr(flag);
+    mx_printerr(&flag);
     mx_printerr(" |\n");
 }
 
