@@ -6,14 +6,14 @@ static bool if_symbol(char test) {
     return 0;
 }
 
-static void check_end_comand(char *temp, int *pos, int end, int *flag) {
-    if (temp[*pos + 1] == ';') {
+static void check_end_comand(char *tmp, int *pos, int end, int *flag) {
+    if (tmp[*pos + 1] == ';') {
         mx_printerr("u$h: parse error near \';;\'\n");
         *pos = end;
         *flag = 1;
     }
     else
-        temp[*pos] = 0;
+        tmp[*pos] = 0;
 }
 
 

@@ -9,7 +9,7 @@ static bool del(t_list *s, t_list **head, void(*del_data)(void *)) {
 void mx_pop_list(t_list **head, void *data, bool(*if_list)(void *, void *),
                  void(*del_data)(void *)) {
     t_list *s = NULL;
-    t_list *temp = NULL;
+    t_list *tmp = NULL;
 
     if (head == 0 || *head == 0)
         return;
@@ -19,10 +19,10 @@ void mx_pop_list(t_list **head, void *data, bool(*if_list)(void *, void *),
     while (s->next != 0) {
         if (if_list(data, s->next->data)) {
             del_data(s->next->data);
-            temp = s->next;
-            free(temp->data);
-            s->next = temp->next;
-            free(temp);
+            tmp = s->next;
+            free(tmp->data);
+            s->next = tmp->next;
+            free(tmp);
             return;
         }
         s = s->next;

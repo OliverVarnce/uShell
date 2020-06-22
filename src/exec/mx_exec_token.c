@@ -15,7 +15,7 @@ static void child(t_token *token, char operator_status, int *fds) {
         mx_execute_proces(token);
 }
 
-int exec_token(t_token *token, int *fds, char operator_status, t_info *info) {
+int exec_token(t_token *token, int *fds, char operator_status, t_ush *ush) {
     int exit_status = 0;
     pid_t pid = fork();
 
@@ -24,13 +24,13 @@ int exec_token(t_token *token, int *fds, char operator_status, t_info *info) {
     else {
         del_desc(operator_status, fds);
         if (!(operator_status & OP_AMP)) {
-            mx_wait_process(info, token->value);
+            mx_wait_process(ush, token->value);
             return exit_status;
         }
         else {
-            if (mx_add_process(&(info->processes), pid, token->value) != -1)
+            if (mx_add_process(&(ush->processes), pid, token->value) != -1)
                 printf("Process [%d] created\n", pid);
-            printf("pr = %d\n", ((t_process*)info->processes->data)->pid);
+            printf("pr = %d\n", ((t_process*)ush->processes->data)->pid);
         }
     }
     return 1;

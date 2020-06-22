@@ -2,16 +2,16 @@
 
 static void add_to_line(char **lineptr, char *fragment, int fr_len) {
     int ptr_len = mx_strlen(*lineptr);
-    char *temp = NULL;
+    char *tmp = NULL;
 
     if (*lineptr) {
-        temp = mx_strncat(mx_strcpy(mx_strnew(ptr_len + fr_len), *lineptr),
+        tmp = mx_strncat(mx_strcpy(mx_strnew(ptr_len + fr_len), *lineptr),
                          fragment, fr_len);
         free(*lineptr);
     } else {
-        temp = mx_strndup(fragment, fr_len);
+        tmp = mx_strndup(fragment, fr_len);
     }
-    *lineptr = temp;
+    *lineptr = tmp;
 }
 
 static bool read_from_buffer(char **lineptr, char delim, const int fd,
@@ -26,16 +26,16 @@ static bool read_from_buffer(char **lineptr, char delim, const int fd,
     buf_len = mx_strlen(static_buf[fd]);
 
     if (di >= 0) {
-        char *temp = NULL;
+        char *tmp = NULL;
 
         // add fragment until delimeter to line:
         add_to_line(lineptr, static_buf[fd], di);
 
         // reduce static buffer by fragment length:
-        temp = mx_strndup(&static_buf[fd][di+1], buf_len - (di+1));
+        tmp = mx_strndup(&static_buf[fd][di+1], buf_len - (di+1));
 
         free(static_buf[fd]);
-        static_buf[fd] = temp;
+        static_buf[fd] = tmp;
         *total_bytes += di;
 
         return true;
@@ -116,10 +116,10 @@ int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd) {
 //             add_to_line(lineptr, static_buf[fd], di);
 
 //             // reduce static buffer by fragment length:
-//             char *temp = mx_strndup(&static_buf[fd][di+1], buf_len - (di+1));
+//             char *tmp = mx_strndup(&static_buf[fd][di+1], buf_len - (di+1));
 
 //             free(static_buf[fd]);
-//             static_buf[fd] = temp;
+//             static_buf[fd] = tmp;
 //             free(buf);
 //             return total_bytes += di;
 //         } else {
@@ -170,10 +170,10 @@ int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd) {
 //             add_to_line(lineptr, static_buf, di);
 
 //             // reduce static buffer by fragment length:
-//             char *temp = mx_strndup(&static_buf[di+1], buf_len - (di+1));
+//             char *tmp = mx_strndup(&static_buf[di+1], buf_len - (di+1));
 
 //             free(static_buf);
-//             static_buf = temp;
+//             static_buf = tmp;
 //             free(buf);
 //             return total_bytes += di;
 //         } else {
@@ -220,10 +220,10 @@ int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd) {
 //         pos += buf_size;
 //         // --------------------------
 //         line_size += buf_size;
-//         char *temp = mx_strnew(line_size);
-//         mx_strcpy(temp, *lineptr);
+//         char *tmp = mx_strnew(line_size);
+//         mx_strcpy(tmp, *lineptr);
 //         free(*lineptr);
-//         *lineptr = temp;
+//         *lineptr = tmp;
 //         // --------------------------
 //         total_bytes_read += buf_size;
 //     }

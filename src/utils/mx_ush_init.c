@@ -1,5 +1,8 @@
 #include "ush.h"
 
+static void emp () {
+}
+
 static char* mx_get_link_path(char *path) {
     char *link_path = malloc(1024);
     int len = 0;
@@ -32,8 +35,8 @@ static char *get_pwd() {
     return cwd;
 }
 
-void mx_ush_init(t_info **info, char **env) {
-    t_info *new_info = (t_info*) malloc(sizeof(t_info));
+void mx_ush_init(t_ush **ush, char **env) {
+    t_ush *new_info = (t_ush*) malloc(sizeof(t_ush));
 
     new_info->env = env;
     new_info->processes = 0; // empty
@@ -44,9 +47,9 @@ void mx_ush_init(t_info **info, char **env) {
     new_info->pwd_l = mx_strdup(new_info->pwd);
     new_info->old_pwd = get_pwd();
     new_info->last_status = 0;
-    (*info) = new_info;
+    (*ush) = new_info;
     mx_start_program(&(new_info->var_tree), env);
-    signal(SIGSEGV, mx_segfault_in);
-    signal(SIGINT, mx_ctrl_c);
-    signal(SIGTSTP, mx_ctrl_z);
+    signal(SIGSEGV, NULL);
+    signal(SIGINT, emp);
+    signal(SIGTSTP, emp);
 }

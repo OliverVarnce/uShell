@@ -8,10 +8,10 @@ int mx_bubble_sort(char **arr, int size) {
         flag = 0;
         for (int j = 0, last = size - i - 1; j < last; j++) {
             if (mx_strcmp(arr[j], arr[j+1]) > 0) {
-                char *temp = arr[j];
+                char *tmp = arr[j];
 
                 arr[j] = arr[j+1];
-                arr[j+1] = temp;
+                arr[j+1] = tmp;
                 swaps++;
                 flag = 1;
             }

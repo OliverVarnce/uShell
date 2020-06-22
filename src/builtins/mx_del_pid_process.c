@@ -1,12 +1,12 @@
 #include "ush.h"
 
-void mx_del_pid_process(t_info *info, int pid) {
-    t_list *tmp = info->processes;
-    t_list *tmp2 = info->processes;
+void mx_del_pid_process(t_ush *ush, int pid) {
+    t_list *tmp = ush->processes;
+    t_list *tmp2 = ush->processes;
 
-    if (info->processes) {
+    if (ush->processes) {
         if (((t_process*)tmp->data)->pid == pid) {
-            mx_del_top_process(info);
+            mx_del_top_process(ush);
             return;
         }
         while (tmp->next) {

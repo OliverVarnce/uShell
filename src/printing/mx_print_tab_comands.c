@@ -10,13 +10,13 @@ static void print_comands(int max, char *comands) {
 
 static int max_comands(t_list *list_comand) {
     t_list *comands = list_comand;
-    int temp = 0;
+    int tmp = 0;
     int max = 0;
 
     while (comands != 0) {
-        temp = mx_strlen(comands->data);
-        if (temp > max)
-            max = temp;
+        tmp = mx_strlen(comands->data);
+        if (tmp > max)
+            max = tmp;
         comands = comands->next;
     }
     return max;

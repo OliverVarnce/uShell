@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.16)
 project(USH C)
 
 set(CMAKE_C_STANDARD 11)
@@ -13,7 +13,10 @@ include_directories(src/exec)
 include_directories(src/memory)
 include_directories(src/parsers)
 include_directories(src/printing)
+include_directories(src/signals)
 include_directories(src/utils)
+
+set(CMAKE_C_FLAGS "-ltermcap")
 
 add_executable(USH
         inc/ush.h
@@ -121,7 +124,6 @@ add_executable(USH
         src/builtins/mx_unset.c
         src/builtins/mx_unset_fds.c
         src/builtins/mx_which.c
-        src/signals/mx_ctrl_r.c
         src/exec/mx_exec_dmore.c
         src/exec/mx_exec_env_pr.c
         src/exec/mx_exec_less.c
@@ -131,8 +133,6 @@ add_executable(USH
         src/exec/mx_execute_proces.c
         src/exec/mx_execute_tree.c
         src/exec/mx_pipe_execute.c
-        src/signals/mx_read_keyboard.c
-        src/signals/mx_signals.c
         src/memory/mx_charge_paranetr_export.c
         src/memory/mx_clear_tokens.c
         src/parsers/mx_check_symbol.c
@@ -148,11 +148,14 @@ add_executable(USH
         src/parsers/mx_parsing_input.c
         src/printing/mx_print_cont.c
         src/printing/mx_print_env.c
-        src/printing/mx_printerr_env.c
         src/printing/mx_print_esc.c
         src/printing/mx_print_susp.c
         src/printing/mx_print_tab_comands.c
+        src/printing/mx_printerr_env.c
         src/printing/mx_printstr_env.c
+        src/signals/mx_ctrl_r.c
+        src/signals/mx_read_keyboard.c
+        src/signals/mx_signals.c
         src/utils/bit_function.c
         src/utils/main.c
         src/utils/mx_0_and_x.c
@@ -177,6 +180,7 @@ add_executable(USH
         src/utils/mx_insert_tree.c
         src/utils/mx_is_str_starts.c
         src/utils/mx_lexer.c
+        src/utils/mx_loop.c
         src/utils/mx_not_ascii.c
         src/utils/mx_parametr_shell.c
         src/utils/mx_pop_front_free_data.c
@@ -190,10 +194,10 @@ add_executable(USH
         src/utils/mx_strjoin3.c
         src/utils/mx_subs.c
         src/utils/mx_syntax_analyzer.c
+        src/utils/mx_term_out.c
         src/utils/mx_token_in_program.c
         src/utils/mx_ush_close.c
         src/utils/mx_ush_init.c
         src/utils/mx_var_tree_to_var.c
         src/utils/mx_wait_process.c
-        src/utils/mx_write_from_to.c
-        src/utils/mx_term_out.c)
+        src/utils/mx_write_from_to.c)

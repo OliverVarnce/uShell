@@ -10,7 +10,7 @@ static bool printerr(int fd) {
     return false;
 }
 
-static int pipe_w(t_tnode *root, int *fds, int operator_status, t_info *info) {
+static int pipe_w(t_tnode *root, int *fds, int operator_status, t_ush *ush) {
     int fdsBuff[2];
     int status = 0;
     int fd = open(((t_token*)(root->right->data))->value[0], MX_FLAGS_W);
@@ -20,18 +20,18 @@ static int pipe_w(t_tnode *root, int *fds, int operator_status, t_info *info) {
     fdsBuff[0] = fds[0];
     fdsBuff[1] = fd;
     status = mx_execute_tree(root->left, fdsBuff, operator_status
-                             | OP_MORE, info);
+                             | OP_MORE, ush);
     close(fds[1]);
     fd = open(((t_token*)(root->right->data))->value[0],
               O_RDWR , S_IWRITE | S_IREAD);
     fds[1] = fd;
     status = mx_execute_tree(root->left, fdsBuff, operator_status
-                             | OP_MORE | LEFT_VISITED, info);
+                             | OP_MORE | LEFT_VISITED, ush);
     close(fd);
     return status;
 }
 
-static int pipe_r(t_tnode *root, int *fds, int operator_status, t_info *info) {
+static int pipe_r(t_tnode *root, int *fds, int operator_status, t_ush *ush) {
     int fdsBuff[2];
     int status = 0;
     int fd = 0;
@@ -42,11 +42,11 @@ static int pipe_r(t_tnode *root, int *fds, int operator_status, t_info *info) {
     fdsBuff[0] = fds[0];
     fdsBuff[1] = fd;
     status = mx_execute_tree(root->left, fdsBuff,
-                             operator_status | OP_MORE, info);
+                             operator_status | OP_MORE, ush);
     return status;
 }
 
-int mx_exec_more(t_tnode *root, int *fds, int operator_status, t_info *info) {
+int mx_exec_more(t_tnode *root, int *fds, int operator_status, t_ush *ush) {
     int fdsBuff[2];
     int status = 0;
     int fd = 0;
@@ -58,11 +58,11 @@ int mx_exec_more(t_tnode *root, int *fds, int operator_status, t_info *info) {
         fdsBuff[0] = 0;
         fdsBuff[1] = fd;
         status = mx_execute_tree(root->left, fdsBuff,
-                                 operator_status | OP_MORE, info);
+                                 operator_status | OP_MORE, ush);
     }
     if (operator_status & OP_PIPE_W)
-        status = pipe_w(root, fds, operator_status, info);
+        status = pipe_w(root, fds, operator_status, ush);
     if (operator_status & OP_PIPE_R)
-        status = pipe_r(root, fds, operator_status, info);
+        status = pipe_r(root, fds, operator_status, ush);
     return status;
 }

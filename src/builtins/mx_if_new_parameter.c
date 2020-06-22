@@ -25,18 +25,18 @@ static int pos_parametr(char *str, int *start) {
         return 0;
 }
 
-static void create_parameter(char *str, int *start, int end, t_info *processes) {
+static void create_parameter(char *str, int *start, int end, t_ush *processes) {
     int pos = pos_parametr(str, start);
     char *name = mx_strndup(&str[*start], pos - *start);
     char *value = NULL;
-    char *temp = NULL;
+    char *tmp = NULL;
 
     *start = ++pos;
     mx_end_flag(str, &pos, end, ' ');
-    temp = mx_strndup(&str[*start], pos - *start);
+    tmp = mx_strndup(&str[*start], pos - *start);
     *start = pos;
-    value = mx_audit_str(temp, processes, 0);
-    mx_strdel(&temp);
+    value = mx_audit_str(tmp, processes, 0);
+    mx_strdel(&tmp);
     mx_subs(&value);
     mx_serch_list(&(processes->var_tree), name, value);
     pos = get_start_index(&str[*start]);
@@ -53,7 +53,7 @@ static bool is_not_operator(char c) {
     return true;
 }
 
-void mx_if_new_parameter(char *str, int *start, int end, t_info *processes) {
+void mx_if_new_parameter(char *str, int *start, int end, t_ush *processes) {
     int check_start = *start;
 
     while (is_not_operator(str[check_start]))

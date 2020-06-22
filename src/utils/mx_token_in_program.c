@@ -49,20 +49,20 @@ static void push_argv_in_list(char **comand, t_token *new_token) {
 }
 
 t_token *mx_token_in_program(int *curr_pos, int end, char *str,
-                                 t_info *processes) {
+                                 t_ush *processes) {
     int token_start = *curr_pos;
     t_token *new_token = mx_create_token(2,0,0);
     char *newValue = 0;
-    char *temp = 0;
+    char *tmp = 0;
 
     while (mx_is_char(str[token_start])) {
         end_argv(curr_pos, end, str);
         newValue = mx_strndup(&str[token_start], *curr_pos - token_start);
-        temp = mx_audit_str(newValue, processes, 0);
+        tmp = mx_audit_str(newValue, processes, 0);
         mx_strdel(&newValue);
         mx_skip_spaces(str, curr_pos, end);
         token_start = *curr_pos;
-        push_argv_in_list(&temp, new_token);
+        push_argv_in_list(&tmp, new_token);
     }
     return new_token;
 }

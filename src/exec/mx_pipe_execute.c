@@ -6,7 +6,7 @@ static void close_desc(int *fds) {
 }
 
 static int pipe_r(t_tnode *root, int *fds, char operator_status,
-                  t_info *processes) {
+                  t_ush *processes) {
     int new_fds[2];
     int fds_buff[2];
     int status = 0;
@@ -25,7 +25,7 @@ static int pipe_r(t_tnode *root, int *fds, char operator_status,
     return status;
 }
 
-static int no_pipe(t_tnode *root, char opst, t_info *pr) {
+static int no_pipe(t_tnode *root, char opst, t_ush *pr) {
     int new_fds[2];
     int fds_buff[2];
     int status = 0;
@@ -51,7 +51,7 @@ static int no_pipe(t_tnode *root, char opst, t_info *pr) {
 
 
 int mx_pipe_execute(t_tnode *root, int *fds, char operator_status,
-                    t_info *processes) {
+                    t_ush *processes) {
     int status = 0;
 
     if ((operator_status & 3) == 0) // PIPE NOTHING

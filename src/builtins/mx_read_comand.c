@@ -1,7 +1,7 @@
 #include "ush.h"
 
-static bool comands(char temp) {
-    if (temp == '\r'|| temp == '|' || temp == '&')
+static bool comands(char tmp) {
+    if (tmp == '\r'|| tmp == '|' || tmp == '&')
         return 1;
     else
         return 0;
@@ -23,12 +23,12 @@ static char *direct(char *parsing) {
 static void add_comand(t_list **list_comand, char *parsing, char ***paths,
                        char **directori) {
     static char *comand[] = {"history", "unset", "export", "./", "../", 0};
-    char *temp = 0;
+    char *tmp = 0;
 
     for (int i = 0; comands(parsing[0]) != 0 && comand[i]; i++) {
         if (mx_strcmp2(comand[i],&parsing[1]) == 0) {
-            temp = mx_strdup(comand[i]);
-            mx_push_front(list_comand, temp);
+            tmp = mx_strdup(comand[i]);
+            mx_push_front(list_comand, tmp);
         }
     }
     mx_del_strarr(paths);
@@ -38,7 +38,7 @@ static void add_comand(t_list **list_comand, char *parsing, char ***paths,
 static void add_file_directory(t_list **list_comand,
                                char *pars, char ***paths) {
     DIR *dir = 0;
-    char *temp = 0;
+    char *tmp = 0;
     struct dirent *entry;
     char *directori = direct(pars);
     int i = 1;
@@ -51,8 +51,8 @@ static void add_file_directory(t_list **list_comand,
         while ((entry = readdir(dir)) != NULL) {
             if (entry->d_name[0] != '.'
                 && mx_strcmp2(entry->d_name, &pars[i]) == 0) {
-                temp = mx_strdup(entry->d_name);
-                mx_push_front(list_comand, temp);
+                tmp = mx_strdup(entry->d_name);
+                mx_push_front(list_comand, tmp);
             }
         }
         closedir(dir);

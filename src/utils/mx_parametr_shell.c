@@ -11,16 +11,16 @@ static bool is_not_operator(char c) {
 }
 
 static int end_parametr(char *str, int i) {
-    int temp = i + 1;
+    int tmp = i + 1;
 
-    while (is_not_operator(str[temp]))
-        temp++;
-    if (str[temp] == '?' && str[temp + 1] != '(')
-        temp++;
-    return temp;
+    while (is_not_operator(str[tmp]))
+        tmp++;
+    if (str[tmp] == '?' && str[tmp + 1] != '(')
+        tmp++;
+    return tmp;
 }
 
-static void parametrchell(t_info *processes, int *i, char **new_str) {
+static void parametrchell(t_ush *processes, int *i, char **new_str) {
     int end = *i;
     int flag = 0;
     char *par_shell = 0;
@@ -41,7 +41,7 @@ static void parametrchell(t_info *processes, int *i, char **new_str) {
     }
 }
 
-static void parametrlaststatus(t_info *processes, int *i, char **new_str, int flag) {
+static void parametrlaststatus(t_ush *processes, int *i, char **new_str, int flag) {
     char *par_shell = 0;
 
     par_shell = mx_itoa(processes->last_status);
@@ -52,7 +52,7 @@ static void parametrlaststatus(t_info *processes, int *i, char **new_str, int fl
     }
 }
 
-void mx_parametr_shell(t_info *processes, int *i, char **new_str) {
+void mx_parametr_shell(t_ush *processes, int *i, char **new_str) {
     int flag = end_parametr(*new_str, *i);
     char *par_shell = 0;
 

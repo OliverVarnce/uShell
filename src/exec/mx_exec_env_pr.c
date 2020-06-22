@@ -1,7 +1,7 @@
 #include "ush.h"
 
-static void clearenv(t_info *info) {
-    t_list *tmp = info->var_tree;
+static void clearenv(t_ush *ush) {
+    t_list *tmp = ush->var_tree;
 
     while (tmp) {
         if (((t_variable*)tmp->data)->is_env)
@@ -52,15 +52,15 @@ static int start_child(char *path, char **argv, char **env) {
     return 0;
 }
 
-void mx_exec_env_pr(char *path, char **argv, char **env, t_info *info) {
+void mx_exec_env_pr(char *path, char **argv, char **env, t_ush *ush) {
     pid_t pid = fork();
 
     if (pid == 0) {
-        clearenv(info);
+        clearenv(ush);
         start_child(path, argv, env);
     }
     else {
-        mx_wait_process(info, argv);
+        mx_wait_process(ush, argv);
     }
     mx_del_strarr(&env);
     mx_del_strarr(&argv);

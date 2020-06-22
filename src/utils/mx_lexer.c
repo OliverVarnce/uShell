@@ -24,7 +24,7 @@ static int get_end_index(char *str) {
     return i + 1;
 }
 
-t_list *mx_create_tokens(char *str, t_info *processes) {
+t_list *mx_create_tokens(char *str, t_ush *processes) {
     int start   = get_start_index(str);
     int end     = get_end_index(str);
     t_token *newToken = 0;
@@ -42,7 +42,7 @@ t_list *mx_create_tokens(char *str, t_info *processes) {
     return tokens;
 }
 
-t_list *mx_lexer(char *str, t_info *processes) {
+t_list *mx_lexer(char *str, t_ush *processes) {
     t_list *tokens = 0;
 
     if (str == 0)
