@@ -98,7 +98,7 @@ SRC = $(addprefix $(SRC_DIR)/,\
         utils/mx_create_tnode.c \
         utils/mx_create_token.c \
         utils/mx_delete_last.c \
-        utils/mx_do_replace.c \
+        utils/mx_replace.c \
         utils/mx_dupstrarr.c \
         utils/mx_exit.c \
         utils/mx_history.c \
@@ -218,7 +218,7 @@ OBJ =	mx_add_one_rank.o \
         mx_create_tnode.o \
         mx_create_token.o \
         mx_delete_last.o \
-        mx_do_replace.o \
+        mx_replace.o \
         mx_dupstrarr.o \
         mx_exit.o \
         mx_history.o \

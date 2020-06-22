@@ -170,7 +170,7 @@ add_executable(USH
         src/utils/mx_create_tnode.c
         src/utils/mx_create_token.c
         src/utils/mx_delete_last.c
-        src/utils/mx_do_replace.c
+        src/utils/mx_replace.c
         src/utils/mx_dupstrarr.c
         src/utils/mx_exit.c
         src/utils/mx_getchar.c

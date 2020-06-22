@@ -1,6 +1,6 @@
 #include "ush.h"
 
-void mx_do_replace(char **str, size_t start, size_t end, char *str_new) {
+void mx_replace(char **str, size_t start, size_t end, char *str_new) {
     char *new_str = NULL;;
     size_t i = mx_strlen(*str);
     int sum = 0;

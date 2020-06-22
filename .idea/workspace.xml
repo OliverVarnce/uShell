@@ -9,19 +9,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66ffa57a-d346-4769-a3ff-cfc76628324e" name="Default Changelist" comment="bugfix">
-      <change afterPath="$PROJECT_DIR$/src/utils/mx_create_commands.c" afterDir="false" />
+    <list default="true" id="66ffa57a-d346-4769-a3ff-cfc76628324e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/ush.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ush.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parsers/mx_parsing.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/mx_parsing.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsers/mx_key_delite.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/mx_key_delite.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/bit_func.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/bit_func.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mx_create_comands.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mx_audit_str.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_audit_str.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mx_do_replace.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_replace.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/mx_home.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_home.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mx_not_ascii.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_not_ascii.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mx_parametr_shell.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_parametr_shell.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mx_term_out.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_term_out.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,7 @@
       <workItem from="1592560073242" duration="3241000" />
       <workItem from="1592773051887" duration="5003000" />
       <workItem from="1592819904313" duration="2836000" />
-      <workItem from="1592857604007" duration="1630000" />
+      <workItem from="1592857604007" duration="2521000" />
     </task>
     <task id="LOCAL-00001" summary="razbil na papki">
       <created>1592565543518</created>
@@ -113,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592821811693</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="andrii_utils_fix 1">
+      <created>1592861130693</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1592861130693</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,19 +128,20 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="razbil na papki" />
     <MESSAGE value="bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix" />
+    <MESSAGE value="andrii_utils_fix 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="andrii_utils_fix 1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="318" y="197" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592772965028">
       <screen x="0" y="23" width="1280" height="730" />
     </state>
     <state x="318" y="197" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.730@0.23.1280.730" timestamp="1592772965028" />
-    <state x="455" y="23" key="CommitChangelistDialog2" timestamp="1592861081427">
+    <state x="455" y="23" key="CommitChangelistDialog2" timestamp="1592861130410">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="341" y="23" key="CommitChangelistDialog2/-316.-1057.2560.1057/0.23.1920.1177@0.23.1920.1177" timestamp="1592841065943" />
     <state x="227" y="23" key="CommitChangelistDialog2/0.23.1280.730@0.23.1280.730" timestamp="1592822731934" />
-    <state x="455" y="23" key="CommitChangelistDialog2/0.23.2560.1337@0.23.2560.1337" timestamp="1592861081427" />
+    <state x="455" y="23" key="CommitChangelistDialog2/0.23.2560.1337@0.23.2560.1337" timestamp="1592861130410" />
     <state width="1238" height="227" key="GridCell.Tab.0.bottom" timestamp="1592820590841">
       <screen x="0" y="23" width="1280" height="730" />
     </state>
@@ -185,10 +192,11 @@
       <screen x="0" y="23" width="1280" height="730" />
     </state>
     <state x="477" y="97" key="RollbackChangesDialog/0.23.1280.730@0.23.1280.730" timestamp="1592816874446" />
-    <state x="240" y="128" key="Vcs.Push.Dialog.v2" timestamp="1592821570010">
-      <screen x="0" y="23" width="1280" height="730" />
+    <state x="480" y="215" key="Vcs.Push.Dialog.v2" timestamp="1592861139886">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="240" y="128" key="Vcs.Push.Dialog.v2/0.23.1280.730@0.23.1280.730" timestamp="1592821570010" />
+    <state x="480" y="215" key="Vcs.Push.Dialog.v2/0.23.2560.1337@0.23.2560.1337" timestamp="1592861139886" />
     <state x="927" y="374" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1592856739988">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
@@ -198,12 +206,12 @@
       <screen x="0" y="23" width="1280" height="730" />
     </state>
     <state x="431" y="309" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.730@0.23.1280.730" timestamp="1592816719251" />
-    <state x="643" y="271" width="1196" height="1005" key="find.popup" timestamp="1592858230822">
+    <state x="643" y="271" width="1196" height="1005" key="find.popup" timestamp="1592862100672">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="482" y="241" width="897" height="884" key="find.popup/-316.-1057.2560.1057/0.23.1920.1177@0.23.1920.1177" timestamp="1592840545863" />
     <state x="321" y="158" width="598" height="548" key="find.popup/0.23.1280.730@0.23.1280.730" timestamp="1592822252849" />
-    <state x="643" y="271" width="1196" height="1005" key="find.popup/0.23.2560.1337@0.23.2560.1337" timestamp="1592858230822" />
+    <state x="643" y="271" width="1196" height="1005" key="find.popup/0.23.2560.1337@0.23.2560.1337" timestamp="1592862100672" />
     <state x="394" y="108" key="git4idea.branch.GitSmartOperationDialog" timestamp="1592819793514">
       <screen x="0" y="23" width="1280" height="730" />
     </state>

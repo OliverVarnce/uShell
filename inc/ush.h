@@ -247,7 +247,7 @@ char *mx_str_bquote(char **str, t_ush *processes);
 char **mx_create_commands(char *str, int end);
 void mx_one_symbol(char **str, char ch, int *count, int position);
 void mx_not_ascii(char *chars, t_ush *ush);
-int mx_bit_sumbol(char *str);
+int mx_bit_symbol(char *str);
 int mx_len_symbol(int sum, char *str);
 int mx_input(t_ush *ush);
 void mx_print_esc(char *s);
@@ -272,7 +272,7 @@ int mx_get_twidth();
 // lexer
 bool mx_is_char(char c);
 void mx_home(char **str, int *i, t_ush *processes);
-void mx_do_replace(char **str, size_t start, size_t end, char *str_new);
+void mx_replace(char **str, size_t start, size_t end, char *str_new);
 bool mx_is_operator(t_token *token);
 unsigned int mx_read_keyboard(t_ush *ush);
 

@@ -61,7 +61,7 @@ void mx_home(char **string, int *i, t_ush *processes) {
             read_user(&home);
     }
     if (home) {
-        mx_do_replace(string, *i, new_position, home);
+        mx_replace(string, *i, new_position, home);
         *i += mx_strlen(home);
         mx_strdel(&home);
     }

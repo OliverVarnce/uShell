@@ -1,12 +1,12 @@
 #include "ush.h"
 
 
-static void substitution_comand(char **str, char **str2, t_ush *processes) {
+static void substitution_command(char **str, char **str2, t_ush *processes) {
     mx_strdel(str);
     for (int i = 0; str2[0][i]; i++) { 
         if (str2[0][i] == '\\' && (str2[0][i + 1] == '`'
             || str2[0][i + 1] == '\\')) {
-            mx_do_replace(str2, i, i + 1, 0);
+            mx_replace(str2, i, i + 1, 0);
         }
     }
     *str2 = mx_str_bquote(str2, processes);
@@ -26,7 +26,7 @@ static void editor_str(char **str, t_ush *processes) {
         *str = tmp;
     }
     else if (str[0][0] == 96 || str[0][0] == '$')
-        substitution_comand(str, &tmp, processes);
+        substitution_command(str, &tmp, processes);
     else if (str[0][0] == 34) { 
         temp2 = mx_audit_str(tmp, processes, 1);
         mx_subs(&temp2);
@@ -36,7 +36,7 @@ static void editor_str(char **str, t_ush *processes) {
     }
 }
 
-static bool chek_comand(char *new_str, int i) {
+static bool chek_command(char *new_str, int i) {
     if (new_str[i] == 34 || new_str[i] == 39 || new_str[i] == 96) {
         if (i == 0 || new_str[i - 1] != '\''
             || !mx_check_symbol(new_str, i, new_str[i]))
@@ -57,19 +57,19 @@ static bool chek_comand(char *new_str, int i) {
 static void spec_symbol(t_ush *processes, int *i, char **new_str) {
     int flag = new_str[0][*i];
     int pos = *i + 1;
-    char *comand = 0;
+    char *command = 0;
 
     if (new_str[0][i[0]] == '$') {
         pos++;
         flag = ')';
     }
     mx_end_flag(new_str[0], &pos, strlen(new_str[0]), flag);
-    comand = mx_strndup(&new_str[0][i[0]], pos - i[0]);
-    editor_str(&comand, processes);
-    mx_do_replace(new_str, i[0], pos, comand);
-    if (comand) {
-        (i[0]) += mx_strlen(comand);
-        mx_strdel(&comand);
+    command = mx_strndup(&new_str[0][i[0]], pos - i[0]);
+    editor_str(&command, processes);
+    mx_replace(new_str, i[0], pos, command);
+    if (command) {
+        (i[0]) += mx_strlen(command);
+        mx_strdel(&command);
     }
     (i[0])--;
 }
@@ -86,13 +86,13 @@ char *mx_audit_str(char *str, t_ush *ush, bool dqute) {
         pos = i;
         if (new_str[i] == '~' && !dqute)
             mx_home(&new_str, &i, ush);
-        else if (chek_comand(new_str, i))
+        else if (chek_command(new_str, i))
             spec_symbol(ush, &i, &new_str);
         else if (mx_check_symbol(new_str, i ,'$'))
             mx_parametr_shell(ush, &i, &new_str);
         else if (new_str[i] == '\\'
                  && (!dqute || (dqute && (new_str[i + 1] == '\\'))))
-            mx_do_replace(&new_str, i, i + 1, 0);
+            mx_replace(&new_str, i, i + 1, 0);
     }
     return new_str;
 }
