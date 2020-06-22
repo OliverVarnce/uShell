@@ -1,6 +1,6 @@
 #include "ush.h"
 
-void mx_parsing(char *str, t_info *info) {
+void mx_parsing(char *str, t_ush *ush) {
     int end = mx_strlen(str);
     char *temp = mx_parsing_input(str);
     char **comands = 0;
@@ -14,6 +14,6 @@ void mx_parsing(char *str, t_info *info) {
         return;
     }
     comands = mx_create_comands(temp, end);
-    mx_execute(comands, info);
+    mx_execute(comands, ush);
     mx_del_strarr(&comands);
 }

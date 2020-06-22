@@ -1,7 +1,7 @@
 #include "ush.h"
 
 
-static void substitution_comand(char **str, char **str2, t_info *processes) {
+static void substitution_comand(char **str, char **str2, t_ush *processes) {
     mx_strdel(str);
     for (int i = 0; str2[0][i]; i++) { 
         if (str2[0][i] == '\\' && (str2[0][i + 1] == '`'
@@ -13,7 +13,7 @@ static void substitution_comand(char **str, char **str2, t_info *processes) {
     *str = *str2;
 }
 
-static void editor_str(char **str, t_info *processes) {
+static void editor_str(char **str, t_ush *processes) {
     char *temp = 0;
     char *temp2 = 0;
     int i = 1;
@@ -54,7 +54,7 @@ static bool chek_comand(char *new_str, int i) {
         return false;
 }
 
-static void spec_symbol(t_info *processes, int *i, char **new_str) {
+static void spec_symbol(t_ush *processes, int *i, char **new_str) {
     int flag = new_str[0][*i];
     int pos = *i + 1;
     char *comand = 0;
@@ -74,7 +74,7 @@ static void spec_symbol(t_info *processes, int *i, char **new_str) {
     (i[0])--;
 }
 
-char *mx_audit_str(char *str, t_info *info, bool dqute) {
+char *mx_audit_str(char *str, t_ush *ush, bool dqute) {
     char *new_str = 0;
     int i = 0;
     int pos = 0;
@@ -82,14 +82,14 @@ char *mx_audit_str(char *str, t_info *info, bool dqute) {
     if (str == 0)
         return 0;
     new_str = mx_strdup(str);
-    for (; new_str && new_str[i] && info->if_ctrl_c; i++) {
+    for (; new_str && new_str[i] && ush->if_ctrl_c; i++) {
         pos = i;
         if (new_str[i] == '~' && !dqute)
-            mx_home(&new_str, &i, info);
+            mx_home(&new_str, &i, ush);
         else if (chek_comand(new_str, i))
-            spec_symbol(info, &i, &new_str);
+            spec_symbol(ush, &i, &new_str);
         else if (mx_check_symbol(new_str, i ,'$'))
-            mx_parametr_shell(info, &i, &new_str);
+            mx_parametr_shell(ush, &i, &new_str);
         else if (new_str[i] == '\\'
                  && (!dqute || (dqute && (new_str[i + 1] == '\\'))))
             mx_do_replace(&new_str, i, i + 1, 0);

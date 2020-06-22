@@ -37,7 +37,7 @@ static char *create_str_comand(char *parsing) {
     return temp_str;
 }
 
-char *mx_mini_parser_tab(char *parsing, t_info *info) {
+char *mx_mini_parser_tab(char *parsing, t_ush *ush) {
     char *tem_str = create_str_comand(parsing);
     int pos = 0;
     char if_comand = 0;
@@ -50,7 +50,7 @@ char *mx_mini_parser_tab(char *parsing, t_info *info) {
         temp = mx_strdup(&tem_str[1]);
         if_comand = tem_str[0];
         mx_strdel(&tem_str);
-        mx_home(&temp, &pos, info);
+        mx_home(&temp, &pos, ush);
         tem_str = mx_strjoin("\r", temp);
         mx_strdel(&temp);
         tem_str[0] = if_comand;

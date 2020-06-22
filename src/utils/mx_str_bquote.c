@@ -34,7 +34,7 @@ static char *read_to_delim(int des, int des2) {
     return str;
 }
 
-static void child(t_info *processes, int des[2], char **str) {
+static void child(t_ush *processes, int des[2], char **str) {
     close(des[0]);
     dup2(des[1], 1);
     mx_parsing(*str, processes);
@@ -43,7 +43,7 @@ static void child(t_info *processes, int des[2], char **str) {
     exit(0);
 }
 
-static void parent(t_info *processes, char **str) {
+static void parent(t_ush *processes, char **str) {
     int status;
     int check;
 
@@ -55,7 +55,7 @@ static void parent(t_info *processes, char **str) {
     }
 }
 
-char *mx_str_bquote(char **str, t_info *processes) {
+char *mx_str_bquote(char **str, t_ush *processes) {
     int des[2] = {0, 0};
     pid_t pid;
     char *test = 0;

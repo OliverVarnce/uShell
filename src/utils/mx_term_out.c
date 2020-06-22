@@ -56,7 +56,7 @@ void mx_clean_terminal(char *name, int table2, int pos, char *str) {
     mx_print_esc("J");
 }
 
-void mx_clean_space_in_term(char *str, t_info *info, char *new_str) {
+void mx_clean_space_in_term(char *str, t_ush *ush, char *new_str) {
     int temp;
     int col = mx_get_twidth();
 

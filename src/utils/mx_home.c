@@ -23,7 +23,7 @@ static void read_user(char **user) {
     check = 0;
 }
 
-static char *env_param(char **string, int *i, t_info *processes) {
+static char *env_param(char **string, int *i, t_ush *processes) {
     char *str = *string;
     char *home = 0;
 
@@ -46,7 +46,7 @@ static char *env_param(char **string, int *i, t_info *processes) {
     return home;
 }
 
-void mx_home(char **string, int *i, t_info *processes) {
+void mx_home(char **string, int *i, t_ush *processes) {
     char *home = 0;
     int new_position = *i;
 

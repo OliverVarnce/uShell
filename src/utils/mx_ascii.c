@@ -19,30 +19,30 @@ static int mx_handle_events(char ch) {
     return 0;
 }
 
-static void special_symbols(unsigned int ch, t_info *info) {
+static void special_symbols(unsigned int ch, t_ush *ush) {
     int str_pos = MX_STR_LEN - MX_STR_POS - 1;
     char *str_tab = 0;
 
     if (MX_SYMBOL != 9 && ch == 9) {
         str_tab = mx_strndup(MX_STR,str_pos);
         mx_clean_terminal(MX_USH, MX_STR_LEN, MX_STR_POS, MX_STR);
-        info->input->comand_tab = mx_key_tab(str_tab, &MX_STR, info);
-        info->input->pos_tab = 0;
+        ush->input->comand_tab = mx_key_tab(str_tab, &MX_STR, ush);
+        ush->input->pos_tab = 0;
     }
     if (MX_SYMBOL == 9 && ch == 9) {
         mx_clean_terminal(MX_USH, MX_STR_LEN, MX_STR_POS, MX_STR);
-        mx_key_duble_tab(&MX_STR, info->input->comand_tab, info);
+        mx_key_duble_tab(&MX_STR, ush->input->comand_tab, ush);
     }
     MX_SYMBOL = mx_handle_events(ch);
     if (MX_SYMBOL == 18) {
         mx_clean_terminal(MX_USH, MX_STR_LEN, MX_STR_POS, MX_STR);
-        mx_ctrl_r(info);
+        mx_ctrl_r(ush);
     }
 }
 
-static int ctrl_enter_d_c(t_info *info) {
+static int ctrl_enter_d_c(t_ush *ush) {
     if (MX_SYMBOL == -1) {
-        mx_clean_space_in_term(MX_STR, info, "exit");
+        mx_clean_space_in_term(MX_STR, ush, "exit");
         return 0;
     }
     else if (MX_SYMBOL == 2) {
@@ -50,24 +50,24 @@ static int ctrl_enter_d_c(t_info *info) {
         return 2;
     }
     else if (MX_SYMBOL == KEY_ENTER) {
-        mx_clean_space_in_term(MX_STR, info, MX_STR);
+        mx_clean_space_in_term(MX_STR, ush, MX_STR);
         if (mx_strlen(MX_STR) != 0) {
-            if (info->history == NULL
-                || mx_strcmp(MX_STR, info->history->data) != 0)
-                mx_push_front(&info->history, mx_strdup(MX_STR));
+            if (ush->history == NULL
+                || mx_strcmp(MX_STR, ush->history->data) != 0)
+                mx_push_front(&ush->history, mx_strdup(MX_STR));
             return 1;
         }
     }
     return 3;
 }
 
-int mx_ascii(t_info *info, char *chars, unsigned int ch) {
+int mx_ascii(t_ush *ush, char *chars, unsigned int ch) {
     int spec_symbol = 3;
 
     if (ch < 32) {
-        special_symbols(ch, info);
+        special_symbols(ch, ush);
         if (MX_SYMBOL == -1 || MX_SYMBOL == 2 || MX_SYMBOL == 13)
-            spec_symbol = ctrl_enter_d_c(info);
+            spec_symbol = ctrl_enter_d_c(ush);
         else
             chars[2] = 10;
     }

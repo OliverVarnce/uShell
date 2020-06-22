@@ -10,56 +10,56 @@ static void set_fds(int *fds, int *savedFds) {
 }
 
 static int mx_exec_buildin(t_token *token, int *fds,
-                           char operator_starus, t_info *info) {
+                           char operator_starus, t_ush *ush) {
     int savedFds[2];
     int status = 0;
 
     set_fds(fds, savedFds);
-    status = mx_buildin_list(token, info);
+    status = mx_buildin_list(token, ush);
     mx_unset_fds(fds, savedFds, operator_starus);
     return status;
 }
 
 static int or_operator(t_tnode *root, int *fds, char operatorStatus,
-                       t_info *info) {
+                       t_ush *ush) {
     int status = 0;
 
-    status = mx_execute_tree(root->left, fds, operatorStatus, info);
-        if (info->last_status != 0)
-            status = mx_execute_tree(root->right, fds, operatorStatus, info);
+    status = mx_execute_tree(root->left, fds, operatorStatus, ush);
+        if (ush->last_status != 0)
+            status = mx_execute_tree(root->right, fds, operatorStatus, ush);
     return status;
 }
 
 static int and_operator(t_tnode *root, int *fds, char operatorStatus,
-                        t_info *info) {
+                        t_ush *ush) {
     int status = 0;
 
-    status = mx_execute_tree(root->left, fds, operatorStatus, info);
-        if (info->last_status == 0)
-            status = mx_execute_tree(root->right, fds, operatorStatus, info);
+    status = mx_execute_tree(root->left, fds, operatorStatus, ush);
+        if (ush->last_status == 0)
+            status = mx_execute_tree(root->right, fds, operatorStatus, ush);
     return status;
 }
 
-int mx_execute_tree(t_tnode *root, int *fds, char op_st, t_info *info) {
+int mx_execute_tree(t_tnode *root, int *fds, char op_st, t_ush *ush) {
     int status = 0;
 
-    if ((root == 0) || (info->is_exit))
+    if ((root == 0) || (ush->is_exit))
         return -1;
     if (mx_is_buildin(((t_token*)root->data)->value[0]))
-        mx_exec_buildin((t_token*)root->data, fds, op_st, info);
+        mx_exec_buildin((t_token*)root->data, fds, op_st, ush);
     else if (((t_token*)root->data)->type == TYPE_COMMAND)
-        status = exec_token(root->data, fds, op_st, info);
+        status = exec_token(root->data, fds, op_st, ush);
     if (mx_strcmp(((t_token*)root->data)->value[0], "|") == 0)
-        status = mx_pipe_execute(root, fds, op_st, info);
+        status = mx_pipe_execute(root, fds, op_st, ush);
     if (mx_strcmp(((t_token*)root->data)->value[0], ">") == 0)
-        status = mx_exec_more(root, fds, op_st, info);
+        status = mx_exec_more(root, fds, op_st, ush);
     if (mx_strcmp(((t_token*)root->data)->value[0], "<") == 0)
-        mx_exec_less(root, fds, op_st, info);
+        mx_exec_less(root, fds, op_st, ush);
     if (mx_strcmp(((t_token*)root->data)->value[0], ">>") == 0)
-        mx_exec_dmore(root, fds, op_st, info);
+        mx_exec_dmore(root, fds, op_st, ush);
     if (mx_strcmp(((t_token*)root->data)->value[0], "||") == 0)
-        status = or_operator(root, fds, op_st, info);
+        status = or_operator(root, fds, op_st, ush);
     if (mx_strcmp(((t_token*)root->data)->value[0], "&&") == 0)
-        status = and_operator(root, fds, op_st, info);
+        status = and_operator(root, fds, op_st, ush);
     return status;
 }

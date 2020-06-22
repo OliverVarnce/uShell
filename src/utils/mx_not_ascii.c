@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static void left_right(char *chars, t_info *info) {
+static void left_right(char *chars, t_ush *ush) {
     unsigned char check;
 
     if (chars[2] == 67) { // RIGHT
@@ -23,7 +23,7 @@ static void left_right(char *chars, t_info *info) {
     }
 }
 
-static void up_down(char *chars, t_info *info){
+static void up_down(char *chars, t_ush *ush){
     if (chars[2] == 65) { // UP
         if (MX_ID != MX_MAX_COMAND) {
             mx_clean_terminal(MX_USH, MX_STR_LEN, MX_STR_POS, MX_STR);
@@ -46,7 +46,7 @@ static void up_down(char *chars, t_info *info){
     }
 }
 
-static void home_end(char *chars, t_info *info) {
+static void home_end(char *chars, t_ush *ush) {
     if (chars[2] == 70) { // position 0
         if (MX_STR_POS != 0) {
             mx_clean_terminal(MX_USH, MX_STR_LEN, MX_STR_POS, MX_STR);
@@ -67,12 +67,12 @@ static void home_end(char *chars, t_info *info) {
         mx_printstr("/n/nEROOR!! DUBLE_COMAND\n\n");
 }
 
-static void page_u_Page_d(char *chars, t_info *info) {
+static void page_u_Page_d(char *chars, t_ush *ush) {
     if (chars[2] == 53) { // PageUP
         if (MX_ID != MX_MAX_COMAND) {
             mx_clean_terminal(MX_USH, MX_STR_LEN, MX_STR_POS, MX_STR);
             MX_STR_POS = 0;
-            MX_STR_LEN = mx_strlen(info->input->comands[MX_MAX_COMAND]) + 1;
+            MX_STR_LEN = mx_strlen(ush->input->comands[MX_MAX_COMAND]) + 1;
             MX_ID = MX_MAX_COMAND;
         }
         else
@@ -81,7 +81,7 @@ static void page_u_Page_d(char *chars, t_info *info) {
     else if (chars[2] == 54) { //PageDown
         if (MX_ID != 0) {
             mx_clean_terminal(MX_USH, MX_STR_LEN, MX_STR_POS, MX_STR);
-            MX_STR_LEN = mx_strlen(info->input->comands[0]) + 1;
+            MX_STR_LEN = mx_strlen(ush->input->comands[0]) + 1;
             MX_STR_POS = 0;
             MX_ID = 0;
         }
@@ -90,24 +90,24 @@ static void page_u_Page_d(char *chars, t_info *info) {
     }
 }
 
-void mx_not_ascii(char *chars, t_info *info) {
+void mx_not_ascii(char *chars, t_ush *ush) {
     if (chars[3] == 0 && (chars[2] == 65 || chars[2] == 66)) {
-        up_down(chars, info);
+        up_down(chars, ush);
     }
     else if (chars[3] == 0 && (chars[2] == 70 || chars[2] == 72)) {
-        home_end(chars, info);
+        home_end(chars, ush);
     }
     else if (chars[3] == 0 && chars[2] == 68 && MX_STR_LEN - 1 > MX_STR_POS) {
-        left_right(chars, info);
+        left_right(chars, ush);
     }
     else if (chars[3] == 0 && chars[2] == 67 && 0 < MX_STR_POS) {
-        left_right(chars, info);
+        left_right(chars, ush);
     }
     else if (chars[3] == 126 && (chars[2] == 53 || chars[2] == 54)) {
-        page_u_Page_d(chars, info);
+        page_u_Page_d(chars, ush);
     }
     else if (chars[3] == 126 && chars[2] == 51 && MX_STR_POS != 0) {
-        mx_key_delite(info);
+        mx_key_delite(ush);
     }
     else
         chars[2] = 10;

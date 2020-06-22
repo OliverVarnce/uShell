@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static void not_id_0(char **str, char **comands, t_info *info) {
+static void not_id_0(char **str, char **comands, t_ush *ush) {
     for (int i = 0; comands[MX_ID_TAB_KEY - 1][i]; i++)
         mx_one_symbol(str, 127, &(MX_STR_LEN), MX_STR_POS);
     if (comands[MX_ID_TAB_KEY] != 0) {
@@ -16,7 +16,7 @@ static void not_id_0(char **str, char **comands, t_info *info) {
     }
 }
 
-void mx_key_duble_tab(char **str, char **comands, t_info *info) {
+void mx_key_duble_tab(char **str, char **comands, t_ush *ush) {
     if (comands != 0 && comands[0] != 0) {
         if (MX_ID_TAB_KEY == 0 && comands[0] != 0) {
             for (int i = 0; comands[0][i]; i++)
@@ -28,7 +28,7 @@ void mx_key_duble_tab(char **str, char **comands, t_info *info) {
             MX_ID_TAB_KEY++;
         }
         else
-            not_id_0(str,comands, info);
+            not_id_0(str,comands, ush);
     }
     else
         write(1,"\a", 1);

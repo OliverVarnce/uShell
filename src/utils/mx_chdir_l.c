@@ -12,9 +12,9 @@ static int get_rank(char *path) {
     return rank;
 } 
 
-static char *get_new_pwd(char *path, t_info *info) {
+static char *get_new_pwd(char *path, t_ush *ush) {
     char **tokens = mx_strsplit(path, '/');
-    char *tmp_pwd = path[0] == '/' ? mx_strdup("/") : mx_strdup(info->pwd_l);
+    char *tmp_pwd = path[0] == '/' ? mx_strdup("/") : mx_strdup(ush->pwd_l);
     char *res = 0;
 
     for (int i = 0; tokens[i]; i++)
@@ -35,24 +35,24 @@ static char *get_new_pwd(char *path, t_info *info) {
     return res;
 }
 
-int mx_chdir_l(char *path, t_info *info, char flags) {
+int mx_chdir_l(char *path, t_ush *ush, char flags) {
     char *new_pwd = 0;
 
     if (path == 0)
         return 0;
-    new_pwd = get_new_pwd(path, info);
+    new_pwd = get_new_pwd(path, ush);
     if (chdir(new_pwd) == -1) {
         if ((flags & 1) == 0)
         fprintf(stderr, "cd: %s: %s\n", strerror(errno), new_pwd);
         free(new_pwd);
         return 1;
     }
-    free(info->old_pwd);
-    info->old_pwd = info->pwd;
-    free(info->pwd_l);
-    info->pwd_l = new_pwd;
-    free(info->pwd_p);
-    info->pwd_p = getcwd(NULL, 0);
-    info->pwd = mx_strdup(info->pwd_l);
+    free(ush->old_pwd);
+    ush->old_pwd = ush->pwd;
+    free(ush->pwd_l);
+    ush->pwd_l = new_pwd;
+    free(ush->pwd_p);
+    ush->pwd_p = getcwd(NULL, 0);
+    ush->pwd = mx_strdup(ush->pwd_l);
     return 0;
 }

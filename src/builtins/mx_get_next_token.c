@@ -40,7 +40,7 @@ static bool is_operator(char c) {
 }
 
 t_token* mx_get_next_token(int *currPos, int end, char *str,
-                           t_info *processes) {
+                           t_ush *processes) {
     int tokenStart = *currPos;
     t_token *newToken = 0;
     char *newValue = 0;

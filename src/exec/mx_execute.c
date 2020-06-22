@@ -1,7 +1,7 @@
 #include "ush.h"
 
 /* execute all commands ony by one*/
-void mx_execute(char **commands, t_info *processes) {
+void mx_execute(char **commands, t_ush *processes) {
     t_list  *tokens  = NULL;
     t_tnode *root_ast = 0;
     int i = 0;

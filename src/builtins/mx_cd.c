@@ -45,22 +45,22 @@ static int get_flags(char **argv, int *i) {
     return flags;
 }
 
-static void export_pwd_oldpwd(t_info *info) {
+static void export_pwd_oldpwd(t_ush *ush) {
     char **temp = (char **) malloc(4 * sizeof (char *));
 
     temp[0] = mx_strdup("cd");
-    temp[1] = mx_strjoin("PWD=", info->pwd);
-    temp[2] = mx_strjoin("OLDPWD=", info->old_pwd);
+    temp[1] = mx_strjoin("PWD=", ush->pwd);
+    temp[2] = mx_strjoin("OLDPWD=", ush->old_pwd);
     temp[3] = 0;
-    mx_export(temp, &info->var_tree, info);
+    mx_export(temp, &ush->var_tree, ush);
     mx_del_strarr(&temp);
 }
 
-int mx_cd(char **argv, t_info *info) {
+int mx_cd(char **argv, t_ush *ush) {
     int i = 0;
     int flags = get_flags(argv, &i);
-    char *path = (flags & 4) ? info->old_pwd : (argv[i] ? argv[i]
-        : mx_return_value2("HOME", &(info->var_tree)));
+    char *path = (flags & 4) ? ush->old_pwd : (argv[i] ? argv[i]
+        : mx_return_value2("HOME", &(ush->var_tree)));
     int status  = 0;
 
     if (mx_is_link(path) && (flags & 1) && (flags & 2) == 0) {
@@ -68,12 +68,12 @@ int mx_cd(char **argv, t_info *info) {
         return 1;
     }
     if (flags & 2)
-        status = mx_chdir_p(path, info, flags);
+        status = mx_chdir_p(path, ush, flags);
     else
-        status = mx_chdir_l(path, info, flags);
+        status = mx_chdir_l(path, ush, flags);
     if (status == 0)
-        export_pwd_oldpwd(info);
-    info->last_status = status;
+        export_pwd_oldpwd(ush);
+    ush->last_status = status;
     return status;
 }
 

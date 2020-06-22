@@ -36,14 +36,14 @@ static int get_flags(char **argv, int *i) {
     return flags;
 }
 
-int mx_pwd(char **argv, t_info *info) {
+int mx_pwd(char **argv, t_ush *ush) {
     int i = 0;
     int flags = get_flags(argv, &i);
 
     if (flags & 2) {
-        printf("%s\n", info->pwd_p);
+        printf("%s\n", ush->pwd_p);
     }
     else
-        printf("%s\n", info->pwd_l);
+        printf("%s\n", ush->pwd_l);
     return 0;
 }

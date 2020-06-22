@@ -7,7 +7,7 @@ static bool cmp_str_min_max(void *str1, void *str2) {
         return 0;
 }
 
-static char **many_comand_in_list(char *path, char **str, t_info *info,
+static char **many_comand_in_list(char *path, char **str, t_ush *ush,
                                   t_list *list_comand) {
     int number_comand = 0;
     char **creat_list_comands = NULL;
@@ -15,7 +15,7 @@ static char **many_comand_in_list(char *path, char **str, t_info *info,
     int size_list = mx_list_size(list_comand) + 1;
     char *name_comand = 0;
 
-    mx_clean_space_in_term("", info, *str);
+    mx_clean_space_in_term("", ush, *str);
     mx_print_tab_comands(list_comand);
     creat_list_comands = (char **)malloc(size_list * sizeof(char *));
     for (temp = mx_strlen(path) - 1; temp != 0 && path[temp] != '/'; temp--);
@@ -29,7 +29,7 @@ static char **many_comand_in_list(char *path, char **str, t_info *info,
     return creat_list_comands;
 }
 
-static void one_comand_in_list(t_info *info, t_list *list_comand, char **str,
+static void one_comand_in_list(t_ush *ush, t_list *list_comand, char **str,
                                char *path) {
     int len_comand = mx_strlen(path) - 1;
 
@@ -46,8 +46,8 @@ static void one_comand_in_list(t_info *info, t_list *list_comand, char **str,
         mx_pop_front_free_data(&list_comand);
 }
 
-char **mx_key_tab(char *parsing, char **str, t_info *info) {
-    char *path = mx_mini_parser_tab(parsing, info);
+char **mx_key_tab(char *parsing, char **str, t_ush *ush) {
+    char *path = mx_mini_parser_tab(parsing, ush);
     t_list *list_comand = 0;
     char **creat_list_comand = NULL;
     int comand_len = 0;
@@ -55,9 +55,9 @@ char **mx_key_tab(char *parsing, char **str, t_info *info) {
     mx_read_comand(path, &list_comand);
     list_comand = mx_sort_list(list_comand, &cmp_str_min_max);
     if (!((comand_len = mx_list_size(list_comand)) == 0 || comand_len == 1))
-        creat_list_comand = many_comand_in_list(path, str, info, list_comand);
+        creat_list_comand = many_comand_in_list(path, str, ush, list_comand);
     else if (comand_len == 1)
-        one_comand_in_list(info, list_comand, str, path);
+        one_comand_in_list(ush, list_comand, str, path);
     else
         write(1,"\a", 1);
     mx_strdel(&path);

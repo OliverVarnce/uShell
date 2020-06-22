@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static unsigned int mx_read_keyb_and_prinitng(t_info *info, int index,
+static unsigned int mx_read_keyb_and_prinitng(t_ush *ush, int index,
                                                   int i, char *temp) {
     unsigned int ch = 0;
 
@@ -17,7 +17,7 @@ static unsigned int mx_read_keyb_and_prinitng(t_info *info, int index,
     return ch;
 }
 
-static int search_comand(t_info *info, int index, char *temp) {
+static int search_comand(t_ush *ush, int index, char *temp) {
     int index_comand = MX_MAX_COMAND + 1;
     int str_len_comand = 0;
 
@@ -33,7 +33,7 @@ static int search_comand(t_info *info, int index, char *temp) {
     return index_comand;
 }
 
-void mx_ctrl_r(t_info *info) {
+void mx_ctrl_r(t_ush *ush) {
     unsigned int ch = 0; 
     char *temp = mx_strnew(0);
     int i = 1;
@@ -41,12 +41,12 @@ void mx_ctrl_r(t_info *info) {
     int index = MX_MAX_COMAND + 1;
 
     while (check) {
-        ch = mx_read_keyb_and_prinitng(info, index, i, temp);
+        ch = mx_read_keyb_and_prinitng(ush, index, i, temp);
         if (ch > 31 && ch < 128)
             mx_one_symbol(&temp, ch, &i, 0);
         else
             check = 0;
-        index = search_comand(info, index, temp);
+        index = search_comand(ush, index, temp);
     }
     if (index != MX_MAX_COMAND + 1) {
         MX_ID = index;

@@ -1,7 +1,7 @@
 #include "ush.h"
 
-static t_process* get_process(int n, char *str, t_info *info) {
-    t_list *tmp = info->processes;
+static t_process* get_process(int n, char *str, t_ush *ush) {
+    t_list *tmp = ush->processes;
 
     if (n != -1) {
         while (tmp) {
@@ -34,8 +34,8 @@ static bool mx_is_number_fg(char *str) {
     return true;
 }
 
-static int fg_continue(char **argv, t_info *info) {
-    t_process *pr = (t_process*)info->processes->data;
+static int fg_continue(char **argv, t_ush *ush) {
+    t_process *pr = (t_process*)ush->processes->data;
     int i = 0;
 
     if (argv[1] == 0) {
@@ -44,13 +44,13 @@ static int fg_continue(char **argv, t_info *info) {
     }
     i = (argv[1][0] == '%') ? 1 : 0;
     if (mx_is_number_fg(argv[1])) {
-            pr = get_process(atoi(&argv[1][i]), argv[1], info);
+            pr = get_process(atoi(&argv[1][i]), argv[1], ush);
     }
     else {
-        pr = get_process(-1, &argv[1][i], info);
+        pr = get_process(-1, &argv[1][i], ush);
     }
     if (pr == 0) {
-        info->exit_status = 1;
+        ush->exit_status = 1;
         return 1;
     }
     mx_print_cont(pr->name, pr->index);
@@ -58,33 +58,33 @@ static int fg_continue(char **argv, t_info *info) {
     return 0;
 }
 
-static void fg_wait(int status, pid_t ch_pr, t_info *info) {
+static void fg_wait(int status, pid_t ch_pr, t_ush *ush) {
     if (MX_WIFSIG(status)) {
         if (MX_WTERMSIG(status) == SIGSEGV)
             mx_segfault();
         else if (MX_WTERMSIG(status) == SIGINT) {
-            mx_del_pid_process(info, ch_pr);
-            info->last_status = 130;
+            mx_del_pid_process(ush, ch_pr);
+            ush->last_status = 130;
         }
         else {
-            char **str = mx_get_name(info, ch_pr);
+            char **str = mx_get_name(ush, ch_pr);
             mx_print_susp(str);
         }
     }
 }
 
-void mx_fg(char **argv, t_info *info) {
+void mx_fg(char **argv, t_ush *ush) {
     pid_t ch_pr = 0;
     int status = 0;
 
-    if (info->processes) {
-        if (fg_continue(argv, info) == 0) {
+    if (ush->processes) {
+        if (fg_continue(argv, ush) == 0) {
             ch_pr = waitpid(-1, &status, WUNTRACED);
             if (!MX_WIFEXIT(status))
-                fg_wait(status, ch_pr, info);
+                fg_wait(status, ch_pr, ush);
             else {
-                mx_del_pid_process(info, ch_pr);
-                info->last_status = MX_EXSTATUS(status);
+                mx_del_pid_process(ush, ch_pr);
+                ush->last_status = MX_EXSTATUS(status);
             }
         }
     }

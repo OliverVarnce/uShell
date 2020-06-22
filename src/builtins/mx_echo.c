@@ -76,7 +76,7 @@ static void print_e(int i, char *flags, char **str) {
         write(1, "\n", 1);
 }
 
-void mx_echo(char **str, t_info *info) {
+void mx_echo(char **str, t_ush *ush) {
     int i = 0;
     char *flags = checkflags(str, &i);
 
@@ -92,7 +92,7 @@ void mx_echo(char **str, t_info *info) {
     else {
         print_e(i, flags, str);
     }
-    info->last_status = 0;
+    ush->last_status = 0;
     free(flags);
 }
 

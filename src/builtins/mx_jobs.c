@@ -8,8 +8,8 @@ static void print_row(t_list *tmp, char c) {
     free(name);
 }
 
-void mx_jobs(t_info *info) {
-    t_list *tmp = info->processes;
+void mx_jobs(t_ush *ush) {
+    t_list *tmp = ush->processes;
     char c = 0;
     int i = -1;
 
@@ -26,5 +26,5 @@ void mx_jobs(t_info *info) {
         print_row(tmp, c);
         tmp = tmp->next;
     }
-    info->last_status = 0;
+    ush->last_status = 0;
 }

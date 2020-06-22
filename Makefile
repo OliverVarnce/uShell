@@ -129,7 +129,8 @@ SRC = $(addprefix $(SRC_DIR)/,\
         utils/mx_term_out.c \
         utils/mx_add_to_strarr.c \
         utils/mx_pop_front_free_data.c \
-        utils/mx_pop_list.c)
+        utils/mx_pop_list.c \
+        utils/mx_loop.c)
 
 
 
@@ -249,7 +250,8 @@ OBJ =	mx_add_one_rank.o \
         mx_term_out.o \
         mx_add_to_strarr.o \
         mx_pop_front_free_data.o \
-        mx_pop_list.o
+        mx_pop_list.o \
+        mx_loop.o
 
 CC = clang
 

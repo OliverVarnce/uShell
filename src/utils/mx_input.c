@@ -15,12 +15,12 @@ static char **creat_comands(t_list **list_comands) {
     return comands;
 }
 
-static t_input *create_input(t_info *info) {
+static t_input *create_input(t_ush *ush) {
     t_input *input = (t_input *) malloc(sizeof(t_input));
 
-    input->comands = creat_comands(&(info->history));
+    input->comands = creat_comands(&(ush->history));
     input->id = 0;
-    input->max_comand = mx_list_size(info->history);
+    input->max_comand = mx_list_size(ush->history);
     input->str_len = 1;
     input->pos_tab = 0;
     input->end_posit = 0;
@@ -28,22 +28,22 @@ static t_input *create_input(t_info *info) {
     return input;
 }
 
-static void del_input(t_info *info) {
-    t_input *input = info->input;
+static void del_input(t_ush *ush) {
+    t_input *input = ush->input;
 
     mx_del_strarr(&(input->comands));
     free(input);
-    info->input = 0;
+    ush->input = 0;
 }
 
-static void return_descriptors(int fd1, int fd2, t_info *info) {
-    del_input(info);
+static void return_descriptors(int fd1, int fd2, t_ush *ush) {
+    del_input(ush);
     dup2(fd1, 1);
     close(fd1);
     close(fd2);
 }
 
-int mx_input(t_info *info) {
+int mx_input(t_ush *ush) {
     unsigned int ch = 0;
     char *chars = (char*)(&ch);
     int if_next = 3;
@@ -51,17 +51,17 @@ int mx_input(t_info *info) {
     int term_fd1 = open("/dev/tty", O_WRONLY);
 
     dup2(term_fd1, 1);
-    info->input = create_input(info);
+    ush->input = create_input(ush);
     while (if_next == 3) {
         if (chars[2] != 10 || chars[0] == 9 || chars[0] == 18)
             mx_terminal_out(MX_USH, MX_STR_LEN, MX_STR_POS, MX_STR);
-        ch = mx_read_keyboard(info);
+        ch = mx_read_keyboard(ush);
         if (ch > 127)
-            mx_ctrl_v_and_not_ascii(info, chars);
+            mx_ctrl_v_and_not_ascii(ush, chars);
         else
-            if_next = mx_ascii(info, chars, ch);
-        info->input->if_ = chars[0];
+            if_next = mx_ascii(ush, chars, ch);
+        ush->input->if_ = chars[0];
     }
-    return_descriptors(save_fd1, term_fd1, info);
+    return_descriptors(save_fd1, term_fd1, ush);
     return if_next;
 }

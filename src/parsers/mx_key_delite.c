@@ -1,6 +1,6 @@
 #include "ush.h"
 
-void mx_key_delite(t_info *info) {
+void mx_key_delite(t_ush *ush) {
     int i;
     int sum = mx_bit_sumbol(&MX_STR[MX_STR_LEN - MX_STR_POS - 1]);
 
@@ -14,5 +14,5 @@ void mx_key_delite(t_info *info) {
         }
         MX_STR_LEN--;
     }
-    info->input->comands[MX_MAX_COMAND][MX_STR_LEN - 1] = 0;
+    ush->input->comands[MX_MAX_COMAND][MX_STR_LEN - 1] = 0;
 }

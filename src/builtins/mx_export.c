@@ -65,13 +65,13 @@ static void print_export(t_list *var_tree_tmp) {
     free(var);
 }
 
-void mx_export(char **argv, t_list **var_tree, t_info *info) {
-    info->last_status = 0;
+void mx_export(char **argv, t_list **var_tree, t_ush *ush) {
+    ush->last_status = 0;
     for (int i = 0; argv[i]; i++) {
         if (mx_reg(argv[i], "")) {
             mx_printerr("export: not valid in this context:");
             mx_printerr(argv[i]);
-            info->last_status = 1;
+            ush->last_status = 1;
             return;
         }
     }
