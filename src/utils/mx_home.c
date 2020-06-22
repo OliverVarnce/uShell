@@ -54,8 +54,7 @@ void mx_home(char **string, int *i, t_ush *processes) {
         return;
     home = env_param(string, &new_position, processes);
     if (new_position == 0) {
-        for (; is_not_operator(string[0][++new_position]; )
-               && is_not_operator2(string[0][new_position]));
+        for (; is_not_operator(string[0][++new_position]) && is_not_operator2(string[0][new_position]);)
         if (is_not_operator2(string[0][new_position]))
             home = mx_strndup(&string[0][*i + 1], new_position - *i - 1);
         if (home)

@@ -17,7 +17,7 @@ static void left_right(char *chars, t_ush *ush) {
         mx_clean_terminal(MX_USH, ush->input->inplen, ush->input->endpoint,
                 ush->input->comands[ush->input->id]);
         check = (unsigned char)ush->input->comands[ush->input->id][ush->input->inplen - ush->input->endpoint - 2];
-        while (; check >> 6 == 2; ) {
+        for (; check >> 6 == 2; ) {
             (ush->input->endpoint)++;
             check = (unsigned char)ush->input->comands[ush->input->id][ush->input->inplen - ush->input->endpoint - 2];
         }

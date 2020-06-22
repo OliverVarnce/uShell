@@ -244,7 +244,7 @@ int mx_end_flag(char *str, int *position, int end, int flag);
 char *mx_parsing_input(char *str);
 char *mx_audit_str(char *str, t_ush *processes, bool dqute);
 char *mx_str_bquote(char **str, t_ush *processes);
-char **mx_create_comands(char *str, int end);
+char **mx_create_commands(char *str, int end);
 void mx_one_symbol(char **str, char ch, int *count, int position);
 void mx_not_ascii(char *chars, t_ush *ush);
 int mx_bit_sumbol(char *str);

@@ -166,7 +166,7 @@ add_executable(USH
         src/utils/mx_chdir_l.c
         src/utils/mx_chdir_p.c
         src/utils/mx_create_ast.c
-        src/utils/mx_create_comands.c
+        src/utils/mx_create_commands.c
         src/utils/mx_create_tnode.c
         src/utils/mx_create_token.c
         src/utils/mx_delete_last.c

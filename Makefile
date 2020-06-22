@@ -94,7 +94,7 @@ SRC = $(addprefix $(SRC_DIR)/,\
         utils/mx_chdir_l.c \
         utils/mx_chdir_p.c \
         utils/mx_create_ast.c \
-        utils/mx_create_comands.c \
+        utils/mx_create_commands.c \
         utils/mx_create_tnode.c \
         utils/mx_create_token.c \
         utils/mx_delete_last.c \
@@ -214,7 +214,7 @@ OBJ =	mx_add_one_rank.o \
         mx_chdir_l.o \
         mx_chdir_p.o \
         mx_create_ast.o \
-        mx_create_comands.o \
+        mx_create_commands.o \
         mx_create_tnode.o \
         mx_create_token.o \
         mx_delete_last.o \
