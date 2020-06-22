@@ -58,7 +58,7 @@ void mx_env(char **argv, t_ush *ush) {
     for (i = 1; argv[i] != NULL; i++) {
         if (mx_reg(argv[i], MX_REG_VER) || mx_reg(argv[i], MX_REG_PROG))
             break;
-        if (mx_check_env(argv, &path, var, &i)) {
+        if (mx_env_status(argv, &path, var, &i)) {
             mx_fre_env_path(var, path);
             ush->last_status = 1;
             return;
@@ -68,6 +68,6 @@ void mx_env(char **argv, t_ush *ush) {
         mx_fre_env_path(var, path);
         return;
     }
-    mx_exec_env_pr(path, mx_call_vlad(argv, i), mx_env_to_vlad(var), ush);
+    mx_exec_env_pr(path, mx_call_av(argv, i), mx_env_to_vlad(var), ush);
     mx_fre_env_path(var, path);
 }

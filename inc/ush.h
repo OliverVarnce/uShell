@@ -43,7 +43,7 @@
 #define MX_SEARCH "Search > "
 #define MX_PATH ((t_token*)tmp->next->next->data)->value[0]
 #define MX_FUNC_RETURN mx_return_value("HOME", &(ush->var_tree))
-#define MX_GET_PATH (argv[i] ? argv[i] : MX_FUNC_RETURN)
+#define MX_take_path (argv[i] ? argv[i] : MX_FUNC_RETURN)
 #define MX_REG_EXPORT   "^[A-Za-z_]+[A-Za-z_0-9]*(=.*)?$"
 #define MX_REG_ERR      "^^-(i+)?[^Pui]"
 #define MX_REG_I        "^-i+((P|u)?|((P|u).+)?)$"
@@ -183,7 +183,7 @@ t_tnode* mx_get_min_tnode(t_tnode *root);
 void mx_strarr_add_to_strarr(char ***strs, char ***str);
 t_tnode *mx_create_tnode(void *data);
 void mx_start_program(t_list **var_tree, char **env);
-void mx_delete_tnode(t_tnode **root, void *data, int (*cmp)(void*, void*), void (*free_tnode)(t_tnode *tnode));
+void mx_delete_branch(t_tnode **root, void *data, int (*cmp)(void*, void*), void (*free_tnode)(t_tnode *tnode));
 void mx_push_env(t_list **var_tree, char *name, char *value, char *mem);
 t_tnode *mx_find_tnode(t_tnode *root, void *data, int (*cmp)(void*, void*));
 void mx_if_new_parameter(char *str, int *start, int end, t_ush *processes);
@@ -228,8 +228,8 @@ void mx_exit(t_token *token, t_ush *ush);
 
 //CD 
 int mx_chdir_p(char *path, t_ush *ush, char flags);
-char* mx_add_one_rank(char *path, char *new_part);
-char* mx_del_last_rank(char *path);
+char* mx_up_rank(char *path, char *new_part);
+char* mx_kill_last_proc(char *path);
 int mx_chdir_l(char *path, t_ush *ush, char flags);
 
 // Which
@@ -237,7 +237,7 @@ bool mx_is_commad(char *fullname, int flags);
 
 //
 bool mx_check_symbol(char *str, int position, char symbol);
-void mx_ctrl_v_and_not_ascii(t_ush *ush, char *chars);
+void mx_paste(t_ush *ush, char *chars);
 void mx_ctrl_r(t_ush *ush);
 int mx_ascii(t_ush *ush, char *chars, unsigned int ch);
 int mx_end_flag(char *str, int *position, int end, int flag);
@@ -288,11 +288,11 @@ void mx_exec_less(t_tnode *root, int *fds, char operator_status, t_ush *ush);
 void mx_execute_proces(t_token* token);
 void mx_close_all_pr(t_ush *ush);
 int mx_pipe_execute(t_tnode *root, int *fds, char operator_status, t_ush *processes);
-int mx_buildin_list(t_token *token, t_ush *ush);
+int mx_fill_build(t_token *token, t_ush *ush);
 void mx_exec_env_pr(char *path, char **argv, char **env, t_ush *ush);
 
 // processes
-int mx_add_process(t_list **processes, pid_t pid, char **name);
+int mx_plus_proc(t_list **processes, pid_t pid, char **name);
 void mx_del_top_process(t_ush *ush);
 void mx_del_pid_process(t_ush *ush, int pid);
 void mx_wait_process(t_ush *ush, char **argv);
@@ -306,14 +306,14 @@ char **mx_get_name(t_ush *ush, int numb);
 
 // env 
 
-char **mx_call_vlad(char **argv, int i);
+char **mx_call_av(char **argv, int i);
 char **mx_env_to_vlad(t_var *var);
-bool mx_check_env(char **argv, char **path, t_var *var, int *i);
+bool mx_env_status(char **argv, char **path, t_var *var, int *i);
 bool mx_printerr_env(char *str, int flag);
 void mx_print_env(t_var *var);
 void mx_fre_env_path(t_var *var, char *path);
 bool mx_reg(char *str, char *regular);
-char *mx_get_path_env(char *str1, char *str2, int *i);
+char *mx_take_path_env(char *str1, char *str2, int *i);
 int mx_delete_veriable_env(char *str1, char *str2, t_var *var, int *i);
 
 // echo

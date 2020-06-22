@@ -21,10 +21,10 @@ static char *get_new_pwd(char *path, t_ush *ush) {
         if (mx_strcmp(tokens[i], "..") == 0) {
             if (get_rank(tmp_pwd) == 0)
                 continue;
-            tmp_pwd = mx_del_last_rank(tmp_pwd);
+            tmp_pwd = mx_kill_last_proc(tmp_pwd);
         }
         else 
-            tmp_pwd = mx_add_one_rank(tmp_pwd, tokens[i]);
+            tmp_pwd = mx_up_rank(tmp_pwd, tokens[i]);
     if (tmp_pwd[0] != '/') {
         res = mx_strjoin("/", tmp_pwd);
         free(tmp_pwd);

@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.16)
-project(USH C)
+cmake_minimum_required(VERSION 3.15)
+project(ush C)
 
 set(CMAKE_C_STANDARD 11)
 
@@ -16,9 +16,7 @@ include_directories(src/printing)
 include_directories(src/signals)
 include_directories(src/utils)
 
-set(CMAKE_C_FLAGS "-ltermcap")
-
-add_executable(USH
+add_executable(ush
         inc/ush.h
         libmx/inc/libmx.h
         libmx/src/mx_atoi.c
@@ -83,18 +81,15 @@ add_executable(USH
         libmx/src/mx_strstr.c
         libmx/src/mx_strtrim.c
         libmx/src/mx_swap_char.c
-        src/builtins/mx_add_one_rank.c
-        src/builtins/mx_add_process.c
-        src/builtins/mx_buildin_list.c
-        src/builtins/mx_call_vlad.c
+        src/builtins/mx_call_av.c
         src/builtins/mx_cd.c
-        src/builtins/mx_check_env.c
+        src/builtins/mx_env_status.c
         src/builtins/mx_close_all_pr.c
-        src/builtins/mx_ctrl_v_and_not_ascii.c
-        src/builtins/mx_del_last_rank.c
+        src/builtins/mx_paste.c
+        src/builtins/mx_kill_last_proc.c
         src/builtins/mx_del_pid_process.c
         src/builtins/mx_del_top_process.c
-        src/builtins/mx_delete_tnode.c
+        src/builtins/mx_delete_branch.c
         src/builtins/mx_delete_veriable_env.c
         src/builtins/mx_echo.c
         src/builtins/mx_end_flag.c
@@ -102,6 +97,7 @@ add_executable(USH
         src/builtins/mx_env_to_vlad.c
         src/builtins/mx_export.c
         src/builtins/mx_fg.c
+        src/builtins/mx_fill_build.c
         src/builtins/mx_find_tnode.c
         src/builtins/mx_flang_comand.c
         src/builtins/mx_fre_env_path.c
@@ -109,13 +105,14 @@ add_executable(USH
         src/builtins/mx_get_min_tnode.c
         src/builtins/mx_get_name.c
         src/builtins/mx_get_next_token.c
-        src/builtins/mx_get_path_env.c
+        src/builtins/mx_take_path_env.c
         src/builtins/mx_get_token_type.c
         src/builtins/mx_get_twidth.c
         src/builtins/mx_if_new_parameter.c
         src/builtins/mx_jobs.c
         src/builtins/mx_key_duble_tab.c
         src/builtins/mx_key_tab.c
+        src/builtins/mx_plus_proc.c
         src/builtins/mx_push_env.c
         src/builtins/mx_pwd.c
         src/builtins/mx_read_comand.c
@@ -123,6 +120,7 @@ add_executable(USH
         src/builtins/mx_serch_list.c
         src/builtins/mx_unset.c
         src/builtins/mx_unset_fds.c
+        src/builtins/mx_up_rank.c
         src/builtins/mx_which.c
         src/exec/mx_exec_dmore.c
         src/exec/mx_exec_env_pr.c
@@ -155,7 +153,6 @@ add_executable(USH
         src/printing/mx_printstr_env.c
         src/signals/mx_ctrl_r.c
         src/signals/mx_read_keyboard.c
-        src/signals/mx_signals.c
         src/utils/bit_function.c
         src/utils/main.c
         src/utils/mx_0_and_x.c

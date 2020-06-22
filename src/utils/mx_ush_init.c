@@ -23,7 +23,7 @@ static char *get_pwd() {
         return cwd;
     if (mx_is_link(pwd)) {
         link_path = mx_get_link_path(pwd);
-        pwd = mx_del_last_rank(pwd);
+        pwd = mx_kill_last_proc(pwd);
         pwd = mx_strjoin3(mx_strjoin2(pwd, "/"), link_path);
         if (mx_strcmp(pwd, cwd) == 0) {
             free(cwd);

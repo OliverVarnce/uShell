@@ -1,51 +1,44 @@
 #include "ush.h"
 
-/* 
-* -1 - not flagline
-*/
-static int get_flags_from_line(char *str) {
+static int flag_from_cmd(char *s) {
     int i = 0;
-    int flags = 0;
+    int flag = 0;
 
-    if (str[i + 1] == '\0') 
-        return 4; // - flag
-    while(str[++i]) {
-        if (str[i] == 's') 
-            flags |= 1;
-        else if (str[i] == 'P') 
-            flags |= 2;
+    if (s[i + 1] == '\0')
+        return 4;
+    while(s[++i])  {
+        if (s[i] == 's')
+            flag |= 1;
+        else if (s[i] == 'P')
+            flag |= 2;
         else {
             return -1;
         }
     }
-    return flags;
+    return flag;
 }
 
-/* 
-* 1-st bit -> -s
-* 2-nd bit -> -P
-* 3-rd bit -> -
-*/
-static int get_flags(char **argv, int *i) {
+static int check_flag(char **av, int *i) {
     int flags = 0;
+//    int actual;
 
-    while(argv[++(*i)]) {
-        if (mx_strcmp(argv[(*i)], "--") == 0) {
+    while(av[++(*i)]) {
+        if (mx_strcmp(av[(*i)], "--") == 0) {
             (*i)++;
             return flags;
         }
-        if (argv[(*i)][0] != '-')
+        if (av[(*i)][0] != '-')
             return flags;
-        int curr = get_flags_from_line(argv[*i]);
-        if (curr == -1)
+        int actual = flag_from_cmd(av[*i]);
+        if (actual == -1)
             return 0;
-        flags |= curr;
+        flags |= actual;
     }
     i--;
     return flags;
 }
 
-static void export_pwd_oldpwd(t_ush *ush) {
+static void pwd_to_old(t_ush *ush) {
     char **tmp = (char **) malloc(4 * sizeof (char *));
 
     tmp[0] = mx_strdup("cd");
@@ -56,23 +49,23 @@ static void export_pwd_oldpwd(t_ush *ush) {
     mx_del_strarr(&tmp);
 }
 
-int mx_cd(char **argv, t_ush *ush) {
+int mx_cd(char **av, t_ush *ush) {
     int i = 0;
-    int flags = get_flags(argv, &i);
-    char *path = (flags & 4) ? ush->old_pwd : (argv[i] ? argv[i]
+    int flag = check_flag(av, &i);
+    char *path = (flag & 4) ? ush->old_pwd : (av[i] ? av[i]
         : mx_return_value2("HOME", &(ush->var_tree)));
-    int status  = 0;
+    int status = 0;
 
-    if (mx_is_link(path) && (flags & 1) && (flags & 2) == 0) {
-        fprintf(stderr, "cd: not a directory: %s\n", argv[i]);
+    if (mx_is_link(path) && (flag & 1) && (flag & 2) == 0) {
+        fprintf(stderr, "cd: not a directory: %s\n", av[i]);
         return 1;
     }
-    if (flags & 2)
-        status = mx_chdir_p(path, ush, flags);
+    if (flag & 2)
+        status = mx_chdir_p(path, ush, flag);
     else
-        status = mx_chdir_l(path, ush, flags);
+        status = mx_chdir_l(path, ush, flag);
     if (status == 0)
-        export_pwd_oldpwd(ush);
+        pwd_to_old(ush);
     ush->last_status = status;
     return status;
 }

@@ -57,7 +57,7 @@ int mx_input(t_ush *ush) {
             mx_terminal_out(MX_USH, ush->input->inplen, ush->input->endpoint, ush->input->comands[ush->input->id]);
         ch = mx_read_keyboard(ush);
         if (ch > 127)
-            mx_ctrl_v_and_not_ascii(ush, chars);
+            mx_paste(ush, chars);
         else
             if_next = mx_ascii(ush, chars, ch);
         ush->input->symb = chars[0];

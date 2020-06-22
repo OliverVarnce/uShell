@@ -5,7 +5,7 @@
 *  2-nd bit -> -s
 * -1 - error
 */
-static int get_flags(int *i, char **argv) {
+static int check_flag(int *i, char **argv) {
     int flags = 0;
 
     while(argv[++(*i)])
@@ -88,7 +88,7 @@ void mx_which(char **argv, t_ush *ush) {
     char *path = mx_return_value2("PATH", &(ush->var_tree));
     char **pathes = mx_strsplit(path, ':');
     int i_args = 0;
-    int flags = get_flags(&i_args, argv);
+    int flags = check_flag(&i_args, argv);
     int finded = false;
     
     if (flags == -1) {

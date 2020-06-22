@@ -28,7 +28,7 @@ int exec_token(t_token *token, int *fds, char operator_status, t_ush *ush) {
             return exit_status;
         }
         else {
-            if (mx_add_process(&(ush->processes), pid, token->value) != -1)
+            if (mx_plus_proc(&(ush->processes), pid, token->value) != -1)
                 printf("Process [%d] created\n", pid);
             printf("pr = %d\n", ((t_process*)ush->processes->data)->pid);
         }

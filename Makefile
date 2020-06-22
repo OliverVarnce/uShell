@@ -12,18 +12,18 @@ SRC_DIR = src
 OBJ_DIR = obj
 
 SRC = $(addprefix $(SRC_DIR)/,\
-		builtins/mx_add_one_rank.c \
-        builtins/mx_add_process.c \
-        builtins/mx_buildin_list.c \
-        builtins/mx_call_vlad.c \
+		builtins/mx_up_rank.c \
+        builtins/mx_plus_proc.c \
+        builtins/mx_fill_build.c \
+        builtins/mx_call_av.c \
         builtins/mx_cd.c \
-        builtins/mx_check_env.c \
+        builtins/mx_env_status.c \
         builtins/mx_close_all_pr.c \
-        builtins/mx_ctrl_v_and_not_ascii.c \
-        builtins/mx_del_last_rank.c \
+        builtins/mx_paste.c \
+        builtins/mx_kill_last_proc.c \
         builtins/mx_del_pid_process.c \
         builtins/mx_del_top_process.c \
-        builtins/mx_delete_tnode.c \
+        builtins/mx_delete_branch.c \
         builtins/mx_delete_veriable_env.c \
         builtins/mx_echo.c \
         builtins/mx_end_flag.c \
@@ -38,7 +38,7 @@ SRC = $(addprefix $(SRC_DIR)/,\
         builtins/mx_get_min_tnode.c \
         builtins/mx_get_name.c \
         builtins/mx_get_next_token.c \
-        builtins/mx_get_path_env.c \
+        builtins/mx_take_path_env.c \
         builtins/mx_get_token_type.c \
         builtins/mx_get_twidth.c \
         builtins/mx_if_new_parameter.c \
@@ -133,18 +133,18 @@ SRC = $(addprefix $(SRC_DIR)/,\
 
 
 
-OBJ =	mx_add_one_rank.o \
-        mx_add_process.o \
-        mx_buildin_list.o \
-        mx_call_vlad.o \
+OBJ =	mx_up_rank.o \
+        mx_plus_proc.o \
+        mx_fill_build.o \
+        mx_call_av.o \
         mx_cd.o \
-        mx_check_env.o \
+        mx_env_status.o \
         mx_close_all_pr.o \
-        mx_ctrl_v_and_not_ascii.o \
-        mx_del_last_rank.o \
+        mx_paste.o \
+        mx_kill_last_proc.o \
         mx_del_pid_process.o \
         mx_del_top_process.o \
-        mx_delete_tnode.o \
+        mx_delete_branch.o \
         mx_delete_veriable_env.o \
         mx_echo.o \
         mx_end_flag.o \
@@ -159,7 +159,7 @@ OBJ =	mx_add_one_rank.o \
         mx_get_min_tnode.o \
         mx_get_name.o \
         mx_get_next_token.o \
-        mx_get_path_env.o \
+        mx_take_path_env.o \
         mx_get_token_type.o \
         mx_get_twidth.o \
         mx_if_new_parameter.o \
