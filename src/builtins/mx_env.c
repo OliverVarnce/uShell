@@ -68,6 +68,6 @@ void mx_env(char **argv, t_ush *ush) {
         mx_fre_env_path(var, path);
         return;
     }
-    mx_exec_env_pr(path, mx_call_av(argv, i), mx_env_to_vlad(var), ush);
+    mx_exec_env_pr(path, mx_call_av(argv, i), mx_env_ush(var), ush);
     mx_fre_env_path(var, path);
 }

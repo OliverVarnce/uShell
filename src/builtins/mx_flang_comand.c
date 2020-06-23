@@ -29,12 +29,12 @@ static int new_spec_symbol(char *str, int *pos, int end, int flag) {
 
     if (if_symbol(str[pos[0]]) && mx_check_symbol(str, pos[0], str[pos[0]])) {
         pos[0]++;
-        new_flag = mx_end_flag(str, pos, end, new_flag);
+        new_flag = mx_last_flag(str, pos, end, new_flag);
     } 
     else if (pos[0] > 0 && str[*pos] == 40 
              && mx_check_symbol(str, pos[0] - 1, '$')) {
         pos[0]++;
-        new_flag = mx_end_flag(str, pos, end, ')');
+        new_flag = mx_last_flag(str, pos, end, ')');
     }
     return new_flag;
 }

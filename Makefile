@@ -24,11 +24,11 @@ SRC = $(addprefix $(SRC_DIR)/,\
         builtins/mx_del_pid_process.c \
         builtins/mx_del_top_process.c \
         builtins/mx_delete_branch.c \
-        builtins/mx_delete_veriable_env.c \
+        builtins/mx_del_elem_env.c \
         builtins/mx_echo.c \
-        builtins/mx_end_flag.c \
+        builtins/mx_last_flag.c \
         builtins/mx_env.c \
-        builtins/mx_env_to_vlad.c \
+        builtins/mx_env_ush.c \
         builtins/mx_export.c \
         builtins/mx_fg.c \
         builtins/mx_find_tnode.c \
@@ -145,11 +145,11 @@ OBJ =	mx_up_rank.o \
         mx_del_pid_process.o \
         mx_del_top_process.o \
         mx_delete_branch.o \
-        mx_delete_veriable_env.o \
+        mx_del_elem_env.o \
         mx_echo.o \
-        mx_end_flag.o \
+        mx_last_flag.o \
         mx_env.o \
-        mx_env_to_vlad.o \
+        mx_env_ush.o \
         mx_export.o \
         mx_fg.o \
         mx_find_tnode.o \

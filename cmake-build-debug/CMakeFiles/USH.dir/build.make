@@ -889,18 +889,18 @@ CMakeFiles/ush.dir/src/builtins/mx_cd.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ush.dir/src/builtins/mx_cd.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vzhukovsky/Desktop/ush/src/builtins/mx_cd.c -o CMakeFiles/ush.dir/src/builtins/mx_cd.c.s
 
-CMakeFiles/ush.dir/src/builtins/mx_check_env.c.o: CMakeFiles/ush.dir/flags.make
-CMakeFiles/ush.dir/src/builtins/mx_check_env.c.o: ../src/builtins/mx_check_env.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vzhukovsky/Desktop/ush/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/ush.dir/src/builtins/mx_check_env.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ush.dir/src/builtins/mx_check_env.c.o   -c /Users/vzhukovsky/Desktop/ush/src/builtins/mx_check_env.c
+CMakeFiles/ush.dir/src/builtins/mx_env_status.c.o: CMakeFiles/ush.dir/flags.make
+CMakeFiles/ush.dir/src/builtins/mx_env_status.c.o: ../src/builtins/mx_env_status.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vzhukovsky/Desktop/ush/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/ush.dir/src/builtins/mx_env_status.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ush.dir/src/builtins/mx_env_status.c.o   -c /Users/vzhukovsky/Desktop/ush/src/builtins/mx_env_status.c
 
-CMakeFiles/ush.dir/src/builtins/mx_check_env.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ush.dir/src/builtins/mx_check_env.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vzhukovsky/Desktop/ush/src/builtins/mx_check_env.c > CMakeFiles/ush.dir/src/builtins/mx_check_env.c.i
+CMakeFiles/ush.dir/src/builtins/mx_env_status.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ush.dir/src/builtins/mx_env_status.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vzhukovsky/Desktop/ush/src/builtins/mx_env_status.c > CMakeFiles/ush.dir/src/builtins/mx_env_status.c.i
 
-CMakeFiles/ush.dir/src/builtins/mx_check_env.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ush.dir/src/builtins/mx_check_env.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vzhukovsky/Desktop/ush/src/builtins/mx_check_env.c -o CMakeFiles/ush.dir/src/builtins/mx_check_env.c.s
+CMakeFiles/ush.dir/src/builtins/mx_env_status.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ush.dir/src/builtins/mx_env_status.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vzhukovsky/Desktop/ush/src/builtins/mx_env_status.c -o CMakeFiles/ush.dir/src/builtins/mx_env_status.c.s
 
 CMakeFiles/ush.dir/src/builtins/mx_close_all_pr.c.o: CMakeFiles/ush.dir/flags.make
 CMakeFiles/ush.dir/src/builtins/mx_close_all_pr.c.o: ../src/builtins/mx_close_all_pr.c
@@ -915,31 +915,31 @@ CMakeFiles/ush.dir/src/builtins/mx_close_all_pr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ush.dir/src/builtins/mx_close_all_pr.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vzhukovsky/Desktop/ush/src/builtins/mx_close_all_pr.c -o CMakeFiles/ush.dir/src/builtins/mx_close_all_pr.c.s
 
-CMakeFiles/ush.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.o: CMakeFiles/ush.dir/flags.make
-CMakeFiles/ush.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.o: ../src/builtins/mx_ctrl_v_and_not_ascii.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vzhukovsky/Desktop/ush/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/ush.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ush.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.o   -c /Users/vzhukovsky/Desktop/ush/src/builtins/mx_ctrl_v_and_not_ascii.c
+CMakeFiles/ush.dir/src/builtins/mx_paste.c.o: CMakeFiles/ush.dir/flags.make
+CMakeFiles/ush.dir/src/builtins/mx_paste.c.o: ../src/builtins/mx_paste.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vzhukovsky/Desktop/ush/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/ush.dir/src/builtins/mx_paste.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ush.dir/src/builtins/mx_paste.c.o   -c /Users/vzhukovsky/Desktop/ush/src/builtins/mx_paste.c
 
-CMakeFiles/ush.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ush.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vzhukovsky/Desktop/ush/src/builtins/mx_ctrl_v_and_not_ascii.c > CMakeFiles/ush.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.i
+CMakeFiles/ush.dir/src/builtins/mx_paste.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ush.dir/src/builtins/mx_paste.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vzhukovsky/Desktop/ush/src/builtins/mx_paste.c > CMakeFiles/ush.dir/src/builtins/mx_paste.c.i
 
-CMakeFiles/ush.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ush.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vzhukovsky/Desktop/ush/src/builtins/mx_ctrl_v_and_not_ascii.c -o CMakeFiles/ush.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.s
+CMakeFiles/ush.dir/src/builtins/mx_paste.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ush.dir/src/builtins/mx_paste.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vzhukovsky/Desktop/ush/src/builtins/mx_paste.c -o CMakeFiles/ush.dir/src/builtins/mx_paste.c.s
 
-CMakeFiles/ush.dir/src/builtins/mx_del_last_rank.c.o: CMakeFiles/ush.dir/flags.make
-CMakeFiles/ush.dir/src/builtins/mx_del_last_rank.c.o: ../src/builtins/mx_del_last_rank.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vzhukovsky/Desktop/ush/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/ush.dir/src/builtins/mx_del_last_rank.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ush.dir/src/builtins/mx_del_last_rank.c.o   -c /Users/vzhukovsky/Desktop/ush/src/builtins/mx_del_last_rank.c
+CMakeFiles/ush.dir/src/builtins/mx_kill_last_proc.c.o: CMakeFiles/ush.dir/flags.make
+CMakeFiles/ush.dir/src/builtins/mx_kill_last_proc.c.o: ../src/builtins/mx_kill_last_proc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vzhukovsky/Desktop/ush/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/ush.dir/src/builtins/mx_kill_last_proc.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ush.dir/src/builtins/mx_kill_last_proc.c.o   -c /Users/vzhukovsky/Desktop/ush/src/builtins/mx_kill_last_proc.c
 
-CMakeFiles/ush.dir/src/builtins/mx_del_last_rank.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ush.dir/src/builtins/mx_del_last_rank.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vzhukovsky/Desktop/ush/src/builtins/mx_del_last_rank.c > CMakeFiles/ush.dir/src/builtins/mx_del_last_rank.c.i
+CMakeFiles/ush.dir/src/builtins/mx_kill_last_proc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ush.dir/src/builtins/mx_kill_last_proc.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vzhukovsky/Desktop/ush/src/builtins/mx_kill_last_proc.c > CMakeFiles/ush.dir/src/builtins/mx_kill_last_proc.c.i
 
-CMakeFiles/ush.dir/src/builtins/mx_del_last_rank.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ush.dir/src/builtins/mx_del_last_rank.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vzhukovsky/Desktop/ush/src/builtins/mx_del_last_rank.c -o CMakeFiles/ush.dir/src/builtins/mx_del_last_rank.c.s
+CMakeFiles/ush.dir/src/builtins/mx_kill_last_proc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ush.dir/src/builtins/mx_kill_last_proc.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vzhukovsky/Desktop/ush/src/builtins/mx_kill_last_proc.c -o CMakeFiles/ush.dir/src/builtins/mx_kill_last_proc.c.s
 
 CMakeFiles/ush.dir/src/builtins/mx_del_pid_process.c.o: CMakeFiles/ush.dir/flags.make
 CMakeFiles/ush.dir/src/builtins/mx_del_pid_process.c.o: ../src/builtins/mx_del_pid_process.c
@@ -967,18 +967,18 @@ CMakeFiles/ush.dir/src/builtins/mx_del_top_process.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ush.dir/src/builtins/mx_del_top_process.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vzhukovsky/Desktop/ush/src/builtins/mx_del_top_process.c -o CMakeFiles/ush.dir/src/builtins/mx_del_top_process.c.s
 
-CMakeFiles/ush.dir/src/builtins/mx_delete_tnode.c.o: CMakeFiles/ush.dir/flags.make
-CMakeFiles/ush.dir/src/builtins/mx_delete_tnode.c.o: ../src/builtins/mx_delete_tnode.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vzhukovsky/Desktop/ush/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/ush.dir/src/builtins/mx_delete_tnode.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ush.dir/src/builtins/mx_delete_tnode.c.o   -c /Users/vzhukovsky/Desktop/ush/src/builtins/mx_delete_tnode.c
+CMakeFiles/ush.dir/src/builtins/mx_delete_branch.c.o: CMakeFiles/ush.dir/flags.make
+CMakeFiles/ush.dir/src/builtins/mx_delete_branch.c.o: ../src/builtins/mx_delete_branch.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vzhukovsky/Desktop/ush/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/ush.dir/src/builtins/mx_delete_branch.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ush.dir/src/builtins/mx_delete_branch.c.o   -c /Users/vzhukovsky/Desktop/ush/src/builtins/mx_delete_branch.c
 
-CMakeFiles/ush.dir/src/builtins/mx_delete_tnode.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ush.dir/src/builtins/mx_delete_tnode.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vzhukovsky/Desktop/ush/src/builtins/mx_delete_tnode.c > CMakeFiles/ush.dir/src/builtins/mx_delete_tnode.c.i
+CMakeFiles/ush.dir/src/builtins/mx_delete_branch.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ush.dir/src/builtins/mx_delete_branch.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vzhukovsky/Desktop/ush/src/builtins/mx_delete_branch.c > CMakeFiles/ush.dir/src/builtins/mx_delete_branch.c.i
 
-CMakeFiles/ush.dir/src/builtins/mx_delete_tnode.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ush.dir/src/builtins/mx_delete_tnode.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vzhukovsky/Desktop/ush/src/builtins/mx_delete_tnode.c -o CMakeFiles/ush.dir/src/builtins/mx_delete_tnode.c.s
+CMakeFiles/ush.dir/src/builtins/mx_delete_branch.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ush.dir/src/builtins/mx_delete_branch.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vzhukovsky/Desktop/ush/src/builtins/mx_delete_branch.c -o CMakeFiles/ush.dir/src/builtins/mx_delete_branch.c.s
 
 CMakeFiles/ush.dir/src/builtins/mx_delete_veriable_env.c.o: CMakeFiles/ush.dir/flags.make
 CMakeFiles/ush.dir/src/builtins/mx_delete_veriable_env.c.o: ../src/builtins/mx_delete_veriable_env.c
@@ -1175,18 +1175,18 @@ CMakeFiles/ush.dir/src/builtins/mx_get_next_token.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ush.dir/src/builtins/mx_get_next_token.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vzhukovsky/Desktop/ush/src/builtins/mx_get_next_token.c -o CMakeFiles/ush.dir/src/builtins/mx_get_next_token.c.s
 
-CMakeFiles/ush.dir/src/builtins/mx_get_path_env.c.o: CMakeFiles/ush.dir/flags.make
-CMakeFiles/ush.dir/src/builtins/mx_get_path_env.c.o: ../src/builtins/mx_get_path_env.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vzhukovsky/Desktop/ush/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/ush.dir/src/builtins/mx_get_path_env.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ush.dir/src/builtins/mx_get_path_env.c.o   -c /Users/vzhukovsky/Desktop/ush/src/builtins/mx_get_path_env.c
+CMakeFiles/ush.dir/src/builtins/mx_take_path_env.c.o: CMakeFiles/ush.dir/flags.make
+CMakeFiles/ush.dir/src/builtins/mx_take_path_env.c.o: ../src/builtins/mx_take_path_env.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vzhukovsky/Desktop/ush/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/ush.dir/src/builtins/mx_take_path_env.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ush.dir/src/builtins/mx_take_path_env.c.o   -c /Users/vzhukovsky/Desktop/ush/src/builtins/mx_take_path_env.c
 
-CMakeFiles/ush.dir/src/builtins/mx_get_path_env.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ush.dir/src/builtins/mx_get_path_env.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vzhukovsky/Desktop/ush/src/builtins/mx_get_path_env.c > CMakeFiles/ush.dir/src/builtins/mx_get_path_env.c.i
+CMakeFiles/ush.dir/src/builtins/mx_take_path_env.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ush.dir/src/builtins/mx_take_path_env.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vzhukovsky/Desktop/ush/src/builtins/mx_take_path_env.c > CMakeFiles/ush.dir/src/builtins/mx_take_path_env.c.i
 
-CMakeFiles/ush.dir/src/builtins/mx_get_path_env.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ush.dir/src/builtins/mx_get_path_env.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vzhukovsky/Desktop/ush/src/builtins/mx_get_path_env.c -o CMakeFiles/ush.dir/src/builtins/mx_get_path_env.c.s
+CMakeFiles/ush.dir/src/builtins/mx_take_path_env.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ush.dir/src/builtins/mx_take_path_env.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vzhukovsky/Desktop/ush/src/builtins/mx_take_path_env.c -o CMakeFiles/ush.dir/src/builtins/mx_take_path_env.c.s
 
 CMakeFiles/ush.dir/src/builtins/mx_get_token_type.c.o: CMakeFiles/ush.dir/flags.make
 CMakeFiles/ush.dir/src/builtins/mx_get_token_type.c.o: ../src/builtins/mx_get_token_type.c
@@ -2450,13 +2450,13 @@ ush_OBJECTS = \
 "CMakeFiles/ush.dir/libmx/src/mx_swap_char.c.o" \
 "CMakeFiles/ush.dir/src/builtins/mx_call_av.c.o" \
 "CMakeFiles/ush.dir/src/builtins/mx_cd.c.o" \
-"CMakeFiles/ush.dir/src/builtins/mx_check_env.c.o" \
+"CMakeFiles/ush.dir/src/builtins/mx_env_status.c.o" \
 "CMakeFiles/ush.dir/src/builtins/mx_close_all_pr.c.o" \
-"CMakeFiles/ush.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.o" \
-"CMakeFiles/ush.dir/src/builtins/mx_del_last_rank.c.o" \
+"CMakeFiles/ush.dir/src/builtins/mx_paste.c.o" \
+"CMakeFiles/ush.dir/src/builtins/mx_kill_last_proc.c.o" \
 "CMakeFiles/ush.dir/src/builtins/mx_del_pid_process.c.o" \
 "CMakeFiles/ush.dir/src/builtins/mx_del_top_process.c.o" \
-"CMakeFiles/ush.dir/src/builtins/mx_delete_tnode.c.o" \
+"CMakeFiles/ush.dir/src/builtins/mx_delete_branch.c.o" \
 "CMakeFiles/ush.dir/src/builtins/mx_delete_veriable_env.c.o" \
 "CMakeFiles/ush.dir/src/builtins/mx_echo.c.o" \
 "CMakeFiles/ush.dir/src/builtins/mx_end_flag.c.o" \
@@ -2472,7 +2472,7 @@ ush_OBJECTS = \
 "CMakeFiles/ush.dir/src/builtins/mx_get_min_tnode.c.o" \
 "CMakeFiles/ush.dir/src/builtins/mx_get_name.c.o" \
 "CMakeFiles/ush.dir/src/builtins/mx_get_next_token.c.o" \
-"CMakeFiles/ush.dir/src/builtins/mx_get_path_env.c.o" \
+"CMakeFiles/ush.dir/src/builtins/mx_take_path_env.c.o" \
 "CMakeFiles/ush.dir/src/builtins/mx_get_token_type.c.o" \
 "CMakeFiles/ush.dir/src/builtins/mx_get_twidth.c.o" \
 "CMakeFiles/ush.dir/src/builtins/mx_if_new_parameter.c.o" \
@@ -2633,13 +2633,13 @@ ush: CMakeFiles/ush.dir/libmx/src/mx_strtrim.c.o
 ush: CMakeFiles/ush.dir/libmx/src/mx_swap_char.c.o
 ush: CMakeFiles/ush.dir/src/builtins/mx_call_av.c.o
 ush: CMakeFiles/ush.dir/src/builtins/mx_cd.c.o
-ush: CMakeFiles/ush.dir/src/builtins/mx_check_env.c.o
+ush: CMakeFiles/ush.dir/src/builtins/mx_env_status.c.o
 ush: CMakeFiles/ush.dir/src/builtins/mx_close_all_pr.c.o
-ush: CMakeFiles/ush.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.o
-ush: CMakeFiles/ush.dir/src/builtins/mx_del_last_rank.c.o
+ush: CMakeFiles/ush.dir/src/builtins/mx_paste.c.o
+ush: CMakeFiles/ush.dir/src/builtins/mx_kill_last_proc.c.o
 ush: CMakeFiles/ush.dir/src/builtins/mx_del_pid_process.c.o
 ush: CMakeFiles/ush.dir/src/builtins/mx_del_top_process.c.o
-ush: CMakeFiles/ush.dir/src/builtins/mx_delete_tnode.c.o
+ush: CMakeFiles/ush.dir/src/builtins/mx_delete_branch.c.o
 ush: CMakeFiles/ush.dir/src/builtins/mx_delete_veriable_env.c.o
 ush: CMakeFiles/ush.dir/src/builtins/mx_echo.c.o
 ush: CMakeFiles/ush.dir/src/builtins/mx_end_flag.c.o
@@ -2655,7 +2655,7 @@ ush: CMakeFiles/ush.dir/src/builtins/mx_get_info.c.o
 ush: CMakeFiles/ush.dir/src/builtins/mx_get_min_tnode.c.o
 ush: CMakeFiles/ush.dir/src/builtins/mx_get_name.c.o
 ush: CMakeFiles/ush.dir/src/builtins/mx_get_next_token.c.o
-ush: CMakeFiles/ush.dir/src/builtins/mx_get_path_env.c.o
+ush: CMakeFiles/ush.dir/src/builtins/mx_take_path_env.c.o
 ush: CMakeFiles/ush.dir/src/builtins/mx_get_token_type.c.o
 ush: CMakeFiles/ush.dir/src/builtins/mx_get_twidth.c.o
 ush: CMakeFiles/ush.dir/src/builtins/mx_if_new_parameter.c.o

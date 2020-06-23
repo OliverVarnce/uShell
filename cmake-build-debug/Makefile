@@ -1851,33 +1851,6 @@ src/builtins/mx_cd.c.s:
 	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_cd.c.s
 .PHONY : src/builtins/mx_cd.c.s
 
-src/builtins/mx_check_env.o: src/builtins/mx_check_env.c.o
-
-.PHONY : src/builtins/mx_check_env.o
-
-# target to build an object file
-src/builtins/mx_check_env.c.o:
-	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_check_env.c.o
-.PHONY : src/builtins/mx_check_env.c.o
-
-src/builtins/mx_check_env.i: src/builtins/mx_check_env.c.i
-
-.PHONY : src/builtins/mx_check_env.i
-
-# target to preprocess a source file
-src/builtins/mx_check_env.c.i:
-	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_check_env.c.i
-.PHONY : src/builtins/mx_check_env.c.i
-
-src/builtins/mx_check_env.s: src/builtins/mx_check_env.c.s
-
-.PHONY : src/builtins/mx_check_env.s
-
-# target to generate assembly for a file
-src/builtins/mx_check_env.c.s:
-	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_check_env.c.s
-.PHONY : src/builtins/mx_check_env.c.s
-
 src/builtins/mx_close_all_pr.o: src/builtins/mx_close_all_pr.c.o
 
 .PHONY : src/builtins/mx_close_all_pr.o
@@ -1904,60 +1877,6 @@ src/builtins/mx_close_all_pr.s: src/builtins/mx_close_all_pr.c.s
 src/builtins/mx_close_all_pr.c.s:
 	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_close_all_pr.c.s
 .PHONY : src/builtins/mx_close_all_pr.c.s
-
-src/builtins/mx_ctrl_v_and_not_ascii.o: src/builtins/mx_ctrl_v_and_not_ascii.c.o
-
-.PHONY : src/builtins/mx_ctrl_v_and_not_ascii.o
-
-# target to build an object file
-src/builtins/mx_ctrl_v_and_not_ascii.c.o:
-	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.o
-.PHONY : src/builtins/mx_ctrl_v_and_not_ascii.c.o
-
-src/builtins/mx_ctrl_v_and_not_ascii.i: src/builtins/mx_ctrl_v_and_not_ascii.c.i
-
-.PHONY : src/builtins/mx_ctrl_v_and_not_ascii.i
-
-# target to preprocess a source file
-src/builtins/mx_ctrl_v_and_not_ascii.c.i:
-	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.i
-.PHONY : src/builtins/mx_ctrl_v_and_not_ascii.c.i
-
-src/builtins/mx_ctrl_v_and_not_ascii.s: src/builtins/mx_ctrl_v_and_not_ascii.c.s
-
-.PHONY : src/builtins/mx_ctrl_v_and_not_ascii.s
-
-# target to generate assembly for a file
-src/builtins/mx_ctrl_v_and_not_ascii.c.s:
-	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_ctrl_v_and_not_ascii.c.s
-.PHONY : src/builtins/mx_ctrl_v_and_not_ascii.c.s
-
-src/builtins/mx_del_last_rank.o: src/builtins/mx_del_last_rank.c.o
-
-.PHONY : src/builtins/mx_del_last_rank.o
-
-# target to build an object file
-src/builtins/mx_del_last_rank.c.o:
-	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_del_last_rank.c.o
-.PHONY : src/builtins/mx_del_last_rank.c.o
-
-src/builtins/mx_del_last_rank.i: src/builtins/mx_del_last_rank.c.i
-
-.PHONY : src/builtins/mx_del_last_rank.i
-
-# target to preprocess a source file
-src/builtins/mx_del_last_rank.c.i:
-	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_del_last_rank.c.i
-.PHONY : src/builtins/mx_del_last_rank.c.i
-
-src/builtins/mx_del_last_rank.s: src/builtins/mx_del_last_rank.c.s
-
-.PHONY : src/builtins/mx_del_last_rank.s
-
-# target to generate assembly for a file
-src/builtins/mx_del_last_rank.c.s:
-	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_del_last_rank.c.s
-.PHONY : src/builtins/mx_del_last_rank.c.s
 
 src/builtins/mx_del_pid_process.o: src/builtins/mx_del_pid_process.c.o
 
@@ -2013,32 +1932,32 @@ src/builtins/mx_del_top_process.c.s:
 	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_del_top_process.c.s
 .PHONY : src/builtins/mx_del_top_process.c.s
 
-src/builtins/mx_delete_tnode.o: src/builtins/mx_delete_tnode.c.o
+src/builtins/mx_delete_branch.o: src/builtins/mx_delete_branch.c.o
 
-.PHONY : src/builtins/mx_delete_tnode.o
+.PHONY : src/builtins/mx_delete_branch.o
 
 # target to build an object file
-src/builtins/mx_delete_tnode.c.o:
-	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_delete_tnode.c.o
-.PHONY : src/builtins/mx_delete_tnode.c.o
+src/builtins/mx_delete_branch.c.o:
+	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_delete_branch.c.o
+.PHONY : src/builtins/mx_delete_branch.c.o
 
-src/builtins/mx_delete_tnode.i: src/builtins/mx_delete_tnode.c.i
+src/builtins/mx_delete_branch.i: src/builtins/mx_delete_branch.c.i
 
-.PHONY : src/builtins/mx_delete_tnode.i
+.PHONY : src/builtins/mx_delete_branch.i
 
 # target to preprocess a source file
-src/builtins/mx_delete_tnode.c.i:
-	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_delete_tnode.c.i
-.PHONY : src/builtins/mx_delete_tnode.c.i
+src/builtins/mx_delete_branch.c.i:
+	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_delete_branch.c.i
+.PHONY : src/builtins/mx_delete_branch.c.i
 
-src/builtins/mx_delete_tnode.s: src/builtins/mx_delete_tnode.c.s
+src/builtins/mx_delete_branch.s: src/builtins/mx_delete_branch.c.s
 
-.PHONY : src/builtins/mx_delete_tnode.s
+.PHONY : src/builtins/mx_delete_branch.s
 
 # target to generate assembly for a file
-src/builtins/mx_delete_tnode.c.s:
-	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_delete_tnode.c.s
-.PHONY : src/builtins/mx_delete_tnode.c.s
+src/builtins/mx_delete_branch.c.s:
+	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_delete_branch.c.s
+.PHONY : src/builtins/mx_delete_branch.c.s
 
 src/builtins/mx_delete_veriable_env.o: src/builtins/mx_delete_veriable_env.c.o
 
@@ -2147,6 +2066,33 @@ src/builtins/mx_env.s: src/builtins/mx_env.c.s
 src/builtins/mx_env.c.s:
 	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_env.c.s
 .PHONY : src/builtins/mx_env.c.s
+
+src/builtins/mx_env_status.o: src/builtins/mx_env_status.c.o
+
+.PHONY : src/builtins/mx_env_status.o
+
+# target to build an object file
+src/builtins/mx_env_status.c.o:
+	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_env_status.c.o
+.PHONY : src/builtins/mx_env_status.c.o
+
+src/builtins/mx_env_status.i: src/builtins/mx_env_status.c.i
+
+.PHONY : src/builtins/mx_env_status.i
+
+# target to preprocess a source file
+src/builtins/mx_env_status.c.i:
+	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_env_status.c.i
+.PHONY : src/builtins/mx_env_status.c.i
+
+src/builtins/mx_env_status.s: src/builtins/mx_env_status.c.s
+
+.PHONY : src/builtins/mx_env_status.s
+
+# target to generate assembly for a file
+src/builtins/mx_env_status.c.s:
+	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_env_status.c.s
+.PHONY : src/builtins/mx_env_status.c.s
 
 src/builtins/mx_env_to_vlad.o: src/builtins/mx_env_to_vlad.c.o
 
@@ -2445,33 +2391,6 @@ src/builtins/mx_get_next_token.c.s:
 	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_get_next_token.c.s
 .PHONY : src/builtins/mx_get_next_token.c.s
 
-src/builtins/mx_get_path_env.o: src/builtins/mx_get_path_env.c.o
-
-.PHONY : src/builtins/mx_get_path_env.o
-
-# target to build an object file
-src/builtins/mx_get_path_env.c.o:
-	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_get_path_env.c.o
-.PHONY : src/builtins/mx_get_path_env.c.o
-
-src/builtins/mx_get_path_env.i: src/builtins/mx_get_path_env.c.i
-
-.PHONY : src/builtins/mx_get_path_env.i
-
-# target to preprocess a source file
-src/builtins/mx_get_path_env.c.i:
-	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_get_path_env.c.i
-.PHONY : src/builtins/mx_get_path_env.c.i
-
-src/builtins/mx_get_path_env.s: src/builtins/mx_get_path_env.c.s
-
-.PHONY : src/builtins/mx_get_path_env.s
-
-# target to generate assembly for a file
-src/builtins/mx_get_path_env.c.s:
-	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_get_path_env.c.s
-.PHONY : src/builtins/mx_get_path_env.c.s
-
 src/builtins/mx_get_token_type.o: src/builtins/mx_get_token_type.c.o
 
 .PHONY : src/builtins/mx_get_token_type.o
@@ -2634,6 +2553,60 @@ src/builtins/mx_key_tab.c.s:
 	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_key_tab.c.s
 .PHONY : src/builtins/mx_key_tab.c.s
 
+src/builtins/mx_kill_last_proc.o: src/builtins/mx_kill_last_proc.c.o
+
+.PHONY : src/builtins/mx_kill_last_proc.o
+
+# target to build an object file
+src/builtins/mx_kill_last_proc.c.o:
+	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_kill_last_proc.c.o
+.PHONY : src/builtins/mx_kill_last_proc.c.o
+
+src/builtins/mx_kill_last_proc.i: src/builtins/mx_kill_last_proc.c.i
+
+.PHONY : src/builtins/mx_kill_last_proc.i
+
+# target to preprocess a source file
+src/builtins/mx_kill_last_proc.c.i:
+	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_kill_last_proc.c.i
+.PHONY : src/builtins/mx_kill_last_proc.c.i
+
+src/builtins/mx_kill_last_proc.s: src/builtins/mx_kill_last_proc.c.s
+
+.PHONY : src/builtins/mx_kill_last_proc.s
+
+# target to generate assembly for a file
+src/builtins/mx_kill_last_proc.c.s:
+	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_kill_last_proc.c.s
+.PHONY : src/builtins/mx_kill_last_proc.c.s
+
+src/builtins/mx_paste.o: src/builtins/mx_paste.c.o
+
+.PHONY : src/builtins/mx_paste.o
+
+# target to build an object file
+src/builtins/mx_paste.c.o:
+	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_paste.c.o
+.PHONY : src/builtins/mx_paste.c.o
+
+src/builtins/mx_paste.i: src/builtins/mx_paste.c.i
+
+.PHONY : src/builtins/mx_paste.i
+
+# target to preprocess a source file
+src/builtins/mx_paste.c.i:
+	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_paste.c.i
+.PHONY : src/builtins/mx_paste.c.i
+
+src/builtins/mx_paste.s: src/builtins/mx_paste.c.s
+
+.PHONY : src/builtins/mx_paste.s
+
+# target to generate assembly for a file
+src/builtins/mx_paste.c.s:
+	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_paste.c.s
+.PHONY : src/builtins/mx_paste.c.s
+
 src/builtins/mx_plus_proc.o: src/builtins/mx_plus_proc.c.o
 
 .PHONY : src/builtins/mx_plus_proc.o
@@ -2795,6 +2768,33 @@ src/builtins/mx_serch_list.s: src/builtins/mx_serch_list.c.s
 src/builtins/mx_serch_list.c.s:
 	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_serch_list.c.s
 .PHONY : src/builtins/mx_serch_list.c.s
+
+src/builtins/mx_take_path_env.o: src/builtins/mx_take_path_env.c.o
+
+.PHONY : src/builtins/mx_take_path_env.o
+
+# target to build an object file
+src/builtins/mx_take_path_env.c.o:
+	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_take_path_env.c.o
+.PHONY : src/builtins/mx_take_path_env.c.o
+
+src/builtins/mx_take_path_env.i: src/builtins/mx_take_path_env.c.i
+
+.PHONY : src/builtins/mx_take_path_env.i
+
+# target to preprocess a source file
+src/builtins/mx_take_path_env.c.i:
+	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_take_path_env.c.i
+.PHONY : src/builtins/mx_take_path_env.c.i
+
+src/builtins/mx_take_path_env.s: src/builtins/mx_take_path_env.c.s
+
+.PHONY : src/builtins/mx_take_path_env.s
+
+# target to generate assembly for a file
+src/builtins/mx_take_path_env.c.s:
+	$(MAKE) -f CMakeFiles/ush.dir/build.make CMakeFiles/ush.dir/src/builtins/mx_take_path_env.c.s
+.PHONY : src/builtins/mx_take_path_env.c.s
 
 src/builtins/mx_unset.o: src/builtins/mx_unset.c.o
 
@@ -5157,27 +5157,18 @@ help:
 	@echo "... src/builtins/mx_cd.o"
 	@echo "... src/builtins/mx_cd.i"
 	@echo "... src/builtins/mx_cd.s"
-	@echo "... src/builtins/mx_check_env.o"
-	@echo "... src/builtins/mx_check_env.i"
-	@echo "... src/builtins/mx_check_env.s"
 	@echo "... src/builtins/mx_close_all_pr.o"
 	@echo "... src/builtins/mx_close_all_pr.i"
 	@echo "... src/builtins/mx_close_all_pr.s"
-	@echo "... src/builtins/mx_ctrl_v_and_not_ascii.o"
-	@echo "... src/builtins/mx_ctrl_v_and_not_ascii.i"
-	@echo "... src/builtins/mx_ctrl_v_and_not_ascii.s"
-	@echo "... src/builtins/mx_del_last_rank.o"
-	@echo "... src/builtins/mx_del_last_rank.i"
-	@echo "... src/builtins/mx_del_last_rank.s"
 	@echo "... src/builtins/mx_del_pid_process.o"
 	@echo "... src/builtins/mx_del_pid_process.i"
 	@echo "... src/builtins/mx_del_pid_process.s"
 	@echo "... src/builtins/mx_del_top_process.o"
 	@echo "... src/builtins/mx_del_top_process.i"
 	@echo "... src/builtins/mx_del_top_process.s"
-	@echo "... src/builtins/mx_delete_tnode.o"
-	@echo "... src/builtins/mx_delete_tnode.i"
-	@echo "... src/builtins/mx_delete_tnode.s"
+	@echo "... src/builtins/mx_delete_branch.o"
+	@echo "... src/builtins/mx_delete_branch.i"
+	@echo "... src/builtins/mx_delete_branch.s"
 	@echo "... src/builtins/mx_delete_veriable_env.o"
 	@echo "... src/builtins/mx_delete_veriable_env.i"
 	@echo "... src/builtins/mx_delete_veriable_env.s"
@@ -5190,6 +5181,9 @@ help:
 	@echo "... src/builtins/mx_env.o"
 	@echo "... src/builtins/mx_env.i"
 	@echo "... src/builtins/mx_env.s"
+	@echo "... src/builtins/mx_env_status.o"
+	@echo "... src/builtins/mx_env_status.i"
+	@echo "... src/builtins/mx_env_status.s"
 	@echo "... src/builtins/mx_env_to_vlad.o"
 	@echo "... src/builtins/mx_env_to_vlad.i"
 	@echo "... src/builtins/mx_env_to_vlad.s"
@@ -5223,9 +5217,6 @@ help:
 	@echo "... src/builtins/mx_get_next_token.o"
 	@echo "... src/builtins/mx_get_next_token.i"
 	@echo "... src/builtins/mx_get_next_token.s"
-	@echo "... src/builtins/mx_get_path_env.o"
-	@echo "... src/builtins/mx_get_path_env.i"
-	@echo "... src/builtins/mx_get_path_env.s"
 	@echo "... src/builtins/mx_get_token_type.o"
 	@echo "... src/builtins/mx_get_token_type.i"
 	@echo "... src/builtins/mx_get_token_type.s"
@@ -5244,6 +5235,12 @@ help:
 	@echo "... src/builtins/mx_key_tab.o"
 	@echo "... src/builtins/mx_key_tab.i"
 	@echo "... src/builtins/mx_key_tab.s"
+	@echo "... src/builtins/mx_kill_last_proc.o"
+	@echo "... src/builtins/mx_kill_last_proc.i"
+	@echo "... src/builtins/mx_kill_last_proc.s"
+	@echo "... src/builtins/mx_paste.o"
+	@echo "... src/builtins/mx_paste.i"
+	@echo "... src/builtins/mx_paste.s"
 	@echo "... src/builtins/mx_plus_proc.o"
 	@echo "... src/builtins/mx_plus_proc.i"
 	@echo "... src/builtins/mx_plus_proc.s"
@@ -5262,6 +5259,9 @@ help:
 	@echo "... src/builtins/mx_serch_list.o"
 	@echo "... src/builtins/mx_serch_list.i"
 	@echo "... src/builtins/mx_serch_list.s"
+	@echo "... src/builtins/mx_take_path_env.o"
+	@echo "... src/builtins/mx_take_path_env.i"
+	@echo "... src/builtins/mx_take_path_env.s"
 	@echo "... src/builtins/mx_unset.o"
 	@echo "... src/builtins/mx_unset.i"
 	@echo "... src/builtins/mx_unset.s"

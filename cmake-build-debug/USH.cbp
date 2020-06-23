@@ -300,16 +300,7 @@
 		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_cd.c">
 			<Option target="ush"/>
 		</Unit>
-		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_check_env.c">
-			<Option target="ush"/>
-		</Unit>
 		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_close_all_pr.c">
-			<Option target="ush"/>
-		</Unit>
-		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_ctrl_v_and_not_ascii.c">
-			<Option target="ush"/>
-		</Unit>
-		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_del_last_rank.c">
 			<Option target="ush"/>
 		</Unit>
 		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_del_pid_process.c">
@@ -318,7 +309,7 @@
 		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_del_top_process.c">
 			<Option target="ush"/>
 		</Unit>
-		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_delete_tnode.c">
+		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_delete_branch.c">
 			<Option target="ush"/>
 		</Unit>
 		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_delete_veriable_env.c">
@@ -331,6 +322,9 @@
 			<Option target="ush"/>
 		</Unit>
 		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_env.c">
+			<Option target="ush"/>
+		</Unit>
+		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_env_status.c">
 			<Option target="ush"/>
 		</Unit>
 		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_env_to_vlad.c">
@@ -366,9 +360,6 @@
 		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_get_next_token.c">
 			<Option target="ush"/>
 		</Unit>
-		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_get_path_env.c">
-			<Option target="ush"/>
-		</Unit>
 		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_get_token_type.c">
 			<Option target="ush"/>
 		</Unit>
@@ -387,6 +378,12 @@
 		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_key_tab.c">
 			<Option target="ush"/>
 		</Unit>
+		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_kill_last_proc.c">
+			<Option target="ush"/>
+		</Unit>
+		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_paste.c">
+			<Option target="ush"/>
+		</Unit>
 		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_plus_proc.c">
 			<Option target="ush"/>
 		</Unit>
@@ -403,6 +400,9 @@
 			<Option target="ush"/>
 		</Unit>
 		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_serch_list.c">
+			<Option target="ush"/>
+		</Unit>
+		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_take_path_env.c">
 			<Option target="ush"/>
 		</Unit>
 		<Unit filename="/Users/vzhukovsky/Desktop/ush/src/builtins/mx_unset.c">

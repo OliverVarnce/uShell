@@ -24,12 +24,12 @@ static void end_argv(int *curr_pos, int end, char *str) {
             && mx_check_symbol(str, *curr_pos, str[*curr_pos])) {
             pos = (*curr_pos);
             (*curr_pos)++;
-            mx_end_flag(str, curr_pos, end, str[pos]);
+            mx_last_flag(str, curr_pos, end, str[pos]);
         }
         else if(str[*curr_pos] == '$' && str[(*curr_pos) + 1] == '(') {
             pos = (*curr_pos);
             *curr_pos += 2;
-            mx_end_flag(str, curr_pos, end, ')');
+            mx_last_flag(str, curr_pos, end, ')');
         }
         else
             (*curr_pos)++;

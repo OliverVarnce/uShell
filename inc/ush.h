@@ -240,7 +240,7 @@ bool mx_check_symbol(char *str, int position, char symbol);
 void mx_paste(t_ush *ush, char *chars);
 void mx_ctrl_r(t_ush *ush);
 int mx_ascii(t_ush *ush, char *chars, unsigned int ch);
-int mx_end_flag(char *str, int *position, int end, int flag);
+int mx_last_flag(char *str, int *position, int end, int flag);
 char *mx_parsing_input(char *str);
 char *mx_audit_str(char *str, t_ush *processes, bool dqute);
 char *mx_str_bquote(char **str, t_ush *processes);
@@ -307,14 +307,14 @@ char **mx_get_name(t_ush *ush, int numb);
 // env 
 
 char **mx_call_av(char **argv, int i);
-char **mx_env_to_vlad(t_var *var);
+char **mx_env_ush(t_var *var);
 bool mx_env_status(char **argv, char **path, t_var *var, int *i);
 bool mx_printerr_env(char *str, int flag);
 void mx_print_env(t_var *var);
 void mx_fre_env_path(t_var *var, char *path);
 bool mx_reg(char *str, char *regular);
 char *mx_take_path_env(char *str1, char *str2, int *i);
-int mx_delete_veriable_env(char *str1, char *str2, t_var *var, int *i);
+int mx_del_elem_env(char *str1, char *str2, t_var *var, int *i);
 
 // echo
 int mx_0_and_x(char *str, int *i);

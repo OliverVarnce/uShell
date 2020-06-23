@@ -32,7 +32,7 @@ static void create_parameter(char *str, int *start, int end, t_ush *processes) {
     char *tmp = NULL;
 
     *start = ++pos;
-    mx_end_flag(str, &pos, end, ' ');
+    mx_last_flag(str, &pos, end, ' ');
     tmp = mx_strndup(&str[*start], pos - *start);
     *start = pos;
     value = mx_audit_str(tmp, processes, 0);

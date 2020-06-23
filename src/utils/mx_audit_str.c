@@ -63,7 +63,7 @@ static void spec_symbol(t_ush *processes, int *i, char **new_str) {
         pos++;
         flag = ')';
     }
-    mx_end_flag(new_str[0], &pos, strlen(new_str[0]), flag);
+    mx_last_flag(new_str[0], &pos, strlen(new_str[0]), flag);
     comand = mx_strndup(&new_str[0][i[0]], pos - i[0]);
     editor_str(&comand, processes);
     mx_do_replace(new_str, i[0], pos, comand);

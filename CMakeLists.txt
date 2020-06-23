@@ -90,11 +90,11 @@ add_executable(ush
         src/builtins/mx_del_pid_process.c
         src/builtins/mx_del_top_process.c
         src/builtins/mx_delete_branch.c
-        src/builtins/mx_delete_veriable_env.c
+        src/builtins/mx_del_elem_env.c
         src/builtins/mx_echo.c
-        src/builtins/mx_end_flag.c
+        src/builtins/mx_last_flag.c
         src/builtins/mx_env.c
-        src/builtins/mx_env_to_vlad.c
+        src/builtins/mx_env_ush.c
         src/builtins/mx_export.c
         src/builtins/mx_fg.c
         src/builtins/mx_fill_build.c

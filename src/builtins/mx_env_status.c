@@ -30,7 +30,7 @@ bool mx_env_status(char **av, char **path, t_var *var, int *i) {
             return 1;
     }
     else if (mx_reg(av[*i], MX_REG_U))
-        if (mx_delete_veriable_env(av[*i], av[*i + 1], var, i)) {
+        if (mx_del_elem_env(av[*i], av[*i + 1], var, i)) {
             mx_printerr_env(av[*i - 1], 0);
             return 1;
         }
