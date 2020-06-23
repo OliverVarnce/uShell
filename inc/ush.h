@@ -73,7 +73,7 @@ typedef struct s_tree_node {
     struct s_tree_node *right;
     struct s_tree_node *parent;
     void *data;
-} t_tnode;
+}               t_tnode;
 
 enum e_branch {
     RIGHT,
@@ -179,6 +179,7 @@ void mx_insert_tree(t_tnode **root, t_tnode *new,
     void (*free_)(void *)
 );
 
+
 t_tnode* mx_get_min_tnode(t_tnode *root);
 void mx_strarr_add_to_strarr(char ***strs, char ***str);
 t_tnode *mx_create_tnode(void *data);
@@ -199,7 +200,7 @@ int mx_flang_comand(char *str, int *pos, int end, int flag);
 void mx_read_user(char **user);
 t_token *mx_token_in_program(int *curr_pos, int end, char *str, t_ush *processes);
 int mx_exec_dmore(t_tnode *root, int *fds, int operatorStatus, t_ush *ush);
-void mx_ush_init(t_ush **ush, char **env);
+void mx_ush_init(t_ush **ush, char **envp);
 void mx_subs(char **str);
 void mx_parsing(char *str, t_ush *ush);
 t_list *mx_lexer(char *str, t_ush *processes);

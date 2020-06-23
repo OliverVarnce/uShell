@@ -253,7 +253,7 @@ OBJ =	mx_add_one_rank.o \
 
 CC = clang
 
-CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
+CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic #-g -fsanitize=address
 
 all : install
 

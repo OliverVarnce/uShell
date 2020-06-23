@@ -11,16 +11,17 @@
   <component name="ChangeListManager">
     <list default="true" id="66ffa57a-d346-4769-a3ff-cfc76628324e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/ush.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ush.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parsers/mx_key_delite.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/mx_key_delite.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/bit_func.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/bit_func.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mx_audit_str.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_audit_str.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mx_do_replace.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_replace.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mx_home.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_home.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libmx/src/mx_itoa.c" beforeDir="false" afterPath="$PROJECT_DIR$/libmx/src/mx_itoa.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libmx/src/mx_push_back.c" beforeDir="false" afterPath="$PROJECT_DIR$/libmx/src/mx_push_back.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsers/mx_parsing_input.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/mx_parsing_input.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/mx_parametr_shell.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_parametr_shell.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mx_term_out.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_term_out.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mx_start_program.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_start_program.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mx_ush_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_ush_init.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="karetka" />
+        <entry key="$PROJECT_DIR$" value="andrii_utils_fix" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -76,6 +77,7 @@
       <workItem from="1592773051887" duration="5003000" />
       <workItem from="1592819904313" duration="2836000" />
       <workItem from="1592857604007" duration="2521000" />
+      <workItem from="1592938783623" duration="4791000" />
     </task>
     <task id="LOCAL-00001" summary="razbil na papki">
       <created>1592565543518</created>
@@ -123,7 +125,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="razbil na papki" />
@@ -206,12 +208,12 @@
       <screen x="0" y="23" width="1280" height="730" />
     </state>
     <state x="431" y="309" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.730@0.23.1280.730" timestamp="1592816719251" />
-    <state x="643" y="271" width="1196" height="1005" key="find.popup" timestamp="1592862100672">
+    <state x="643" y="271" width="1196" height="1005" key="find.popup" timestamp="1592943296154">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="482" y="241" width="897" height="884" key="find.popup/-316.-1057.2560.1057/0.23.1920.1177@0.23.1920.1177" timestamp="1592840545863" />
     <state x="321" y="158" width="598" height="548" key="find.popup/0.23.1280.730@0.23.1280.730" timestamp="1592822252849" />
-    <state x="643" y="271" width="1196" height="1005" key="find.popup/0.23.2560.1337@0.23.2560.1337" timestamp="1592862100672" />
+    <state x="643" y="271" width="1196" height="1005" key="find.popup/0.23.2560.1337@0.23.2560.1337" timestamp="1592943296154" />
     <state x="394" y="108" key="git4idea.branch.GitSmartOperationDialog" timestamp="1592819793514">
       <screen x="0" y="23" width="1280" height="730" />
     </state>

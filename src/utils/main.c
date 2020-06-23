@@ -22,9 +22,31 @@ void mx_not_stdin_term(t_ush *ush, int argc, char **argv) {
     argc++;
 }
 
-int main(int argc, char *argv[], char **envp) {
+static void mysetenv() {
+    struct passwd *pw = getpwuid(getuid());
+    char *pwd = getcwd(NULL, 0);
+
+    setenv("HOME", pw->pw_dir, 0);
+    setenv("LOGNAME", getlogin(), 0);
+    setenv("PWD", pwd, 0);
+    setenv("OLDPWD",pwd, 0);
+    if (getenv("SHLVL") != NULL) {
+        char *num = getenv("SHLVL");
+        *num += 1;
+        setenv("SHLVL", num, 1);
+    }
+    else
+        setenv("SHLVL", "1", 0);
+    setenv("_", "/usr/bin/env", 0);
+    free(pwd);
+}
+
+int main(int argc, char **argv, char **envp) {
     int str = 1;
     t_ush *ush = 0;
+
+    if (*envp == NULL)
+        mysetenv();
 
     mx_get_twidth();
     mx_ush_init(&ush, envp);

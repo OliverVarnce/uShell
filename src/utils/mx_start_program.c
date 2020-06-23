@@ -91,8 +91,11 @@ void mx_start_program(t_list **var_tree, char **env) {
         var->mem = tmp;
         putenv(tmp);
         mx_push_back(var_tree, var);
-        free(envvar[1]);
-        free(envvar);
+        if (envvar) {
+            mx_strdel(&envvar[1]);
+            free(envvar);
+        }
+
     }
     check_env(var_tree);
 }

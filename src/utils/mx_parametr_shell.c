@@ -48,7 +48,8 @@ static void parametrlaststatus(t_ush *processes, int *i, char **new_str, int fla
     mx_replace(new_str, *i, flag, par_shell);
     if (par_shell) {
         *i += mx_strlen(par_shell);
-        mx_strdel(&par_shell);
+        if (strcmp(par_shell, "1") == 0)
+            mx_strdel(&par_shell);
     }
 }
 
@@ -58,7 +59,9 @@ void mx_parametr_shell(t_ush *processes, int *i, char **new_str) {
 
     par_shell = mx_strndup(&new_str[0][*i + 1], flag - *i - 1);
     if (par_shell[0] == '?') {
-        mx_strdel(&par_shell);
+        if (par_shell != NULL) {
+            mx_strdel(&par_shell);
+        }
         parametrlaststatus(processes, i, new_str, flag);
     }
     else if (par_shell[0] == '{') {
