@@ -1,15 +1,14 @@
 #include "ush.h"
 
-static void print_row(t_list *tmp, char c) {
-    char *name = mx_arrstr_to_str(((t_process*)tmp->data)->name);
+static void print_row(t_process *tmp, char c) {
+    char *name = mx_arrstr_to_str(tmp->name);
 
-    printf("[%d] %c suspended %s\n", ((t_process*)tmp->data)->index, c,
-        name);
+    printf("[%d] %c suspended %s\n", tmp->index, c, name);
     free(name);
 }
 
 void mx_jobs(t_ush *ush) {
-    t_list *tmp = ush->processes;
+    t_process *tmp = ush->processes;
     char c = 0;
     int i = -1;
 

@@ -113,6 +113,7 @@ typedef struct s_process {
     char **name;
     pid_t pid;
     int index;
+    struct s_process *next;
 }              t_process;
 
 typedef struct s_input {
@@ -132,7 +133,7 @@ typedef struct s_ush {
     char **env;
     t_list *history;
     t_input *input;
-    t_list *processes;
+    t_process *processes;
     bool is_exit;
     bool if_ctrl_c;
     int exit_status;
@@ -296,7 +297,7 @@ int mx_buildin_list(t_token *token, t_ush *ush);
 void mx_exec_env_pr(char *path, char **argv, char **env, t_ush *ush);
 
 // processes
-int mx_add_process(t_list **processes, pid_t pid, char **name);
+int mx_add_process(t_process **processes, pid_t pid, char **name);
 void mx_del_top_process(t_ush *ush);
 void mx_del_pid_process(t_ush *ush, int pid);
 void mx_wait_process(t_ush *ush, char **argv);
@@ -338,5 +339,5 @@ void mx_pop_front_free_data_list(t_list **head);
 //void mx_pop_list(t_variable **head, void *data, bool(*if_list)(void *, void *),
 //                 void(*del_data)(void *));
 void mx_pop_list(t_variable **head, void *data, bool(*if_list)(void *, void *));
-
+void mx_push_front_proc(t_process **list, t_process *new_head);
 #endif

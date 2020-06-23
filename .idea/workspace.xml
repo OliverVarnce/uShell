@@ -11,28 +11,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66ffa57a-d346-4769-a3ff-cfc76628324e" name="Default Changelist" comment="andrii_utils_fix 1">
+    <list default="true" id="66ffa57a-d346-4769-a3ff-cfc76628324e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/USH.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/USH.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/ush.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ush.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libmx/src/mx_itoa.c" beforeDir="false" afterPath="$PROJECT_DIR$/libmx/src/mx_itoa.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_export.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_export.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_key_tab.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_key_tab.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_push_env.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_push_env.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_return_value.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_return_value.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_serch_list.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_serch_list.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_unset.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_unset.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exec/mx_exec_env_pr.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/exec/mx_exec_env_pr.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mx_pop_front_free_data.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_pop_front_free_data.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mx_pop_list.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_pop_list.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mx_start_program.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_start_program.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mx_var_tree_to_var.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mx_var_tree_to_var.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_add_process.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_add_process.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_close_all_pr.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_close_all_pr.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_del_pid_process.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_del_pid_process.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_del_top_process.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_del_top_process.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_fg.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_fg.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_get_name.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_get_name.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/builtins/mx_jobs.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_jobs.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exec/mx_exec_token.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/exec/mx_exec_token.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="bugfix_echo" />
+        <entry key="$PROJECT_DIR$" value="bugfix_sanitizer" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,7 +86,7 @@
       <workItem from="1592773051887" duration="5003000" />
       <workItem from="1592819904313" duration="2836000" />
       <workItem from="1592857604007" duration="2521000" />
-      <workItem from="1592938783623" duration="10409000" />
+      <workItem from="1592938783623" duration="12053000" />
     </task>
     <task id="LOCAL-00001" summary="razbil na papki">
       <created>1592565543518</created>
@@ -148,7 +137,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592943711146</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="andrii_utils_fix 1">
+      <created>1592951597885</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1592951597885</updated>
+    </task>
+    <task id="LOCAL-00009" summary="andrii_utils_fix 1">
+      <created>1592951721576</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1592951721576</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,12 +168,12 @@
       <screen x="0" y="23" width="1280" height="730" />
     </state>
     <state x="318" y="197" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.730@0.23.1280.730" timestamp="1592772965028" />
-    <state x="455" y="23" key="CommitChangelistDialog2" timestamp="1592951597677">
+    <state x="455" y="23" key="CommitChangelistDialog2" timestamp="1592951721467">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="341" y="23" key="CommitChangelistDialog2/-316.-1057.2560.1057/0.23.1920.1177@0.23.1920.1177" timestamp="1592841065943" />
     <state x="227" y="23" key="CommitChangelistDialog2/0.23.1280.730@0.23.1280.730" timestamp="1592822731934" />
-    <state x="455" y="23" key="CommitChangelistDialog2/0.23.2560.1337@0.23.2560.1337" timestamp="1592951597677" />
+    <state x="455" y="23" key="CommitChangelistDialog2/0.23.2560.1337@0.23.2560.1337" timestamp="1592951721467" />
     <state width="1238" height="227" key="GridCell.Tab.0.bottom" timestamp="1592820590841">
       <screen x="0" y="23" width="1280" height="730" />
     </state>
@@ -235,12 +238,12 @@
       <screen x="0" y="23" width="1280" height="730" />
     </state>
     <state x="431" y="309" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.730@0.23.1280.730" timestamp="1592816719251" />
-    <state x="1364" y="160" width="1196" height="1005" key="find.popup" timestamp="1592950245773">
+    <state x="785" y="176" width="1196" height="1005" key="find.popup" timestamp="1592953230243">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="482" y="241" width="897" height="884" key="find.popup/-316.-1057.2560.1057/0.23.1920.1177@0.23.1920.1177" timestamp="1592840545863" />
     <state x="321" y="158" width="598" height="548" key="find.popup/0.23.1280.730@0.23.1280.730" timestamp="1592822252849" />
-    <state x="1364" y="160" width="1196" height="1005" key="find.popup/0.23.2560.1337@0.23.2560.1337" timestamp="1592950245773" />
+    <state x="785" y="176" width="1196" height="1005" key="find.popup/0.23.2560.1337@0.23.2560.1337" timestamp="1592953230243" />
     <state x="394" y="108" key="git4idea.branch.GitSmartOperationDialog" timestamp="1592819793514">
       <screen x="0" y="23" width="1280" height="730" />
     </state>

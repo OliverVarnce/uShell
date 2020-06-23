@@ -1,33 +1,38 @@
 #include "ush.h"
 
-static int get_index(t_list *process) {
-    t_list *tmp = process;
+static int get_index(t_process *process) {
+    t_process *tmp = process;
     int max = 0;
 
     if (tmp == 0)
         return 0;
-    max = ((t_process*)tmp->data)->index;
+    max = tmp->index;
     while (tmp) {
-        if (max < ((t_process*)tmp->data)->index) {
-            max = ((t_process*)tmp->data)->index;
+        if (max < tmp->index) {
+            max = tmp->index;
         }
         tmp = tmp->next;
     }
     return max;
 }
 
-static bool is_exist(t_list *process, pid_t pid) {
-    t_list *tmp = process;
+static bool is_exist(t_process *process, pid_t pid) {
+    t_process *tmp = process;
 
     while (tmp) {
-        if (((t_process*)process->data)->pid == pid)
+        if (process->pid == pid)
             return true;
         tmp = tmp->next;
     }
     return false;
 }
 
-int mx_add_process(t_list **processes, pid_t pid, char **name) {
+void mx_push_front_proc(t_process **list, t_process *new_head) {
+    new_head->next = *list;
+    *list = new_head;
+}
+
+int mx_add_process(t_process **processes, pid_t pid, char **name) {
     int max_index = get_index(*processes);
     t_process *pr = 0;
 
@@ -37,6 +42,7 @@ int mx_add_process(t_list **processes, pid_t pid, char **name) {
     pr->index = max_index + 1;
     pr->pid = pid;
     pr->name = mx_dupstrarr(name);
-    mx_push_front(processes, pr);
+    pr->next = NULL;
+    mx_push_front_proc(processes, pr);
     return max_index + 1;
 }

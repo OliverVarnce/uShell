@@ -1,20 +1,20 @@
 #include "ush.h"
 
 static t_process* get_process(int n, char *str, t_ush *ush) {
-    t_list *tmp = ush->processes;
+    t_process *tmp = ush->processes;
 
     if (n != -1) {
         while (tmp) {
-            if (((t_process*)tmp->data)->index == n)
-                return ((t_process*)tmp->data);
+            if (tmp->index == n)
+                return tmp;
             tmp = tmp->next;
         }
         fprintf(stderr, "fg: job not found: %s\n", str);
     }
     else {
         while (tmp) {
-            if (mx_is_str_starts(((t_process*)tmp->data)->name[0], str))
-                return ((t_process*)tmp->data);
+            if (mx_is_str_starts(tmp->name[0], str))
+                return tmp;
             tmp = tmp->next;
         }
         fprintf(stderr, "fg: job not found: %s\n", str);
@@ -35,7 +35,7 @@ static bool mx_is_number_fg(char *str) {
 }
 
 static int fg_continue(char **argv, t_ush *ush) {
-    t_process *pr = (t_process*)ush->processes->data;
+    t_process *pr = ush->processes;
     int i = 0;
 
     if (argv[1] == 0) {
