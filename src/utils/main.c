@@ -50,7 +50,7 @@ int main(int argc, char **argv, char **envp) {
 
     mx_get_twidth();
     mx_ush_init(&ush, envp);
-    if (isatty(0) == 0) 
+    if (isatty(0) == 0)
         mx_not_stdin_term(ush, argc, argv);
     else
         mx_loop(str, ush);

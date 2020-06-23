@@ -1,11 +1,11 @@
 #include "ush.h"
 
 static void clearenv(t_ush *ush) {
-    t_list *tmp = ush->var_tree;
+    t_variable *tmp = ush->var_tree;
 
     while (tmp) {
-        if (((t_variable*)tmp->data)->is_env)
-            unsetenv(((t_variable*)tmp->data)->name);
+        if (tmp->is_env)
+            unsetenv(tmp->name);
         tmp = tmp->next;
     }
 }

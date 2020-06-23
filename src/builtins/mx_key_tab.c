@@ -43,7 +43,7 @@ static void one_comand_in_list(t_ush *ush, t_list *list_comand, char **str,
             mx_one_symbol(str, ' ', &(ush->input->inplen), ush->input->endpoint);
             (ush->input->endpoint)++;
         }
-        mx_pop_front_free_data(&list_comand);
+        mx_pop_front_free_data_list(&list_comand);
 }
 
 char **mx_key_tab(char *parsing, char **str, t_ush *ush) {

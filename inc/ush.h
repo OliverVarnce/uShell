@@ -66,6 +66,7 @@ typedef struct s_variable {
     char *value;
     bool is_env;
     char *mem;
+    struct s_variable *next;
 }              t_variable;
 
 typedef struct s_tree_node {
@@ -141,9 +142,11 @@ typedef struct s_ush {
     char *old_pwd;
     char *path;
     char *home;
-    t_list *var_tree;
+    t_variable *var_tree;
     int last_status;
 }              t_ush;
+
+void mx_push_back_res(t_variable **list, t_variable *new);
 
 enum e_keys{
     CTRL_A = 1,
@@ -183,14 +186,14 @@ void mx_insert_tree(t_tnode **root, t_tnode *new,
 t_tnode* mx_get_min_tnode(t_tnode *root);
 void mx_strarr_add_to_strarr(char ***strs, char ***str);
 t_tnode *mx_create_tnode(void *data);
-void mx_start_program(t_list **var_tree, char **env);
+void mx_start_program(t_variable **var_tree, char **env);
 void mx_delete_tnode(t_tnode **root, void *data, int (*cmp)(void*, void*), void (*free_tnode)(t_tnode *tnode));
-void mx_push_env(t_list **var_tree, char *name, char *value, char *mem);
+void mx_push_env(t_variable **var_tree, char *name, char *value, char *mem);
 t_tnode *mx_find_tnode(t_tnode *root, void *data, int (*cmp)(void*, void*));
 void mx_if_new_parameter(char *str, int *start, int end, t_ush *processes);
-char *mx_return_value(char **str, t_list **var_tree);
-char *mx_return_value2(const char *str, t_list **var_tree);
-void mx_serch_list(t_list **var_tree, char *name, char *value);
+char *mx_return_value(char **str, t_variable **var_tree);
+char *mx_return_value2(const char *str, t_variable **var_tree);
+void mx_serch_list(t_variable **var_tree, char *name, char *value);
 t_token *mx_create_token(char type, char **value, int priority);
 void mx_clear_tokens(t_list **tokens);
 t_token* mx_get_next_token(int *start, int end, char *str, t_ush *processes);
@@ -219,8 +222,8 @@ void mx_printstr_env(char *str);
 int mx_pwd(char **argv, t_ush *ush);
 void mx_echo(char **str,  t_ush *ush);
 void mx_env(char **argv, t_ush *ush);
-void mx_export(char **argv, t_list **var_tree, t_ush *ush);
-void mx_unset(char **argv, t_list **var_tree, t_ush *ush);
+void mx_export(char **argv, t_variable **var_tree, t_ush *ush);
+void mx_unset(char **argv, t_variable **var_tree, t_ush *ush);
 void mx_which(char **argv, t_ush *ush);
 bool mx_is_buildin(char *str);
 void mx_jobs(t_ush *ush);
@@ -267,7 +270,7 @@ void mx_print_tab_comands(t_list *list_comand);
 t_ush* mx_get_info(t_ush *ush);
 bool mx_is_link(char *file);
 void mx_unset_fds(int *fds, int *savedFds, int operator_starus);
-t_var *mx_var_tree_to_var(t_list *var_tree);
+t_var *mx_var_tree_to_var(t_variable *var_tree);
 int mx_get_twidth();
 
 // lexer
@@ -329,9 +332,11 @@ char *mx_arrstr_to_str(char **strs);
 unsigned int mx_getchar();
 bool mx_is_str_starts(char *string, char *start);
 void mx_add_to_strarr(char ***strs, char *str);
-void mx_pop_front_free_data(t_list **head);
-void mx_pop_list(t_list **head, void *data, bool(*if_list)(void *, void *),
-                 void(*del_data)(void *));
-
+void mx_pop_front_free_data(t_variable **head);
+void mx_pop_front_free_data_list(t_list **head);
+//void mx_pop_front_free_data(t_list **head);
+//void mx_pop_list(t_variable **head, void *data, bool(*if_list)(void *, void *),
+//                 void(*del_data)(void *));
+void mx_pop_list(t_variable **head, void *data, bool(*if_list)(void *, void *));
 
 #endif

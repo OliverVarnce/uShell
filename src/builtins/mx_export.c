@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static void new_node(t_list **var_tree, char *name, char *value, char *tmp) {
+static void new_node(t_variable **var_tree, char *name, char *value, char *tmp) {
     t_variable *node = malloc(sizeof(t_variable));
 
     node->name = name;
@@ -8,20 +8,20 @@ static void new_node(t_list **var_tree, char *name, char *value, char *tmp) {
     node->mem = value == 0 ? tmp : mx_strjoin2(tmp, value);
     node->is_env = true;
     putenv(node->mem);
-    mx_push_back(var_tree, node);
+    node->next = NULL;
+    mx_push_back_res(var_tree, node);
 }
 
-static void get_parametr(t_list **var_tree, char *str) {
+static void get_parametr(t_variable **var_tree, char *str) {
     int counter = mx_get_char_index(str, '=');
     char *name = counter == -1 ? mx_strdup(str) : mx_strndup(str, counter);
     char *value = counter == -1 ? 0 : mx_strdup(str + counter + 1);
-    t_list *var_tree_tmp = *var_tree;
+    t_variable *var_tree_tmp = *var_tree;
     char *tmp = mx_strjoin(name, "=");
 
     for (; var_tree_tmp; var_tree_tmp = var_tree_tmp->next) {
-        if (strcmp(((t_variable*)(var_tree_tmp->data))->name, name) == 0) {
-            mx_charge_parametr_export(value, tmp,
-                                     (t_variable*)(var_tree_tmp->data));
+        if (strcmp(var_tree_tmp->name, name) == 0) {
+            mx_charge_parametr_export(value, tmp, var_tree_tmp);
             free(name);
             free(tmp);
             return;
@@ -43,7 +43,7 @@ static void swap(t_var *var) {
     var->next->flag = flag;
 }
 
-static void print_export(t_list *var_tree_tmp) {
+static void print_export(t_variable *var_tree_tmp) {
     t_var *var = mx_var_tree_to_var(var_tree_tmp);
     t_var *tmp = var;
 
@@ -65,7 +65,7 @@ static void print_export(t_list *var_tree_tmp) {
     free(var);
 }
 
-void mx_export(char **argv, t_list **var_tree, t_ush *ush) {
+void mx_export(char **argv, t_variable **var_tree, t_ush *ush) {
     ush->last_status = 0;
     for (int i = 0; argv[i]; i++) {
         if (mx_reg(argv[i], "")) {

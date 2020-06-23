@@ -43,11 +43,11 @@ static char *create_mem(char *str1, char **str2, char *str3, char **value) {
     return mem;
 }
 
-static bool check_if_env_have(char *name, t_list **var_tree) {
-    t_list *var_tree_check = *var_tree;
+static bool check_if_env_have(char *name, t_variable **var_tree) {
+    t_variable *var_tree_check = *var_tree;
 
     while (var_tree_check) {
-        if (mx_strcmp(((t_variable *)var_tree_check->data)->name, name) == 0)
+        if (mx_strcmp(var_tree_check->name, name) == 0)
             return false;
         else
             var_tree_check = var_tree_check->next;
@@ -55,7 +55,7 @@ static bool check_if_env_have(char *name, t_list **var_tree) {
     return true;
 }
 
-static void check_env(t_list **var_tree) {
+static void check_env(t_variable **var_tree) {
     char *tmp = 0;
 
     if (check_if_env_have("PWD", var_tree)) {
@@ -75,7 +75,24 @@ static void check_env(t_list **var_tree) {
     }
 }
 
-void mx_start_program(t_list **var_tree, char **env) {
+void mx_push_back_res(t_variable **list, t_variable *new) {
+    if (list) {
+        if (*list) {
+            t_variable *current = *list;
+
+            while(current->next != NULL) {
+                current = current->next;
+            }
+            current->next = new;
+        }
+        else {
+            *list = new;
+        }
+       // printf("\n**********ER*********\n");
+    }
+}
+
+void mx_start_program(t_variable **var_tree, char **env) {
     int i = -1;
     char **envvar = 0;
     char *tmp = 0;
@@ -89,8 +106,9 @@ void mx_start_program(t_list **var_tree, char **env) {
         tmp = create_mem(envvar[0], &envvar[1], env[i], &(var->value));
         var->is_env = true;
         var->mem = tmp;
+        var->next = NULL;
         putenv(tmp);
-        mx_push_back(var_tree, var);
+        mx_push_back_res(var_tree, var);
         if (envvar) {
             mx_strdel(&envvar[1]);
             free(envvar);

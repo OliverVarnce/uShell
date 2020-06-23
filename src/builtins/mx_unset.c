@@ -11,16 +11,16 @@ static bool check_argv(char *str) {
     return 1;
 }
 
-static void del_t_variable(void *str) {
-    t_variable *var = str;
-
-    mx_strdel(&(var->name));
-    mx_strdel(&(var->value));
-    if (var->is_env) {
-        var->mem[0] = 0;
-        mx_strdel(&(var->mem));
-    }
-}
+//static void del_t_variable(void *str) {
+//    t_variable *var = str;
+//
+//    mx_strdel(&(var->name));
+//    mx_strdel(&(var->value));
+//    if (var->is_env) {
+//        var->mem[0] = 0;
+//        mx_strdel(&(var->mem));
+//    }
+//}
 
 static bool if_argv(void *s1, void *s2) {
     char *temp1 = s1;
@@ -32,11 +32,13 @@ static bool if_argv(void *s1, void *s2) {
         return 0;
 }
 
-void mx_unset(char **argv, t_list **var_tree, t_ush *ush) {
+
+
+void mx_unset(char **argv, t_variable **var_tree, t_ush *ush) {
     ush->last_status = 0;
     for (int i = 1; argv[i]; i++) {
         if (check_argv(argv[i])) {
-            mx_pop_list(var_tree, argv[i], if_argv, del_t_variable);
+            mx_pop_list(var_tree, argv[i], if_argv);
         }
     }
 }
