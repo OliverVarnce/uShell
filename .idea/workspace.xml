@@ -13,15 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="66ffa57a-d346-4769-a3ff-cfc76628324e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/ush.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ush.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_add_process.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_add_process.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_close_all_pr.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_close_all_pr.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_del_pid_process.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_del_pid_process.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_del_top_process.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_del_top_process.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_fg.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_fg.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_get_name.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_get_name.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/builtins/mx_jobs.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/builtins/mx_jobs.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exec/mx_exec_token.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/exec/mx_exec_token.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="bugfix_sanitizer" />
+        <entry key="$PROJECT_DIR$" value="fg" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,7 +56,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="USH" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="USH" TARGET_NAME="USH" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="USH" RUN_TARGET_NAME="USH">
+    <configuration name="USH" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="USH" TARGET_NAME="USH" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="USH" RUN_TARGET_NAME="USH">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -86,7 +77,8 @@
       <workItem from="1592773051887" duration="5003000" />
       <workItem from="1592819904313" duration="2836000" />
       <workItem from="1592857604007" duration="2521000" />
-      <workItem from="1592938783623" duration="12053000" />
+      <workItem from="1592938783623" duration="12553000" />
+      <workItem from="1593015325281" duration="217000" />
     </task>
     <task id="LOCAL-00001" summary="razbil na papki">
       <created>1592565543518</created>
@@ -151,7 +143,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592951721576</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="andrii_utils_fix 1">
+      <created>1592953260475</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1592953260475</updated>
+    </task>
+    <task id="LOCAL-00011" summary="working fg and working echo">
+      <created>1592953400205</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1592953400205</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,19 +167,20 @@
     <MESSAGE value="razbil na papki" />
     <MESSAGE value="bugfix" />
     <MESSAGE value="andrii_utils_fix 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="andrii_utils_fix 1" />
+    <MESSAGE value="working fg and working echo" />
+    <option name="LAST_COMMIT_MESSAGE" value="working fg and working echo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="318" y="197" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592772965028">
       <screen x="0" y="23" width="1280" height="730" />
     </state>
     <state x="318" y="197" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.730@0.23.1280.730" timestamp="1592772965028" />
-    <state x="455" y="23" key="CommitChangelistDialog2" timestamp="1592953260344">
+    <state x="455" y="23" key="CommitChangelistDialog2" timestamp="1592953400090">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="341" y="23" key="CommitChangelistDialog2/-316.-1057.2560.1057/0.23.1920.1177@0.23.1920.1177" timestamp="1592841065943" />
     <state x="227" y="23" key="CommitChangelistDialog2/0.23.1280.730@0.23.1280.730" timestamp="1592822731934" />
-    <state x="455" y="23" key="CommitChangelistDialog2/0.23.2560.1337@0.23.2560.1337" timestamp="1592953260344" />
+    <state x="455" y="23" key="CommitChangelistDialog2/0.23.2560.1337@0.23.2560.1337" timestamp="1592953400090" />
     <state width="1238" height="227" key="GridCell.Tab.0.bottom" timestamp="1592820590841">
       <screen x="0" y="23" width="1280" height="730" />
     </state>
@@ -224,11 +231,11 @@
       <screen x="0" y="23" width="1280" height="730" />
     </state>
     <state x="477" y="97" key="RollbackChangesDialog/0.23.1280.730@0.23.1280.730" timestamp="1592816874446" />
-    <state x="480" y="215" key="Vcs.Push.Dialog.v2" timestamp="1592861139886">
+    <state x="480" y="215" key="Vcs.Push.Dialog.v2" timestamp="1592953408836">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="240" y="128" key="Vcs.Push.Dialog.v2/0.23.1280.730@0.23.1280.730" timestamp="1592821570010" />
-    <state x="480" y="215" key="Vcs.Push.Dialog.v2/0.23.2560.1337@0.23.2560.1337" timestamp="1592861139886" />
+    <state x="480" y="215" key="Vcs.Push.Dialog.v2/0.23.2560.1337@0.23.2560.1337" timestamp="1592953408836" />
     <state x="927" y="374" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1592856739988">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
