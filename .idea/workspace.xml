@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated>
-      <config projectName="USH" targetName="USH" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -13,6 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="66ffa57a-d346-4769-a3ff-cfc76628324e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +22,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -54,13 +53,6 @@
       <recent name="$PROJECT_DIR$/src/exec" />
       <recent name="$PROJECT_DIR$/src/prinitng" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="USH" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="USH" TARGET_NAME="USH" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="USH" RUN_TARGET_NAME="USH">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -251,9 +243,14 @@
     <state x="482" y="241" width="897" height="884" key="find.popup/-316.-1057.2560.1057/0.23.1920.1177@0.23.1920.1177" timestamp="1592840545863" />
     <state x="321" y="158" width="598" height="548" key="find.popup/0.23.1280.730@0.23.1280.730" timestamp="1592822252849" />
     <state x="785" y="176" width="1196" height="1005" key="find.popup/0.23.2560.1337@0.23.2560.1337" timestamp="1592953230243" />
-    <state x="394" y="108" key="git4idea.branch.GitSmartOperationDialog" timestamp="1592819793514">
-      <screen x="0" y="23" width="1280" height="730" />
+    <state x="788" y="179" key="git4idea.branch.GitSmartOperationDialog" timestamp="1593020904730">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="394" y="108" key="git4idea.branch.GitSmartOperationDialog/0.23.1280.730@0.23.1280.730" timestamp="1592819793514" />
+    <state x="788" y="179" key="git4idea.branch.GitSmartOperationDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1593020904730" />
+    <state x="1065" y="487" key="git4idea.merge.GitMergeDialog" timestamp="1593021874374">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state x="1065" y="487" key="git4idea.merge.GitMergeDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1593021874374" />
   </component>
 </project>
