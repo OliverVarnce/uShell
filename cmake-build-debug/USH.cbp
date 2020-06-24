@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="USH"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/ovoitenko/Desktop/USH/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/ovoitenko/Desktop/USH/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/ovoitenko/Desktop/USH/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="USH">
+				<Option output="/Users/ovoitenko/Desktop/USH/cmake-build-debug/USH" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ovoitenko/Desktop/USH/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ovoitenko/Desktop/USH/inc"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/libmx"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/libmx/inc"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/libmx/src"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/builtins"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/exec"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/memory"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/parsers"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/printing"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/signals"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/sortings"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/utils"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 USH"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="USH/fast">
+				<Option output="/Users/ovoitenko/Desktop/USH/cmake-build-debug/USH" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ovoitenko/Desktop/USH/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ovoitenko/Desktop/USH/inc"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/libmx"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/libmx/inc"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/libmx/src"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/builtins"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/exec"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/memory"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/parsers"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/printing"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/signals"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/sortings"/>
+					<Add directory="/Users/ovoitenko/Desktop/USH/src/utils"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 USH/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ovoitenko/Desktop/USH/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/inc/ush.h">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/inc/libmx.h">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_atoi.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_binary_search.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_bubble_sort.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_count_substr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_count_words.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_create_node.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_del_extra_spaces.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_del_strarr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_delete_list.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_file_to_str.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_foreach.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_get_char_index.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_get_substr_index.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_hex_to_nbr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_isalpha.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_isdigit.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_isspace.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_itoa.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_list_size.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_memccpy.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_memchr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_memcmp.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_memcpy.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_memmem.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_memmove.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_memrchr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_memset.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_nbr_to_hex.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_pop_back.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_pop_front.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_pow.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_print_strarr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_print_unicode.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_printchar.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_printerr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_printint.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_printstr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_push_back.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_push_front.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_quicksort.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_read_line.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_realloc.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_replace_substr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_sort_list.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_sqrt.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_str_reverse.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_strcat.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_strcmp.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_strcpy.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_strdel.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_strdup.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_strjoin.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_strlen.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_strncat.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_strncmp.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_strncpy.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_strndup.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_strnew.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_strsplit.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_strstr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_strtrim.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/libmx/src/mx_swap_char.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_add_one_rank.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_add_process.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_buildin_list.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_call_vlad.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_cd.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_check_env.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_close_all_pr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_ctrl_v_and_not_ascii.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_del_last_rank.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_del_pid_process.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_del_top_process.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_delete_tnode.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_delete_veriable_env.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_echo.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_end_flag.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_env.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_env_to_vlad.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_export.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_fg.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_find_tnode.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_flang_comand.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_fre_env_path.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_get_info.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_get_min_tnode.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_get_name.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_get_next_token.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_get_path_env.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_get_token_type.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_get_twidth.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_if_new_parameter.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_jobs.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_key_duble_tab.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_key_tab.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_push_env.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_pwd.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_read_comand.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_return_value.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_serch_list.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_unset.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_unset_fds.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_which.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec_dmore.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec_env_pr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec_less.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec_more.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_exec_token.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_execute.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_execute_proces.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_execute_tree.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/exec/mx_pipe_execute.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/memory/mx_charge_paranetr_export.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/memory/mx_clear_tokens.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/parsers/mx_check_symbol.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/parsers/mx_is_buildin.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/parsers/mx_is_char.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/parsers/mx_is_commad.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/parsers/mx_is_link.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/parsers/mx_is_operator.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/parsers/mx_key_delite.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/parsers/mx_mini_parser_tab.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/parsers/mx_one_symbol.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/parsers/mx_parsing.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/parsers/mx_parsing_input.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/printing/mx_print_cont.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/printing/mx_print_env.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/printing/mx_print_esc.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/printing/mx_print_susp.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/printing/mx_print_tab_comands.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/printing/mx_printerr_env.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/printing/mx_printstr_env.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/signals/mx_ctrl_r.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/signals/mx_read_keyboard.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/sortings/mx_push_back_proc.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/bit_func.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/main.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_0_and_x.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_add_to_strarr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_arrstr_to_str.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_ascii.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_audit_str.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_chdir_l.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_chdir_p.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_create_ast.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_create_commands.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_create_tnode.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_create_token.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_delete_last.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_dupstrarr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_exit.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_getchar.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_history.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_home.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_input.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_insert_tree.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_is_str_starts.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_lexer.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_loop.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_not_ascii.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_parametr_shell.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_pop_front_free_data.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_pop_list.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_reg.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_replace.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_start_program.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_str_bquote.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_strarr_add_to_strarr.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_strcmp2.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_strjoin2.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_strjoin3.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_subs.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_syntax_analyzer.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_term_out.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_token_in_program.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_ush_close.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_ush_init.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_var_tree_to_var.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_wait_process.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_write_from_to.c">
+			<Option target="USH"/>
+		</Unit>
+		<Unit filename="/Users/ovoitenko/Desktop/USH/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
