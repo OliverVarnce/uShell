@@ -3,4 +3,5 @@
 text/
 libmx/libmx.a
 ush
+cmake-*
 .bash_history
