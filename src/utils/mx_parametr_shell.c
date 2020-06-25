@@ -25,7 +25,7 @@ static void parametrchell(t_ush *processes, int *i, char **new_str) {
     int flag = 0;
     char *par_shell = 0;
 
-    flag = mx_end_flag(*new_str, &end, mx_strlen(*new_str), '}');
+    flag = mx_last_flag(*new_str, &end, mx_strlen(*new_str), '}');
     if (flag != 0) {
         mx_strdel(new_str);
         *new_str = mx_strnew(0);

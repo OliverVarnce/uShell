@@ -27,7 +27,7 @@ static int row_tab(int *max, t_list *list_comand) {
     int row = 0;
     int sum = mx_list_size(list_comand);
 
-    coloms = mx_get_twidth() / *max;
+    coloms = mx_twight_1() / *max;
     if (coloms == 0)
         coloms = 1;
     row = sum / coloms;

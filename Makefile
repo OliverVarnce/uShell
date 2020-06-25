@@ -12,40 +12,40 @@ SRC_DIR = src
 OBJ_DIR = obj
 
 SRC = $(addprefix $(SRC_DIR)/,\
-		builtins/mx_add_one_rank.c \
+		builtins/mx_add_new_path.c \
         builtins/mx_add_process.c \
-        builtins/mx_buildin_list.c \
-        builtins/mx_call_vlad.c \
+        builtins/mx_fill_build.c \
+        builtins/mx_call_env.c \
         builtins/mx_cd.c \
-        builtins/mx_check_env.c \
+        builtins/mx_find_env.c \
         builtins/mx_close_all_pr.c \
-        builtins/mx_ctrl_v_and_not_ascii.c \
-        builtins/mx_del_last_rank.c \
+        builtins/mx_paste_nonascii.c \
+        builtins/mx_del_last_var.c \
         builtins/mx_del_pid_process.c \
         builtins/mx_del_top_process.c \
-        builtins/mx_delete_tnode.c \
-        builtins/mx_delete_veriable_env.c \
+        builtins/mx_del_our_node.c \
+        builtins/mx_del_variable_env.c \
         builtins/mx_echo.c \
-        builtins/mx_end_flag.c \
+        builtins/mx_last_flag.c \
         builtins/mx_env.c \
-        builtins/mx_env_to_vlad.c \
+        builtins/mx_env_to_ush.c \
         builtins/mx_export.c \
         builtins/mx_fg.c \
-        builtins/mx_find_tnode.c \
-        builtins/mx_flang_comand.c \
-        builtins/mx_fre_env_path.c \
-        builtins/mx_get_info.c \
-        builtins/mx_get_min_tnode.c \
-        builtins/mx_get_name.c \
-        builtins/mx_get_next_token.c \
-        builtins/mx_get_path_env.c \
-        builtins/mx_get_token_type.c \
-        builtins/mx_get_twidth.c \
-        builtins/mx_if_new_parameter.c \
+        builtins/mx_find_our_node.c \
+        builtins/mx_checker_flag.c \
+        builtins/mx_clear_path.c \
+        builtins/mx_shell_info.c \
+        builtins/mx_get_1st_node.c \
+        builtins/mx_find_name.c \
+        builtins/mx_find_next_tok.c \
+        builtins/mx_find_env_path.c \
+        builtins/mx_get_tok.c \
+        builtins/mx_twight_1.c \
+        builtins/mx_new_param.c \
         builtins/mx_jobs.c \
-        builtins/mx_key_duble_tab.c \
-        builtins/mx_key_tab.c \
-        builtins/mx_push_env.c \
+        builtins/mx_many_tabs.c \
+        builtins/mx_lone_tab.c \
+        builtins/mx_filling_env.c \
         builtins/mx_pwd.c \
         builtins/mx_read_comand.c \
         builtins/mx_return_value.c \
@@ -134,40 +134,40 @@ SRC = $(addprefix $(SRC_DIR)/,\
 
 
 
-OBJ =	mx_add_one_rank.o \
+OBJ =	mx_add_new_path.o \
         mx_add_process.o \
-        mx_buildin_list.o \
-        mx_call_vlad.o \
+        mx_fill_build.o \
+        mx_call_env.o \
         mx_cd.o \
-        mx_check_env.o \
+        mx_find_env.o \
         mx_close_all_pr.o \
-        mx_ctrl_v_and_not_ascii.o \
-        mx_del_last_rank.o \
+        mx_paste_nonascii.o \
+        mx_del_last_var.o \
         mx_del_pid_process.o \
         mx_del_top_process.o \
-        mx_delete_tnode.o \
-        mx_delete_veriable_env.o \
+        mx_del_our_node.o \
+        mx_del_variable_env.o \
         mx_echo.o \
-        mx_end_flag.o \
+        mx_last_flag.o \
         mx_env.o \
-        mx_env_to_vlad.o \
+        mx_env_to_ush.o \
         mx_export.o \
         mx_fg.o \
-        mx_find_tnode.o \
-        mx_flang_comand.o \
-        mx_fre_env_path.o \
-        mx_get_info.o \
-        mx_get_min_tnode.o \
-        mx_get_name.o \
-        mx_get_next_token.o \
-        mx_get_path_env.o \
-        mx_get_token_type.o \
-        mx_get_twidth.o \
-        mx_if_new_parameter.o \
+        mx_find_our_node.o \
+        mx_checker_flag.o \
+        mx_clear_path.o \
+        mx_shell_info.o \
+        mx_get_1st_node.o \
+        mx_find_name.o \
+        mx_find_next_tok.o \
+        mx_find_env_path.o \
+        mx_get_tok.o \
+        mx_twight_1.o \
+        mx_new_param.o \
         mx_jobs.o \
-        mx_key_duble_tab.o \
-        mx_key_tab.o \
-        mx_push_env.o \
+        mx_many_tabs.o \
+        mx_lone_tab.o \
+        mx_filling_env.o \
         mx_pwd.o \
         mx_read_comand.o \
         mx_return_value.o \

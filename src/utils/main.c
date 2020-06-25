@@ -48,7 +48,7 @@ int main(int argc, char **argv, char **envp) {
     if (*envp == NULL)
         mysetenv();
 
-    mx_get_twidth();
+    mx_twight_1();
     mx_ush_init(&ush, envp);
     if (isatty(0) == 0)
         mx_not_stdin_term(ush, argc, argv);

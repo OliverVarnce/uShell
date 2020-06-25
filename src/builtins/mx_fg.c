@@ -65,7 +65,7 @@ static void fg_wait(int status, pid_t ch_pr, t_ush *ush) {
             ush->last_status = 130;
         }
         else {
-            char **str = mx_get_name(ush, ch_pr);
+            char **str = mx_find_name(ush, ch_pr);
             mx_print_susp(str);
         }
     }
