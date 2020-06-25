@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static void set_Terminal_Settings() {
+static void mx_set_Terminal_Settings() {
     struct termios newTerm;
 
     tcgetattr(STDIN_FILENO, &newTerm);
@@ -13,7 +13,7 @@ static void set_Terminal_Settings() {
     tcsetattr(STDIN_FILENO, 0, &newTerm);
 }
 
-static void disable_Terminal(struct termios oldTerm) {
+static void mx_disable_Terminal(struct termios oldTerm) {
     tcsetattr(STDIN_FILENO, 0, &oldTerm);
 }
 
@@ -22,10 +22,10 @@ unsigned int mx_getchar() {
     struct termios oldTerm;
 
     tcgetattr(STDIN_FILENO, &oldTerm);
-    set_Terminal_Settings();
-    if (read(0, &ch, 4) == 0) {
+    mx_set_Terminal_Settings();
+    if (read(0, &ch, 4) == 0)
         return 0;
-    }
-    disable_Terminal(oldTerm);
+        
+    mx_disable_Terminal(oldTerm);
     return ch;
 }

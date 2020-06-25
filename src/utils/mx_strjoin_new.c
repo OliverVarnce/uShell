@@ -1,6 +1,6 @@
 #include "ush.h"
 
-char *mx_strjoin2(char *s1, char *s2) {
+char *mx_strjoin_new(char *s1, char *s2) {
     char *s = NULL;
     int a;
 

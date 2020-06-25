@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static int sum_commands(char *str, int end) {
+static int mx_sum_commands(char *str, int end) {
     int sum = 0;
 
     for (int i = 0; i <= end; i ++) {
@@ -12,7 +12,7 @@ static int sum_commands(char *str, int end) {
     return sum;
 }
 
-static char *create_command(char *str, int *position) {
+static char *mx_create_command(char *str, int *position) {
     char *command = mx_strdup(str);
     int len = mx_strlen(command);
 
@@ -21,14 +21,14 @@ static char *create_command(char *str, int *position) {
 }
 
 char **mx_create_commands(char *str, int end) {
-    int sum = sum_commands(str, end);
+    int sum = mx_sum_commands(str, end);
     char **commands = (char **) malloc (sizeof(char *) * (sum + 1));
     int position = 0;
 
     for (int i = 0; position < end && i < sum; i++) {
         if (str[position] == 0)
             position++;
-        commands[i] = create_command(&str[position], &position);
+        commands[i] = mx_create_command(&str[position], &position);
     }
     commands[sum] = 0;
     mx_strdel(&str);

@@ -1,6 +1,6 @@
 #include "ush.h"
 
-char *mx_strjoin3(char *s1, char *s2) {
+char *mx_str_diff(char *s1, char *s2) {
     char *newStr = NULL;
 
     newStr = mx_strjoin(s1,s2);

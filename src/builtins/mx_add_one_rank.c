@@ -6,7 +6,7 @@ char *mx_add_one_rank(char *path, char *new_part) {
 
     if (path[len_path - 1] != '/')
         new_path = mx_strjoin(path, "/");
-    new_path = mx_strjoin2(new_path, new_part);
+    new_path = mx_strjoin_new(new_path, new_part);
     free(path);
     return new_path;
 }

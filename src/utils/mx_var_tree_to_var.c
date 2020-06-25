@@ -18,7 +18,7 @@ t_var *mx_var_tree_to_var(t_variable *var_tree) {
     var->flag = 0;
     var->next = NULL;
     var->value = NULL;
-    for (;var_tree; var_tree = var_tree->next) {
+    for (; var_tree; var_tree = var_tree->next) {
         if (var->value == NULL && var_tree->is_env) {
             var->value = strdup(var_tree->mem);
             var->name = mx_strdup(var_tree->name);

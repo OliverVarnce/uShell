@@ -9,7 +9,7 @@ static void change_variteble(t_variable *noda, char *name, char *value) {
     noda->value = value;
     if (noda->is_env) {
         tmp = mx_strjoin(name, "=");
-        tmp = mx_strjoin2(tmp, value);
+        tmp = mx_strjoin_new(tmp, value);
         mx_strdel(&(noda->mem));
         noda->mem = tmp;
         putenv(tmp);

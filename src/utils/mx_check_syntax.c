@@ -66,7 +66,7 @@ static bool mx_is_ampersand(t_list *tmp) {
     return false;
 }
 
-bool mx_syntax_analyzer(t_list *tokens) {
+bool mx_check_syntax(t_list *tokens) {
     t_list *tmp = tokens;
     bool op = 0;
 

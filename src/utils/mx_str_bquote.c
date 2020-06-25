@@ -1,26 +1,26 @@
 #include "ush.h"
 
-static char *read_bqute(int des, int des2) {
+static char *mx_read_bqute(int des, int des2) {
     char *str = 0;
     char *tmp = malloc(1025 * sizeof(char));
     ssize_t check;
-    ssize_t check2 = 0;
+    ssize_t check1 = 0;
 
     close(des2);
     for (; (check = read(des, tmp, 1024)) != 0;) {
-        str = realloc(str, check2 + check + 1);
-        mx_memcpy(&str[check2], tmp, check);
-        check2 += check;
+        str = realloc(str, check1 + check + 1);
+        mx_memcpy(&str[check1], tmp, check);
+        check1 += check;
     }
-    if (check2 > 1)
-        str[check2 - 1] = 0;
+    if (check1 > 1)
+        str[check1 - 1] = 0;
     close(des);
     free(tmp);
     return str;
 }
 
-static char *read_to_delim(int des, int des2) {
-    char *str = read_bqute(des, des2);
+static char *mx_read_to_delim(int des, int des2) {
+    char *str = mx_read_bqute(des, des2);
     int i = -1;
 
     for (; str && str[++i] != 0;)
@@ -69,7 +69,7 @@ char *mx_str_bquote(char **str, t_ush *processes) {
         exit(1);
     }
     else
-        test = read_to_delim(des[0], des[1]);
+        test = mx_read_to_delim(des[0], des[1]);
     parent(processes, str);
     if (!processes->if_ctrl_c) {
         mx_strdel(&test);

@@ -88,12 +88,12 @@ SRC = $(addprefix $(SRC_DIR)/,\
         sortings/mx_pop_list.c \
         sortings/mx_push_back_res.c \
 		utils/main.c \
-		utils/bit_func.c \
+		utils/bit_function.c \
         utils/main.c \
-        utils/mx_0_and_x.c \
-        utils/mx_arrstr_to_str.c \
+        utils/mx_xo.c \
+        utils/mx_arr_to_str.c \
         utils/mx_ascii.c \
-        utils/mx_audit_str.c \
+        utils/mx_check_str.c \
         utils/mx_chdir_l.c \
         utils/mx_chdir_p.c \
         utils/mx_create_ast.c \
@@ -102,25 +102,25 @@ SRC = $(addprefix $(SRC_DIR)/,\
         utils/mx_create_token.c \
         utils/mx_delete_last.c \
         utils/mx_replace.c \
-        utils/mx_dupstrarr.c \
+        utils/mx_duplicate_arr.c \
         utils/mx_exit.c \
         utils/mx_history.c \
         utils/mx_home.c \
         utils/mx_input.c \
         utils/mx_insert_tree.c \
         utils/mx_is_str_starts.c \
-        utils/mx_lexer.c \
+        utils/mx_lexical.c \
         utils/mx_not_ascii.c \
-        utils/mx_parametr_shell.c \
+        utils/mx_term_args.c \
         utils/mx_reg.c \
-        utils/mx_start_program.c \
+        utils/mx_start_ush.c \
         utils/mx_str_bquote.c \
-        utils/mx_strarr_add_to_strarr.c \
-        utils/mx_strcmp2.c \
-        utils/mx_strjoin2.c \
-        utils/mx_strjoin3.c \
+        utils/mx_arr_str_to_arr_str.c \
+        utils/mx_strcmp_new.c \
+        utils/mx_strjoin_new.c \
+        utils/mx_str_diff.c \
         utils/mx_subs.c \
-        utils/mx_syntax_analyzer.c \
+        utils/mx_check_syntax.c \
         utils/mx_token_in_program.c \
         utils/mx_ush_close.c \
         utils/mx_ush_init.c \
@@ -129,7 +129,7 @@ SRC = $(addprefix $(SRC_DIR)/,\
         utils/mx_write_from_to.c \
         utils/mx_getchar.c \
         utils/mx_term_out.c \
-        utils/mx_add_to_strarr.c \
+        utils/mx_str_to_arr.c \
         utils/mx_loop.c)
 
 
@@ -207,11 +207,11 @@ OBJ =	mx_add_one_rank.o \
   		mx_print_tab_comands.o \
   		mx_printstr_env.o \
   		main.o \
-  		bit_func.o \
-        mx_0_and_x.o \
-        mx_arrstr_to_str.o \
+  		bit_function.o \
+        mx_xo.o \
+        mx_arr_to_str.o \
         mx_ascii.o \
-        mx_audit_str.o \
+        mx_check_str.o \
         mx_chdir_l.o \
         mx_chdir_p.o \
         mx_create_ast.o \
@@ -220,26 +220,26 @@ OBJ =	mx_add_one_rank.o \
         mx_create_token.o \
         mx_delete_last.o \
         mx_replace.o \
-        mx_dupstrarr.o \
+        mx_duplicate_arr.o \
         mx_exit.o \
         mx_history.o \
         mx_home.o \
         mx_input.o \
         mx_insert_tree.o \
         mx_is_str_starts.o \
-        mx_lexer.o \
+        mx_lexical.o \
         mx_not_ascii.o \
-        mx_parametr_shell.o \
+        mx_term_args.o \
         mx_push_back_res.o \
         mx_reg.o \
-        mx_start_program.o \
+        mx_start_ush.o \
         mx_str_bquote.o \
-        mx_strarr_add_to_strarr.o \
-        mx_strcmp2.o \
-        mx_strjoin2.o \
-        mx_strjoin3.o \
+        mx_arr_str_to_arr_str.o \
+        mx_strcmp_new.o \
+        mx_strjoin_new.o \
+        mx_str_diff.o \
         mx_subs.o \
-        mx_syntax_analyzer.o \
+        mx_check_syntax.o \
         mx_token_in_program.o \
         mx_ush_close.o \
         mx_ush_init.o \
@@ -248,7 +248,7 @@ OBJ =	mx_add_one_rank.o \
         mx_write_from_to.o \
         mx_getchar.o \
         mx_term_out.o \
-        mx_add_to_strarr.o \
+        mx_str_to_arr.o \
         mx_pop_front_free_data.o \
         mx_pop_list.o \
         mx_loop.o

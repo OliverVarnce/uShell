@@ -10,7 +10,7 @@ static bool is_not_operator(char c) {
     return true;
 }
 
-static int end_parametr(char *str, int i) {
+static int mx_last_param(char *str, int i) {
     int tmp = i + 1;
 
     while (is_not_operator(str[tmp]))
@@ -20,7 +20,7 @@ static int end_parametr(char *str, int i) {
     return tmp;
 }
 
-static void parametrchell(t_ush *processes, int *i, char **new_str) {
+static void mx_term_param(t_ush *processes, int *i, char **new_str) {
     int end = *i;
     int flag = 0;
     char *par_shell = 0;
@@ -41,7 +41,7 @@ static void parametrchell(t_ush *processes, int *i, char **new_str) {
     }
 }
 
-static void parametrlaststatus(t_ush *processes, int *i, char **new_str, int flag) {
+static void mx_param_status(t_ush *processes, int *i, char **new_str, int flag) {
     char *par_shell = 0;
 
     par_shell = mx_itoa(processes->last_status);
@@ -53,20 +53,19 @@ static void parametrlaststatus(t_ush *processes, int *i, char **new_str, int fla
     }
 }
 
-void mx_parametr_shell(t_ush *processes, int *i, char **new_str) {
-    int flag = end_parametr(*new_str, *i);
+void mx_term_args(t_ush *processes, int *i, char **new_str) {
+    int flag = mx_last_param(*new_str, *i);
     char *par_shell = 0;
 
     par_shell = mx_strndup(&new_str[0][*i + 1], flag - *i - 1);
     if (par_shell[0] == '?') {
-        if (par_shell != NULL) {
+        if (par_shell != NULL)
             mx_strdel(&par_shell);
-        }
-        parametrlaststatus(processes, i, new_str, flag);
+        mx_param_status(processes, i, new_str, flag);
     }
     else if (par_shell[0] == '{') {
         mx_strdel(&par_shell);
-        parametrchell(processes, i, new_str);
+        mx_term_param(processes, i, new_str);
     }
     else {
         par_shell = mx_return_value(&par_shell, &(processes->var_tree));

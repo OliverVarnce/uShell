@@ -1,15 +1,15 @@
 #include "ush.h"
 
-static void emp () {
+static void mx_empty_func() {
 }
 
 static char* mx_get_link_path(char *path) {
     char *link_path = malloc(1024);
     int len = 0;
 
-    if ((len = readlink(path, link_path, sizeof(link_path) - 1)) == -1) {
+    if ((len = readlink(path, link_path, sizeof(link_path) - 1)) == -1)
         return 0;
-    }
+        
     link_path[len] = 0;
     return link_path;
 }
@@ -24,7 +24,7 @@ static char *get_pwd() {
     if (mx_is_link(pwd)) {
         link_path = mx_get_link_path(pwd);
         pwd = mx_del_last_rank(pwd);
-        pwd = mx_strjoin3(mx_strjoin2(pwd, "/"), link_path);
+        pwd = mx_str_diff(mx_strjoin_new(pwd, "/"), link_path);
         if (mx_strcmp(pwd, cwd) == 0) {
             free(cwd);
             free(pwd);
@@ -49,8 +49,8 @@ void mx_ush_init(t_ush **ush, char **envp) {
     new_info->old_pwd = get_pwd();
     new_info->last_status = 0;
     *ush = new_info;
-    mx_start_program(&(new_info->var_tree), envp);
+    mx_start_ush(&(new_info->var_tree), envp);
     signal(SIGSEGV, NULL);
-    signal(SIGINT, emp);
-    signal(SIGTSTP, emp);
+    signal(SIGINT, mx_empty_func);
+    signal(SIGTSTP, mx_empty_func);
 }

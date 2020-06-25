@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static char **creat_commands(t_list **list_commands) {
+static char **create_commands(t_list **list_commands) {
     int sum_command = mx_list_size(*list_commands) + 2;
     char **commands = (char **) malloc(sum_command * sizeof(char *));
     t_list *list = *list_commands;
@@ -18,7 +18,7 @@ static char **creat_commands(t_list **list_commands) {
 static t_input *create_input(t_ush *ush) {
     t_input *input = (t_input *) malloc(sizeof(t_input));
 
-    input->comands = creat_commands(&(ush->history));
+    input->comands = create_commands(&(ush->history));
     input->id = 0;
     input->maxcmd = mx_list_size(ush->history);
     input->inplen = 1;
