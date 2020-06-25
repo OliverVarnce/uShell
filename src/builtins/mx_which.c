@@ -56,7 +56,7 @@ static bool check_command(char *command, char **pathes, int flags) {
     }
     else {
         for(int i = 0; pathes[i]; i++) {
-            fullname = mx_strjoin2(mx_strjoin(pathes[i], "/"), command);
+            fullname = mx_strjoin_new(mx_strjoin(pathes[i], "/"), command);
             if (mx_is_commad(fullname, flags)) {
                 if ((flags & 1) == 0)
                     return true;

@@ -75,7 +75,7 @@ static void check_env(t_variable **var_tree) {
     }
 }
 
-void mx_start_program(t_variable **var_tree, char **env) {
+void mx_start_ush(t_variable **var_tree, char **env) {
     int i = -1;
     char **envvar = 0;
     char *tmp = 0;

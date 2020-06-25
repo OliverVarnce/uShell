@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static int get_hex_and_oct(char *buf, char *str, int *i) {
+static int get_oct_hex(char *buf, char *str, int *i) {
     if (str[*i + 1] == 'x' && mx_reg(str + *i + 2, "^[0-9a-fA-F].*$")) {
         *i += 2;
         buf[0] = str[*i];
@@ -22,11 +22,11 @@ static int get_hex_and_oct(char *buf, char *str, int *i) {
     return -1;
 }
 
-int mx_0_and_x(char *str, int *i) {
+int mx_xo(char *str, int *i) {
     char *buf = mx_strnew(3);
     int result = 0;
 
-    result = get_hex_and_oct(buf, str, i);
+    result = get_oct_hex(buf, str, i);
     free(buf);
     return result;
 }

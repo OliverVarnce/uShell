@@ -45,7 +45,7 @@ static int start_child(char *path, char **argv, char **env) {
     }
     else {
         char *path_buff = mx_strjoin(path, "/");
-        path_buff = mx_strjoin2(path_buff, argv[0]);
+        path_buff = mx_strjoin_new(path_buff, argv[0]);
         if (execv(path_buff, argv) == -1)
             printerr(argv[0]);
     }

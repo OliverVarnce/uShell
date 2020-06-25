@@ -1,6 +1,6 @@
 #include "ush.h"
 
-int mx_bit_symbol(char *str) {
+int mx_bit_smbl(char *str) {
     unsigned char tmp = (unsigned char)str[0];
 
     if (tmp >> 7 == 0)
@@ -14,7 +14,7 @@ int mx_bit_symbol(char *str) {
     return 0;
 }
 
-int mx_len_symbol(int sum, char *str) {
+int mx_len_smbl(int sum, char *str) {
     unsigned char tmp;
     int counter = 0;
 

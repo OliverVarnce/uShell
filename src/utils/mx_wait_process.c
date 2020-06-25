@@ -21,9 +21,8 @@ void mx_wait_process(t_ush *ush, char **argv) {
     pid_t pr = 0;
 
     pr = waitpid(-1, &status, WUNTRACED); 
-    if (!MX_WIFEXIT(status)) {
+    if (!MX_WIFEXIT(status))
         check_status(argv, status, ush, pr);
-    }
     else {
         mx_del_pid_process(ush, pr);
         ush->last_status = MX_EXSTATUS(status);

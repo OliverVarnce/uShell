@@ -1,7 +1,7 @@
 #include "ush.h"
 
 static void print_row(t_process *tmp, char c) {
-    char *name = mx_arrstr_to_str(tmp->name);
+    char *name = mx_arr_to_str(tmp->name);
 
     printf("[%d] %c suspended %s\n", tmp->index, c, name);
     free(name);

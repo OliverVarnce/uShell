@@ -1,6 +1,6 @@
 #include "ush.h"
 // SIGFAULT
-static t_list* find_max_priority(t_list* tokens) {
+static t_list* mx_find_max_priority(t_list* tokens) {
     t_list *tmp = tokens;
     t_list *max_node = tmp;
     int max_priority = 0;
@@ -20,7 +20,7 @@ static t_list* find_max_priority(t_list* tokens) {
     return max_node;
 }
 
-t_list* del_token(t_list **tokens, t_list *max) {
+t_list* mx_del_token(t_list **tokens, t_list *max) {
     t_list *tmp = *tokens;
     t_list *next = 0;
 
@@ -43,9 +43,9 @@ t_list* del_token(t_list **tokens, t_list *max) {
 }
 
 t_tnode* mx_create_ast(t_list** tokens, t_tnode *prev) {
-    t_list *max = find_max_priority(*tokens);
+    t_list *max = mx_find_max_priority(*tokens);
     t_tnode *root = mx_create_tnode(max->data);
-    t_list *next = del_token(tokens, max);
+    t_list *next = mx_del_token(tokens, max);
 
     root->parent = prev;
     if (next != 0)
