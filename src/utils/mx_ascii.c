@@ -10,7 +10,7 @@ static int mx_handle_events(char ch) {
         return -1;
     }
     if (ch == CTRL_Z) {
-        write(1, "\a", 1);
+        mx_printstr("\a");
     }
     if (ch == CTRL_C)
         return 2;

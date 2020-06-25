@@ -65,7 +65,11 @@ void mx_clean_space_in_term(char *str, t_ush *ush, char *new_str) {
         mx_print_esc("1F");
     }
     write(1,"\r",1);
+    if (mx_strlen(new_str) == 0)
+        write(1,"\n",1);
     mx_print_esc("J");
-    mx_printstr(MX_USH);
+    if (mx_strlen(new_str) != 0)
+        mx_printstr(MX_USH);
+    //mx_printstr(MX_USH);
     mx_printstr(new_str);
 }
