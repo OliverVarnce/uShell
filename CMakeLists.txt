@@ -123,15 +123,15 @@ add_executable(USH
     src/builtins/mx_unset.c
     src/builtins/mx_unset_fds.c
     src/builtins/mx_which.c
-    src/exec/mx_exec_dmore.c
+        src/exec/mx_exec_dmor.c
     src/exec/mx_exec_env_pr.c
     src/exec/mx_exec_less.c
     src/exec/mx_exec_more.c
     src/exec/mx_exec_token.c
-    src/exec/mx_execute.c
-    src/exec/mx_execute_proces.c
-    src/exec/mx_execute_tree.c
-    src/exec/mx_pipe_execute.c
+        src/exec/mx_exec.c
+        src/exec/mx_exec_proces.c
+        src/exec/mx_exec_tree.c
+        src/exec/mx_exec_pipe.c
     src/memory/mx_charge_paranetr_export.c
     src/memory/mx_clear_tokens.c
     src/parsers/mx_check_symbol.c
@@ -154,8 +154,7 @@ add_executable(USH
     src/printing/mx_printstr_env.c
     src/signals/mx_ctrl_r.c
     src/signals/mx_read_keyboard.c
-    src/sortings/mx_push_back_proc.c
-    src/utils/bit_func.c
+        src/utils/bit_func.c
     src/utils/main.c
     src/utils/mx_0_and_x.c
     src/utils/mx_add_to_strarr.c
@@ -181,8 +180,8 @@ add_executable(USH
     src/utils/mx_loop.c
     src/utils/mx_not_ascii.c
     src/utils/mx_parametr_shell.c
-    src/utils/mx_pop_front_free_data.c
-    src/utils/mx_pop_list.c
+        src/sortings/mx_pop_front_free_data.c
+        src/sortings/mx_pop_list.c
     src/utils/mx_reg.c
     src/utils/mx_replace.c
     src/utils/mx_start_program.c

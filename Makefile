@@ -54,15 +54,15 @@ SRC = $(addprefix $(SRC_DIR)/,\
         builtins/mx_unset_fds.c \
         builtins/mx_which.c \
 		signals/mx_ctrl_r.c \
-		exec/mx_exec_dmore.c \
+		exec/mx_exec_dmor.c \
 		exec/mx_exec_env_pr.c \
 		exec/mx_exec_less.c \
 		exec/mx_exec_more.c \
 		exec/mx_exec_token.c \
-		exec/mx_execute.c \
-		exec/mx_execute_proces.c \
-		exec/mx_execute_tree.c \
-		exec/mx_pipe_execute.c \
+		exec/mx_exec.c \
+		exec/mx_exec_proces.c \
+		exec/mx_exec_tree.c \
+		exec/mx_exec_pipe.c \
 		signals/mx_read_keyboard.c \
 		memory/mx_charge_paranetr_export.c \
 		memory/mx_clear_tokens.c \
@@ -84,6 +84,9 @@ SRC = $(addprefix $(SRC_DIR)/,\
 		printing/mx_print_susp.c \
 		printing/mx_print_tab_comands.c \
 		printing/mx_printstr_env.c \
+		sortings/mx_pop_front_free_data.c \
+        sortings/mx_pop_list.c \
+        sortings/mx_push_back_res.c \
 		utils/main.c \
 		utils/bit_func.c \
         utils/main.c \
@@ -127,8 +130,6 @@ SRC = $(addprefix $(SRC_DIR)/,\
         utils/mx_getchar.c \
         utils/mx_term_out.c \
         utils/mx_add_to_strarr.c \
-        utils/mx_pop_front_free_data.c \
-        utils/mx_pop_list.c \
         utils/mx_loop.c)
 
 
@@ -175,15 +176,15 @@ OBJ =	mx_add_one_rank.o \
         mx_unset_fds.o \
         mx_which.o \
   		mx_ctrl_r.o \
-  		mx_exec_dmore.o \
+  		mx_exec_dmor.o \
   		mx_exec_env_pr.o \
   		mx_exec_less.o \
   		mx_exec_more.o \
   		mx_exec_token.o \
-  		mx_execute.o \
-  		mx_execute_proces.o \
-  		mx_execute_tree.o \
-  		mx_pipe_execute.o \
+  		mx_exec.o \
+  		mx_exec_proces.o \
+  		mx_exec_tree.o \
+  		mx_exec_pipe.o \
   		mx_read_keyboard.o \
   		mx_charge_paranetr_export.o \
   		mx_clear_tokens.o \
@@ -229,6 +230,7 @@ OBJ =	mx_add_one_rank.o \
         mx_lexer.o \
         mx_not_ascii.o \
         mx_parametr_shell.o \
+        mx_push_back_res.o \
         mx_reg.o \
         mx_start_program.o \
         mx_str_bquote.o \
@@ -253,7 +255,7 @@ OBJ =	mx_add_one_rank.o \
 
 CC = clang
 
-CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic #-g -fsanitize=address
+CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 
 all : install
 
@@ -268,16 +270,16 @@ ush : $(SRC) inc/ush.h libmx/libmx.a
 	@printf "\r\33[2K$@ \033[32;1mcreated\033[0m\n"
 	@mkdir -p $(OBJ_DIR)
 	@mv $(OBJ) $(OBJ_DIR)
-	@printf "$(NAME) \033[31;1minstalled\033[0m\n"
+	@printf "$(APP_NAME) \033[31;1minstalled\033[0m\n"
 
 uninstall : clean
 	@make uninstall -C $(LIBMXF)
 	@rm -rf $(APP_NAME) $(OBJ)
-	@printf "$(NAME) \033[31;1muninstalled\033[0m\n"
+	@printf "$(APP_NAME) \033[31;1muninstalled\033[0m\n"
 
 clean :
 	@make clean -C $(LIBMXF)
 	@rm -rf $(OBJ_DIR)
-	@printf "$(OBJD)\t   \033[31;1mdeleted\033[0m\n"
+	@printf "$(OBJD)\t   \033[31;1mcleaned\033[0m\n"
 
 reinstall : uninstall install
