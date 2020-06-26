@@ -325,19 +325,16 @@ int mx_del_variable_env(char *str1, char *str2, t_var *var, int *i);
 int mx_0_and_x(char *str, int *i);
 
 //utils
-char *mx_strjoin2(char *s1, char *s2);
-char **mx_dupstrarr(char **strs);
-int mx_strcmp2(const char *s1, const char *s2);
-char *mx_strjoin3(char *s1, char *s2);
-char *mx_arrstr_to_str(char **strs);
+char *mx_strjoin_new(char *s1, char *s2);
+char **mx_duplicate_arr(char **strings);
+int mx_strcmp_new(const char *s1, const char *s2);
+char *mx_str_diff(char *s1, char *s2);
+char *mx_arr_to_str(char **strings);
 unsigned int mx_getchar();
 bool mx_is_str_starts(char *string, char *start);
-void mx_add_to_strarr(char ***strs, char *str);
+void mx_str_to_arr(char ***strings, char *str);
 void mx_pop_front_free_data(t_variable **head);
 void mx_pop_front_free_data_list(t_list **head);
-//void mx_pop_front_free_data(t_list **head);
-//void mx_pop_list(t_variable **head, void *data, bool(*if_list)(void *, void *),
-//                 void(*del_data)(void *));
 void mx_pop_list(t_variable **head, void *data, bool(*if_list)(void *, void *));
 void mx_push_front_proc(t_process **list, t_process *new_head);
 #endif
