@@ -42,7 +42,7 @@
 #define MX_USH "\x4\x1b[32;5;76mu$h> \x1b[37;5;76m"
 #define MX_SEARCH "Search > "
 #define MX_PATH ((t_token*)tmp->next->next->data)->value[0]
-#define MX_FUNC_RETURN mx_return_value("HOME", &(ush->var_tree))
+#define MX_FUNC_RETURN mx_return_var("HOME", &(ush->var_tree))
 #define MX_GET_PATH (argv[i] ? argv[i] : MX_FUNC_RETURN)
 #define MX_REG_EXPORT   "^[A-Za-z_]+[A-Za-z_0-9]*(=.*)?$"
 #define MX_REG_ERR      "^^-(i+)?[^Pui]"
@@ -192,9 +192,9 @@ void mx_del_our_node(t_tnode **root, void *data, int (*cmp)(void*, void*), void 
 void mx_filling_env(t_variable **var_tree, char *name, char *value, char *mem);
 t_tnode *mx_find_our_node(t_tnode *root, void *data, int (*cmp)(void*, void*));
 void mx_new_param(char *str, int *start, int end, t_ush *processes);
-char *mx_return_value(char **str, t_variable **var_tree);
-char *mx_return_value2(const char *str, t_variable **var_tree);
-void mx_serch_list(t_variable **var_tree, char *name, char *value);
+char *mx_return_var(char **str, t_variable **var_tree);
+char *mx_return_var2(const char *str, t_variable **var_tree);
+void mx_find_cur_list(t_variable **var_tree, char *name, char *value);
 t_token *mx_create_token(char type, char **value, int priority);
 void mx_clear_tokens(t_list **tokens);
 t_token* mx_find_next_tok(int *start, int end, char *str, t_ush *processes);
@@ -270,7 +270,7 @@ void mx_many_tabs(char **str, char **comands, t_ush *ush);
 void mx_print_tab_comands(t_list *list_comand);
 t_ush* mx_shell_info(t_ush *ush);
 bool mx_is_link(char *file);
-void mx_unset_fds(int *fds, int *savedFds, int operator_starus);
+void mx_unset_saved(int *fds, int *savedFds, int operator_starus);
 t_var *mx_var_tree_to_var(t_variable *var_tree);
 int mx_twight_1();
 

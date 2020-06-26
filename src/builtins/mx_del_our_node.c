@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static void delete_no_child(t_tnode **root, void *data,
+static void delete_tree(t_tnode **root, void *data,
                             int (*cmp)(void*, void*),
                             void (*free_tnode)(t_tnode *tnode)) {
     t_tnode *root_ = *root;
@@ -11,14 +11,14 @@ static void delete_no_child(t_tnode **root, void *data,
         *root = 0;
     }
     else if (result > 0) {
-       delete_no_child(&((*root)->left), data, cmp, free_tnode);
+       delete_tree(&((*root)->left), data, cmp, free_tnode);
     }
     else {
-        delete_no_child(&((*root)->right), data, cmp, free_tnode);
+        delete_tree(&((*root)->right), data, cmp, free_tnode);
     }
 }
 
-static void delete_tnode_1ch(t_tnode **root, void *data,
+static void delete_branch_1(t_tnode **root, void *data,
                              int (*cmp)(void*, void*),
                              void (*free_tnode)(t_tnode *tnode)) {
     t_tnode *del_node = 0;
@@ -38,12 +38,12 @@ static void delete_tnode_1ch(t_tnode **root, void *data,
         }
     }
     else if (cmp((*root)->data, data) > 0)
-        delete_tnode_1ch(&((*root)->left), data, cmp, free_tnode);
+        delete_branch_1(&((*root)->left), data, cmp, free_tnode);
     else
-        delete_tnode_1ch(&((*root)->right), data, cmp, free_tnode);
+        delete_branch_1(&((*root)->right), data, cmp, free_tnode);
 }
 
-static void delete_tnode_2ch(t_tnode **root, int (*cmp)(void*, void*),
+static void delete_branch_2(t_tnode **root, int (*cmp)(void*, void*),
                              t_tnode *finded,
                              void (*free_tnode)(t_tnode *tnode)) {
     t_tnode *min = mx_get_1st_node(finded->right);
@@ -59,17 +59,16 @@ void mx_del_our_node(t_tnode **root, void *data, int (*cmp)(void*, void*),
     if (finded == 0)
         return;
     if (finded == *root) {
-        printf("ROOTTT\n");
         free_tnode(finded);
     }
     if (finded == 0) // no value
         return;
     if ((finded->left == 0) && (finded->right == 0))
-        delete_no_child(root, data, cmp, free_tnode);
+        delete_tree(root, data, cmp, free_tnode);
     else if ((finded->left == 0) && (finded->right != 0))
-        delete_tnode_1ch(root, data, cmp, free_tnode);
+        delete_branch_1(root, data, cmp, free_tnode);
     else if ((finded->left != 0) && (finded->right == 0))
-        delete_tnode_1ch(root, data, cmp, free_tnode);
+        delete_branch_1(root, data, cmp, free_tnode);
     else if ((finded->right != 0) && (finded->left !=0))
-        delete_tnode_2ch(root, cmp, finded, free_tnode);
+        delete_branch_2(root, cmp, finded, free_tnode);
 }

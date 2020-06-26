@@ -1,13 +1,13 @@
 #include "ush.h"
 
 void mx_pop_front_proc(t_process **head) {
-    t_process *current = NULL;
+    t_process *now = NULL;
 
     if (head && *head) {
-        current = (*head)->next;
+        now = (*head)->next;
         mx_del_strarr(&((*head)->name));
         free(*head);
-        *head = current;
+        *head = now;
     }
 }
 

@@ -1,45 +1,45 @@
 #include "ush.h"
 
-static void mx_skip_spaces (char *str, int *start, int end) {
-    while (str[*start] && *start < end) {
-        if (str[*start] != ' ') {
+static void skip_spaces (char *s, int *begin, int end) {
+    while (s[*begin] && *begin < end) {
+        if (s[*begin] != ' ') {
             return;
         }
-        (*start)++;
+        (*begin)++;
     }
 }
 
-static void set_current_pos(int *currPos, char c, char *str) {
-    if (str[*currPos] == c) {
+static void current_pos(int *currPos, char c, char *s) {
+    if (s[*currPos] == c) {
         *currPos += 1;
-        if (str[*currPos] == c) {
+        if (s[*currPos] == c) {
             *currPos += 1;
         }
     }
 }
 
-static int get_token_priority(char *str) {
-    if (mx_strcmp(str, "||") == 0 || mx_strcmp(str, "&&") == 0)
+static int get_token_priority(char *s) {
+    if (mx_strcmp(s, "||") == 0 || mx_strcmp(s, "&&") == 0)
         return 60;
-    else if (str[0] == '|')
+    else if (s[0] == '|')
         return 50;
-    else if (str[0] == '>')
+    else if (s[0] == '>')
         return 40;
-    else if (str[0] == '<')
+    else if (s[0] == '<')
         return 30;
-    else if (str[0] == '&')
+    else if (s[0] == '&')
         return 20;
     else
         return 10;
 }
 
-static bool is_operator(char c) {
+static bool send_operator(char c) {
     if (c == '|' || c == '&' || c == '>' || c == '<')
         return true;
     return false;
 }
 
-t_token* mx_find_next_tok(int *currPos, int end, char *str,
+t_token* mx_find_next_tok(int *currPos, int end, char *s,
                            t_ush *processes) {
     int tokenStart = *currPos;
     t_token *newToken = 0;
@@ -47,16 +47,16 @@ t_token* mx_find_next_tok(int *currPos, int end, char *str,
 
     if (*currPos >= end)
         return 0;
-    if (mx_is_char(str[tokenStart]))
-        newToken = mx_token_in_program(currPos, end, str, processes);
-    else if (is_operator(str[tokenStart])) {
+    if (mx_is_char(s[tokenStart]))
+        newToken = mx_token_in_program(currPos, end, s, processes);
+    else if (send_operator(s[tokenStart])) {
         newToken = mx_create_token(2,0,0);
-        set_current_pos(currPos, str[tokenStart], str);
-        newValue = mx_strndup(&str[tokenStart], *currPos - tokenStart);
+        current_pos(currPos, s[tokenStart], s);
+        newValue = mx_strndup(&s[tokenStart], *currPos - tokenStart);
         mx_add_to_strarr(&newToken->value, newValue);
         newToken->type = mx_get_tok(newToken->value[0]);
         newToken->priority = get_token_priority(newToken->value[0]);
     }
-    mx_skip_spaces(str, currPos, end);
+    skip_spaces(s, currPos, end);
     return newToken;
 }

@@ -10,20 +10,20 @@ static void chenge_var(t_var *var, char *name) {
     }
 }
 
-int mx_del_variable_env(char *str1, char *str2, t_var *var, int *i) {
+int mx_del_variable_env(char *s1, char *s2, t_var *var, int *i) {
     char *name = NULL;
 
-    str1++;
-    if (*str1 == 'i')
-        for (; *str1 == 'i'; str1++);
-    if (*str1 == 'u' && *(str1 + 1) != '\0') {
-        str1++;
-        name = mx_strdup(str1);
+    s1++;
+    if (*s1 == 'i')
+        for (; *s1 == 'i'; s1++);
+    if (*s1 == 'u' && *(s1 + 1) != '\0') {
+        s1++;
+        name = mx_strdup(s1);
     }
     else {
         (*i)++;
-        if (str2) {
-            name = mx_strdup(str2);
+        if (s2) {
+            name = mx_strdup(s2);
         }
     }
     if (name == NULL)

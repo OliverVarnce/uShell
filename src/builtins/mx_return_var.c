@@ -1,24 +1,24 @@
 #include "ush.h"
 
-char *mx_return_value(char **str, t_variable **var_tree) {
+char *mx_return_var(char **s, t_variable **var_tree) {
     t_variable *tmp = *var_tree;
 
     while (tmp) {
-        if (mx_strcmp(*str, tmp->name) == 0) {
-            mx_strdel(str);
+        if (mx_strcmp(*s, tmp->name) == 0) {
+            mx_strdel(s);
             return tmp->value;
         }
         tmp = tmp->next;
     }
-    mx_strdel(str);
+    mx_strdel(s);
     return 0;
 }
 
-char *mx_return_value2(const char *str, t_variable **var_tree) {
+char *mx_return_var2(const char *s, t_variable **var_tree) {
     t_variable *tmp = *var_tree;
 
     while (tmp) {
-        if (mx_strcmp(str, tmp->name) == 0)
+        if (mx_strcmp(s, tmp->name) == 0)
             return tmp->value;
         tmp = tmp->next;
     }

@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static void buildin_list_1(t_token *token, t_ush *ush) {
+static void build_help_1(t_token *token, t_ush *ush) {
     if (mx_strcmp(token->value[0], "cd") == 0) 
         ush->last_status = mx_cd(token->value, ush);
     else if (mx_strcmp(token->value[0], "history") == 0) 
@@ -15,7 +15,7 @@ static void buildin_list_1(t_token *token, t_ush *ush) {
         mx_fg(token->value, ush);
 }
 
-static void buildin_list_2(t_token *token, t_ush *ush) {
+static void buildin_help_2(t_token *token, t_ush *ush) {
     if (mx_strcmp(token->value[0], "export") == 0)
         mx_export(token->value, &(ush->var_tree), ush);
     else if (mx_strcmp(token->value[0], "unset") == 0)
@@ -31,7 +31,7 @@ static void buildin_list_2(t_token *token, t_ush *ush) {
 }
 
 int mx_fill_build(t_token *token, t_ush *ush) {
-    buildin_list_1(token, ush);
-    buildin_list_2(token, ush);
+    build_help_1(token, ush);
+    buildin_help_2(token, ush);
     return ush->exit_status;
 }

@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static void print_row(t_process *tmp, char c) {
+static void fg_help(t_process *tmp, char c) {
     char *name = mx_arrstr_to_str(tmp->name);
 
     printf("[%d] %c suspended %s\n", tmp->index, c, name);
@@ -22,7 +22,7 @@ void mx_jobs(t_ush *ush) {
             c = '-';
         else 
             c = ' ';
-        print_row(tmp, c);
+        fg_help(tmp, c);
         tmp = tmp->next;
     }
     ush->last_status = 0;

@@ -12,25 +12,25 @@ static void new_node(t_variable **var_tree, char *name, char *value, char *tmp) 
     mx_push_back_res(var_tree, node);
 }
 
-static void get_parametr(t_variable **var_tree, char *str) {
-    int counter = mx_get_char_index(str, '=');
-    char *name = counter == -1 ? mx_strdup(str) : mx_strndup(str, counter);
-    char *value = counter == -1 ? 0 : mx_strdup(str + counter + 1);
+static void get_param(t_variable **var_tree, char *s) {
+    int count = mx_get_char_index(s, '=');
+    char *name = count == -1 ? mx_strdup(s) : mx_strndup(s, count);
+    char *val = count == -1 ? 0 : mx_strdup(s + count + 1);
     t_variable *var_tree_tmp = *var_tree;
     char *tmp = mx_strjoin(name, "=");
 
     for (; var_tree_tmp; var_tree_tmp = var_tree_tmp->next) {
         if (strcmp(var_tree_tmp->name, name) == 0) {
-            mx_charge_parametr_export(value, tmp, var_tree_tmp);
+            mx_charge_parametr_export(val, tmp, var_tree_tmp);
             free(name);
             free(tmp);
             return;
         }
     }
-    new_node(var_tree, name, value, tmp);
+    new_node(var_tree, name, val, tmp);
 }
 
-static void swap(t_var *var) {
+static void swap_var(t_var *var) {
     char *name = var->name;
     char *value = var->value;
     int flag = var->flag;
@@ -43,14 +43,14 @@ static void swap(t_var *var) {
     var->next->flag = flag;
 }
 
-static void print_export(t_variable *var_tree_tmp) {
+static void export_help(t_variable *var_tree_tmp) {
     t_var *var = mx_var_tree_to_var(var_tree_tmp);
     t_var *tmp = var;
 
     for (t_var *i = var; i && var->value; i = i->next) {
         for (t_var *j = var; j->next; j = j->next) {
             if (mx_strcmp(j->name, j->next->name) > 0)
-                swap(j);
+                swap_var(j);
         }
     }
     while (var && var->value) {
@@ -65,20 +65,20 @@ static void print_export(t_variable *var_tree_tmp) {
     free(var);
 }
 
-void mx_export(char **argv, t_variable **var_tree, t_ush *ush) {
+void mx_export(char **av, t_variable **var_tree, t_ush *ush) {
     ush->last_status = 0;
-    for (int i = 0; argv[i]; i++) {
-        if (mx_reg(argv[i], "")) {
+    for (int i = 0; av[i]; i++) {
+        if (mx_reg(av[i], "")) {
             mx_printerr("export: not valid in this context:");
-            mx_printerr(argv[i]);
+            mx_printerr(av[i]);
             ush->last_status = 1;
             return;
         }
     }
-    for (int i = 1; argv[i]; i++) {
-        if (mx_reg(argv[i], MX_REG_EXPORT))
-            get_parametr(var_tree, argv[i]);
+    for (int i = 1; av[i]; i++) {
+        if (mx_reg(av[i], MX_REG_EXPORT))
+            get_param(var_tree, av[i]);
     }
-    if (argv[1] == 0)
-        print_export(*var_tree);
+    if (av[1] == 0)
+        export_help(*var_tree);
 }

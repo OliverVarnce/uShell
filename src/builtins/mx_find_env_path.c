@@ -1,20 +1,19 @@
 #include "ush.h"
 
-char *mx_find_env_path(char *str1, char *str2, int *i) {
-    char *result = NULL;
+char *mx_find_env_path(char *s1, char *s2, int *i) {
+    char *res = NULL;
 
-    str1++;
-    if (*str1 == 'i')
-        for (; *str1 == 'i'; str1++);
-    if (*str1 == 'P' && *(str1 + 1) != '\0') {
-        str1++;
-        result = mx_strdup(str1);
+    s1++;
+    if (*s1 == 'i')
+        for (; *s1 == 'i'; s1++);
+    if (*s1 == 'P' && *(s1 + 1) != '\0') {
+        s1++;
+        res = mx_strdup(s1);
     }
     else {
         (*i)++;
-        if (str2)
-            result = mx_strdup(str2);
+        if (s2)
+            res = mx_strdup(s2);
     }
-    return result;
+    return res;
 }
-

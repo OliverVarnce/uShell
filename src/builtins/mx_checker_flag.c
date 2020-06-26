@@ -1,61 +1,61 @@
 #include "ush.h"
 
-static bool if_symbol(char test) {
-    if (test == 34 || test == 39 || test == 96)
+static bool symbols(char c) {
+    if (c == 34 || c == 39 || c == 96)
         return 1;
     return 0;
 }
 
-static void printerrflag(char flag) {
+static void useflag(char flag) {
     mx_printerr("u$h: parse error near | ");
     mx_printerr(&flag);
     mx_printerr(" |\n");
 }
 
-static bool flag_oper(char *str, int *pos, int flag) {
+static bool operators(char *s, int *pos, int flag) {
     if (flag != ' ')
         return 0;
-    if (str[pos[0]] == '|' || str[pos[0]] == '<'
-        || str[pos[0]] == '>' || str[pos[0]] == '&')
-        if (mx_check_symbol(str, pos[0], str[pos[0]])) {
+    if (s[pos[0]] == '|' || s[pos[0]] == '<'
+        || s[pos[0]] == '>' || s[pos[0]] == '&')
+        if (mx_check_symbol(s, pos[0], s[pos[0]])) {
             pos[0]--;
             return 1;
         }
     return 0;
 }
 
-static int new_spec_symbol(char *str, int *pos, int end, int flag) {
-    int new_flag = flag;
+static int spec_symbol(char *s, int *pos, int last, int flag) {
+    int input_flag = flag;
 
-    if (if_symbol(str[pos[0]]) && mx_check_symbol(str, pos[0], str[pos[0]])) {
+    if (symbols(s[pos[0]]) && mx_check_symbol(s, pos[0], s[pos[0]])) {
         pos[0]++;
-        new_flag = mx_last_flag(str, pos, end, new_flag);
+        input_flag = mx_last_flag(s, pos, last, input_flag);
     } 
-    else if (pos[0] > 0 && str[*pos] == 40 
-             && mx_check_symbol(str, pos[0] - 1, '$')) {
+    else if (pos[0] > 0 && s[*pos] == 40 
+             && mx_check_symbol(s, pos[0] - 1, '$')) {
         pos[0]++;
-        new_flag = mx_last_flag(str, pos, end, ')');
+        input_flag = mx_last_flag(s, pos, last, ')');
     }
-    return new_flag;
+    return input_flag;
 }
 
-int mx_checker_flag(char *str, int *pos, int end, int flag) {
-    int check_flag = flag;
+int mx_checker_flag(char *s, int *pos, int last, int flag) {
+    int find_flag = flag;
 
-    while (pos[0] <= end) {
-        check_flag = str[pos[0]];
-        if (mx_check_symbol(str, pos[0], flag) || flag_oper(str, pos, flag)) {
+    while (pos[0] <= last) {
+        find_flag = s[pos[0]];
+        if (mx_check_symbol(s, pos[0], flag) || operators(s, pos, flag)) {
             return 0;
         }
-        else if ((if_symbol(str[*pos])
-                  && mx_check_symbol(str, pos[0], str[pos[0]]))
-                  || (pos[0] > 0 && str[pos[0]] == 40 
-             && mx_check_symbol(str, pos[0] - 1, '$')))
-             check_flag = new_spec_symbol(str, pos, end, check_flag);
+        else if ((symbols(s[*pos])
+                  && mx_check_symbol(s, pos[0], s[pos[0]]))
+                  || (pos[0] > 0 && s[pos[0]] == 40 
+             && mx_check_symbol(s, pos[0] - 1, '$')))
+             find_flag = spec_symbol(s, pos, last, find_flag);
         else
             (pos[0])++;
     }
     if (flag != 32)
-        printerrflag(flag);
+        useflag(flag);
     return flag;
 }

@@ -1,41 +1,32 @@
 #include "ush.h"
 
-/* 
-*  1-st bit -> -a
-*  2-nd bit -> -s
-* -1 - error
-*/
-static int get_flags(int *i, char **argv) {
-    int flags = 0;
+static int find_flags(int *i, char **av) {
+    int flag = 0;
 
-    while(argv[++(*i)])
-        if (argv[*i][0] == '-') {
-            for(int j = 1; j < mx_strlen(argv[*i]); j++)
-                if (argv[*i][j] == 'a')
-                    flags |= 1;
-                else if(argv[*i][j] == 's')
-                    flags |= 2;
+    while(av[++(*i)])
+        if (av[*i][0] == '-') {
+            for(int j = 1; j < mx_strlen(av[*i]); j++)
+                if (av[*i][j] == 'a')
+                    flag |= 1;
+                else if(av[*i][j] == 's')
+                    flag |= 2;
                 else {
                     mx_printerr("which: bad option: -");
-                    write(2, &argv[*i][j], 1);
+                    write(2, &av[*i][j], 1);
                     write(2, "\n", 1);
                     return -1;
                 }
         }
         else
-            return flags;
-    return flags;
+            return flag;
+    return flag;
 }
 
-/* 
-1 - return true;
-0 - dont return;
-*/
-static int mx_check_buildin(char *command, int flags, bool *finded) {
-    if (mx_is_buildin(command)) {
+static int mx_check_buildin(char *com, int flags, bool *finded) {
+    if (mx_is_buildin(com)) {
         if ((flags & 2) == 2)
             return 1;
-        printf("%s: shell built-in command\n", command);
+        printf("%s: shell built-in command\n", com);
         *finded = true;
         if ((flags & 1) == 0)
             return 1;
@@ -44,19 +35,19 @@ static int mx_check_buildin(char *command, int flags, bool *finded) {
 }
 
 
-static bool check_command(char *command, char **pathes, int flags) {
+static bool check_command(char *com, char **pathes, int flags) {
     char *fullname = 0;
     bool finded = false;
 
-    if (mx_check_buildin(command, flags, &finded) == 1)
+    if (mx_check_buildin(com, flags, &finded) == 1)
         return true;
-    if (command[0] == '/') {
-        if (mx_is_commad(mx_strdup(command), flags))
+    if (com[0] == '/') {
+        if (mx_is_commad(mx_strdup(com), flags))
                 return true;
     }
     else {
         for(int i = 0; pathes[i]; i++) {
-            fullname = mx_strjoin2(mx_strjoin(pathes[i], "/"), command);
+            fullname = mx_strjoin2(mx_strjoin(pathes[i], "/"), com);
             if (mx_is_commad(fullname, flags)) {
                 if ((flags & 1) == 0)
                     return true;
@@ -85,10 +76,10 @@ static bool check_commands(char **commands, char** pathes, int start_index,
 }
 
 void mx_which(char **argv, t_ush *ush) {
-    char *path = mx_return_value2("PATH", &(ush->var_tree));
+    char *path = mx_return_var2("PATH", &(ush->var_tree));
     char **pathes = mx_strsplit(path, ':');
     int i_args = 0;
-    int flags = get_flags(&i_args, argv);
+    int flags = find_flags(&i_args, argv);
     int finded = false;
     
     if (flags == -1) {

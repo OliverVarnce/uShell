@@ -2,22 +2,22 @@
 
 char **mx_env_to_ush(t_var *var) {
     t_var *save = var;
-    int counter = 0;
+    int count = 0;
     char **env = NULL;
 
     if (var == NULL)
         return NULL;
     for ( ; var; var = var->next) {
         if (var->flag)
-            counter++;
+            count++;
     }
     var = save;
-    env = malloc(sizeof(char *) * (counter + 1));
-    env[counter] = NULL;
-    for (counter = 0; var; var = var->next) {
+    env = malloc(sizeof(char *) * (count + 1));
+    env[count] = NULL;
+    for (count = 0; var; var = var->next) {
         if (var->flag) {
-            env[counter] = mx_strdup(var->value);
-            counter++;
+            env[count] = mx_strdup(var->value);
+            count++;
         }
     }
     return env;

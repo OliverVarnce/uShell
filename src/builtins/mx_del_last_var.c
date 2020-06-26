@@ -1,7 +1,7 @@
 #include "ush.h"
 
 char* mx_del_last_var(char *path) {
-    char *new_path = 0;
+    char *new = 0;
     int len = mx_strlen(path);
     int i = len;
 
@@ -9,7 +9,7 @@ char* mx_del_last_var(char *path) {
         path[i] = 0;
     if ((path[i] == '/') && (i != 0))
         path[i] = 0;
-    new_path = mx_strdup(path);
+    new = mx_strdup(path);
     free(path);
-    return new_path;
+    return new;
 }

@@ -1,12 +1,12 @@
 #include "ush.h"
 
-char *mx_add_new_path(char *path, char *new_part) {
-    int len_path = mx_strlen(path);
-    char *new_path = 0;
+char *mx_add_new_path(char *path, char *part) {
+    int len = mx_strlen(path);
+    char *path2 = 0;
 
-    if (path[len_path - 1] != '/')
-        new_path = mx_strjoin(path, "/");
-    new_path = mx_strjoin2(new_path, new_part);
+    if (path[len - 1] != '/')
+        path2 = mx_strjoin(path, "/");
+    path2 = mx_strjoin2(path2, part);
     free(path);
-    return new_path;
+    return path2;
 }

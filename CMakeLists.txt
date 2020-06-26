@@ -118,10 +118,10 @@ add_executable(USH
     src/builtins/mx_filling_env.c
     src/builtins/mx_pwd.c
     src/builtins/mx_read_comand.c
-    src/builtins/mx_return_value.c
-    src/builtins/mx_serch_list.c
+    src/builtins/mx_return_var.c
+    src/builtins/mx_find_cur_list.c
     src/builtins/mx_unset.c
-    src/builtins/mx_unset_fds.c
+    src/builtins/mx_unset_saved.c
     src/builtins/mx_which.c
         src/exec/mx_exec_dmor.c
     src/exec/mx_exec_env_pr.c

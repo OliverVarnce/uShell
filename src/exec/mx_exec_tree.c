@@ -16,7 +16,7 @@ static int mx_exec_buildin(t_token *token, int *fds,
 
     set_fds(fds, savedFds);
     status = mx_fill_build(token, ush);
-    mx_unset_fds(fds, savedFds, operator_starus);
+    mx_unset_saved(fds, savedFds, operator_starus);
     return status;
 }
 

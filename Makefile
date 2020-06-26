@@ -48,10 +48,10 @@ SRC = $(addprefix $(SRC_DIR)/,\
         builtins/mx_filling_env.c \
         builtins/mx_pwd.c \
         builtins/mx_read_comand.c \
-        builtins/mx_return_value.c \
-        builtins/mx_serch_list.c \
+        builtins/mx_return_var.c \
+        builtins/mx_find_cur_list.c \
         builtins/mx_unset.c \
-        builtins/mx_unset_fds.c \
+        builtins/mx_unset_saved.c \
         builtins/mx_which.c \
 		signals/mx_ctrl_r.c \
 		exec/mx_exec_dmor.c \
@@ -170,10 +170,10 @@ OBJ =	mx_add_new_path.o \
         mx_filling_env.o \
         mx_pwd.o \
         mx_read_comand.o \
-        mx_return_value.o \
-        mx_serch_list.o \
+        mx_return_var.o \
+        mx_find_cur_list.o \
         mx_unset.o \
-        mx_unset_fds.o \
+        mx_unset_saved.o \
         mx_which.o \
   		mx_ctrl_r.o \
   		mx_exec_dmor.o \
