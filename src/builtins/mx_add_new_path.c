@@ -6,7 +6,7 @@ char *mx_add_new_path(char *path, char *part) {
 
     if (path[len - 1] != '/')
         path2 = mx_strjoin(path, "/");
-    path2 = mx_strjoin2(path2, part);
+    path2 = mx_strjoin_new(path2, part);
     free(path);
     return path2;
 }

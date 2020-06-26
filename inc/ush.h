@@ -187,7 +187,7 @@ void mx_insert_tree(t_tnode **root, t_tnode *new,
 t_tnode* mx_get_1st_node(t_tnode *root);
 void mx_strarr_add_to_strarr(char ***strs, char ***str);
 t_tnode *mx_create_tnode(void *data);
-void mx_start_program(t_variable **var_tree, char **env);
+void mx_find_ush(t_variable **var_tree, char **env);
 void mx_del_our_node(t_tnode **root, void *data, int (*cmp)(void*, void*), void (*free_tnode)(t_tnode *tnode));
 void mx_filling_env(t_variable **var_tree, char *name, char *value, char *mem);
 t_tnode *mx_find_our_node(t_tnode *root, void *data, int (*cmp)(void*, void*));
@@ -234,7 +234,7 @@ void mx_exit(t_token *token, t_ush *ush);
 //CD 
 int mx_chdir_p(char *path, t_ush *ush, char flags);
 char* mx_add_new_path(char *path, char *new_part);
-char* mx_del_last_var(char *path);
+char* mx_del_last_rank(char *path);
 int mx_chdir_l(char *path, t_ush *ush, char flags);
 
 // Which
@@ -274,7 +274,6 @@ void mx_unset_saved(int *fds, int *savedFds, int operator_starus);
 t_var *mx_var_tree_to_var(t_variable *var_tree);
 int mx_twight_1();
 
-// lexer
 bool mx_is_char(char c);
 void mx_home(char **str, int *i, t_ush *processes);
 void mx_replace(char **str, size_t start, size_t end, char *str_new);
@@ -309,8 +308,7 @@ void mx_print_susp(char **mas_name);
 void mx_print_cont(char **mas_name, int pid);
 char **mx_find_name(t_ush *ush, int numb);
 
-// env 
-
+// env
 char **mx_call_env(char **argv, int i);
 char **mx_env_to_ush(t_var *var);
 bool mx_find_env(char **argv, char **path, t_var *var, int *i);
@@ -322,7 +320,7 @@ char *mx_find_env_path(char *str1, char *str2, int *i);
 int mx_del_variable_env(char *str1, char *str2, t_var *var, int *i);
 
 // echo
-int mx_0_and_x(char *str, int *i);
+int mx_xo(char *str, int *i);
 
 //utils
 char *mx_strjoin_new(char *s1, char *s2);

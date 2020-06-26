@@ -2445,32 +2445,32 @@ src/builtins/mx_get_min_tnode.c.s:
 	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/builtins/mx_get_min_tnode.c.s
 .PHONY : src/builtins/mx_get_min_tnode.c.s
 
-src/builtins/mx_get_name.o: src/builtins/mx_get_name.c.o
+src/builtins/mx_find_name.o: src/builtins/mx_find_name.c.o
 
-.PHONY : src/builtins/mx_get_name.o
+.PHONY : src/builtins/mx_find_name.o
 
 # target to build an object file
-src/builtins/mx_get_name.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/builtins/mx_get_name.c.o
-.PHONY : src/builtins/mx_get_name.c.o
+src/builtins/mx_find_name.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/builtins/mx_find_name.c.o
+.PHONY : src/builtins/mx_find_name.c.o
 
-src/builtins/mx_get_name.i: src/builtins/mx_get_name.c.i
+src/builtins/mx_find_name.i: src/builtins/mx_find_name.c.i
 
-.PHONY : src/builtins/mx_get_name.i
+.PHONY : src/builtins/mx_find_name.i
 
 # target to preprocess a source file
-src/builtins/mx_get_name.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/builtins/mx_get_name.c.i
-.PHONY : src/builtins/mx_get_name.c.i
+src/builtins/mx_find_name.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/builtins/mx_find_name.c.i
+.PHONY : src/builtins/mx_find_name.c.i
 
-src/builtins/mx_get_name.s: src/builtins/mx_get_name.c.s
+src/builtins/mx_find_name.s: src/builtins/mx_find_name.c.s
 
-.PHONY : src/builtins/mx_get_name.s
+.PHONY : src/builtins/mx_find_name.s
 
 # target to generate assembly for a file
-src/builtins/mx_get_name.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/builtins/mx_get_name.c.s
-.PHONY : src/builtins/mx_get_name.c.s
+src/builtins/mx_find_name.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/builtins/mx_find_name.c.s
+.PHONY : src/builtins/mx_find_name.c.s
 
 src/builtins/mx_get_next_token.o: src/builtins/mx_get_next_token.c.o
 
@@ -3822,32 +3822,32 @@ src/utils/main.c.s:
 	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/main.c.s
 .PHONY : src/utils/main.c.s
 
-src/utils/mx_0_and_x.o: src/utils/mx_0_and_x.c.o
+src/utils/mx_xo.o: src/utils/mx_xo.c.o
 
-.PHONY : src/utils/mx_0_and_x.o
+.PHONY : src/utils/mx_xo.o
 
 # target to build an object file
-src/utils/mx_0_and_x.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_0_and_x.c.o
-.PHONY : src/utils/mx_0_and_x.c.o
+src/utils/mx_xo.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_xo.c.o
+.PHONY : src/utils/mx_xo.c.o
 
-src/utils/mx_0_and_x.i: src/utils/mx_0_and_x.c.i
+src/utils/mx_xo.i: src/utils/mx_xo.c.i
 
-.PHONY : src/utils/mx_0_and_x.i
+.PHONY : src/utils/mx_xo.i
 
 # target to preprocess a source file
-src/utils/mx_0_and_x.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_0_and_x.c.i
-.PHONY : src/utils/mx_0_and_x.c.i
+src/utils/mx_xo.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_xo.c.i
+.PHONY : src/utils/mx_xo.c.i
 
-src/utils/mx_0_and_x.s: src/utils/mx_0_and_x.c.s
+src/utils/mx_xo.s: src/utils/mx_xo.c.s
 
-.PHONY : src/utils/mx_0_and_x.s
+.PHONY : src/utils/mx_xo.s
 
 # target to generate assembly for a file
-src/utils/mx_0_and_x.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_0_and_x.c.s
-.PHONY : src/utils/mx_0_and_x.c.s
+src/utils/mx_xo.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_xo.c.s
+.PHONY : src/utils/mx_xo.c.s
 
 src/utils/mx_add_to_strarr.o: src/utils/mx_add_to_strarr.c.o
 
@@ -4578,32 +4578,32 @@ src/utils/mx_replace.c.s:
 	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_replace.c.s
 .PHONY : src/utils/mx_replace.c.s
 
-src/utils/mx_start_program.o: src/utils/mx_start_program.c.o
+src/utils/mx_find_ush.o: src/utils/mx_find_ush.c.o
 
-.PHONY : src/utils/mx_start_program.o
+.PHONY : src/utils/mx_find_ush.o
 
 # target to build an object file
-src/utils/mx_start_program.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_start_program.c.o
-.PHONY : src/utils/mx_start_program.c.o
+src/utils/mx_find_ush.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_find_ush.c.o
+.PHONY : src/utils/mx_find_ush.c.o
 
-src/utils/mx_start_program.i: src/utils/mx_start_program.c.i
+src/utils/mx_find_ush.i: src/utils/mx_find_ush.c.i
 
-.PHONY : src/utils/mx_start_program.i
+.PHONY : src/utils/mx_find_ush.i
 
 # target to preprocess a source file
-src/utils/mx_start_program.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_start_program.c.i
-.PHONY : src/utils/mx_start_program.c.i
+src/utils/mx_find_ush.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_find_ush.c.i
+.PHONY : src/utils/mx_find_ush.c.i
 
-src/utils/mx_start_program.s: src/utils/mx_start_program.c.s
+src/utils/mx_find_ush.s: src/utils/mx_find_ush.c.s
 
-.PHONY : src/utils/mx_start_program.s
+.PHONY : src/utils/mx_find_ush.s
 
 # target to generate assembly for a file
-src/utils/mx_start_program.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_start_program.c.s
-.PHONY : src/utils/mx_start_program.c.s
+src/utils/mx_find_ush.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_find_ush.c.s
+.PHONY : src/utils/mx_find_ush.c.s
 
 src/utils/mx_str_bquote.o: src/utils/mx_str_bquote.c.o
 
@@ -4686,32 +4686,32 @@ src/utils/mx_strcmp2.c.s:
 	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_strcmp2.c.s
 .PHONY : src/utils/mx_strcmp2.c.s
 
-src/utils/mx_strjoin2.o: src/utils/mx_strjoin2.c.o
+src/utils/mx_strjoin_new.o: src/utils/mx_strjoin_new.c.o
 
-.PHONY : src/utils/mx_strjoin2.o
+.PHONY : src/utils/mx_strjoin_new.o
 
 # target to build an object file
-src/utils/mx_strjoin2.c.o:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_strjoin2.c.o
-.PHONY : src/utils/mx_strjoin2.c.o
+src/utils/mx_strjoin_new.c.o:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_strjoin_new.c.o
+.PHONY : src/utils/mx_strjoin_new.c.o
 
-src/utils/mx_strjoin2.i: src/utils/mx_strjoin2.c.i
+src/utils/mx_strjoin_new.i: src/utils/mx_strjoin_new.c.i
 
-.PHONY : src/utils/mx_strjoin2.i
+.PHONY : src/utils/mx_strjoin_new.i
 
 # target to preprocess a source file
-src/utils/mx_strjoin2.c.i:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_strjoin2.c.i
-.PHONY : src/utils/mx_strjoin2.c.i
+src/utils/mx_strjoin_new.c.i:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_strjoin_new.c.i
+.PHONY : src/utils/mx_strjoin_new.c.i
 
-src/utils/mx_strjoin2.s: src/utils/mx_strjoin2.c.s
+src/utils/mx_strjoin_new.s: src/utils/mx_strjoin_new.c.s
 
-.PHONY : src/utils/mx_strjoin2.s
+.PHONY : src/utils/mx_strjoin_new.s
 
 # target to generate assembly for a file
-src/utils/mx_strjoin2.c.s:
-	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_strjoin2.c.s
-.PHONY : src/utils/mx_strjoin2.c.s
+src/utils/mx_strjoin_new.c.s:
+	$(MAKE) -f CMakeFiles/USH.dir/build.make CMakeFiles/USH.dir/src/utils/mx_strjoin_new.c.s
+.PHONY : src/utils/mx_strjoin_new.c.s
 
 src/utils/mx_strjoin3.o: src/utils/mx_strjoin3.c.o
 
@@ -5250,9 +5250,9 @@ help:
 	@echo "... src/builtins/mx_get_min_tnode.o"
 	@echo "... src/builtins/mx_get_min_tnode.i"
 	@echo "... src/builtins/mx_get_min_tnode.s"
-	@echo "... src/builtins/mx_get_name.o"
-	@echo "... src/builtins/mx_get_name.i"
-	@echo "... src/builtins/mx_get_name.s"
+	@echo "... src/builtins/mx_find_name.o"
+	@echo "... src/builtins/mx_find_name.i"
+	@echo "... src/builtins/mx_find_name.s"
 	@echo "... src/builtins/mx_get_next_token.o"
 	@echo "... src/builtins/mx_get_next_token.i"
 	@echo "... src/builtins/mx_get_next_token.s"
@@ -5403,9 +5403,9 @@ help:
 	@echo "... src/utils/main.o"
 	@echo "... src/utils/main.i"
 	@echo "... src/utils/main.s"
-	@echo "... src/utils/mx_0_and_x.o"
-	@echo "... src/utils/mx_0_and_x.i"
-	@echo "... src/utils/mx_0_and_x.s"
+	@echo "... src/utils/mx_xo.o"
+	@echo "... src/utils/mx_xo.i"
+	@echo "... src/utils/mx_xo.s"
 	@echo "... src/utils/mx_add_to_strarr.o"
 	@echo "... src/utils/mx_add_to_strarr.i"
 	@echo "... src/utils/mx_add_to_strarr.s"
@@ -5487,9 +5487,9 @@ help:
 	@echo "... src/utils/mx_replace.o"
 	@echo "... src/utils/mx_replace.i"
 	@echo "... src/utils/mx_replace.s"
-	@echo "... src/utils/mx_start_program.o"
-	@echo "... src/utils/mx_start_program.i"
-	@echo "... src/utils/mx_start_program.s"
+	@echo "... src/utils/mx_find_ush.o"
+	@echo "... src/utils/mx_find_ush.i"
+	@echo "... src/utils/mx_find_ush.s"
 	@echo "... src/utils/mx_str_bquote.o"
 	@echo "... src/utils/mx_str_bquote.i"
 	@echo "... src/utils/mx_str_bquote.s"
@@ -5499,9 +5499,9 @@ help:
 	@echo "... src/utils/mx_strcmp2.o"
 	@echo "... src/utils/mx_strcmp2.i"
 	@echo "... src/utils/mx_strcmp2.s"
-	@echo "... src/utils/mx_strjoin2.o"
-	@echo "... src/utils/mx_strjoin2.i"
-	@echo "... src/utils/mx_strjoin2.s"
+	@echo "... src/utils/mx_strjoin_new.o"
+	@echo "... src/utils/mx_strjoin_new.i"
+	@echo "... src/utils/mx_strjoin_new.s"
 	@echo "... src/utils/mx_strjoin3.o"
 	@echo "... src/utils/mx_strjoin3.i"
 	@echo "... src/utils/mx_strjoin3.s"

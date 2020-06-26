@@ -9,7 +9,7 @@ static void join_val(t_variable *noda, char *name, char *value) {
     noda->value = value;
     if (noda->is_env) {
         buf = mx_strjoin(name, "=");
-        buf = mx_strjoin2(buf, value);
+        buf = mx_strjoin_new(buf, value);
         mx_strdel(&(noda->mem));
         noda->mem = buf;
         putenv(buf);

@@ -368,7 +368,7 @@
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_get_min_tnode.c">
 			<Option target="USH"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_get_name.c">
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_find_name.c">
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/builtins/mx_get_next_token.c">
@@ -521,7 +521,7 @@
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/main.c">
 			<Option target="USH"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_0_and_x.c">
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_xo.c">
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_add_to_strarr.c">
@@ -605,7 +605,7 @@
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_replace.c">
 			<Option target="USH"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_start_program.c">
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_find_ush.c">
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_str_bquote.c">
@@ -617,7 +617,7 @@
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_strcmp2.c">
 			<Option target="USH"/>
 		</Unit>
-		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_strjoin2.c">
+		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_strjoin_new.c">
 			<Option target="USH"/>
 		</Unit>
 		<Unit filename="/Users/ovoitenko/Desktop/USH/src/utils/mx_strjoin3.c">

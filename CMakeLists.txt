@@ -90,7 +90,7 @@ add_executable(USH
     src/builtins/mx_find_env.c
     src/builtins/mx_close_all_pr.c
     src/builtins/mx_paste_nonascii.c
-    src/builtins/mx_del_last_var.c
+    src/builtins/mx_del_last_rank.c
     src/builtins/mx_del_pid_process.c
     src/builtins/mx_del_top_process.c
     src/builtins/mx_del_our_node.c
@@ -156,7 +156,7 @@ add_executable(USH
     src/signals/mx_read_keyboard.c
         src/utils/bit_func.c
     src/utils/main.c
-    src/utils/mx_0_and_x.c
+    src/utils/mx_xo.c
     src/utils/mx_add_to_strarr.c
     src/utils/mx_arrstr_to_str.c
     src/utils/mx_ascii.c
@@ -184,11 +184,11 @@ add_executable(USH
         src/sortings/mx_pop_list.c
     src/utils/mx_reg.c
     src/utils/mx_replace.c
-    src/utils/mx_start_program.c
+    src/utils/mx_find_ush.c
     src/utils/mx_str_bquote.c
     src/utils/mx_strarr_add_to_strarr.c
     src/utils/mx_strcmp2.c
-    src/utils/mx_strjoin2.c
+    src/utils/mx_strjoin_new.c
     src/utils/mx_strjoin3.c
     src/utils/mx_subs.c
     src/utils/mx_syntax_analyzer.c

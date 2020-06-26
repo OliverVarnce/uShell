@@ -5,7 +5,7 @@ static void new_node(t_variable **var_tree, char *name, char *value, char *tmp) 
 
     node->name = name;
     node->value = value;
-    node->mem = value == 0 ? tmp : mx_strjoin2(tmp, value);
+    node->mem = value == 0 ? tmp : mx_strjoin_new(tmp, value);
     node->is_env = true;
     putenv(node->mem);
     node->next = NULL;

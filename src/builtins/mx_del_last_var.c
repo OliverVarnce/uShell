@@ -1,6 +1,6 @@
 #include "ush.h"
 
-char* mx_del_last_var(char *path) {
+char* mx_del_last_rank(char *path) {
     char *new = 0;
     int len = mx_strlen(path);
     int i = len;

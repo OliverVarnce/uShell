@@ -141,7 +141,7 @@ OBJ =	mx_add_new_path.o \
         mx_find_env.o \
         mx_close_all_pr.o \
         mx_paste_nonascii.o \
-        mx_del_last_var.o \
+        mx_del_last_rank.o \
         mx_del_pid_process.o \
         mx_del_top_process.o \
         mx_del_our_node.o \
