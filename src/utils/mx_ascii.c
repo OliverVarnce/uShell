@@ -27,14 +27,14 @@ static void special_symbols(unsigned int ch, t_ush *ush) {
         str_tab = mx_strndup(ush->input->comands[ush->input->id],str_pos);
         mx_clean_terminal(MX_USH, ush->input->inplen, ush->input->endpoint,
                 ush->input->comands[ush->input->id]);
-        ush->input->comand_tab = mx_key_tab(str_tab,
+        ush->input->comand_tab = mx_lone_tab(str_tab,
                 &ush->input->comands[ush->input->id], ush);
         ush->input->tabposition = 0;
     }
     if (ush->input->symb == 9 && ch == 9) {
         mx_clean_terminal(MX_USH, ush->input->inplen, ush->input->endpoint,
                 ush->input->comands[ush->input->id]);
-        mx_key_duble_tab(&ush->input->comands[ush->input->id],
+        mx_many_tabs(&ush->input->comands[ush->input->id],
                 ush->input->comand_tab, ush);
     }
     ush->input->symb = mx_handle_events(ch);

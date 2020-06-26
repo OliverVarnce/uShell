@@ -11,7 +11,7 @@ static void check_status(char **argv, int status, t_ush *ush, pid_t pr) {
     }
     else {
         mx_add_process(&(ush->processes), pr, argv);
-        mas_name = mx_get_name(ush, pr);
+        mas_name = mx_find_name(ush, pr);
         mx_print_susp(mas_name);
     }
 }

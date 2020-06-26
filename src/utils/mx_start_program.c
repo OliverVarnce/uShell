@@ -60,17 +60,17 @@ static void check_env(t_variable **var_tree) {
 
     if (check_if_env_have("PWD", var_tree)) {
         tmp = getcwd(NULL, 0);;
-        mx_push_env(var_tree, mx_strdup("PWD"),
+        mx_filling_env(var_tree, mx_strdup("PWD"),
                     tmp, mx_strjoin("PWD=", tmp));
     }
     if (check_if_env_have("OLDPWD", var_tree)) {
         tmp = getcwd(NULL, 0);
-        mx_push_env(var_tree, mx_strdup("OLDPWD"), tmp,
+        mx_filling_env(var_tree, mx_strdup("OLDPWD"), tmp,
                     mx_strjoin("OLDPWD=", tmp));
     }
     if (check_if_env_have("SHLVL", var_tree)) {
         tmp = mx_strdup("1");
-        mx_push_env(var_tree, mx_strdup("SHLVL"), tmp,
+        mx_filling_env(var_tree, mx_strdup("SHLVL"), tmp,
                     mx_strjoin("SHLVL=", tmp));
     }
 }

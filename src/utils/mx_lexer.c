@@ -30,8 +30,8 @@ t_list *mx_create_tokens(char *str, t_ush *processes) {
     t_token *newToken = 0;
     t_list *tokens = 0;
 
-    mx_if_new_parameter(str, &start, end, processes);
-    for (; (newToken = mx_get_next_token(&start, end, str, processes));) {
+    mx_new_param(str, &start, end, processes);
+    for (; (newToken = mx_find_next_tok(&start, end, str, processes));) {
         if (newToken->type == 2)
             free(newToken);
         else

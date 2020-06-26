@@ -82,46 +82,46 @@ add_executable(USH
     libmx/src/mx_strstr.c
     libmx/src/mx_strtrim.c
     libmx/src/mx_swap_char.c
-    src/builtins/mx_add_one_rank.c
+    src/builtins/mx_add_new_path.c
     src/builtins/mx_add_process.c
-    src/builtins/mx_buildin_list.c
-    src/builtins/mx_call_vlad.c
+    src/builtins/mx_fill_build.c
+    src/builtins/mx_call_env.c
     src/builtins/mx_cd.c
-    src/builtins/mx_check_env.c
+    src/builtins/mx_find_env.c
     src/builtins/mx_close_all_pr.c
-    src/builtins/mx_ctrl_v_and_not_ascii.c
-    src/builtins/mx_del_last_rank.c
+    src/builtins/mx_paste_nonascii.c
+    src/builtins/mx_del_last_var.c
     src/builtins/mx_del_pid_process.c
     src/builtins/mx_del_top_process.c
-    src/builtins/mx_delete_tnode.c
-    src/builtins/mx_delete_veriable_env.c
+    src/builtins/mx_del_our_node.c
+    src/builtins/mx_del_variable_env.c
     src/builtins/mx_echo.c
-    src/builtins/mx_end_flag.c
+    src/builtins/mx_last_flag.c
     src/builtins/mx_env.c
-    src/builtins/mx_env_to_vlad.c
+    src/builtins/mx_env_to_ush.c
     src/builtins/mx_export.c
     src/builtins/mx_fg.c
-    src/builtins/mx_find_tnode.c
-    src/builtins/mx_flang_comand.c
-    src/builtins/mx_fre_env_path.c
-    src/builtins/mx_get_info.c
-    src/builtins/mx_get_min_tnode.c
-    src/builtins/mx_get_name.c
-    src/builtins/mx_get_next_token.c
-    src/builtins/mx_get_path_env.c
-    src/builtins/mx_get_token_type.c
-    src/builtins/mx_get_twidth.c
-    src/builtins/mx_if_new_parameter.c
+    src/builtins/mx_find_our_node.c
+    src/builtins/mx_checker_flag.c
+    src/builtins/mx_clear_path.c
+    src/builtins/mx_shell_info.c
+    src/builtins/mx_get_1st_node.c
+    src/builtins/mx_find_name.c
+    src/builtins/mx_find_next_tok.c
+    src/builtins/mx_find_env_path.c
+        src/builtins/mx_get_tok.c
+    src/builtins/mx_twight_1.c
+    src/builtins/mx_new_param.c
     src/builtins/mx_jobs.c
-    src/builtins/mx_key_duble_tab.c
-    src/builtins/mx_key_tab.c
-    src/builtins/mx_push_env.c
+    src/builtins/mx_many_tabs.c
+    src/builtins/mx_lone_tab.c
+    src/builtins/mx_filling_env.c
     src/builtins/mx_pwd.c
     src/builtins/mx_read_comand.c
-    src/builtins/mx_return_value.c
-    src/builtins/mx_serch_list.c
+    src/builtins/mx_return_var.c
+    src/builtins/mx_find_cur_list.c
     src/builtins/mx_unset.c
-    src/builtins/mx_unset_fds.c
+    src/builtins/mx_unset_saved.c
     src/builtins/mx_which.c
         src/exec/mx_exec_dmor.c
     src/exec/mx_exec_env_pr.c

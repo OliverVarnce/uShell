@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static bool check_argv(char *str) {
+static bool check_av(char *str) {
     for (int i = 0 ; str[i]; i++)
         if (str[i] == '=') {
             mx_printerr("unset: ");
@@ -11,34 +11,21 @@ static bool check_argv(char *str) {
     return 1;
 }
 
-//static void del_t_variable(void *str) {
-//    t_variable *var = str;
-//
-//    mx_strdel(&(var->name));
-//    mx_strdel(&(var->value));
-//    if (var->is_env) {
-//        var->mem[0] = 0;
-//        mx_strdel(&(var->mem));
-//    }
-//}
+static bool if_av(void *s1, void *s2) {
+    char *tmp1 = s1;
+    char *tmp2 = ((t_variable *)s2)->name;
 
-static bool if_argv(void *s1, void *s2) {
-    char *temp1 = s1;
-    char *temp2 = ((t_variable *)s2)->name;
-
-    if (mx_strcmp(temp1, temp2) == 0)
+    if (mx_strcmp(tmp1, tmp2) == 0)
         return 1;
     else
         return 0;
 }
 
-
-
-void mx_unset(char **argv, t_variable **var_tree, t_ush *ush) {
+void mx_unset(char **av, t_variable **var_tree, t_ush *ush) {
     ush->last_status = 0;
-    for (int i = 1; argv[i]; i++) {
-        if (check_argv(argv[i])) {
-            mx_pop_list(var_tree, argv[i], if_argv);
+    for (int i = 1; av[i]; i++) {
+        if (check_av(av[i])) {
+            mx_pop_list(var_tree, av[i], if_av);
         }
     }
 }

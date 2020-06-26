@@ -1,14 +1,14 @@
 #include "ush.h"
 
 
-static int get_flags_from_line(char *str) {
+static int flags_in_str(char *s) {
     int i = 0;
     int flags = 0;
 
-    while (str[++i]) {
-        if (str[i] == 'L') 
+    while (s[++i]) {
+        if (s[i] == 'L') 
             flags |= 1;
-        else if (str[i] == 'P') 
+        else if (s[i] == 'P') 
             flags |= 2;
         else {
             return -1;
@@ -16,31 +16,28 @@ static int get_flags_from_line(char *str) {
     }
     return flags;
 }
-/* 
-* 1-st bit -> -L
-* 2-nd bit -> -P
-*/
-static int get_flags(char **argv, int *i) {
-    int flags = 0;
 
-    while (argv[++(*i)]) {
-        if (argv[(*i)][0] != '-')
-            return flags;
-        int curr = get_flags_from_line(argv[*i]);
-        if (curr == -1) {
+static int find_flags(char **av, int *i) {
+    int flag = 0;
+
+    while (av[++(*i)]) {
+        if (av[(*i)][0] != '-')
+            return flag;
+        int c = flags_in_str(av[*i]);
+        if (c == -1) {
             return 0;
         }
-        flags |= curr;
+        flag |= c;
     }
     i--;
-    return flags;
+    return flag;
 }
 
-int mx_pwd(char **argv, t_ush *ush) {
+int mx_pwd(char **av, t_ush *ush) {
     int i = 0;
-    int flags = get_flags(argv, &i);
+    int flag = find_flags(av, &i);
 
-    if (flags & 2) {
+    if (flag & 2) {
         printf("%s\n", ush->pwd_p);
     }
     else

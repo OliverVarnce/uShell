@@ -1,7 +1,7 @@
 #include "ush.h"
 
 void mx_check_outprogram_new_line(void) {
-    int twidth = mx_get_twidth() - 1;
+    int twidth = mx_twight_1() - 1;
     int save_fd = dup(1);
     int term_fd = open("/dev/tty", O_WRONLY);
 
@@ -24,7 +24,7 @@ static void print_two_str(char *str1, char *str2) {
 void mx_terminal_out(char *name, int table2, int pos, char *str) {
     int symbol = mx_bit_symbol(&str[table2 - pos - 1]);
     int len = (int) name[0];
-    int col = mx_get_twidth();
+    int col = mx_twight_1();
 
     print_two_str(&name[1], str);
     mx_printstr(" ");
@@ -48,7 +48,7 @@ void mx_clean_terminal(char *name, int table2, int pos, char *str) {
     int tmp;
     int len = (int)name[0];
 
-    tmp = (mx_len_symbol(table2 - pos, str) + len) / mx_get_twidth();
+    tmp = (mx_len_symbol(table2 - pos, str) + len) / mx_twight_1();
     for (int i = tmp; i > 0; i--) {
         mx_print_esc("1F");
     }
@@ -58,7 +58,7 @@ void mx_clean_terminal(char *name, int table2, int pos, char *str) {
 
 void mx_clean_space_in_term(char *str, t_ush *ush, char *new_str) {
     int tmp;
-    int col = mx_get_twidth();
+    int col = mx_twight_1();
 
     tmp = (mx_len_symbol(ush->input->inplen - ush->input->endpoint, str) + 4) / col;
     for (int i = tmp; i > 0; i--) {

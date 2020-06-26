@@ -38,7 +38,7 @@ static char *env_param(char **string, int *i, t_ush *processes) {
         (*i)++;
     }
     if (home) {
-        home = mx_strdup(mx_return_value(&home, &processes->var_tree));
+        home = mx_strdup(mx_return_var(&home, &processes->var_tree));
         (*i)++;
         if (home == 0)
             home = mx_strnew(0);

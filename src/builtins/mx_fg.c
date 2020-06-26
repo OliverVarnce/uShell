@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static t_process* get_process(int n, char *str, t_ush *ush) {
+static t_process* get_process(int n, char *s, t_ush *ush) {
     t_process *tmp = ush->processes;
 
     if (n != -1) {
@@ -9,45 +9,45 @@ static t_process* get_process(int n, char *str, t_ush *ush) {
                 return tmp;
             tmp = tmp->next;
         }
-        fprintf(stderr, "fg: job not found: %s\n", str);
+        fprintf(stderr, "fg: job not found: %s\n", s);
     }
     else {
         while (tmp) {
-            if (mx_is_str_starts(tmp->name[0], str))
+            if (mx_is_str_starts(tmp->name[0], s))
                 return tmp;
             tmp = tmp->next;
         }
-        fprintf(stderr, "fg: job not found: %s\n", str);
+        fprintf(stderr, "fg: job not found: %s\n", s);
     }
     return 0;
 }
 
 /*return true if all elements - numbers*/
-static bool mx_is_number_fg(char *str) {
+static bool fg_is_persent(char *s) {
     int i = -1;
-    if (str[0] == '%')
+    if (s[0] == '%')
         i++;
-    while (str[++i]) {
-        if (str[i] < 48 || str[i] > 57)
+    while (s[++i]) {
+        if (s[i] < 48 || s[i] > 57)
             return false;
     }
     return true;
 }
 
-static int fg_continue(char **argv, t_ush *ush) {
+static int fg_continue(char **av, t_ush *ush) {
     t_process *pr = ush->processes;
     int i = 0;
 
-    if (argv[1] == 0) {
+    if (av[1] == 0) {
         kill(pr->pid, SIGCONT);
         return 0;
     }
-    i = (argv[1][0] == '%') ? 1 : 0;
-    if (mx_is_number_fg(argv[1])) {
-            pr = get_process(atoi(&argv[1][i]), argv[1], ush);
+    i = (av[1][0] == '%') ? 1 : 0;
+    if (fg_is_persent(av[1])) {
+            pr = get_process(atoi(&av[1][i]), av[1], ush);
     }
     else {
-        pr = get_process(-1, &argv[1][i], ush);
+        pr = get_process(-1, &av[1][i], ush);
     }
     if (pr == 0) {
         ush->exit_status = 1;
@@ -65,7 +65,7 @@ static void fg_wait(int status, pid_t ch_pr, t_ush *ush) {
             ush->last_status = 130;
         }
         else {
-            char **str = mx_get_name(ush, ch_pr);
+            char **str = mx_find_name(ush, ch_pr);
             mx_print_susp(str);
         }
     }
