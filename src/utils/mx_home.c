@@ -8,7 +8,7 @@ static bool is_not_operator(char c) {
     return true;
 }
 
-static bool is_not_operator2(char c) {
+static bool is_not_operator_next(char c) {
     if (c == '$' || c == '=' || c == 92 || c == 34 || c == 39 || c == 96)
         return false;
     return true;
@@ -38,7 +38,7 @@ static char *env_param(char **string, int *i, t_ush *processes) {
         (*i)++;
     }
     if (home) {
-        home = mx_strdup(mx_return_var(&home, &processes->var_tree));
+        home = mx_strdup(mx_return_value(&home, &processes->var_tree));
         (*i)++;
         if (home == 0)
             home = mx_strnew(0);
@@ -54,8 +54,8 @@ void mx_home(char **string, int *i, t_ush *processes) {
         return;
     home = env_param(string, &new_position, processes);
     if (new_position == 0) {
-        for (; is_not_operator(string[0][++new_position]) && is_not_operator2(string[0][new_position]);)
-        if (is_not_operator2(string[0][new_position]))
+        for (; is_not_operator(string[0][++new_position]) && is_not_operator_next(string[0][new_position]);)
+        if (is_not_operator_next(string[0][new_position]))
             home = mx_strndup(&string[0][*i + 1], new_position - *i - 1);
         if (home)
             read_user(&home);

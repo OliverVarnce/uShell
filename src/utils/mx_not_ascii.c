@@ -99,25 +99,19 @@ static void page_u_Page_d(char *chars, t_ush *ush) {
 }
 
 void mx_not_ascii(char *chars, t_ush *ush) {
-    if (chars[3] == 0 && (chars[2] == 65 || chars[2] == 66)) {
+    if (chars[3] == 0 && (chars[2] == 65 || chars[2] == 66))
         up_down(chars, ush);
-    }
-    else if (chars[3] == 0 && (chars[2] == 70 || chars[2] == 72)) {
+    else if (chars[3] == 0 && (chars[2] == 70 || chars[2] == 72))
         home_end(chars, ush);
-    }
     else if (chars[3] == 0 && chars[2] == 68 &&
-    ush->input->inplen - 1 > ush->input->endpoint) {
+    ush->input->inplen - 1 > ush->input->endpoint)
         left_right(chars, ush);
-    }
-    else if (chars[3] == 0 && chars[2] == 67 && 0 < ush->input->endpoint) {
+    else if (chars[3] == 0 && chars[2] == 67 && 0 < ush->input->endpoint)
         left_right(chars, ush);
-    }
-    else if (chars[3] == 126 && (chars[2] == 53 || chars[2] == 54)) {
+    else if (chars[3] == 126 && (chars[2] == 53 || chars[2] == 54))
         page_u_Page_d(chars, ush);
-    }
-    else if (chars[3] == 126 && chars[2] == 51 && ush->input->endpoint != 0) {
+    else if (chars[3] == 126 && chars[2] == 51 && ush->input->endpoint != 0)
         mx_key_delite(ush);
-    }
     else
         chars[2] = 10;
 }
