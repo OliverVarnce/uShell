@@ -35,9 +35,9 @@ static void create_parameter(char *str, int *start, int end, t_ush *processes) {
     mx_last_flag(str, &pos, end, ' ');
     tmp = mx_strndup(&str[*start], pos - *start);
     *start = pos;
-    value = mx_audit_str(tmp, processes, 0);
+    value = mx_str_check(tmp, processes, 0);
     mx_strdel(&tmp);
-    mx_subs(&value);
+    mx_sub_str(&value);
     mx_find_cur_list(&(processes->var_tree), name, value);
     pos = get_start_index(&str[*start]);
     if (pos != -1) 
@@ -45,7 +45,7 @@ static void create_parameter(char *str, int *start, int end, t_ush *processes) {
     mx_new_param(str, start, end, processes);
 }
 
-static bool is_not_operator(char c) {
+static bool is_operator1(char c) {
     if (c == '|' || c == '&' || c == '>' || c == '<'|| c == '$' || c == ' ')
         return false;
     if (c == '='|| c == 92 || c == 34 || c == 39 || c== 96 || c == 0)
@@ -56,7 +56,7 @@ static bool is_not_operator(char c) {
 void mx_new_param(char *str, int *start, int end, t_ush *processes) {
     int check_start = *start;
 
-    while (is_not_operator(str[check_start]))
+    while (is_operator1(str[check_start]))
         check_start++;
     if (str[check_start] == '=') {
         create_parameter(str, start, end, processes);

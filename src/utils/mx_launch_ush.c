@@ -10,9 +10,8 @@ static void shlvl_new(char **s) {
         i++;
         neg = -1;
     }
-    for (; i < mx_strlen(s[0]); i++){
+    for (; i < mx_strlen(s[0]); i++)
         a = a * 10 + (s[0][i] - '0');
-    }
     a = a * neg;
     mx_strdel(s);
     tmp = mx_itoa(++a);
@@ -75,7 +74,7 @@ static void check_env(t_variable **var_tree) {
     }
 }
 
-void mx_start_program(t_variable **var_tree, char **env) {
+void mx_launch_ush(t_variable **var_tree, char **env) {
     int i = -1;
     char **envvar = 0;
     char *tmp = 0;

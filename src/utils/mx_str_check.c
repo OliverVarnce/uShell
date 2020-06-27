@@ -9,7 +9,7 @@ static void substitution_command(char **str, char **str2, t_ush *processes) {
             mx_replace(str2, i, i + 1, 0);
         }
     }
-    *str2 = mx_str_bquote(str2, processes);
+    *str2 = mx_bquote_str(str2, processes);
     *str = *str2;
 }
 
@@ -28,8 +28,8 @@ static void editor_str(char **str, t_ush *processes) {
     else if (str[0][0] == 96 || str[0][0] == '$')
         substitution_command(str, &tmp, processes);
     else if (str[0][0] == 34) { 
-        temp2 = mx_audit_str(tmp, processes, 1);
-        mx_subs(&temp2);
+        temp2 = mx_str_check(tmp, processes, 1);
+        mx_sub_str(&temp2);
         mx_strdel(str);
         mx_strdel(&tmp);
         *str = temp2;
@@ -74,7 +74,7 @@ static void spec_symbol(t_ush *processes, int *i, char **new_str) {
     (i[0])--;
 }
 
-char *mx_audit_str(char *str, t_ush *ush, bool dqute) {
+char *mx_str_check(char *str, t_ush *ush, bool dqute) {
     char *new_str = 0;
     int i = 0;
     int pos = 0;
@@ -89,7 +89,7 @@ char *mx_audit_str(char *str, t_ush *ush, bool dqute) {
         else if (chek_command(new_str, i))
             spec_symbol(ush, &i, &new_str);
         else if (mx_check_symbol(new_str, i ,'$'))
-            mx_parametr_shell(ush, &i, &new_str);
+            mx_term_param(ush, &i, &new_str);
         else if (new_str[i] == '\\'
                  && (!dqute || (dqute && (new_str[i + 1] == '\\'))))
             mx_replace(&new_str, i, i + 1, 0);

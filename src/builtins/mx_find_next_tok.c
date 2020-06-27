@@ -53,7 +53,7 @@ t_token* mx_find_next_tok(int *currPos, int end, char *s,
         newToken = mx_create_token(2,0,0);
         current_pos(currPos, s[tokenStart], s);
         newValue = mx_strndup(&s[tokenStart], *currPos - tokenStart);
-        mx_add_to_strarr(&newToken->value, newValue);
+        mx_add_to_str_arr(&newToken->value, newValue);
         newToken->type = mx_get_tok(newToken->value[0]);
         newToken->priority = get_token_priority(newToken->value[0]);
     }

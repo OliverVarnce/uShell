@@ -24,7 +24,7 @@ static char *get_pwd() {
     if (mx_is_link(pwd)) {
         link_path = mx_get_link_path(pwd);
         pwd = mx_del_last_var(pwd);
-        pwd = mx_strjoin3(mx_strjoin2(pwd, "/"), link_path);
+        pwd = mx_str_merge(mx_str_concatenation(pwd, "/"), link_path);
         if (mx_strcmp(pwd, cwd) == 0) {
             free(cwd);
             free(pwd);
@@ -47,9 +47,9 @@ void mx_ush_init(t_ush **ush, char **envp) {
     new_info->pwd_p = getcwd(NULL, 0);
     new_info->pwd_l = mx_strdup(new_info->pwd);
     new_info->old_pwd = get_pwd();
-    new_info->last_status = 0;
+    new_info->last_return = 0;
     *ush = new_info;
-    mx_start_program(&(new_info->var_tree), envp);
+    mx_launch_ush(&(new_info->var_tree), envp);
     signal(SIGSEGV, NULL);
     signal(SIGINT, emp);
     signal(SIGTSTP, emp);

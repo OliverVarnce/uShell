@@ -26,7 +26,7 @@ static int echo_flag_e(char *s) {
     for (int i = 0; s[i] != '\0'; i++) {
         if (s[i] == '\\' 
             && mx_reg(s + i + 1, "^(x[0-9a-fA-F]{2}.*)|(0[0-7]{2,3}.*)$")) {
-            buf = mx_0_and_x(s, &i);
+            buf = mx_xo(s, &i);
         }
         else if(s[i] == '\\' && s[i + 1] == '\\')
             buf = '\\';
@@ -92,7 +92,7 @@ void mx_echo(char **s, t_ush *ush) {
     else {
         flag_e(i, flag, s);
     }
-    ush->last_status = 0;
+    ush->last_return = 0;
     free(flag);
 }
 

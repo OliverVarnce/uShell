@@ -26,7 +26,7 @@ static void add_comand(t_list **list_comand, char *pars, char ***paths,
     char *tmp = 0;
 
     for (int i = 0; str_line(pars[0]) != 0 && comand[i]; i++) {
-        if (mx_strcmp2(comand[i],&pars[1]) == 0) {
+        if (mx_str_diff(comand[i],&pars[1]) == 0) {
             tmp = mx_strdup(comand[i]);
             mx_push_front(list_comand, tmp);
         }
@@ -43,14 +43,14 @@ static void file_in_dir(t_list **list_comand,
     char *directori = direct_line(pars);
     int i = 1;
 
-    if (mx_strcmp2("./", directori) == 0 && mx_strcmp2(&pars[1], "./") != 0)
+    if (mx_str_diff("./", directori) == 0 && mx_str_diff(&pars[1], "./") != 0)
         i = 1;
     else
         i = mx_strlen(directori) + 1;
     if ((str_line(pars[0]) == 0) && (dir = opendir(directori))) {
         while ((entry = readdir(dir)) != NULL) {
             if (entry->d_name[0] != '.'
-                && mx_strcmp2(entry->d_name, &pars[i]) == 0) {
+                && mx_str_diff(entry->d_name, &pars[i]) == 0) {
                 tmp = mx_strdup(entry->d_name);
                 mx_push_front(list_comand, tmp);
             }
@@ -71,7 +71,7 @@ void mx_read_comand(char *pars, t_list **list_comand) {
             if ((dir = opendir(paths[i]))) {
                 while ((entry = readdir(dir)) != NULL) {
                     if (entry->d_name[0] != '.'
-                        && mx_strcmp2(entry->d_name, &pars[1]) == 0) {
+                        && mx_str_diff(entry->d_name, &pars[1]) == 0) {
                         path = mx_strdup(entry->d_name);
                         mx_push_front(list_comand, path);
                     }

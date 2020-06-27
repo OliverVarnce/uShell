@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static char **creat_commands(t_list **list_commands) {
+static char **mx_commands_create(t_list **list_commands) {
     int sum_command = mx_list_size(*list_commands) + 2;
     char **commands = (char **) malloc(sum_command * sizeof(char *));
     t_list *list = *list_commands;
@@ -15,7 +15,7 @@ static char **creat_commands(t_list **list_commands) {
 }
 
 int mx_history(t_list **list_commands) {
-    char **commands = creat_commands(list_commands);
+    char **commands = mx_commands_create(list_commands);
 
     for (int i = 1; commands && commands[i - 1]; i++) {
         if (i < 10)

@@ -22,7 +22,7 @@ static bool if_av(void *s1, void *s2) {
 }
 
 void mx_unset(char **av, t_variable **var_tree, t_ush *ush) {
-    ush->last_status = 0;
+    ush->last_return = 0;
     for (int i = 1; av[i]; i++) {
         if (check_av(av[i])) {
             mx_pop_list(var_tree, av[i], if_av);

@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static char **creat_commands(t_list **list_commands) {
+static char **mx_commands_create(t_list **list_commands) {
     int sum_command = mx_list_size(*list_commands) + 2;
     char **commands = (char **) malloc(sum_command * sizeof(char *));
     t_list *list = *list_commands;
@@ -18,7 +18,7 @@ static char **creat_commands(t_list **list_commands) {
 static t_input *create_input(t_ush *ush) {
     t_input *input = (t_input *) malloc(sizeof(t_input));
 
-    input->comands = creat_commands(&(ush->history));
+    input->comands = mx_commands_create(&(ush->history));
     input->id = 0;
     input->maxcmd = mx_list_size(ush->history);
     input->inplen = 1;
@@ -54,7 +54,7 @@ int mx_input(t_ush *ush) {
     ush->input = create_input(ush);
     while (if_next == 3) {
         if (chars[2] != 10 || chars[0] == 9 || chars[0] == 18)
-            mx_terminal_out(MX_USH, ush->input->inplen, ush->input->endpoint,
+            mx_terminal_stdout(MX_USH, ush->input->inplen, ush->input->endpoint,
                     ush->input->comands[ush->input->id]);
         ch = mx_read_keyboard(ush);
         if (ch > 127)

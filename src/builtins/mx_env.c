@@ -60,7 +60,7 @@ void mx_env(char **av, t_ush *ush) {
             break;
         if (mx_find_env(av, &path, var, &i)) {
             mx_clear_path(var, path);
-            ush->last_status = 1;
+            ush->last_return = 1;
             return;
         }
     }

@@ -8,7 +8,7 @@ static int len_strarr(char **str) {
     return count;
 }
 
-void mx_strarr_add_to_strarr(char ***strs, char ***str) {
+void mx_arrstr_to_arrstr(char ***strs, char ***str) {
     int count = 0;
     int count2 = 0;
 

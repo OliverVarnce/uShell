@@ -1,17 +1,14 @@
 #include "ush.h"
 
-static int mx_handle_events(char ch) {
-    if (ch == KEY_ENTER) {
+static int mx_events(char ch) {
+    if (ch == KEY_ENTER)
         return KEY_ENTER;
-    }
     if (ch == CTRL_I)
         return 9;
-    if (ch == CTRL_D) {
+    if (ch == CTRL_D)
         return -1;
-    }
-    if (ch == CTRL_Z) {
+    if (ch == CTRL_Z)
         mx_printstr("\a");
-    }
     if (ch == CTRL_C)
         return 2;
     if (ch == CTRL_R)
@@ -19,7 +16,7 @@ static int mx_handle_events(char ch) {
     return 0;
 }
 
-static void special_symbols(unsigned int ch, t_ush *ush) {
+static void mx_special_symbols(unsigned int ch, t_ush *ush) {
     int str_pos = ush->input->inplen - ush->input->endpoint - 1;
     char *str_tab = 0;
 
@@ -37,7 +34,7 @@ static void special_symbols(unsigned int ch, t_ush *ush) {
         mx_many_tabs(&ush->input->comands[ush->input->id],
                 ush->input->comand_tab, ush);
     }
-    ush->input->symb = mx_handle_events(ch);
+    ush->input->symb = mx_events(ch);
     if (ush->input->symb == 18) {
         mx_clean_terminal(MX_USH, ush->input->inplen, ush->input->endpoint,
                 ush->input->comands[ush->input->id]);
@@ -75,7 +72,7 @@ int mx_ascii(t_ush *ush, char *chars, unsigned int ch) {
     int spec_symbol = 3;
 
     if (ch < 32) {
-        special_symbols(ch, ush);
+        mx_special_symbols(ch, ush);
         if (ush->input->symb == -1 || ush->input->symb == 2 ||
             ush->input->symb == 13)
             spec_symbol = ctrl_enter_d_c(ush);

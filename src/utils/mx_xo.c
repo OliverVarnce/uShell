@@ -22,7 +22,7 @@ static int get_hex_and_oct(char *buf, char *str, int *i) {
     return -1;
 }
 
-int mx_0_and_x(char *str, int *i) {
+int mx_xo(char *str, int *i) {
     char *buf = mx_strnew(3);
     int result = 0;
 

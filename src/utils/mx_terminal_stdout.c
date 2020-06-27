@@ -21,7 +21,7 @@ static void print_two_str(char *str1, char *str2) {
     mx_printstr(str2);
 }
 
-void mx_terminal_out(char *name, int table2, int pos, char *str) {
+void mx_terminal_stdout(char *name, int table2, int pos, char *str) {
     int symbol = mx_bit_symbol(&str[table2 - pos - 1]);
     int len = (int) name[0];
     int col = mx_twight_1();

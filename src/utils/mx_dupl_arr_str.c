@@ -1,6 +1,6 @@
 #include "ush.h"
 
-char **mx_dupstrarr(char **strs) {
+char **mx_dupl_arr_str(char **strs) {
     char **new_arr = 0;
     int i = -1;
     int len = 0;

@@ -5,13 +5,13 @@ static unsigned int mx_read_keyb_and_prinitng(t_ush *ush, int index,
     unsigned int ch = 0;
 
     if (index != ush->input->maxcmd + 1)
-        mx_terminal_out(MX_USH, mx_strlen(ush->input->comands[index]) + 1, 0,
+        mx_terminal_stdout(MX_USH, mx_strlen(ush->input->comands[index]) + 1, 0,
                            ush->input->comands[index]);
     else
-        mx_terminal_out(MX_USH, 1, 0, "");
+        mx_terminal_stdout(MX_USH, 1, 0, "");
     mx_printstr("\n");
-    mx_terminal_out(MX_SEARCH, i, 0, tmp);
-    ch = mx_getchar();
+    mx_terminal_stdout(MX_SEARCH, i, 0, tmp);
+    ch = mx_get_char();
     mx_clean_terminal(MX_SEARCH, i, 0, tmp);
     mx_print_esc("1A");
     return ch;

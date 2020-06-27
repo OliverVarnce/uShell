@@ -2,11 +2,11 @@
 
 static void build_help_1(t_token *token, t_ush *ush) {
     if (mx_strcmp(token->value[0], "cd") == 0) 
-        ush->last_status = mx_cd(token->value, ush);
+        ush->last_return = mx_cd(token->value, ush);
     else if (mx_strcmp(token->value[0], "history") == 0) 
-        ush->last_status = mx_history(&(ush->history));
+        ush->last_return = mx_history(&(ush->history));
     else if (mx_strcmp(token->value[0], "pwd") == 0) 
-        ush->last_status = mx_pwd(token->value, ush);
+        ush->last_return = mx_pwd(token->value, ush);
     else if (mx_strcmp(token->value[0], "echo") == 0) 
         mx_echo(token->value, ush);
     else if (mx_strcmp(token->value[0], "exit") == 0)

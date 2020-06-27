@@ -47,7 +47,7 @@ static bool check_command(char *com, char **pathes, int flags) {
     }
     else {
         for(int i = 0; pathes[i]; i++) {
-            fullname = mx_strjoin2(mx_strjoin(pathes[i], "/"), com);
+            fullname = mx_str_concatenation(mx_strjoin(pathes[i], "/"), com);
             if (mx_is_commad(fullname, flags)) {
                 if ((flags & 1) == 0)
                     return true;
@@ -84,10 +84,10 @@ void mx_which(char **argv, t_ush *ush) {
     
     if (flags == -1) {
         mx_del_strarr(&pathes);
-        ush->last_status = 1;
+        ush->last_return = 1;
         return;
     }
     finded = check_commands(argv, pathes, i_args, flags);
-    finded ? (ush->last_status = 0) : (ush->last_status = 1);
+    finded ? (ush->last_return = 0) : (ush->last_return = 1);
     mx_del_strarr(&pathes);
 }
