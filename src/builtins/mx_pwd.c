@@ -24,9 +24,8 @@ static int find_flags(char **av, int *i) {
         if (av[(*i)][0] != '-')
             return flag;
         int c = flags_in_str(av[*i]);
-        if (c == -1) {
+        if (c == -1)
             return 0;
-        }
         flag |= c;
     }
     i--;
@@ -38,9 +37,12 @@ int mx_pwd(char **av, t_ush *ush) {
     int flag = find_flags(av, &i);
 
     if (flag & 2) {
-        printf("%s\n", ush->pwd_p);
+        mx_printstr(ush->pwd_p);
+        mx_printstr("\n");
     }
-    else
-        printf("%s\n", ush->pwd_l);
+    else {
+        mx_printstr(ush->pwd_l);
+        mx_printstr("\n");
+    }
     return 0;
 }

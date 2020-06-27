@@ -6,9 +6,8 @@ static void new_lesser(t_tnode **root, t_tnode *new, int (*cmp)(void*, void*),
         (*root)->left = new;
         new->parent = *root;
     }
-    else {
+    else
         mx_insert_tree(&((*root)->left), new, cmp, free_);
-    }
 }
 
 static void not_lesser(t_tnode **root, t_tnode *new, int (*cmp)(void*, void*),
@@ -17,9 +16,8 @@ static void not_lesser(t_tnode **root, t_tnode *new, int (*cmp)(void*, void*),
         (*root)->right = new;
         new->parent = *root;
     }
-    else {
+    else
         mx_insert_tree(&((*root)->right), new, cmp, free_);
-    }
 }
 
 void mx_insert_tree(t_tnode **root, t_tnode *new, int (*cmp)(void*, void*),

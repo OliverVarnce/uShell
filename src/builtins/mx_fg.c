@@ -13,7 +13,7 @@ static t_process* get_process(int n, char *s, t_ush *ush) {
     }
     else {
         while (tmp) {
-            if (mx_is_str_starts(tmp->name[0], s))
+            if (mx_is_str_begin(tmp->name[0], s))
                 return tmp;
             tmp = tmp->next;
         }
@@ -62,7 +62,7 @@ static void fg_wait(int status, pid_t ch_pr, t_ush *ush) {
     if (MX_WIFSIG(status)) {
         if (MX_WTERMSIG(status) == SIGINT) {
             mx_del_pid_process(ush, ch_pr);
-            ush->last_status = 130;
+            ush->last_return = 130;
         }
         else {
             char **str = mx_find_name(ush, ch_pr);
@@ -82,7 +82,7 @@ void mx_fg(char **argv, t_ush *ush) {
                 fg_wait(status, ch_pr, ush);
             else {
                 mx_del_pid_process(ush, ch_pr);
-                ush->last_status = MX_EXSTATUS(status);
+                ush->last_return = MX_EXSTATUS(status);
             }
         }
     }

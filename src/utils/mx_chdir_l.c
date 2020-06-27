@@ -4,7 +4,7 @@ static int get_rank(char *path) {
     int i = -1;
     int rank = 0;
 
-    for (; path[++i]; )
+    for (; path[++i];)
         if ((path[i] == '/') && (path[i + 1]))
             rank++;
     return rank;

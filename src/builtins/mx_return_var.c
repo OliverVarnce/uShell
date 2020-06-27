@@ -3,7 +3,7 @@
 char *mx_return_var(char **s, t_variable **var_tree) {
     t_variable *tmp = *var_tree;
 
-    while (tmp) {
+    for (; tmp;) {
         if (mx_strcmp(*s, tmp->name) == 0) {
             mx_strdel(s);
             return tmp->value;
@@ -17,7 +17,7 @@ char *mx_return_var(char **s, t_variable **var_tree) {
 char *mx_return_var2(const char *s, t_variable **var_tree) {
     t_variable *tmp = *var_tree;
 
-    while (tmp) {
+    for (; tmp;) {
         if (mx_strcmp(s, tmp->name) == 0)
             return tmp->value;
         tmp = tmp->next;

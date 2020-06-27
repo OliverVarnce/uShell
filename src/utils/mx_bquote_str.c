@@ -38,7 +38,7 @@ static void child(t_ush *processes, int des[2], char **str) {
     close(des[0]);
     dup2(des[1], 1);
     mx_parsing(*str, processes);
-    if (processes->last_status == 130 || !(processes->if_ctrl_c))
+    if (processes->last_return == 130 || !(processes->if_ctrl_c))
         exit(130);
     exit(0);
 }
@@ -55,7 +55,7 @@ static void parent(t_ush *processes, char **str) {
     }
 }
 
-char *mx_str_bquote(char **str, t_ush *processes) {
+char *mx_bquote_str(char **str, t_ush *processes) {
     int des[2] = {0, 0};
     pid_t pid;
     char *test = 0;

@@ -17,7 +17,7 @@ static void disable_Terminal(struct termios oldTerm) {
     tcsetattr(STDIN_FILENO, 0, &oldTerm);
 }
 
-unsigned int mx_getchar() {
+unsigned int mx_get_char() {
     unsigned int ch = 0;
     struct termios oldTerm;
 

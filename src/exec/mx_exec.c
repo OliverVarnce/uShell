@@ -8,7 +8,7 @@ void mx_execute(char **commands, t_ush *processes) {
 
     while (commands[i]) {
         tokens = mx_lexer(commands[i], processes);
-        if (processes->if_ctrl_c && mx_syntax_analyzer(tokens)) {
+        if (processes->if_ctrl_c && mx_syntax_check(tokens)) {
             root_ast = mx_create_ast(&tokens, 0);
             mx_execute_tree(root_ast, 0, 0, processes);
             mx_delete_last(&root_ast);

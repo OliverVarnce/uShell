@@ -65,7 +65,7 @@ int mx_cd(char **av, t_ush *ush) {
         status = mx_chdir_l(path, ush, flags);
     if (status == 0)
         pwd_to_old(ush);
-    ush->last_status = status;
+    ush->last_return = status;
     return status;
 }
 

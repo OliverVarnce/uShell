@@ -5,7 +5,7 @@ static void new_node(t_variable **var_tree, char *name, char *value, char *tmp) 
 
     node->name = name;
     node->value = value;
-    node->mem = value == 0 ? tmp : mx_strjoin2(tmp, value);
+    node->mem = value == 0 ? tmp : mx_str_concatenation(tmp, value);
     node->is_env = true;
     putenv(node->mem);
     node->next = NULL;
@@ -66,12 +66,12 @@ static void export_help(t_variable *var_tree_tmp) {
 }
 
 void mx_export(char **av, t_variable **var_tree, t_ush *ush) {
-    ush->last_status = 0;
+    ush->last_return = 0;
     for (int i = 0; av[i]; i++) {
         if (mx_reg(av[i], "")) {
             mx_printerr("export: not valid in this context:");
             mx_printerr(av[i]);
-            ush->last_status = 1;
+            ush->last_return = 1;
             return;
         }
     }

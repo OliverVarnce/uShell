@@ -6,7 +6,7 @@ static void check_status(char **argv, int status, t_ush *ush, pid_t pr) {
     if (MX_WIFSIG(status)) {
         if (MX_WTERMSIG(status) == SIGINT) {
             mx_del_pid_process(ush, pr);
-            ush->last_status = 130;
+            ush->last_return = 130;
         }
     }
     else {
@@ -26,6 +26,6 @@ void mx_wait_process(t_ush *ush, char **argv) {
     }
     else {
         mx_del_pid_process(ush, pr);
-        ush->last_status = MX_EXSTATUS(status);
+        ush->last_return = MX_EXSTATUS(status);
     }
 }

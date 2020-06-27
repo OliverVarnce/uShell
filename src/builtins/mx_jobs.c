@@ -1,7 +1,7 @@
 #include "ush.h"
 
 static void fg_help(t_process *tmp, char c) {
-    char *name = mx_arrstr_to_str(tmp->name);
+    char *name = mx_arr_str_to_str(tmp->name);
 
     printf("[%d] %c suspended %s\n", tmp->index, c, name);
     free(name);
@@ -25,5 +25,5 @@ void mx_jobs(t_ush *ush) {
         fg_help(tmp, c);
         tmp = tmp->next;
     }
-    ush->last_status = 0;
+    ush->last_return = 0;
 }

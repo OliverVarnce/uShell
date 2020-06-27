@@ -4,9 +4,8 @@ static int get_start_index(char *str) {
     int i = 0;
 
     for (; str[i];) {
-        if (str[i] != ' ') {
+        if (str[i] != ' ')
             return i;
-        }
         i++;
     }
     return i;
@@ -16,9 +15,8 @@ static int get_end_index(char *str) {
     int i = mx_strlen(str) - 1;
 
     for (; i >= 0; ) {
-        if (str[i] != ' ') {
+        if (str[i] != ' ')
             return i + 1;
-        }
         i--;
     }
     return i + 1;

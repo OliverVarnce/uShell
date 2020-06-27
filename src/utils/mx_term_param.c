@@ -1,6 +1,6 @@
 #include "ush.h"
 
-static bool is_not_operator(char c) {
+static bool is_operator1(char c) {
     if (c == '|' || c == '&' || c == '>' || c == '<'|| c == '$' || c == ' ')
         return false;
     if (c == 34 || c == 39 || c== 96 || c == 0 || c == '?')
@@ -13,7 +13,7 @@ static bool is_not_operator(char c) {
 static int end_parametr(char *str, int i) {
     int tmp = i + 1;
 
-    while (is_not_operator(str[tmp]))
+    while (is_operator1(str[tmp]))
         tmp++;
     if (str[tmp] == '?' && str[tmp + 1] != '(')
         tmp++;
@@ -44,7 +44,7 @@ static void parametrchell(t_ush *processes, int *i, char **new_str) {
 static void parametrlaststatus(t_ush *processes, int *i, char **new_str, int flag) {
     char *par_shell = 0;
 
-    par_shell = mx_itoa(processes->last_status);
+    par_shell = mx_itoa(processes->last_return);
     mx_replace(new_str, *i, flag, par_shell);
     if (par_shell) {
         *i += mx_strlen(par_shell);
@@ -53,7 +53,7 @@ static void parametrlaststatus(t_ush *processes, int *i, char **new_str, int fla
     }
 }
 
-void mx_parametr_shell(t_ush *processes, int *i, char **new_str) {
+void mx_term_param(t_ush *processes, int *i, char **new_str) {
     int flag = end_parametr(*new_str, *i);
     char *par_shell = 0;
 

@@ -41,7 +41,7 @@ int mx_add_process(t_process **processes, pid_t pid, char **name) {
     pr = (t_process*)malloc(sizeof(t_process));
     pr->index = index2 + 1;
     pr->pid = pid;
-    pr->name = mx_dupstrarr(name);
+    pr->name = mx_dupl_arr_str(name);
     pr->next = NULL;
     mx_push_front_proc(processes, pr);
     return index2 + 1;

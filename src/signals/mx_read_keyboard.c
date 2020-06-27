@@ -3,7 +3,7 @@
 unsigned int mx_read_keyboard(t_ush *ush) {
     unsigned int ch = 0;
 
-    if ((ch = mx_getchar()) == 0) {
+    if ((ch = mx_get_char()) == 0) {
         mx_printerr("u$h: some troubeles with input!\n");
         exit(2);
     }
